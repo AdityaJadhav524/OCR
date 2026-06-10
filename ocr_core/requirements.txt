@@ -1,0 +1,9 @@
+# ocr_core/requirements.txt
+# Minimum requirements for standalone 
+
+paddlepaddle>=2.6.1     # Required by paddleocr
+paddleocr>=2.7.3        # OCR inference engine
+
+PyMuPDF>=1.23.0         # Fast PDF to image rendering
+opencv-python>=4.8.0    # Image median blur and resizing
+numpy>=1.24.0           # Box coordinate manipulation

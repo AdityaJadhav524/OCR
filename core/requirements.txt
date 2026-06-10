@@ -1,0 +1,17 @@
+# core/requirements.txt
+# PDF/CSV → structured transaction JSON
+# No Supabase · No database · No auth · No frontend
+
+# ── PDF Extraction ─────────────────────────────────────────────────────────────
+pdfplumber          # Primary: table-aware, layout-preserving text extraction
+pymupdf             # Fallback 1: word-grid extraction (PyMuPDF)
+PyPDF2              # Fallback 2: password detection, legacy PDFs
+pypdf               # Encryption checks
+
+# ── LLM ───────────────────────────────────────────────────────────────────────
+google-genai        # Gemini SDK (classification + transaction extraction)
+requests            # OpenRouter / 9router HTTP fallback
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+pandas              # CSV / Excel ingestion
+python-dotenv       # .env file loading
