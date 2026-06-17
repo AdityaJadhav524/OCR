@@ -1,0 +1,42 @@
+{
+  "YES Bank": {
+    "pdf_name": "JOB_20260617_154654_7602_YESBANK_page-0001.pdf",
+    "extracted_rows": 83,
+    "bank_detected": "YES BANK",
+    "document_family": "BANK_STATEMENT",
+    "parser_selected": "coordinate_parser_v2",
+    "reject_counts": 0
+  },
+  "HDFC": {
+    "pdf_name": "HDFC_01.pdf",
+    "extracted_rows": 94,
+    "bank_detected": "HDFC BANK",
+    "document_family": "BANK_STATEMENT",
+    "parser_selected": "coordinate_parser_v2",
+    "reject_counts": 0
+  },
+  "BOI": {
+    "pdf_name": "BOI_01.pdf",
+    "extracted_rows": 10,
+    "bank_detected": "BANK OF INDIA",
+    "document_family": "BANK_STATEMENT",
+    "parser_selected": "coordinate_parser_v2",
+    "reject_counts": 0
+  },
+  "Credit Card": {
+    "pdf_name": "JOB_20260617_144436_EF6E_CC_STMT_117048135_345073_1607202515082025 1 (1) 2_page-0001.pdf",
+    "extracted_rows": 14,
+    "bank_detected": "INDUSIND BANK",
+    "document_family": "CREDIT_CARD",
+    "parser_selected": "credit_card_parser",
+    "reject_counts": 4
+  },
+  "Axis": {
+    "pdf_name": "JOB_20260617_144436_EF6E_axis.pdf",
+    "extracted_rows": 57,
+    "bank_detected": "AXIS BANK",
+    "document_family": "BANK_STATEMENT",
+    "parser_selected": "coordinate_parser_v2",
+    "reject_counts": 16
+  }
+}

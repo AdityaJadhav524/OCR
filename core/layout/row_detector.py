@@ -109,15 +109,29 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
     contamination_keywords = ["IFSC", "MICR", "Branch", "Address", "Statement", "Page", "Customer", "Nomination", "Registered", "Closing balance"]
     
     for row in rows:
-        tokens = row['tokens']
+        tokens = row.get('tokens', [])
         if not tokens:
             continue
             
         is_anchor = False
+        import re
+        OCR_TOLERANT_DATE_RE = re.compile(
+            r'^([Ool\d]{1,2}[\-\.\/\|\)][Ool\d]{1,2}[\-\.\/\|\)]\d{2,4}|'
+            r'[Ool\d]{1,2}[\-\.\/\|\)]\d{2,4}|'
+            r'[a-zA-Z]{3}[\-\.\/\|\)]\d{2,4})',
+            re.IGNORECASE
+        )
         
-        # Check if row has a date in the expected bounds, or just generally at the start
         for t in tokens:
             is_date = DATE_RE.search(t['text']) or DATE_PREFIX_RE.match(t['text'])
+            
+            # If not a strict date, see if it matches the tolerant OCR regex
+            if not is_date and OCR_TOLERANT_DATE_RE.search(t['text']):
+                # Heal the token in-place
+                t['text'] = t['text'].replace('O', '0').replace('o', '0').replace('l', '1').replace('|', '-').replace(')', '-')
+                if DATE_RE.search(t['text']) or DATE_PREFIX_RE.match(t['text']):
+                    is_date = True
+                    
             if is_date:
                 # Check if it falls within a very generous tolerance of the detected date column
                 if date_x_bounds and (date_x_bounds[0] - 70 <= t['x0'] <= date_x_bounds[1] + 70):
