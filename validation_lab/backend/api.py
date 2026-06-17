@@ -536,8 +536,15 @@ async def process_document(file: UploadFile = File(...), password: Optional[str]
                     v1_audit = run_financial_audit(v1_rows)
                     v1_score = score_statement(v1_rows)
 
+                    from core.detection.bank_detector import classify_document_llm
+                    identity = classify_document_llm(pages)
+
                     # V2 Benchmark — pass raw tokens, let V2 do its own detection
-                    v2_txns, v2_tel = parse_with_coordinates(page_tokens)
+                    v2_txns, v2_tel = parse_with_coordinates(
+                        page_tokens, 
+                        bank=identity.get("institution_name"), 
+                        identity=identity
+                    )
                     v2_audit = run_financial_audit(v2_txns)
                     v2_score = score_statement(v2_txns)
 

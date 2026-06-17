@@ -22,7 +22,7 @@ def evaluate():
     
     # Filter to 3 PDFs for quick check
     target_pdfs = [
-        "JOB_20260617_144436_EF6E_E_STATEMENT_20260301_20260331_054506_27011738 (3)_page-0001.pdf",
+        "JOB_20260617_144436_EF6E_AccountStatement_02022026_233637 1_pages-to-jpg-0001.pdf",
         "JOB_20260617_144436_EF6E_CC_STMT_117048135_345073_1607202515082025 1 (1) 2_page-0001.pdf",
         "JOB_20260617_144436_EF6E_axis.pdf"
     ]

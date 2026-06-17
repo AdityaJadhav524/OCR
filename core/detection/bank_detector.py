@@ -23,7 +23,7 @@ _BANK_PATTERNS: Dict[str, List[str]] = {
     "HDFC BANK":             ["HDFC BANK", "HDFC"],
     "STATE BANK OF INDIA":   ["STATE BANK OF INDIA", "SBI"],
     "ICICI BANK":            ["ICICI BANK", "ICICI"],
-    "AXIS BANK":             ["AXIS BANK"],
+    "AXIS BANK":             ["AXIS BANK", "AXIS"],
     "KOTAK MAHINDRA BANK":   ["KOTAK MAHINDRA BANK", "KOTAK"],
     "YES BANK":              ["YES BANK"],
     "TJSB SAHAKARI BANK":    ["TJSB", "SAVINGACCOUNTSTATEMENT"],
@@ -167,8 +167,6 @@ def _detect_document_family(text: str) -> str:
         score += 3
     if "PAYMENT DUE DATE" in text_upper:
         score += 3
-    if "CREDIT CARD" in text_upper:
-        score += 5
     if "CARD STATEMENT" in text_upper:
         score += 3
     if "LEGEND CREDIT CARD" in text_upper:
@@ -177,6 +175,12 @@ def _detect_document_family(text: str) -> str:
         score += 3
     if "CASH LIMIT" in text_upper:
         score += 3
+        
+    # Only score "CREDIT CARD" if it appears in the top 15% of the text 
+    # to avoid falsely matching security warnings in the footer.
+    top_15_percent = text_upper[:max(1, int(len(text_upper) * 0.15))]
+    if "CREDIT CARD" in top_15_percent:
+        score += 5
         
     return "CREDIT_CARD" if score >= 5 else "BANK_STATEMENT"
 
