@@ -1,0 +1,119 @@
+================================================================================
+PAGE 1
+================================================================================
+
+     Registered Branch Code: 02142       Thank you for choosing WhatsApp Banking services of State Bank of India
+
+     Miss. MUSKAN NAJIR SHAIKH                                 Important
+     RASAL GALLI                                         Dear Customer, as part of our green
+     AT POST BHAVANINAGAR TAL WALWA,                    initiative, all statements of account will be
+     DIST SANGLI                                        sent via e-mail. We request you to update
+     Sangli                                              your e-mail id at your home branch.
+     415302
+     Statement of Miss. MUSKAN NAJIR SHAIKH (A/c-00000035181289108) between 01/01/2026 to 31/03/2026
+
+     Account Number : 00000035181289108
+     Branch : 02142
+     Account Name : Miss. MUSKAN NAJIR SHAIKH
+     Interest Rate : 2.50
+     CIF NO : 00000088656288827
+     Balance as on 17-04-2026 : 5334.89
+
+       Txn Date Value Date       Description         Debit    Credit  Balance
+     11/01/2026 11/01/2026 UPI/DR/601194040837/Jio/YESB/paybil3066/ 19.00 72.69
+                       Sent usi
+     11/01/2026 11/01/2026 UPI/DR/298255986636/Jio/YESB/paybil3066/ 19.00 53.69
+                       Sent usi
+     15/01/2026 15/01/2026 UPI/CR/638164718789/RASHID      500.00   553.69
+                       M/BKID/rashidshai/UPI
+     25/01/2026 25/01/2026 UPI/DR/602522995475/Jio/YESB/paybil3066/ 19.00 534.69
+                       Sent usi
+     29/01/2026 29/01/2026 UPI/DR/602900056568/Jio/YESB/paybil3066/ 19.00 515.69
+                       Sent usi
+     01/02/2026 01/02/2026 UPI/CR/603230808462/NURJAHAN/SBIN/sh 500.00 1015.69
+                       aikhnaji/UPI
+     01/02/2026 01/02/2026 UPI/DR/396481631854/MYNTRA 498.00        517.69
+                       D/UTIB/myntradesi/Payme
+     01/02/2026 01/02/2026 UPI/DR/603217202387/Flipkart/YESB/flipkart 491.00 26.69
+                       .h/UPIPA
+     08/02/2026 08/02/2026 UPI/CR/603955169871/Flipkart/YESB/flipkart 239.00 265.69
+                       .h/Refun
+     10/02/2026 10/02/2026 UPI/CR/604182058448/NURJAHAN/SBIN/sh 130.00 395.69
+                       aikhnaji/UPI
+     12/02/2026 12/02/2026 UPI/DR/604387915189/Jio/YESB/paybil3066/ 19.00 376.69
+                       Sent usi
+     14/02/2026 14/02/2026 UPI/DR/604500767375/Jio/YESB/paybil3066/ 19.00 357.69
+                       Sent usi
+     14/02/2026 14/02/2026 UPI/DR/604502683053/Jio/YESB/paybil3066/ 19.00 338.69
+                       Sent usi
+     24/02/2026 24/02/2026 UPI/DR/605568843962/Jio/YESB/paybil3066/ 49.00 289.69
+                       Sent usi
+     24/02/2026 24/02/2026 UPI/CR/778884598717/Shridhan/SBIN/72490 39.00 328.69
+                       94892/Payme
+     25/02/2026 25/02/2026 UPI/DR/605676248340/Jio/YESB/paybil3066/ 19.00 309.69
+                       Sent usi
+     01/03/2026 01/03/2026 UPI/DR/606005483596/Jio/YESB/paybil3066/ 19.00 290.69
+                       Sent usi
+     03/03/2026 03/03/2026 UPI/CR/606204738990/NURJAHAN/SBIN/na 1.00 291.69
+                       jirshaik/UPI
+                             **This is computer generated statement and does not require a signature.**
+
+================================================================================
+PAGE 2
+================================================================================
+
+     Statement of Miss. MUSKAN NAJIR SHAIKH (A/c-00000035181289108) between 01/01/2026 to 31/03/2026
+
+       Txn Date Value Date       Description         Debit    Credit  Balance
+     04/03/2026 04/03/2026 UPI/DR/606328265016/Jio/YESB/paybil3066/ 19.00 272.69
+                       Sent usi
+     05/03/2026 05/03/2026 UPI/CR/391669837379/Miss        20.00    292.69
+                       Bha/MAHB/9561206440/Payme
+     06/03/2026 06/03/2026 UPI/CR/606545071898/SANIKA      10.00    302.69
+                       A/BARB/sanikashin/UPI
+     06/03/2026 06/03/2026 PFM A0226015279FE Credit Through PFMS 2700.00 3002.69
+                       OBCXQ6H
+     08/03/2026 08/03/2026 UPI/CR/606794450115/NURJAHAN/SBIN/na 350.00 3352.69
+                       jirshaik/UPI
+     09/03/2026 09/03/2026 UPI/DR/606870793873/Google 2.00          3350.69
+                       C/YESB/googleclou/Recur
+     09/03/2026 09/03/2026 UPI/DR/606870797467/Google 2.00          3348.69
+                       C/YESB/googleclou/Recur
+     09/03/2026 09/03/2026 UPI/DR/819884020686/Google 2.00          3346.69
+                       C/utib/googleclou/Manda
+     11/03/2026 11/03/2026 UPI/DR/607076344319/Jio/YESB/paybil3066/ 19.00 3327.69
+                       Sent usi
+     14/03/2026 14/03/2026 UPI/DR/607395679513/Jio/YESB/paybil3066/ 29.00 3298.69
+                       Sent usi
+     16/03/2026 16/03/2026 UPI/CR/644181070067/Google      2.00     3300.69
+                       C/YESB/googleclou/Refun
+     16/03/2026 16/03/2026 UPI/CR/644181072965/Google      2.00     3302.69
+                       C/YESB/googleclou/Refun
+     16/03/2026 16/03/2026 UPI/CR/324467030756/Google      2.00     3304.69
+                       C/utib/googleclou/UPI
+     16/03/2026 16/03/2026 UPI/DR/607507563586/Jio/YESB/paybil3066/ 19.00 3285.69
+                       Sent usi
+     17/03/2026 17/03/2026 UPI/DR/607613957869/Jio/YESB/paybil3066/ 29.00 3256.69
+                       Sent usi
+     18/03/2026 18/03/2026 UPI/CR/692918766026/NAZU        200.00   3456.69
+                       MAU/SDCE/7499430917/Payme
+     18/03/2026 18/03/2026 UPI/DR/430870704332/SAHIL 200.00         3256.69
+                       NA/SBIN/7744078601/Payme
+     25/03/2026 25/03/2026 UPI/DR/202620895898/Jio/YESB/paybil3066/ 19.00 3237.69
+                       Sent usi
+     25/03/2026 25/03/2026 UPI/DR/202630756106/Jio/YESB/paybil3066/ 29.00 3208.69
+                       Sent usi
+     25/03/2026 25/03/2026                                 6.00     3214.69
+     26/03/2026 26/03/2026 DBT A0326007FD508 Credit Through PFMS 2700.00 5914.69
+                       OBCXQ6H
+     26/03/2026 26/03/2026 UPI/DR/608556641234/Google 29.00         5885.69
+                       I/UTIB/gpayrechar/UPI
+     27/03/2026 27/03/2026 UPI/DR/608672436714/Jio/YESB/paybil3066/ 29.00 5856.69
+                       Sent usi
+     27/03/2026 27/03/2026 UPI/DR/608674162245/Jio/YESB/paybil3066/ 29.00 5827.69
+                       Sent usi
+     28/03/2026 28/03/2026 UPI/DR/202807499264/Jio/YESB/paybil3066/ 19.00 5808.69
+                       Sent usi
+     28/03/2026 28/03/2026 UPI/DR/162506208175/Jio 19.00            5789.69
+                       Rech/UTIB/JIOINAPPDI/Payme
+                             **This is computer generated statement and does not require a signature.**

@@ -1,0 +1,1041 @@
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 16932
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 16932
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 16932
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 16932
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 16932
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 16932
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 16932
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 16932
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 14252
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 14252
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 14252
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 14252
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 14252
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 14252
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 14252
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 12156
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 12156
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 12156
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 12156
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 12156
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 12156
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 19704
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 19704
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 12304
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 12304
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 12304
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 12304
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10820
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 10820
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10820
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 10820
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 10820
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10820
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 10820
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 10820
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10820
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 10820
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18888
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 18888
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 18888
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18888
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18888
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18888
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18888
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18888
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18888
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18888
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18888
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18888
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18888
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: True
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18352
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18352
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 4300
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 4300
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 25568
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 25568
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 23832
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 23832
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 17988
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 17988
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 6116
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 6116
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 6116
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 6116
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 6116
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 6116
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 7252
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 7252
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 22948
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 22948
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 22948
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 22948
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18820
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18820
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 18820
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 18820
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 26832
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 26832
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 26832
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 26832
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 26832
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 26832
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 19768
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 19768
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 4300
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 4300
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 4300
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 4300
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10520
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 10520
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10520
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 10520
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10520
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 10520
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10520
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 10520
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10520
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 10520
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 10520
+received session_id: None
+has password: False
+session exists: False
+
+REQUEST START
+PID: 12768
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 12768
+called classify_document_llm: True
+returned cached result: False
+REQUEST END
+
+REQUEST START
+PID: 6484
+received session_id: None
+has password: False
+session exists: False
+entered do_bank_detection: True
+PID: 6484
+called classify_document_llm: True
+returned cached result: False
+REQUEST END

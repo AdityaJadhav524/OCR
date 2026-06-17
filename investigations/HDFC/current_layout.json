@@ -1,0 +1,132 @@
+{
+  "engine": "current_engine_pdfplumber",
+  "elapsed_seconds": 0.01,
+  "total_words": 0,
+  "page_count": 12,
+  "page_stats": {
+    "page_1": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_2": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_3": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_4": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_5": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_6": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_7": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_8": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_9": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_10": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_11": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    },
+    "page_12": {
+      "page_height": 842,
+      "page_width": 595,
+      "word_count": 0,
+      "text_line_count": 0,
+      "header_line_count": 0,
+      "footer_line_count": 0,
+      "body_line_count": 0,
+      "table_count": 0
+    }
+  },
+  "header_lines": [],
+  "footer_lines": [],
+  "body_lines": [],
+  "fitz_blocks": []
+}

@@ -33,7 +33,7 @@ def _estimate_density(page) -> bool:
         return False
 
 
-def render_pdf_to_images(file_bytes: bytes, max_width: int = 1800) -> list:
+def render_pdf_to_images(file_bytes: bytes, max_width: int = 1800, password: str = None) -> list:
     """
     Renders a PDF to a list of OpenCV images (numpy arrays).
 
@@ -44,6 +44,13 @@ def render_pdf_to_images(file_bytes: bytes, max_width: int = 1800) -> list:
     This avoids global DPI inflation while improving dense docs specifically.
     """
     doc = fitz.open(stream=file_bytes, filetype="pdf")
+    if doc.needs_pass:
+        if password:
+            doc.authenticate(password)
+        else:
+            raise RuntimeError("Stage render failed: document closed or encrypted (missing password)")
+    if doc.is_encrypted:
+        raise RuntimeError("Stage render failed: document closed or encrypted (incorrect password?)")
     images = []
 
     for page_num in range(len(doc)):

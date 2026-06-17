@@ -1,0 +1,36 @@
+{
+  "YES": {
+    "bank": "YES",
+    "extracted": 83,
+    "gt": 83,
+    "recall_pct": 100.0,
+    "precision_pct": 100.0,
+    "date_acc": 100.0,
+    "debit_acc": 100.0,
+    "credit_acc": 100.0,
+    "balance_acc": 95.2,
+    "known_errors_recovered": 0,
+    "ledger_pass_pct": 90.4,
+    "runtime": 0.01
+  },
+  "SBI": {
+    "bank": "SBI",
+    "extracted": 4,
+    "gt": 4,
+    "recall_pct": 100.0,
+    "precision_pct": 100.0,
+    "date_acc": 100.0,
+    "debit_acc": 100.0,
+    "credit_acc": 100.0,
+    "balance_acc": 100.0,
+    "known_errors_recovered": 0,
+    "ledger_pass_pct": 100.0,
+    "runtime": 0.0
+  },
+  "HDFC": {
+    "bank": "HDFC",
+    "extracted": 107,
+    "ledger_pass_pct": 84.1,
+    "runtime": 0.0
+  }
+}

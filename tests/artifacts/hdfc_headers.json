@@ -1,0 +1,39 @@
+{
+  "detected_headers": [
+    {
+      "text": "Date",
+      "x0": 95.0,
+      "x1": 145.0
+    },
+    {
+      "text": "Narration",
+      "x0": 357.0,
+      "x1": 453.0
+    },
+    {
+      "text": "Chq./Ref.No.",
+      "x0": 707.0,
+      "x1": 826.0
+    },
+    {
+      "text": "ValueDt",
+      "x0": 900.0,
+      "x1": 988.0
+    },
+    {
+      "text": "Withdrawal Amt.",
+      "x0": 1009.0,
+      "x1": 1174.0
+    },
+    {
+      "text": "Deposit Amt.",
+      "x0": 1229.0,
+      "x1": 1348.0
+    },
+    {
+      "text": "Closing Balance",
+      "x0": 1412.0,
+      "x1": 1557.0
+    }
+  ]
+}

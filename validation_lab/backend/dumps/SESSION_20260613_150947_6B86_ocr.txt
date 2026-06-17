@@ -1,0 +1,299 @@
+================================================================================
+PAGE 1
+================================================================================
+
+  24*7 Phone Banking
+    1800 425 1199
+    1800 420 1199
+   www.federal.co.in
+
+     Name            AKSHATA DHANYAKUMAR PATIL Branch Name Fintech Partnerships (Jupiter)
+     Communication Address Indradhwaj Nivas, Plot No.6 Branch Address Federal Bank Ltd, Fintech Partnerships
+                     Ramkrishna Parm Hans Society 100    Department Integrated Startup Complex,
+                     Futi Road Sangli, Pol Mala, Sangli, KSUM, HMT Colony, Kalamassery,
+                     Maharashtra, 416416                 Ernakulam, Kerala - 683503
+     Address Last Updated On 12/04/2023  Branch Sol ID   7777
+
+     Registered Mobile Number 917744091824 Account Number 77770132595618
+     Email ID        akshatadpatil@gmail.com Customer ID 142280189
+
+     Scheme          SALARY-7777         Account Open Date 12/04/2023
+     Type Of Account Savings             Account Status  Active
+     IFSC            FDRL0007777         Mode Of Operation Single
+
+     MICR Code       682049069           Joint Holders   NIL
+     SWIFT Code      FDRLINBBIBD         Nomination      Not Registered
+     Effective Available Balance 162726.7 Date Of Issue  06/03/2026
+     Currency        INR
+
+                        STATEMENT OF ACCOUNT PERIOD : 01-DEC-2025 to 31-DEC-2025
+
+     Date Value Date      Particulars      Tran Type Cheque Details Withdrawals Deposits Balance Dr/Cr
+
+               Opening Balance                                      60643.51
+
+    01/12/2025 01/12/2025 UPIOUT/429842213355/paytmqr62dsi9@ptys/Sent /5411 TFR 113.00 60530.51 Dr
+
+    01/12/2025 01/12/2025 UPIOUT/446319473355/pisaldatta52@axl/Sent vi/0000 TFR 112.00 60418.51 Dr
+
+    02/12/2025 02/12/2025 UPIOUT/660998183365/rohitgaikwad37193@okhdfc/0000 TFR 112.00 60306.51 Dr
+
+    02/12/2025 02/12/2025 UPIOUT/684280153365/paytmqr2810050501016nse9/5541 TFR 290.00 60016.51 Dr
+
+    02/12/2025 02/12/2025 UPIOUT/685670203365/Mswipe.1430060325002700@/5331 TFR 280.00 59736.51 Dr
+
+    03/12/2025 03/12/2025 UPIOUT/871749633375/gpay-11239231023@okbizax/5812 TFR 112.00 59624.51 Dr
+
+    03/12/2025 03/12/2025 UPIOUT/900654763375/Q761083054@ybl/Sent via /5411 TFR 30.00 59594.51 Dr
+
+    03/12/2025 03/12/2025 UPIOUT/994116553375/Q358267419@ybl/Sent via /5947 TFR 60.00 59534.51 Dr
+
+    03/12/2025 03/12/2025 UPIOUT/994618023375/Q440943425@ybl/Sent via /5411 TFR 75.00 59459.51 Dr
+
+    04/12/2025 04/12/2025 UPIOUT/195893853385/vishraj.akhade93-2@oksbi/0000 TFR 110.00 59349.51 Dr
+
+    04/12/2025 04/12/2025 UPIOUT/316484083385/ashish.rc25-1@okhdfcbank/0000 TFR 500.00 58849.51 Dr
+
+    05/12/2025 05/12/2025 UPIOUT/415803273395/2693bapumahajan@okhdfcba/0000 TFR 110.00 58739.51 Dr
+
+                                        Page 1 of 5
+                       The Federal Bank Ltd. Corporate Office: Federal Towers, Market Rd, Periyar Nagar, Aluva, Kerala 683101
+                                Phone number: 0484 2630996 Website: www.federal.co.in
+
+================================================================================
+PAGE 2
+================================================================================
+
+  24*7 Phone Banking
+    1800 425 1199
+    1800 420 1199
+   www.federal.co.in
+
+     Date Value Date      Particulars      Tran Type Cheque Details Withdrawals Deposits Balance Dr/Cr
+
+    05/12/2025 05/12/2025 UPIOUT/450409003395/Q258577984@ybl/Sent via /5812 TFR 202.00 58537.51 Dr
+
+    05/12/2025 05/12/2025 UPIOUT/452400243395/paytmqr6wwrgi@ptys/Sent /5411 TFR 198.00 58339.51 Dr
+
+    06/12/2025 06/12/2025 UPIOUT/648197293405/9594486827@ybl/Sent via /0000 TFR 108.00 58231.51 Dr
+
+    06/12/2025 06/12/2025 NFT/NEWEL TECHNOLOG/HDFCH00656397058/HDFC TFR 110369.00 168600.51 Cr
+               BANK
+    06/12/2025 06/12/2025 UPIOUT/668923363405/7209885913@axl/Sent via /0000 TFR 60.00 168540.51 Dr
+
+    07/12/2025 07/12/2025 UPIOUT/939434073415/dmartavenuesupermart.411/5411 TFR 3281.47 165259.04 Dr
+
+    07/12/2025 07/12/2025 UPIOUT/941432903415/anekatugrejiya123@oksbi//0000 TFR 250.00 165009.04 Dr
+
+    07/12/2025 07/12/2025 UPIOUT/967543853415/ashish.rc25-1@okhdfcbank/0000 TFR 1000.00 164009.04 Dr
+
+    08/12/2025 08/12/2025 UPIOUT/149874403425/9920635709@naviaxis/Sent/0000 TFR 110.00 163899.04 Dr
+
+    08/12/2025 08/12/2025 UPIOUT/237794513425/paytmqr10o7e5@paytm/Sent/5947 TFR 2.00 163897.04 Dr
+
+    08/12/2025 08/12/2025 UPIOUT/238495653425/medpluskhargharsecto.618/5047 TFR 113.00 163784.04 Dr
+
+    08/12/2025 08/12/2025 UPIOUT/255547983425/paytmqr62dsi9@ptys/Sent /5411 TFR 38.00 163746.04 Dr
+
+    09/12/2025 09/12/2025 UPIOUT/484946083435/Q396539626@ybl/Sent via /4812 TFR 250.00 163496.04 Dr
+
+    09/12/2025 09/12/2025 UPIOUT/485264643435/Q656956497@ybl/Sent via /5814 TFR 140.00 163356.04 Dr
+
+    10/12/2025 10/12/2025 ACHDR/FIN NSE Clearing Lim/FDRL6000000005477416/S TFR 4165.00 159191.04 Dr
+
+    10/12/2025 10/12/2025 ACHDR/FIN NSE Clearing Lim/FDRL6000000005477416/S TFR 4165.00 155026.04 Dr
+
+    10/12/2025 10/12/2025 ACHDR/FIN NSE Clearing Lim/FDRL6000000005477416/S TFR 4165.00 150861.04 Dr
+
+    10/12/2025 10/12/2025 ACHDR/FIN NSE Clearing Lim/FDRL6000000005477416/S TFR 4165.00 146696.04 Dr
+
+    10/12/2025 10/12/2025 ACHDR/FIN NSE Clearing Lim/FDRL6000000005477416/S TFR 4170.00 142526.04 Dr
+
+    10/12/2025 10/12/2025 ACHDR/FIN NSE Clearing Lim/FDRL6000000005477416/S TFR 4170.00 138356.04 Dr
+
+    10/12/2025 10/12/2025 UPIOUT/603658183445/jafaralishah733@okicici//0000 TFR 113.00 138243.04 Dr
+
+    10/12/2025 10/12/2025 UPIOUT/632158163445/9819484882@kotak811/Sent/0000 TFR 235.00 138008.04 Dr
+
+    10/12/2025 10/12/2025 UPIOUT/697204183445/Q656956497@ybl/Sent via /5814 TFR 200.00 137808.04 Dr
+
+                                        Page 2 of 5
+                       The Federal Bank Ltd. Corporate Office: Federal Towers, Market Rd, Periyar Nagar, Aluva, Kerala 683101
+                                Phone number: 0484 2630996 Website: www.federal.co.in
+
+================================================================================
+PAGE 3
+================================================================================
+
+  24*7 Phone Banking
+    1800 425 1199
+    1800 420 1199
+   www.federal.co.in
+
+     Date Value Date      Particulars      Tran Type Cheque Details Withdrawals Deposits Balance Dr/Cr
+
+    10/12/2025 10/12/2025 UPIOUT/697373223445/Q681390060@ybl/Sent via /5411 TFR 160.00 137648.04 Dr
+
+    10/12/2025 10/12/2025 UPIOUT/698167653445/Q358267419@ybl/Sent via /5947 TFR 60.00 137588.04 Dr
+
+    10/12/2025 10/12/2025 UPIOUT/102189096383/lifeincorpofindia@hdfcba/6529 TFR 9600.00 127988.04 Dr
+
+    11/12/2025 11/12/2025 UPIOUT/818645173455/sujitghutukade@axl/Sent /0000 TFR 113.00 127875.04 Dr
+
+    11/12/2025 11/12/2025 UPIOUT/841542403455/paytmqr5eny89@ptys/Sent /5411 TFR 35.00 127840.04 Dr
+
+    12/12/2025 12/12/2025 UPIOUT/128740113465/8419935789@axl/Sent via /0000 TFR 114.00 127726.04 Dr
+
+    12/12/2025 12/12/2025 UPIOUT/174523383465/paytmqr62m6w0@ptys/Sent /5912 TFR 110.00 127616.04 Dr
+
+    12/12/2025 12/12/2025 UPIOUT/220206713465/paytmqr6mbjoe@ptys/Sent /5411 TFR 47.00 127569.04 Dr
+
+    13/12/2025 13/12/2025 UPIOUT/317752163475/paytmqr6vdg1o@ptys/Sent /5451 TFR 74.00 127495.04 Dr
+
+    13/12/2025 13/12/2025 UPIOUT/318310283475/paytmqr281005050101gt8rs/5541 TFR 240.00 127255.04 Dr
+
+    14/12/2025 14/12/2025 UPIOUT/656827813485/rajnikam29@oksbi/Decembe/0000 TFR 2500.00 124755.04 Dr
+
+    14/12/2025 14/12/2025 UPIOUT/686008963485/paytm.s15k2xc@pty/Sent v/5331 TFR 11.00 124744.04 Dr
+
+    14/12/2025 14/12/2025 UPIOUT/686489563485/paytmqr6w7hox@ptys/Sent /5193 TFR 20.00 124724.04 Dr
+
+    15/12/2025 15/12/2025 UPIOUT/765306423495/Q280085344@ybl/Sent via /5411 TFR 74.00 124650.04 Dr
+
+    15/12/2025 15/12/2025 UPIOUT/765540543495/Q298787008@ybl/Sent via /5451 TFR 40.00 124610.04 Dr
+
+    15/12/2025 15/12/2025 UPIOUT/823076493495/paytmqr6mbjoe@ptys/Sent /5411 TFR 30.00 124580.04 Dr
+
+    16/12/2025 16/12/2025 UPIOUT/998556713505/paytmqr6vdg1o@ptys/Sent /5451 TFR 74.00 124506.04 Dr
+
+    17/12/2025 17/12/2025 UPIOUT/335528223515/Q298787008@ybl/Sent via /5451 TFR 77.00 124429.04 Dr
+
+    18/12/2025 18/12/2025 UPIOUT/563949433525/Q280085344@ybl/Sent via /5411 TFR 74.00 124355.04 Dr
+
+    18/12/2025 18/12/2025 UPIOUT/565525173525/paytmqr6w7hox@ptys/Sent /5193 TFR 70.00 124285.04 Dr
+
+    18/12/2025 18/12/2025 UPIOUT/605997303525/gpay-11214262874@okbizax/8011 TFR 350.00 123935.04 Dr
+
+    18/12/2025 18/12/2025 UPIOUT/617821313525/7209885913@axl/Sent via /0000 TFR 85.00 123850.04 Dr
+
+    18/12/2025 18/12/2025 UPIOUT/696350653525/paytm.s15wof1@pty/Sent v/5812 TFR 200.00 123650.04 Dr
+
+                                        Page 3 of 5
+                       The Federal Bank Ltd. Corporate Office: Federal Towers, Market Rd, Periyar Nagar, Aluva, Kerala 683101
+                                Phone number: 0484 2630996 Website: www.federal.co.in
+
+================================================================================
+PAGE 4
+================================================================================
+
+  24*7 Phone Banking
+    1800 425 1199
+    1800 420 1199
+   www.federal.co.in
+
+     Date Value Date      Particulars      Tran Type Cheque Details Withdrawals Deposits Balance Dr/Cr
+
+    19/12/2025 19/12/2025 UPIOUT/795757093535/paytmqr281005050101gt8rs/5541 TFR 270.00 123380.04 Dr
+
+    19/12/2025 19/12/2025 UPIOUT/858251103535/gpay-11214262874@okbizax/8011 TFR 50.00 123330.04 Dr
+
+    19/12/2025 19/12/2025 UPIOUT/971564093535/dominospizzaonline@ptybl/5814 TFR 181.65 123148.39 Dr
+
+    20/12/2025 20/12/2025 UPIOUT/166510993545/Q576683920@ybl/Sent via /5411 TFR 74.00 123074.39 Dr
+
+    20/12/2025 20/12/2025 UPIOUT/231289063545/9819484882@kotak811/Sent/0000 TFR 140.00 122934.39 Dr
+
+    22/12/2025 22/12/2025 UPIOUT/744693203565/paytm.s15wof1@pty/Sent v/5812 TFR 455.00 122479.39 Dr
+
+    23/12/2025 23/12/2025 UPIOUT/907685983575/paytmqr6iztch@ptys/Sent /5411 TFR 10.00 122469.39 Dr
+
+    23/12/2025 23/12/2025 UPIOUT/977944133575/paytmqr6b3nv4@ptys/Sent /4722 TFR 10.00 122459.39 Dr
+
+    24/12/2025 24/12/2025 UPIOUT/179988293585/rasulbepari86@okaxis/Sen/0000 TFR 230.00 122229.39 Dr
+
+    24/12/2025 24/12/2025 UPIOUT/180284603585/paytm.s1tr10q@pty/Sent v/5411 TFR 80.00 122149.39 Dr
+
+    24/12/2025 24/12/2025 UPIOUT/238043523585/Q898729550@ybl/Sent via /5441 TFR 720.00 121429.39 Dr
+
+    25/12/2025 25/12/2025 UPIOUT/419353063595/eazypay.549521225@icici//5411 TFR 926.00 120503.39 Dr
+
+    25/12/2025 25/12/2025 UPIOUT/420384103595/gpay-12190907738@okbizax/5912 TFR 170.00 120333.39 Dr
+
+    25/12/2025 25/12/2025 UPIOUT/436466483595/gpay-11222302358@okbizic/8931 TFR 2152.00 118181.39 Dr
+
+    25/12/2025 25/12/2025 UPIOUT/497275583595/amshinde96-1@oksbi/Sent /0000 TFR 1000.00 117181.39 Dr
+
+    26/12/2025 26/12/2025 UPIOUT/637203543605/gpay-12190907738@okbizax/5912 TFR 150.00 117031.39 Dr
+
+    26/12/2025 26/12/2025 UPIOUT/650488903605/Q05569493@ybl/Sent via J/5541 TFR 180.00 116851.39 Dr
+
+    26/12/2025 26/12/2025 UPIOUT/695919753605/abhidashinde007@okaxis/S/0000 TFR 350.00 116501.39 Dr
+
+    27/12/2025 26/12/2025 SBINT:27-09-2025 to 26-12-2025[77770132595618] TFR 734.00 117235.39 Cr
+
+    27/12/2025 27/12/2025 UPIOUT/934399603615/Q571319501@ybl/Sent via /9399 TFR 32.00 117203.39 Dr
+
+    27/12/2025 27/12/2025 UPIOUT/952308243615/paytmqr6o6r4f@ptys/Sent /5137 TFR 260.00 116943.39 Dr
+
+    27/12/2025 27/12/2025 UPIOUT/952787213615/paytmqr1waobdddf5@paytm//5411 TFR 55.00 116888.39 Dr
+
+    27/12/2025 27/12/2025 UPIOUT/955927323615/7058668009-297jp@jio/Sen/0000 TFR 60.00 116828.39 Dr
+
+                                        Page 4 of 5
+                       The Federal Bank Ltd. Corporate Office: Federal Towers, Market Rd, Periyar Nagar, Aluva, Kerala 683101
+                                Phone number: 0484 2630996 Website: www.federal.co.in
+
+================================================================================
+PAGE 5
+================================================================================
+
+  24*7 Phone Banking
+    1800 425 1199
+    1800 420 1199
+   www.federal.co.in
+
+     Date Value Date      Particulars      Tran Type Cheque Details Withdrawals Deposits Balance Dr/Cr
+
+    27/12/2025 27/12/2025 UPIOUT/956217753615/BHARATPE.9T0O0K7U2D92255/54 TFR 10.00 116818.39 Dr
+               11
+    27/12/2025 27/12/2025 UPIOUT/957303523615/paytmqr6lzpku@ptys/Sent /5912 TFR 55.00 116763.39 Dr
+
+    28/12/2025 28/12/2025 UPIOUT/118236983625/paytmqr698fe4@ptys/Sent /5411 TFR 50.00 116713.39 Dr
+
+    28/12/2025 28/12/2025 UPIOUT/257768833625/Q605217010@ybl/Sent via /5411 TFR 25.00 116688.39 Dr
+
+    29/12/2025 29/12/2025 UPIOUT/344460013635/paytmqr10o0uu@paytm/Sent/5943 TFR 2.00 116686.39 Dr
+
+    29/12/2025 29/12/2025 UPIOUT/345057373635/Q280085344@ybl/Sent via /5411 TFR 124.00 116562.39 Dr
+
+    29/12/2025 29/12/2025 UPIOUT/346055713635/paytmqr281005050101gt8rs/5541 TFR 290.00 116272.39 Dr
+
+    29/12/2025 29/12/2025 UPIOUT/476068893635/paytmqr62dsi9@ptys/Sent /5411 TFR 60.00 116212.39 Dr
+
+    29/12/2025 29/12/2025 UPIOUT/476104133635/paytmqr62dsi9@ptys/Sent /5411 TFR 20.00 116192.39 Dr
+
+    29/12/2025 29/12/2025 UPIOUT/476180003635/paytmqr62dsi9@ptys/Sent /5411 TFR 30.00 116162.39 Dr
+
+    30/12/2025 30/12/2025 UPIOUT/719113573645/dr.manishagharad@oksbi/S/0000 TFR 27000.00 89162.39 Dr
+
+    31/12/2025 31/12/2025 UPIOUT/805865263655/paytmqr6vyrcj@ptys/Sent /5451 TFR 109.00 89053.39 Dr
+
+    31/12/2025 31/12/2025 UPIOUT/837686843655/Q024125297@ybl/Sent via /5812 TFR 120.00 88933.39 Dr
+
+               GRAND TOTAL                              82813.12 111103.00
+
+     Abbreviations Used
+
+     CASH    Cash Transaction TFR    Transfer Transaction
+     FT      Fund Transfer   CLG     Clearing Transfer
+
+     SBINT   Interest on Savings account MB Mobile Banking
+
+     D.ISCLAIMER
+       This computer generated statement contains the particulars of the transaction(s) in the account that have been updated till the time of day end operations of the CBS system of the Bank on
+       the previous working day and the same will not reflect the transaction(s) that have occurred in the account, if any, subsequent thereto. The Federal Bank Ltd. shall not be liable/responsible
+     . for want of full particulars of the transaction(s) at the time of the generation of this statement.
+
+                                        Page 5 of 5
+                       The Federal Bank Ltd. Corporate Office: Federal Towers, Market Rd, Periyar Nagar, Aluva, Kerala 683101
+                                Phone number: 0484 2630996 Website: www.federal.co.in

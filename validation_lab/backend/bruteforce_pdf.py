@@ -1,0 +1,79 @@
+import fitz
+import re
+
+PDF_PATH = r"z:\CA\validation_lab\backend\temp\11707454011-JUL-25221947 2.PDF"
+
+text = """
+AKSHATA   DHANYAKUMAR    PATIL
+      INDRADHWAJ PLOT NO-6                    Home Branch: VISHRAMBAG
+      RAMKRISHNA PARAMHANS SOC.100FT.RD.,SANGLI
+      SANGLI
+      MAHARASHTRA 416416
+
+      Customer ID: 117074540
+      IFSC Code: BKID0001507
+   0 1 Customer e-mail:*************@*****.COM
+
+   3011 M 3O1AC MRT A 22R002 2254025 Statement Of Account from : 01 OCT 2024 to 31 MAR 2025
+
+      Deposit Accounts:
+                                                       Balance as on
+           Account Type      Account Number                         Currency
+                                                         31 MAR 2025
+      SAVINGS BANK            150710110010982               26,849.30 INR
+
+A/C Number: 150710110010982
+   11 VISHRAMBAG BRANCH
+
+                                      Chq/Vouch
+       Date          Particulars                Withdrawal Deposit    Balance
+                                       Number
+            B/F     150710110010982                                       66,935.30
+    03-Oct-2024 APBS CR INW - MUKHYAMANTRI MAZI LA            1,500.00    68,435.30
+            9284901484 AK
+    08-Oct-2024 APBS CR INW - MUKHYAMANTRI MAZI LA            3,000.00    71,435.30
+            9829764856 AK
+    06-Nov-2024 UNAMB/747690003692/NSDL/NPS-CONTRI/1507101 50,295.00      21,140.30
+            10010982
+    08-Nov-2024 150710110010982:SBInt.Pd:05-08-2024 to         327.00     21,467.30
+            30-10-2024
+    25-Dec-2024 APBS CR INW - MUKHYAMANTRI MAZI LA            1,500.00    22,967.30
+            2655921365 OB
+    05-Jan-2025 CWDR//454688/SNM9055                 500.00               22,467.30
+    24-Jan-2025 APBS CR INW - MUKHYAMANTRI MAZI LA            1,500.00    23,967.30
+            3742797198 OB
+    09-Feb-2025 150710110010982:SBInt.Pd:31-10-2024 to         177.00     24,144.30
+            31-01-2025
+    11-Feb-2025 ATM Card Maint Charge + GST          295.00               23,849.30
+    08-Mar-2025 APBS CR INW - Credit 5691280942 AKSHATA       1,500.00    25,349.30
+            DHANYAKU
+    12-Mar-2025 APBS CR INW - Ladki Bahin MAR 25 5976962640   1,500.00    26,849.30
+            AKSH
+"""
+
+passwords = set()
+for m in re.findall(r'\b\w+\b', text):
+    passwords.add(m)
+    passwords.add(m.lower())
+    passwords.add(m.upper())
+
+passwords.add("AKSHATA")
+passwords.add("AKSH0982") # First 4 name, last 4 account
+passwords.add("AKSH1484") # First 4 name, last 4 phone
+passwords.add("9284901484")
+passwords.add("9829764856")
+passwords.add("5691280942")
+passwords.add("5976962640")
+
+found = None
+doc = fitz.open(PDF_PATH)
+if doc.needs_pass:
+    for pwd in passwords:
+        if doc.authenticate(pwd):
+            found = pwd
+            break
+
+if found:
+    print(f"FOUND: {found}")
+else:
+    print("NOT FOUND")

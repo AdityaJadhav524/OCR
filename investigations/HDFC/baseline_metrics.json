@@ -1,0 +1,97 @@
+{
+  "engine": "current_engine_paddleocr_v2",
+  "ocr_engine": "PaddleOCR 2.7.3 (Python 3.11)",
+  "parser": "coordinate_parser_v2",
+  "validator": "ledger_truth",
+  "pdf_type": "SCANNED_IMAGE",
+  "extraction": {
+    "total_transactions": 107,
+    "total_rejects": 14,
+    "total_anomalies": 27,
+    "debit_count": 101,
+    "credit_count": 6,
+    "balance_extracted": 107
+  },
+  "layout": {
+    "footer_leak_count": 10,
+    "footer_leak_transactions": [
+      {
+        "date": "17/05/25",
+        "narration_snippet": "HDFC BANK LIMITED Contes of this statemen will be considered correct if ao error is reported within 30 days of receipt of statemea.The address on this staemeat is that ou secord with the Bank as at th",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "27/05/25",
+        "narration_snippet": "*Closing balance includes funds earmarked for hold and uncleared funds HDFC BANK LIMITED Registered Offce AddressHDFC Bank HouseSenapan Bapar Marg Lowe ParelMumbai 400013 State accou ns statement REST",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "03/05/25",
+        "narration_snippet": "*Closing balance includes funds earmarked for hold and uncleared funds HDFC BANK LIMITED Registered Offce AddressHDFC Bank HouseSenapan Bapar Marg Lowe ParelMumbai 400013 State accou ns statement tbra",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "29/05/25",
+        "narration_snippet": "Contes of this statemen will be considered correct if ao error is reported within 30 days of receipt of statemea.The address on this staemeat is that ou secord with the Bank as at the day of requestig",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "02/05/25",
+        "narration_snippet": "*Closing balance includes funds earmarked for hold and uncleared funds Coutens of this statement will be considered carrectif ao error is reported within 30 days of receipt of statemeat.The address HD",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "30/05/25",
+        "narration_snippet": "HDFC BANK LIMITED *Closing balance includes funds earmarked for hold and uncleared funds Registered Offce AddressHDFC Bank HouseSenapan Bapar Marg Lowe ParelMumbai 400013 State accou ns statement UPI-",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "06/05/25",
+        "narration_snippet": "HDFC BANK LIMITED *Closing balance includes funds earmarked for hold and uncleared funds Registered Offce AddressHDFC Bank HouseSenapan Bapar Marg Lowe ParelMumbai 400013 State accou ns statement t br",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "12/05/25",
+        "narration_snippet": "*Closing balance includes funds earmarked for hold and uncleared funds HDFC BANK LIMITED Registered Offce AddressHDFC Bank HouseSenapan Bapar Marg Lowe ParelMumbai 400013 State accou ns statement P-94",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "08/05/25",
+        "narration_snippet": "*Closing balance includes funds earmarked for hold and uncleared funds HDFC BANK LIMITED Registered Offce AddressHDFC Bank HouseSenapan Bapar Marg Lowe ParelMumbai 400013 State accou ns statement SAPK",
+        "leaked_string": "HDFC BANK LIMITED"
+      },
+      {
+        "date": "22/05/25",
+        "narration_snippet": "HDFC BANK LIMITED *Closing balance includes funds earmarked for hold and uncleared funds Contes of this statemen will be considered correct if ao error is reported within 30 days of receipt of statmea",
+        "leaked_string": "HDFC BANK LIMITED"
+      }
+    ],
+    "header_leak_count": 0
+  },
+  "accounting": {
+    "ledger_pass_count": 80,
+    "ledger_fail_count": 27,
+    "ledger_pass_pct": 74.8,
+    "anomaly_breakdown": {
+      "MULTIPLE_DOTS": 11,
+      "PRIMARY_BALANCE_ANOMALY": 15,
+      "POWER_OF_TEN_DRIFT": 2,
+      "DATE_NARRATION_MERGE": 1
+    }
+  },
+  "rejects": {
+    "total": 14,
+    "by_reason": {
+      "no_balance": 9,
+      "both_debit_and_credit": 2,
+      "no_date": 3
+    }
+  },
+  "notes": [
+    "HDFC PDF is 100% scanned (12 pages, each a 1240x1636 JPEG at ~150 DPI)",
+    "Zero native text layer — all text via OCR",
+    "Footer leaks: 10 transactions have HDFC footer text in narration",
+    "Root cause: Row grouper blindly appends non-anchor rows (ISSUE-HDFC-003)",
+    "Known issues: ISSUE-HDFC-001, ISSUE-HDFC-002, ISSUE-HDFC-003 (from findings.md)"
+  ]
+}

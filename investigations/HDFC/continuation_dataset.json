@@ -1,0 +1,413 @@
+{
+  "valid_candidates": [
+    {
+      "text": "TY-YESB0MCHUPI-842465317214-EGGS",
+      "row_gap": 9.0,
+      "page_position": 0.331,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "UPI"
+      ],
+      "page": 1
+    },
+    {
+      "text": "BAKERY-GPAY-11256635426@OKB",
+      "row_gap": 14.0,
+      "page_position": 0.371,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "IZAXIS-UTIB0000553-870389050015-CAKE",
+      "row_gap": 14.0,
+      "page_position": 0.388,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "RAIMAN-Q991665194@YBL",
+      "row_gap": 16.0,
+      "page_position": 0.428,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "YESB0YBLUPI-090633360799-TOAST",
+      "row_gap": 21.0,
+      "page_position": 0.449,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "UPI"
+      ],
+      "page": 1
+    },
+    {
+      "text": "L-UT1B0000640-525384748072-MANCHURIAN",
+      "row_gap": 9.0,
+      "page_position": 0.527,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "GARDUN-S600459590@OKBIZ",
+      "row_gap": 14.0,
+      "page_position": 0.566,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "AXIS-UTIB0000553-313534911814-LUNCH",
+      "row_gap": 21.0,
+      "page_position": 0.587,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "Q045280766@YBL",
+      "row_gap": 11.0,
+      "page_position": 0.626,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "YESB0YBLUPI-912667894791-DISH",
+      "row_gap": 14.0,
+      "page_position": 0.647,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "UPI"
+      ],
+      "page": 1
+    },
+    {
+      "text": "0244954-MASURA",
+      "row_gap": 12.0,
+      "page_position": 0.686,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "-PAYTMQRICA555ZP",
+      "row_gap": 19.0,
+      "page_position": 0.725,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "PAYTM"
+      ],
+      "page": 1
+    },
+    {
+      "text": "DW@PAYTM-YESB0PIMUPI-330154559387-PANEER",
+      "row_gap": 19.0,
+      "page_position": 0.744,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "UPI",
+        "PAYTM"
+      ],
+      "page": 1
+    },
+    {
+      "text": "SHA-JAVEDSHAIKH6785",
+      "row_gap": 14.0,
+      "page_position": 0.783,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "2@IBL-HDFC0000080-006493397829-GATE TOGE",
+      "row_gap": 21.0,
+      "page_position": 0.804,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "THER",
+      "row_gap": 13.0,
+      "page_position": 0.825,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "PAYTMQR28100505",
+      "row_gap": 19.0,
+      "page_position": 0.863,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "PAYTM"
+      ],
+      "page": 1
+    },
+    {
+      "text": "HDFC BANK",
+      "row_gap": 29.0,
+      "page_position": 0.094,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "AND 522,1EXTN OPP ZILLA PARISHAD",
+      "row_gap": -7.0,
+      "page_position": 0.126,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "Z,P ROAD,SANGLI,MAHARASHTRA",
+      "row_gap": -5.0,
+      "page_position": 0.135,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 2
+    }
+  ],
+  "footer_candidates": [
+    {
+      "text": "01011SV9DCQXCZPS@PAYTM-YESBOPTMUPI-S9493",
+      "row_gap": 19.0,
+      "page_position": 0.882,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "UPI",
+        "PAYTM"
+      ],
+      "page": 1
+    },
+    {
+      "text": "6773566-PAYMENT FROM PHONE",
+      "row_gap": 19.0,
+      "page_position": 0.902,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [
+        "PAYMENT"
+      ],
+      "page": 1
+    },
+    {
+      "text": "HDFC BANK LIMITED",
+      "row_gap": 18.0,
+      "page_position": 0.946,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "*Closing balance includes funds earmarked for hold and uncleared funds",
+      "row_gap": -4.0,
+      "page_position": 0.958,
+      "token_count": 1,
+      "contaminants": [
+        "Closing balance"
+      ],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "Contes of this statemen will be considered correct if ao error is reported within 30 days of receipt of statemea.The address on this staemeat is that ou secord with the Bank as at the day of requestig",
+      "row_gap": -7.0,
+      "page_position": 0.969,
+      "token_count": 1,
+      "contaminants": [
+        "Address"
+      ],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "ns statement",
+      "row_gap": -5.0,
+      "page_position": 0.974,
+      "token_count": 1,
+      "contaminants": [
+        "Statement"
+      ],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "State accou",
+      "row_gap": -8.0,
+      "page_position": 0.983,
+      "token_count": 1,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "Registered Offce AddressHDFC Bank HouseSenapan Bapar Marg Lowe ParelMumbai 400013",
+      "row_gap": 14.0,
+      "page_position": 1.0,
+      "token_count": 1,
+      "contaminants": [
+        "Address",
+        "Registered"
+      ],
+      "valid_kws": [],
+      "page": 1
+    },
+    {
+      "text": "Page No11",
+      "row_gap": -2063.0,
+      "page_position": 0.067,
+      "token_count": 1,
+      "contaminants": [
+        "Page"
+      ],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "Account Branch:SANGLIMAHARASHIRA",
+      "row_gap": 0.0,
+      "page_position": 0.105,
+      "token_count": 1,
+      "contaminants": [
+        "Branch"
+      ],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "We understand your world Address HDFC BANK LTD,CTS NO 522",
+      "row_gap": -12.0,
+      "page_position": 0.115,
+      "token_count": 3,
+      "contaminants": [
+        "Address"
+      ],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "168-1 NAVIN STAND PARISAR BISUR Phone no. 18002600/18001600",
+      "row_gap": -10.0,
+      "page_position": 0.165,
+      "token_count": 3,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "MAHARASHTRA INDIA Account No 50100478383644 OTHER",
+      "row_gap": -2.0,
+      "page_position": 0.216,
+      "token_count": 3,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "RTGS/NEFTIFSC HDFC0000222 MICR416240151",
+      "row_gap": -5.0,
+      "page_position": 0.244,
+      "token_count": 3,
+      "contaminants": [
+        "IFSC",
+        "MICR"
+      ],
+      "valid_kws": [
+        "NEFT"
+      ],
+      "page": 2
+    },
+    {
+      "text": "Branch Code 222",
+      "row_gap": 0.0,
+      "page_position": 0.256,
+      "token_count": 2,
+      "contaminants": [
+        "Branch"
+      ],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "NominationRegistered Account Type SAVINGS -RESIDENTS(105)",
+      "row_gap": -7.0,
+      "page_position": 0.267,
+      "token_count": 3,
+      "contaminants": [
+        "Nomination",
+        "Registered"
+      ],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "3005/25 UPI-SAI PARK 0000338148174038 30/05/25 280.00 693,543.42",
+      "row_gap": 11.0,
+      "page_position": 0.45,
+      "token_count": 6,
+      "contaminants": [],
+      "valid_kws": [
+        "UPI"
+      ],
+      "page": 2
+    },
+    {
+      "text": "STATEMENT SUMMARY:",
+      "row_gap": 57.0,
+      "page_position": 0.785,
+      "token_count": 1,
+      "contaminants": [
+        "Statement"
+      ],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "Opening Balance Dr Count Cr Count Debits Credits Closing Bal",
+      "row_gap": -10.0,
+      "page_position": 0.8,
+      "token_count": 6,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 2
+    },
+    {
+      "text": "775.763.61 105 7 109,68727 25.697.36 691,773.70",
+      "row_gap": -8.0,
+      "page_position": 0.809,
+      "token_count": 6,
+      "contaminants": [],
+      "valid_kws": [],
+      "page": 2
+    }
+  ]
+}

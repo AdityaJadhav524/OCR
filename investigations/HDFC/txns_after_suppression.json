@@ -1,0 +1,7196 @@
+[
+  {
+    "date": "13/05/25",
+    "narration": "UPI-ARATI SACHIN KSHIRSA-PAYTM S1866L9@P TY-YESB0MCHUPI-842465317214-EGGS 13/05/25",
+    "debit": 82.0,
+    "credit": null,
+    "balance": 735525.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "82.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "735,525.39",
+      "parsed_debit": 82.0,
+      "parsed_credit": null,
+      "parsed_balance": 735525.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 82.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "UNSEEDED",
+    "_evidence_id": "txn_00002",
+    "_source_page": 1,
+    "_source_bbox": [
+      76.0,
+      648.0,
+      1579.0,
+      724.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "13/05/25",
+        "x0": 76.0,
+        "y0": 653.0,
+        "x1": 160.0,
+        "y1": 679.0,
+        "page": 1,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "UPI-ARATI SACHIN KSHIRSA-PAYTM S1866L9@P",
+        "x0": 167.0,
+        "y0": 648.0,
+        "x1": 641.0,
+        "y1": 682.0,
+        "page": 1,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "0000842465317214",
+        "x0": 721.0,
+        "y0": 651.0,
+        "x1": 898.0,
+        "y1": 679.0,
+        "page": 1,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "13/05/25",
+        "x0": 888.0,
+        "y0": 653.0,
+        "x1": 983.0,
+        "y1": 679.0,
+        "page": 1,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "82.00",
+        "x0": 1131.0,
+        "y0": 653.0,
+        "x1": 1188.0,
+        "y1": 679.0,
+        "page": 1,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "735,525.39",
+        "x0": 1478.0,
+        "y0": 650.0,
+        "x1": 1579.0,
+        "y1": 682.0,
+        "page": 1,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "TY-YESB0MCHUPI-842465317214-EGGS",
+        "x0": 176.0,
+        "y0": 691.0,
+        "x1": 541.0,
+        "y1": 724.0,
+        "page": 1,
+        "source": "paddleocr",
+        "yc": 707.5
+      }
+    ],
+    "ledger_truth": {
+      "available": false,
+      "reason": "NO_PREVIOUS_BALANCE"
+    },
+    "agreement_state": "UNSEEDED"
+  },
+  {
+    "date": "13/05/25",
+    "narration": "BAKERY-GPAY-11256635426@OKB UPI-DEEPSONS IZAXIS-UTIB0000553-870389050015-CAKE 13/05/25",
+    "debit": 1500.0,
+    "credit": null,
+    "balance": 734025.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "1,500.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "734,025.39",
+      "parsed_debit": 1500.0,
+      "parsed_credit": null,
+      "parsed_balance": 734025.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 1500.0,
+    "ocr_x": 1107.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00003",
+    "_source_page": 1,
+    "_source_bbox": [
+      81.0,
+      735.0,
+      1576.0,
+      849.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 735525.39,
+      "expected_delta": 1500.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "13/05/25",
+    "narration": "UPI-KUMAR MAHADEV RAIMAN-Q991665194@YBL YESB0YBLUPI-090633360799-TOAST 13/05/25",
+    "debit": 160.0,
+    "credit": null,
+    "balance": 733865.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "160.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "733,865.39",
+      "parsed_debit": 160.0,
+      "parsed_credit": null,
+      "parsed_balance": 733865.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 160.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00004",
+    "_source_page": 1,
+    "_source_bbox": [
+      81.0,
+      862.0,
+      1576.0,
+      981.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 734025.39,
+      "expected_delta": 160.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "14/05/25",
+    "narration": "CMGTTDATA/2400024041150906-0542232000217 14/05/25",
+    "debit": 1638.0,
+    "credit": null,
+    "balance": 732227.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "1,638.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "732,227.39",
+      "parsed_debit": 1638.0,
+      "parsed_credit": null,
+      "parsed_balance": 732227.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 1638.0,
+    "ocr_x": 1105.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00005",
+    "_source_page": 1,
+    "_source_bbox": [
+      81.0,
+      992.0,
+      1579.0,
+      1031.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 733865.39,
+      "expected_delta": 1638.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "14/05/25",
+    "narration": "UPI-HUSENMIRASAHEBMULA-7498274214-2@IB L-UT1B0000640-525384748072-MANCHURIAN 14/05/25",
+    "debit": 50.0,
+    "credit": null,
+    "balance": 732177.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "50.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "732,177.39",
+      "parsed_debit": 50.0,
+      "parsed_credit": null,
+      "parsed_balance": 732177.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 50.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00006",
+    "_source_page": 1,
+    "_source_bbox": [
+      81.0,
+      1077.0,
+      1579.0,
+      1153.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 732227.39,
+      "expected_delta": 50.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "14/05/25",
+    "narration": "GARDUN-S600459590@OKBIZ UPI-HOTEL NISARG AXIS-UTIB0000553-313534911814-LUNCH 14/05/25",
+    "debit": 1120.0,
+    "credit": null,
+    "balance": 731057.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "1,120.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "731,057.39",
+      "parsed_debit": 1120.0,
+      "parsed_credit": null,
+      "parsed_balance": 731057.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 1120.0,
+    "ocr_x": 1102.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00007",
+    "_source_page": 1,
+    "_source_bbox": [
+      81.0,
+      1162.0,
+      1576.0,
+      1283.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 732177.39,
+      "expected_delta": 1120.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "14/05/25",
+    "narration": "UPI-NAVIDAHEMAD IBRAHIM Q045280766@YBL YESB0YBLUPI-912667894791-DISH 14/05/25",
+    "debit": 30.0,
+    "credit": null,
+    "balance": 731027.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "30.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "731,027.39",
+      "parsed_debit": 30.0,
+      "parsed_credit": null,
+      "parsed_balance": 731027.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 30.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00008",
+    "_source_page": 1,
+    "_source_bbox": [
+      81.0,
+      1294.0,
+      1579.0,
+      1415.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 731057.39,
+      "expected_delta": 30.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "14/05/25",
+    "narration": "UPI-SML-Q934845467@YBL-YESB0YBLUPI-09690 0244954-MASURA 14/05/25",
+    "debit": 220.0,
+    "credit": null,
+    "balance": 730807.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "220.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "730,807.39",
+      "parsed_debit": 220.0,
+      "parsed_credit": null,
+      "parsed_balance": 730807.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 220.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00009",
+    "_source_page": 1,
+    "_source_bbox": [
+      78.0,
+      1424.0,
+      1579.0,
+      1500.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 731027.39,
+      "expected_delta": 220.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "16/05/25",
+    "narration": "DW@PAYTM-YESB0PIMUPI-330154559387-PANEER -PAYTMQRICA555ZP UPI-MR DASHRATH SHAMRAO 16/05/25",
+    "debit": 100.0,
+    "credit": null,
+    "balance": 730707.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "100.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "730,707.39",
+      "parsed_debit": 100.0,
+      "parsed_credit": null,
+      "parsed_balance": 730707.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 100.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00010",
+    "_source_page": 1,
+    "_source_bbox": [
+      81.0,
+      1514.0,
+      1579.0,
+      1627.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 730807.39,
+      "expected_delta": 100.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "16/05/25",
+    "narration": "SHA-JAVEDSHAIKH6785 UPI-JAVED ALLABAKSHA THER 2@IBL-HDFC0000080-006493397829-GATE TOGE 16/05/25",
+    "debit": 2000.0,
+    "credit": null,
+    "balance": 728707.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "2,000.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "728,707.39",
+      "parsed_debit": 2000.0,
+      "parsed_credit": null,
+      "parsed_balance": 728707.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 2000.0,
+    "ocr_x": 1107.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00011",
+    "_source_page": 1,
+    "_source_bbox": [
+      83.0,
+      1641.0,
+      1577.0,
+      1803.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 730707.39,
+      "expected_delta": 2000.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "17/05/25",
+    "narration": "01011SV9DCQXCZPS@PAYTM-YESBOPTMUPI-S9493 UPI-MR DASHRATH SHAMRAO PAYTMQR28100505 6773566-PAYMENT FROM PHONE 17/05/25",
+    "debit": 15.0,
+    "credit": null,
+    "balance": 728692.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "15.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "728,692.39",
+      "parsed_debit": 15.0,
+      "parsed_credit": null,
+      "parsed_balance": 728692.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 15.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00012",
+    "_source_page": 1,
+    "_source_bbox": [
+      79.0,
+      1816.0,
+      1579.0,
+      1972.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 728707.39,
+      "expected_delta": 15.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "17/05/25",
+    "narration": "Contes of this statemen will be considered correct if ao error is reported within 30 days of receipt of statemea.The address on this staemeat is that ou secord with the Bank as at the day of requestig UPI-RUPALI MAHADEV 17/05/25",
+    "debit": 30.0,
+    "credit": null,
+    "balance": 728662.39,
+    "page": 1,
+    "raw_extraction": {
+      "ocr_debit_text": "30.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "728.662.39",
+      "parsed_debit": 30.0,
+      "parsed_credit": null,
+      "parsed_balance": 728662.39
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "728.662.39",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 30.0,
+    "ocr_x": 1125.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00013",
+    "_source_page": 1,
+    "_source_bbox": [
+      67.0,
+      1982.0,
+      1576.0,
+      2118.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 728692.39,
+      "expected_delta": 30.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "30/05/25",
+    "narration": "UPI-SHIVAJI ASHOK BHARIS-7798539582@YBL~ ONE SBIN0008891-380109783452.PAYMENTFROMPH 30/05/25",
+    "debit": 800.0,
+    "credit": null,
+    "balance": 693893.42,
+    "page": 2,
+    "raw_extraction": {
+      "ocr_debit_text": "800.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "693,893.42",
+      "parsed_debit": 800.0,
+      "parsed_credit": null,
+      "parsed_balance": 693893.42
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0001",
+        "diff": 33968.97,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -33968.97"
+      }
+    },
+    "ocr_amount": 800.0,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00015",
+    "_source_page": 2,
+    "_source_bbox": [
+      81.0,
+      648.0,
+      1579.0,
+      770.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "30/05/25",
+        "x0": 81.0,
+        "y0": 653.0,
+        "x1": 162.0,
+        "y1": 677.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "UPI-SHIVAJI ASHOK BHARIS-7798539582@YBL~",
+        "x0": 169.0,
+        "y0": 648.0,
+        "x1": 624.0,
+        "y1": 682.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "0000380109783452",
+        "x0": 724.0,
+        "y0": 656.0,
+        "x1": 895.0,
+        "y1": 679.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 667.5
+      },
+      {
+        "text": "30/05/25",
+        "x0": 900.0,
+        "y0": 653.0,
+        "x1": 983.0,
+        "y1": 679.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "800.00",
+        "x0": 1121.0,
+        "y0": 653.0,
+        "x1": 1186.0,
+        "y1": 679.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "693,893.42",
+        "x0": 1479.0,
+        "y0": 656.0,
+        "x1": 1579.0,
+        "y1": 679.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 667.5
+      },
+      {
+        "text": "SBIN0008891-380109783452.PAYMENTFROMPH",
+        "x0": 176.0,
+        "y0": 696.0,
+        "x1": 621.0,
+        "y1": 719.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 707.5
+      },
+      {
+        "text": "ONE",
+        "x0": 173.0,
+        "y0": 735.0,
+        "x1": 227.0,
+        "y1": 770.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 752.5
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 728662.39,
+      "expected_delta": 34768.97,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "30/05/25",
+    "narration": "3005/25 UPI-MR RANVUAY KUMAR RANVJAYK262@OK IN-PAYIMQRIFHYLH2FHT@PAYTM UPI-SAI PARK ESS AXIS-CBIN0282444-018785526161-CLOTHES PR YESB0PTMUPI-338148174038-THALI 30/05/25 30/05/25",
+    "debit": 70.0,
+    "credit": null,
+    "balance": 693823.42,
+    "page": 2,
+    "raw_extraction": {
+      "ocr_debit_text": "70.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "693.823.42",
+      "parsed_debit": 70.0,
+      "parsed_credit": null,
+      "parsed_balance": 693823.42
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "693.823.42",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 70.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00016",
+    "_source_page": 2,
+    "_source_bbox": [
+      81.0,
+      781.0,
+      1576.0,
+      1066.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 693893.42,
+      "expected_delta": 70.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "30/05/25",
+    "narration": "UPI-MR LALIT KUMAR PUK-Q754238133@YBL YESB0YBLUPI-052855723886-CHOCOLATE 30/05/25",
+    "debit": 100.0,
+    "credit": null,
+    "balance": 693443.42,
+    "page": 2,
+    "raw_extraction": {
+      "ocr_debit_text": "100.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "693.443.42",
+      "parsed_debit": 100.0,
+      "parsed_credit": null,
+      "parsed_balance": 693443.42
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0002",
+        "diff": 280.0,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -280.0"
+      }
+    },
+    "ocr_amount": 100.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00017",
+    "_source_page": 2,
+    "_source_bbox": [
+      81.0,
+      1080.0,
+      1576.0,
+      1153.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "30/05/25",
+        "x0": 81.0,
+        "y0": 1085.0,
+        "x1": 162.0,
+        "y1": 1108.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 1096.5
+      },
+      {
+        "text": "UPI-MR LALIT KUMAR PUK-Q754238133@YBL",
+        "x0": 169.0,
+        "y0": 1080.0,
+        "x1": 624.0,
+        "y1": 1113.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 1096.5
+      },
+      {
+        "text": "0000052855723886",
+        "x0": 719.0,
+        "y0": 1080.0,
+        "x1": 893.0,
+        "y1": 1111.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 1095.5
+      },
+      {
+        "text": "30/05/25",
+        "x0": 907.0,
+        "y0": 1085.0,
+        "x1": 986.0,
+        "y1": 1111.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 1098.0
+      },
+      {
+        "text": "100.00",
+        "x0": 1117.0,
+        "y0": 1080.0,
+        "x1": 1188.0,
+        "y1": 1113.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 1096.5
+      },
+      {
+        "text": "693.443.42",
+        "x0": 1479.0,
+        "y0": 1085.0,
+        "x1": 1576.0,
+        "y1": 1111.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 1098.0
+      },
+      {
+        "text": "YESB0YBLUPI-052855723886-CHOCOLATE",
+        "x0": 176.0,
+        "y0": 1125.0,
+        "x1": 571.0,
+        "y1": 1153.0,
+        "page": 2,
+        "source": "paddleocr",
+        "yc": 1139.0
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 693823.42,
+      "expected_delta": 380.0,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "30/05/25",
+    "narration": "KAMBLE-AKKAMBLE08-2@OKH UPI-ANAND KESHAV DFCBANK-SBIN0008043-589073041777-MAJA JA CKETRAHILA 31/05/25",
+    "debit": 1.0,
+    "credit": null,
+    "balance": 693442.42,
+    "page": 2,
+    "raw_extraction": {
+      "ocr_debit_text": "1.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "693,442.42",
+      "parsed_debit": 1.0,
+      "parsed_credit": null,
+      "parsed_balance": 693442.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 1.0,
+    "ocr_x": 1140.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00018",
+    "_source_page": 2,
+    "_source_bbox": [
+      81.0,
+      1167.0,
+      1576.0,
+      1328.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 693443.42,
+      "expected_delta": 1.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "31/05/25",
+    "narration": "BANK-YESBANK665272RZP@AXISBANK UPI-YES UTIB0000100-687720092184-QBSHBKUWA5UHXD 31/05/25",
+    "debit": 1638.72,
+    "credit": null,
+    "balance": 691803.7,
+    "page": 2,
+    "raw_extraction": {
+      "ocr_debit_text": "1,638.72",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "691,803.70",
+      "parsed_debit": 1638.72,
+      "parsed_credit": null,
+      "parsed_balance": 691803.7
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 1638.72,
+    "ocr_x": 1107.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00019",
+    "_source_page": 2,
+    "_source_bbox": [
+      83.0,
+      1344.0,
+      1576.0,
+      1458.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 693442.42,
+      "expected_delta": 1638.72,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "23/05/25",
+    "narration": "RAIMAN-Q991665194@YBL UPI-KUMARMAHADEV YESB0YBLUPI-502664328163-SANDWICH 23/05/25",
+    "debit": 80.0,
+    "credit": null,
+    "balance": 701079.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "80.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "701,079.52",
+      "parsed_debit": 80.0,
+      "parsed_credit": null,
+      "parsed_balance": 701079.52
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0003",
+        "diff": 9355.82,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of 9355.82"
+      }
+    },
+    "ocr_amount": 80.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00023",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      781.0,
+      1576.0,
+      896.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "23/05/25",
+        "x0": 81.0,
+        "y0": 783.0,
+        "x1": 162.0,
+        "y1": 807.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "UPI-KUMARMAHADEV",
+        "x0": 171.0,
+        "y0": 783.0,
+        "x1": 405.0,
+        "y1": 807.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "0000502664328163",
+        "x0": 724.0,
+        "y0": 783.0,
+        "x1": 893.0,
+        "y1": 807.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "23/05/25",
+        "x0": 905.0,
+        "y0": 783.0,
+        "x1": 983.0,
+        "y1": 809.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 796.0
+      },
+      {
+        "text": "80.00",
+        "x0": 1131.0,
+        "y0": 781.0,
+        "x1": 1186.0,
+        "y1": 809.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "701,079.52",
+        "x0": 1479.0,
+        "y0": 783.0,
+        "x1": 1576.0,
+        "y1": 809.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 796.0
+      },
+      {
+        "text": "RAIMAN-Q991665194@YBL",
+        "x0": 167.0,
+        "y0": 823.0,
+        "x1": 429.0,
+        "y1": 851.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 837.0
+      },
+      {
+        "text": "YESB0YBLUPI-502664328163-SANDWICH",
+        "x0": 174.0,
+        "y0": 863.0,
+        "x1": 557.0,
+        "y1": 896.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 879.5
+      }
+    ],
+    "agreement_state": "CONFLICT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 691803.7,
+      "expected_delta": 9275.82,
+      "expected_direction": "credit",
+      "balance_trust": "LOW",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "conflict_record": {
+      "unexplained_delta": 9195.82,
+      "candidate_causes": [
+        "ocr_amount_corruption",
+        "column_boundary_failure",
+        "token_ownership_failure",
+        "statement_contradiction"
+      ]
+    }
+  },
+  {
+    "date": "24/05/25",
+    "narration": "RECHARGE-AIRTELPREDIRECTI @AXL UPI-AIRTEL HONE UTIB0AXLUPI-362029604354-PAYMENTFROM P 24/05/25",
+    "debit": 252.0,
+    "credit": null,
+    "balance": 700827.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "252.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "700,827.52",
+      "parsed_debit": 252.0,
+      "parsed_credit": null,
+      "parsed_balance": 700827.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 252.0,
+    "ocr_x": 1116.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00024",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      905.0,
+      1579.0,
+      1068.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 701079.52,
+      "expected_delta": 252.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "24/05/25",
+    "narration": "SWAMI-GPAY-1119373978 UPI-RUPALI MAHADEV MENT FROM PHONE 0@OKBIZAXIS-UIIB0000553-281407190010-PAY 24/05/25",
+    "debit": 30.0,
+    "credit": null,
+    "balance": 700797.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "30.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "700,797.52",
+      "parsed_debit": 30.0,
+      "parsed_credit": null,
+      "parsed_balance": 700797.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 30.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00025",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      1082.0,
+      1576.0,
+      1238.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 700827.52,
+      "expected_delta": 30.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "24/05/25",
+    "narration": "UPI-SML-Q934845457@YBL-YESB0YBLUPI-97246 1041293-MASURA 24/05/25",
+    "debit": 280.0,
+    "credit": null,
+    "balance": 700517.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "280.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "700,517.52",
+      "parsed_debit": 280.0,
+      "parsed_credit": null,
+      "parsed_balance": 700517.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 280.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00026",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      1252.0,
+      1579.0,
+      1323.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 700797.52,
+      "expected_delta": 280.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "24/05/25",
+    "narration": "010110PEFY4G2LM3@PAYTM-YESB0PIMUPI-37833 PAYTMQR28100505 UPI-SURESH DHANAYAKUMAR 3119179-AMRAKHAND 24/05/25",
+    "debit": 55.0,
+    "credit": null,
+    "balance": 700452.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "55.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "700,452.52",
+      "parsed_debit": 55.0,
+      "parsed_credit": null,
+      "parsed_balance": 700452.52
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "POWER_OF_TEN_DRIFT",
+        "severity": "HIGH",
+        "diff": 10.0,
+        "magnitude": 1,
+        "detail": "Difference of 10.0 indicates single digit OCR substitution",
+        "anomaly_id": "A0004",
+        "affected_rows": []
+      }
+    },
+    "ocr_amount": 55.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00027",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      1342.0,
+      1576.0,
+      1498.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "24/05/25",
+        "x0": 81.0,
+        "y0": 1344.0,
+        "x1": 160.0,
+        "y1": 1368.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "UPI-SURESH DHANAYAKUMAR",
+        "x0": 174.0,
+        "y0": 1344.0,
+        "x1": 481.0,
+        "y1": 1368.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "0000378333119179",
+        "x0": 724.0,
+        "y0": 1344.0,
+        "x1": 890.0,
+        "y1": 1368.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "24/05/25",
+        "x0": 907.0,
+        "y0": 1344.0,
+        "x1": 983.0,
+        "y1": 1368.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "55.00",
+        "x0": 1131.0,
+        "y0": 1342.0,
+        "x1": 1186.0,
+        "y1": 1370.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "700,452.52",
+        "x0": 1479.0,
+        "y0": 1344.0,
+        "x1": 1576.0,
+        "y1": 1368.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "PAYTMQR28100505",
+        "x0": 169.0,
+        "y0": 1384.0,
+        "x1": 362.0,
+        "y1": 1415.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1399.5
+      },
+      {
+        "text": "010110PEFY4G2LM3@PAYTM-YESB0PIMUPI-37833",
+        "x0": 164.0,
+        "y0": 1424.0,
+        "x1": 643.0,
+        "y1": 1457.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1440.5
+      },
+      {
+        "text": "3119179-AMRAKHAND",
+        "x0": 176.0,
+        "y0": 1469.0,
+        "x1": 393.0,
+        "y1": 1498.0,
+        "page": 4,
+        "source": "paddleocr",
+        "yc": 1483.5
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 700517.52,
+      "expected_delta": 65.0,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "24/05/25",
+    "narration": "MORE-Q567584205@YBL-Y UPI-VISHAL SHANKAR ESB0YBLUPI.438134697155-VADAPAV 24/05/25",
+    "debit": 80.0,
+    "credit": null,
+    "balance": 700372.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "80.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "700,372.52",
+      "parsed_debit": 80.0,
+      "parsed_credit": null,
+      "parsed_balance": 700372.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 80.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00028",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      1514.0,
+      1579.0,
+      1627.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 700452.52,
+      "expected_delta": 80.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "26/05/25",
+    "narration": "SAKHAR-JAGADEBABAN3@OK HDFCBANK-SVCB0000106-375001694931-AUTO UPI-JAGADE DAGADU 26/05/25",
+    "debit": 100.0,
+    "credit": null,
+    "balance": 700272.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "100.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "700,272.52",
+      "parsed_debit": 100.0,
+      "parsed_credit": null,
+      "parsed_balance": 700272.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 100.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00029",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      1641.0,
+      1576.0,
+      1759.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 700372.52,
+      "expected_delta": 100.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "26/05/25",
+    "narration": "RECHARGE-JIOINAPPDIRECT@AXL-UTIB UPI-JIO 0AXLUPI-636918857225-PAYMENT FROM PHONE 26/05/25",
+    "debit": 902.0,
+    "credit": null,
+    "balance": 699370.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "902.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "699,370.52",
+      "parsed_debit": 902.0,
+      "parsed_credit": null,
+      "parsed_balance": 699370.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 902.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00030",
+    "_source_page": 4,
+    "_source_bbox": [
+      81.0,
+      1770.0,
+      1576.0,
+      1887.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 700272.52,
+      "expected_delta": 902.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "27/05/25",
+    "narration": "RESTAURANT-Q632954980@YBL UPI-WADESHWAR YESB0YBLUPI-591410260753-BREAKFAST 27/05/25 is that ou secord with the Bank as at the day of requestirg",
+    "debit": 437.0,
+    "credit": null,
+    "balance": 698933.52,
+    "page": 4,
+    "raw_extraction": {
+      "ocr_debit_text": "437.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698,933.52",
+      "parsed_debit": 437.0,
+      "parsed_credit": null,
+      "parsed_balance": 698933.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 437.0,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00031",
+    "_source_page": 4,
+    "_source_bbox": [
+      78.0,
+      1900.0,
+      1576.0,
+      2115.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 699370.52,
+      "expected_delta": 437.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "PATI-PATILSHUBHAM753 UPI UPI-SHUBHAM TATYASO 7-3@OKHDFCBANK-HDFC0000222-104133825677- 02/05/25",
+    "debit": null,
+    "credit": 100.0,
+    "balance": 775686.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": null,
+      "ocr_credit_text": "100.00",
+      "ocr_balance_text": "775,686.97",
+      "parsed_debit": null,
+      "parsed_credit": 100.0,
+      "parsed_balance": 775686.97
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0005",
+        "diff": 76653.45,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of 76653.45"
+      }
+    },
+    "ocr_amount": 100.0,
+    "ocr_x": 1317.0,
+    "assigned_column": "credit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00033",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      738.0,
+      1576.0,
+      897.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "02/05/25",
+        "x0": 81.0,
+        "y0": 741.0,
+        "x1": 160.0,
+        "y1": 764.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 752.5
+      },
+      {
+        "text": "UPI-SHUBHAM TATYASO",
+        "x0": 174.0,
+        "y0": 741.0,
+        "x1": 419.0,
+        "y1": 764.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 752.5
+      },
+      {
+        "text": "0000104133825677",
+        "x0": 721.0,
+        "y0": 738.0,
+        "x1": 893.0,
+        "y1": 762.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 750.0
+      },
+      {
+        "text": "02/05/25",
+        "x0": 905.0,
+        "y0": 741.0,
+        "x1": 983.0,
+        "y1": 766.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 753.5
+      },
+      {
+        "text": "100.00",
+        "x0": 1317.0,
+        "y0": 741.0,
+        "x1": 1381.0,
+        "y1": 766.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 753.5
+      },
+      {
+        "text": "775,686.97",
+        "x0": 1479.0,
+        "y0": 741.0,
+        "x1": 1576.0,
+        "y1": 766.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 753.5
+      },
+      {
+        "text": "PATI-PATILSHUBHAM753",
+        "x0": 167.0,
+        "y0": 778.0,
+        "x1": 414.0,
+        "y1": 811.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 794.5
+      },
+      {
+        "text": "7-3@OKHDFCBANK-HDFC0000222-104133825677-",
+        "x0": 179.0,
+        "y0": 825.0,
+        "x1": 631.0,
+        "y1": 849.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 837.0
+      },
+      {
+        "text": "UPI",
+        "x0": 170.0,
+        "y0": 862.0,
+        "x1": 220.0,
+        "y1": 897.0,
+        "page": 5,
+        "source": "paddleocr",
+        "yc": 879.5
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698933.52,
+      "expected_delta": 76753.45,
+      "expected_direction": "credit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "02/05/25",
+    "narration": "CATERERS-BHARATPE90727958943@ UPI-VIKRAM YESBANKLTD.YESB0YESUPI-310613534504-PAY TO BHARATPE ME 02/05/25",
+    "debit": 200.0,
+    "credit": null,
+    "balance": 775486.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "200.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,486.97",
+      "parsed_debit": 200.0,
+      "parsed_credit": null,
+      "parsed_balance": 775486.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 200.0,
+    "ocr_x": 1116.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00034",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      905.0,
+      1574.0,
+      1066.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775686.97,
+      "expected_delta": 200.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "IB BILLPAYDR-HDFCEL-457704XXXXXX6080 MB02154346030T13 02/05/25",
+    "debit": 19071.0,
+    "credit": null,
+    "balance": 756415.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "19.071.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "756.415.97",
+      "parsed_debit": 19071.0,
+      "parsed_credit": null,
+      "parsed_balance": 756415.97
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "756.415.97",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      },
+      "debit": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "19.071.00",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 19071.0,
+    "ocr_x": 1092.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00035",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1077.0,
+      1574.0,
+      1116.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775486.97,
+      "expected_delta": 19071.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "UPI-SANJAYBABU-8318143661@AXL-NSPB00000 02-834469667321-COFFEE 02/05/25",
+    "debit": 20.0,
+    "credit": null,
+    "balance": 756395.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "20.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "756,395.97",
+      "parsed_debit": 20.0,
+      "parsed_credit": null,
+      "parsed_balance": 756395.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 20.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00036",
+    "_source_page": 5,
+    "_source_bbox": [
+      78.0,
+      1122.0,
+      1576.0,
+      1196.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 756415.97,
+      "expected_delta": 20.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "GHARGE-770988697712332 UPI-AVADHUT ASHOK 1@YBL-BKID0001508-210966121435-LENTRETU RNED 02/05/25",
+    "debit": null,
+    "credit": 20000.0,
+    "balance": 776395.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": null,
+      "ocr_credit_text": "20,000.00",
+      "ocr_balance_text": "776,395.97",
+      "parsed_debit": null,
+      "parsed_credit": 20000.0,
+      "parsed_balance": 776395.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 20000.0,
+    "ocr_x": 1293.0,
+    "assigned_column": "credit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00037",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1212.0,
+      1574.0,
+      1368.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 756395.97,
+      "expected_delta": 20000.0,
+      "expected_direction": "credit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "UPI-AROMAFOODS-BHQR 1903106A@SIB-SIBL00 08097-893228614226-SPRITE 02/05/25",
+    "debit": 20.0,
+    "credit": null,
+    "balance": 776375.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "20.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "776,375.97",
+      "parsed_debit": 20.0,
+      "parsed_credit": null,
+      "parsed_balance": 776375.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 20.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00038",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1379.0,
+      1577.0,
+      1455.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776395.97,
+      "expected_delta": 20.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "03/05/25",
+    "narration": "BHONDU-PAYTMQR396SSFISJ UPI-MAGDUMGOBARE P@PAYTM-YESB0PTMUPI458832708844-JUICE 03/05/25",
+    "debit": 80.0,
+    "credit": null,
+    "balance": 776295.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "80.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "776,295.97",
+      "parsed_debit": 80.0,
+      "parsed_credit": null,
+      "parsed_balance": 776295.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 80.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00039",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1472.0,
+      1574.0,
+      1585.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776375.97,
+      "expected_delta": 80.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "03/05/25",
+    "narration": "UPI-PMBANATWALA-STK-9665971874-1@OKBIZ AXIS-UTIB0000553-847212849033-LIFAFE 03/05/25",
+    "debit": 63.0,
+    "credit": null,
+    "balance": 776232.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "63.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "776,232.97",
+      "parsed_debit": 63.0,
+      "parsed_credit": null,
+      "parsed_balance": 776232.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 63.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00040",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1596.0,
+      1577.0,
+      1670.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776295.97,
+      "expected_delta": 63.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "03/05/25",
+    "narration": "UPI-PMBANATWALA-STK-9665971874-1@OKBIZ AXIS-UTIB0000553-964208916371-LIFAFE 03/05/25",
+    "debit": 48.0,
+    "credit": null,
+    "balance": 776184.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "48.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "776.184.97",
+      "parsed_debit": 48.0,
+      "parsed_credit": null,
+      "parsed_balance": 776184.97
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "776.184.97",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 48.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00041",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1681.0,
+      1577.0,
+      1757.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776232.97,
+      "expected_delta": 48.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "03/05/25",
+    "narration": "SABANE-PAYTMQRSCX6PS@PT UPI-MAHESH VIJAY YS-YESB0PTMUPI-158760582422-LIFAFE 03/05/25",
+    "debit": 140.0,
+    "credit": null,
+    "balance": 776044.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "140.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "776,044.97",
+      "parsed_debit": 140.0,
+      "parsed_credit": null,
+      "parsed_balance": 776044.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 140.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00042",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1770.0,
+      1574.0,
+      1887.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776184.97,
+      "expected_delta": 140.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "03/05/25",
+    "narration": "tbranchGSTN27AAACH2702HZ0 SWAMI-GPAY-1119373978 UPI-RUPALI MAHADEV 0@OKBIZAXIS-UTIB0000553-706829691879-PAY 03/05/25 is that ou secord with the Bank as at the day of requestirg",
+    "debit": 30.0,
+    "credit": null,
+    "balance": 776014.97,
+    "page": 5,
+    "raw_extraction": {
+      "ocr_debit_text": "30.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "776,014.97",
+      "parsed_debit": 30.0,
+      "parsed_credit": null,
+      "parsed_balance": 776014.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 30.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00043",
+    "_source_page": 5,
+    "_source_bbox": [
+      81.0,
+      1898.0,
+      1579.0,
+      2146.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776044.97,
+      "expected_delta": 30.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "27/05/25",
+    "narration": "UPI-SATYAVAN RAJU SHIKHA-SHIKHARESATISH2 715@OKSBI-BKID0000503-318727385848-AUTO 000031872738584827/05/25",
+    "debit": 125.0,
+    "credit": null,
+    "balance": 698808.52,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "125.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698,808.52",
+      "parsed_debit": 125.0,
+      "parsed_credit": null,
+      "parsed_balance": 698808.52
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0006",
+        "diff": 77081.45,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -77081.45"
+      }
+    },
+    "ocr_amount": 125.0,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00045",
+    "_source_page": 6,
+    "_source_bbox": [
+      79.0,
+      651.0,
+      1579.0,
+      762.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "27/05/25",
+        "x0": 79.0,
+        "y0": 653.0,
+        "x1": 176.0,
+        "y1": 677.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "UPI-SATYAVAN RAJU",
+        "x0": 169.0,
+        "y0": 651.0,
+        "x1": 388.0,
+        "y1": 679.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "000031872738584827/05/25",
+        "x0": 721.0,
+        "y0": 651.0,
+        "x1": 986.0,
+        "y1": 682.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 666.5
+      },
+      {
+        "text": "125.00",
+        "x0": 1121.0,
+        "y0": 653.0,
+        "x1": 1186.0,
+        "y1": 679.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "698,808.52",
+        "x0": 1479.0,
+        "y0": 656.0,
+        "x1": 1579.0,
+        "y1": 679.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 667.5
+      },
+      {
+        "text": "SHIKHA-SHIKHARESATISH2",
+        "x0": 169.0,
+        "y0": 698.0,
+        "x1": 436.0,
+        "y1": 722.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 710.0
+      },
+      {
+        "text": "715@OKSBI-BKID0000503-318727385848-AUTO",
+        "x0": 179.0,
+        "y0": 738.0,
+        "x1": 607.0,
+        "y1": 762.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 750.0
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776014.97,
+      "expected_delta": 77206.45,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "28/05/25",
+    "narration": "ANK-HDFC0MERUPI-961239764357-POHE 28/05/25",
+    "debit": 100.0,
+    "credit": null,
+    "balance": 698708.52,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "100.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698.708.52",
+      "parsed_debit": 100.0,
+      "parsed_credit": null,
+      "parsed_balance": 698708.52
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "698.708.52",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      },
+      "date": {
+        "reason": "DATE_NARRATION_MERGE",
+        "severity": "HIGH",
+        "raw_text": "28/05/25UPI-YOGESHWARI-VYAPAR173204547941@HDFCB",
+        "date_extracted": "28/05/25",
+        "detail": "Date and narration merged into single OCR token"
+      }
+    },
+    "ocr_amount": 100.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00046",
+    "_source_page": 6,
+    "_source_bbox": [
+      81.0,
+      778.0,
+      1576.0,
+      849.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698808.52,
+      "expected_delta": 100.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "28/05/25",
+    "narration": "CF-IRCTC.CF@HDFCBANK-HDFCOMERU UPI-IRCTC PI-464315035146-IRCTCTICKET BOOKI 28/05/25",
+    "debit": 534.05,
+    "credit": null,
+    "balance": 698174.47,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "534.05",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698,174.47",
+      "parsed_debit": 534.05,
+      "parsed_credit": null,
+      "parsed_balance": 698174.47
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 534.05,
+    "ocr_x": 1116.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00047",
+    "_source_page": 6,
+    "_source_bbox": [
+      81.0,
+      862.0,
+      1574.0,
+      981.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698708.52,
+      "expected_delta": 534.05,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "28/05/25",
+    "narration": "CF-IRCTC.CF@HDFCBANK-HDFCOMERU UPI-IRCTC PI-529849886882-IRCTC TICKET BOOKI 28/05/25",
+    "debit": 494.05,
+    "credit": null,
+    "balance": 697680.42,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "494.05",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "697,680.42",
+      "parsed_debit": 494.05,
+      "parsed_credit": null,
+      "parsed_balance": 697680.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 494.05,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00048",
+    "_source_page": 6,
+    "_source_bbox": [
+      81.0,
+      995.0,
+      1577.0,
+      1113.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698174.47,
+      "expected_delta": 494.05,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "BHAGAT-BHARATPE.9HOROY OB0J911312@UNITYPE-UNBA000BHPE-449568036 UPI-SAMIR SHANKAR 315-PAY TO BHARATPE ME 29/05/25",
+    "debit": 116.0,
+    "credit": null,
+    "balance": 698634.42,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "116.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698,634.42",
+      "parsed_debit": 116.0,
+      "parsed_credit": null,
+      "parsed_balance": 698634.42
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0007",
+        "diff": 1070.0,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of 1070.0"
+      }
+    },
+    "ocr_amount": 116.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00050",
+    "_source_page": 6,
+    "_source_bbox": [
+      81.0,
+      1339.0,
+      1576.0,
+      1495.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "29/05/25",
+        "x0": 81.0,
+        "y0": 1344.0,
+        "x1": 160.0,
+        "y1": 1368.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "UPI-SAMIR SHANKAR",
+        "x0": 174.0,
+        "y0": 1344.0,
+        "x1": 386.0,
+        "y1": 1368.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "0000449565036315",
+        "x0": 724.0,
+        "y0": 1344.0,
+        "x1": 888.0,
+        "y1": 1368.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "29/05/25",
+        "x0": 907.0,
+        "y0": 1344.0,
+        "x1": 983.0,
+        "y1": 1368.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "116.00",
+        "x0": 1118.0,
+        "y0": 1339.0,
+        "x1": 1187.0,
+        "y1": 1373.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "698,634.42",
+        "x0": 1479.0,
+        "y0": 1344.0,
+        "x1": 1576.0,
+        "y1": 1368.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1356.0
+      },
+      {
+        "text": "BHAGAT-BHARATPE.9HOROY",
+        "x0": 167.0,
+        "y0": 1384.0,
+        "x1": 448.0,
+        "y1": 1415.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1399.5
+      },
+      {
+        "text": "OB0J911312@UNITYPE-UNBA000BHPE-449568036",
+        "x0": 171.0,
+        "y0": 1424.0,
+        "x1": 633.0,
+        "y1": 1458.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1441.0
+      },
+      {
+        "text": "315-PAY TO BHARATPE ME",
+        "x0": 176.0,
+        "y0": 1472.0,
+        "x1": 436.0,
+        "y1": 1495.0,
+        "page": 6,
+        "source": "paddleocr",
+        "yc": 1483.5
+      }
+    ],
+    "agreement_state": "CONFLICT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 697680.42,
+      "expected_delta": 954.0,
+      "expected_direction": "credit",
+      "balance_trust": "LOW",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "conflict_record": {
+      "unexplained_delta": 838.0,
+      "candidate_causes": [
+        "ocr_amount_corruption",
+        "column_boundary_failure",
+        "token_ownership_failure",
+        "statement_contradiction"
+      ]
+    }
+  },
+  {
+    "date": "29/05/25",
+    "narration": "SHETTY-PAYTMSIECHOS@P UPI-SUKANYA VIVEK TY-YESB0MCHUPI-920999965242-BREAKFAST 29/05/25",
+    "debit": 50.0,
+    "credit": null,
+    "balance": 698584.42,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "50.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698,584.42",
+      "parsed_debit": 50.0,
+      "parsed_credit": null,
+      "parsed_balance": 698584.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 50.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00051",
+    "_source_page": 6,
+    "_source_bbox": [
+      81.0,
+      1514.0,
+      1576.0,
+      1627.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698634.42,
+      "expected_delta": 50.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "UPI-IRCTCUT'S-PAYTM-S727353@PTYBL-YESB0P TMUPI-285687814558-OID805291040499629 29/05/25",
+    "debit": 50.0,
+    "credit": null,
+    "balance": 698534.42,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "50.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698,534.42",
+      "parsed_debit": 50.0,
+      "parsed_credit": null,
+      "parsed_balance": 698534.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 50.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00052",
+    "_source_page": 6,
+    "_source_bbox": [
+      81.0,
+      1644.0,
+      1576.0,
+      1712.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698584.42,
+      "expected_delta": 50.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "UPI-PRINT CLUB-GPAY-11250001439@OKBIZAXI S-UIIB0000553-530719978003-STAMP 29/05/25",
+    "debit": 450.0,
+    "credit": null,
+    "balance": 698084.42,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "450.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "698,084.42",
+      "parsed_debit": 450.0,
+      "parsed_credit": null,
+      "parsed_balance": 698084.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 450.0,
+    "ocr_x": 1116.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00053",
+    "_source_page": 6,
+    "_source_bbox": [
+      81.0,
+      1726.0,
+      1576.0,
+      1799.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698534.42,
+      "expected_delta": 450.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "CATERERS-SATKARCATERERS.63006 $29@HDFCBANK-HDFC0MERUPI771303284098-LU UPI-SATKAR NCH 29/05/25",
+    "debit": 330.0,
+    "credit": null,
+    "balance": 697754.42,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "330.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "697,754.42",
+      "parsed_debit": 330.0,
+      "parsed_credit": null,
+      "parsed_balance": 697754.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 330.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00054",
+    "_source_page": 6,
+    "_source_bbox": [
+      78.0,
+      1813.0,
+      1579.0,
+      1972.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 698084.42,
+      "expected_delta": 330.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "Contes of this statemen will be considered correct if ao error is reported within 30 days of receipt of statemea.The address on this staemeat is that ou secord with the Bank as at the day of requestig tbranch GSTN27AAACH2702HZ0 UPI-VRAJU 29/05/25",
+    "debit": 25.0,
+    "credit": null,
+    "balance": 697729.42,
+    "page": 6,
+    "raw_extraction": {
+      "ocr_debit_text": "25.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "697.729.42",
+      "parsed_debit": 25.0,
+      "parsed_credit": null,
+      "parsed_balance": 697729.42
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "697.729.42",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 25.0,
+    "ocr_x": 1127.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00055",
+    "_source_page": 6,
+    "_source_bbox": [
+      67.0,
+      1980.0,
+      1576.0,
+      2146.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 697754.42,
+      "expected_delta": 25.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "01/05/25",
+    "narration": "UPI-MRB H MOIDIN KUNHI-Q320749831@YBL YESB0YBLUPI-040656042130-WATER BOITLE 000004065604213001/05/25",
+    "debit": 30.0,
+    "credit": null,
+    "balance": 775733.61,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "30.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,733.61",
+      "parsed_debit": 30.0,
+      "parsed_credit": null,
+      "parsed_balance": 775733.61
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0008",
+        "diff": 78034.19,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of 78034.19"
+      }
+    },
+    "ocr_amount": 30.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00057",
+    "_source_page": 7,
+    "_source_bbox": [
+      79.0,
+      700.0,
+      1574.0,
+      771.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "01/05/25",
+        "x0": 79.0,
+        "y0": 703.0,
+        "x1": 176.0,
+        "y1": 729.0,
+        "page": 7,
+        "source": "paddleocr",
+        "yc": 716.0
+      },
+      {
+        "text": "UPI-MRB H MOIDIN KUNHI-Q320749831@YBL",
+        "x0": 171.0,
+        "y0": 705.0,
+        "x1": 619.0,
+        "y1": 729.0,
+        "page": 7,
+        "source": "paddleocr",
+        "yc": 717.0
+      },
+      {
+        "text": "000004065604213001/05/25",
+        "x0": 719.0,
+        "y0": 700.0,
+        "x1": 986.0,
+        "y1": 731.0,
+        "page": 7,
+        "source": "paddleocr",
+        "yc": 715.5
+      },
+      {
+        "text": "30.00",
+        "x0": 1131.0,
+        "y0": 703.0,
+        "x1": 1188.0,
+        "y1": 731.0,
+        "page": 7,
+        "source": "paddleocr",
+        "yc": 717.0
+      },
+      {
+        "text": "775,733.61",
+        "x0": 1479.0,
+        "y0": 703.0,
+        "x1": 1574.0,
+        "y1": 729.0,
+        "page": 7,
+        "source": "paddleocr",
+        "yc": 716.0
+      },
+      {
+        "text": "YESB0YBLUPI-040656042130-WATER BOITLE",
+        "x0": 174.0,
+        "y0": 743.0,
+        "x1": 602.0,
+        "y1": 771.0,
+        "page": 7,
+        "source": "paddleocr",
+        "yc": 757.0
+      }
+    ],
+    "agreement_state": "CONFLICT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 697729.42,
+      "expected_delta": 78004.19,
+      "expected_direction": "credit",
+      "balance_trust": "LOW",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "conflict_record": {
+      "unexplained_delta": 77974.19,
+      "candidate_causes": [
+        "ocr_amount_corruption",
+        "column_boundary_failure",
+        "token_ownership_failure",
+        "statement_contradiction"
+      ]
+    }
+  },
+  {
+    "date": "01/05/25",
+    "narration": "UPI-AKASH-6398473381@IBL-HDFC0001838-994 758188371-BREKFAST 01/05/25",
+    "debit": 50.0,
+    "credit": null,
+    "balance": 775683.61,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "50.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,683.61",
+      "parsed_debit": 50.0,
+      "parsed_credit": null,
+      "parsed_balance": 775683.61
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 50.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00058",
+    "_source_page": 7,
+    "_source_bbox": [
+      81.0,
+      783.0,
+      1574.0,
+      856.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775733.61,
+      "expected_delta": 50.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "01/05/25",
+    "narration": "B-BHARATPE.9OOD0A UPI-SHAHSIKANT GUNWANT OL0R310946@UNITYPE-UNBA000BHPE-064336504 307-PAY TO BHARATPE ME 01/05/25",
+    "debit": 45.0,
+    "credit": null,
+    "balance": 775638.61,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "45.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,638.61",
+      "parsed_debit": 45.0,
+      "parsed_credit": null,
+      "parsed_balance": 775638.61
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 45.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00059",
+    "_source_page": 7,
+    "_source_bbox": [
+      81.0,
+      875.0,
+      1574.0,
+      1031.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775683.61,
+      "expected_delta": 45.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "01/05/25",
+    "narration": "UPI-ROHAN MOHAN BHANDARI-Q09662303@YBL YESB0YBLUPI-458158403076-NIRA 000045815340307601/05/25",
+    "debit": 20.0,
+    "credit": null,
+    "balance": 775618.61,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "20.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,618.61",
+      "parsed_debit": 20.0,
+      "parsed_credit": null,
+      "parsed_balance": 775618.61
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 20.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00060",
+    "_source_page": 7,
+    "_source_bbox": [
+      81.0,
+      1045.0,
+      1574.0,
+      1163.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775638.61,
+      "expected_delta": 20.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "01/05/25",
+    "narration": "UPI-PAYIM-IRCTCAPP@PTYBL-Y UPI-IRCTCAPP ESB0PTMUPI-548705257055-COLLECT 01/05/25",
+    "debit": null,
+    "credit": 405.36,
+    "balance": 776023.97,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": null,
+      "ocr_credit_text": "405.36",
+      "ocr_balance_text": "776,023.97",
+      "parsed_debit": null,
+      "parsed_credit": 405.36,
+      "parsed_balance": 776023.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 405.36,
+    "ocr_x": 1317.0,
+    "assigned_column": "credit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00061",
+    "_source_page": 7,
+    "_source_bbox": [
+      76.0,
+      1172.0,
+      1574.0,
+      1288.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775618.61,
+      "expected_delta": 405.36,
+      "expected_direction": "credit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "01/05/25",
+    "narration": "ANSARI-9595989524@AXL-PUN B0112810-032700170336-AUTO UPI-MOHD AKRAM 000003270017033601/05/25",
+    "debit": 107.0,
+    "credit": null,
+    "balance": 775916.97,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "107.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,916.97",
+      "parsed_debit": 107.0,
+      "parsed_credit": null,
+      "parsed_balance": 775916.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 107.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00062",
+    "_source_page": 7,
+    "_source_bbox": [
+      81.0,
+      1301.0,
+      1574.0,
+      1420.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 776023.97,
+      "expected_delta": 107.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "CATERERS-BHARATPE90727958943@ UPI-VIKRAM TO BHARAIPE ME YESBANKLTD-YESB0YESUPI-550564352408-PAY 02/05/25",
+    "debit": 10.0,
+    "credit": null,
+    "balance": 775906.97,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "10.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,906.97",
+      "parsed_debit": 10.0,
+      "parsed_credit": null,
+      "parsed_balance": 775906.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 10.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00063",
+    "_source_page": 7,
+    "_source_bbox": [
+      81.0,
+      1434.0,
+      1574.0,
+      1590.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775916.97,
+      "expected_delta": 10.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "KUMAR-MITHLESHMDPR2002@OK UPI-MITHILESH MPHONE SBI-SBIN0008157-059800798012-PAYMENTFRO 02/05/25",
+    "debit": 20.0,
+    "credit": null,
+    "balance": 775886.97,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "20.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,886.97",
+      "parsed_debit": 20.0,
+      "parsed_credit": null,
+      "parsed_balance": 775886.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 20.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00064",
+    "_source_page": 7,
+    "_source_bbox": [
+      81.0,
+      1608.0,
+      1574.0,
+      1767.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775906.97,
+      "expected_delta": 20.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "UPI-NEHERUL ALAM-PAYTMQRSD6VAR@PTYS-YESB OPTMUPI-128727092963-PAYMENT FROMPHONE 02/05/25",
+    "debit": 200.0,
+    "credit": null,
+    "balance": 775686.97,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "200.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,686.97",
+      "parsed_debit": 200.0,
+      "parsed_credit": null,
+      "parsed_balance": 775686.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 200.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00065",
+    "_source_page": 7,
+    "_source_bbox": [
+      78.0,
+      1775.0,
+      1574.0,
+      1891.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775886.97,
+      "expected_delta": 200.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "02/05/25",
+    "narration": "Coutens of this statement will be considered carrectif ao error is reported within 30 days of receipt of statemeat.The address State accoun PATI-PATILSHUBHAM753 UPI-SHUBHAM TATYASO 02/05/25 that ou secord with the Bank as at the day of requesting",
+    "debit": 100.0,
+    "credit": null,
+    "balance": 775586.97,
+    "page": 7,
+    "raw_extraction": {
+      "ocr_debit_text": "100.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,586.97",
+      "parsed_debit": 100.0,
+      "parsed_credit": null,
+      "parsed_balance": 775586.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 100.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00066",
+    "_source_page": 7,
+    "_source_bbox": [
+      67.0,
+      1907.0,
+      1574.0,
+      2146.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775686.97,
+      "expected_delta": 100.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "POOJARY-CHAND98925134@BARODA UPI-CHANDRA MPAY-BARB0DBNMAR-771718761885-UPI 29/05/25",
+    "debit": 10.0,
+    "credit": null,
+    "balance": 697719.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "10.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "697,719.42",
+      "parsed_debit": 10.0,
+      "parsed_credit": null,
+      "parsed_balance": 697719.42
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0009",
+        "diff": 77857.55,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -77857.55"
+      }
+    },
+    "ocr_amount": 10.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00068",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      738.0,
+      1576.0,
+      849.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "29/05/25",
+        "x0": 81.0,
+        "y0": 741.0,
+        "x1": 160.0,
+        "y1": 764.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 752.5
+      },
+      {
+        "text": "UPI-CHANDRA",
+        "x0": 174.0,
+        "y0": 741.0,
+        "x1": 321.0,
+        "y1": 764.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 752.5
+      },
+      {
+        "text": "0000771718761885",
+        "x0": 721.0,
+        "y0": 738.0,
+        "x1": 890.0,
+        "y1": 762.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 750.0
+      },
+      {
+        "text": "29/05/25",
+        "x0": 907.0,
+        "y0": 741.0,
+        "x1": 986.0,
+        "y1": 766.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 753.5
+      },
+      {
+        "text": "10.00",
+        "x0": 1131.0,
+        "y0": 741.0,
+        "x1": 1186.0,
+        "y1": 766.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 753.5
+      },
+      {
+        "text": "697,719.42",
+        "x0": 1479.0,
+        "y0": 741.0,
+        "x1": 1576.0,
+        "y1": 766.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 753.5
+      },
+      {
+        "text": "POOJARY-CHAND98925134@BARODA",
+        "x0": 167.0,
+        "y0": 781.0,
+        "x1": 524.0,
+        "y1": 809.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "MPAY-BARB0DBNMAR-771718761885-UPI",
+        "x0": 176.0,
+        "y0": 825.0,
+        "x1": 567.0,
+        "y1": 849.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 837.0
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775586.97,
+      "expected_delta": 77867.55,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "29/05/25",
+    "narration": "UPI-PRINT CLUB-GPAY-11250001489@OKBIZAXI S-UIIB0000553-792354121526-PRINTS 29/05/25",
+    "debit": 48.0,
+    "credit": null,
+    "balance": 697671.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "48.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "697,671.42",
+      "parsed_debit": 48.0,
+      "parsed_credit": null,
+      "parsed_balance": 697671.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 48.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00069",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      868.0,
+      1576.0,
+      936.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 697719.42,
+      "expected_delta": 48.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "UPI-MANJU-9589693424@AIRTEL-AIRP0000001- 915705424878-PAYMONEY TOMANJU 29/05/25",
+    "debit": 20.0,
+    "credit": null,
+    "balance": 697651.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "20.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "697,651.42",
+      "parsed_debit": 20.0,
+      "parsed_credit": null,
+      "parsed_balance": 697651.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 20.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00070",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      955.0,
+      1576.0,
+      1024.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 697671.42,
+      "expected_delta": 20.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "UPI-FK IRANI ANDCOVEN-Q366381554@YBL YESB0YBLUPI-893391950215-DINNER 29/05/25",
+    "debit": 800.0,
+    "credit": null,
+    "balance": 696851.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "800.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "696,851.42",
+      "parsed_debit": 800.0,
+      "parsed_credit": null,
+      "parsed_balance": 696851.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 800.0,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00071",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      1040.0,
+      1574.0,
+      1113.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 697651.42,
+      "expected_delta": 800.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "UPI-PAPPU SINGH-Q627434781@YBL-YESB0YBL UPI-996080821235-PASTE 29/05/25",
+    "debit": 10.0,
+    "credit": null,
+    "balance": 696841.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "10.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "696,841.42",
+      "parsed_debit": 10.0,
+      "parsed_credit": null,
+      "parsed_balance": 696841.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 10.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00072",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      1125.0,
+      1576.0,
+      1196.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 696851.42,
+      "expected_delta": 10.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "29/05/25",
+    "narration": "KUMAR-BAJAJPAY.6879729.1PUH XMJY@INDUS-INDB0MERCHA-372474387741-CREA UPI-MAHENDRA M 29/05/25",
+    "debit": 99.0,
+    "credit": null,
+    "balance": 696742.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "99.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "696,742.42",
+      "parsed_debit": 99.0,
+      "parsed_credit": null,
+      "parsed_balance": 696742.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 99.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00073",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      1212.0,
+      1576.0,
+      1368.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 696841.42,
+      "expected_delta": 99.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "30/05/25",
+    "narration": "3005/25 UPI-VIKRAM CATERERS-BHARATPE90727958943@ MEN-PAYTMQR6SOQME@PTYS-YE UPI-SHIVAMFOR YESBANKLTD-YESB0YESUPI-330722090216-PAY SB0PTMUPI-679057859474-JACKET TO BHARATPE ME 30/05/25 30/05/25",
+    "debit": 190.0,
+    "credit": null,
+    "balance": 696552.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "190.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "696,552.42",
+      "parsed_debit": 190.0,
+      "parsed_credit": null,
+      "parsed_balance": 696552.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 190.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00074",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      1382.0,
+      1576.0,
+      1667.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 696742.42,
+      "expected_delta": 190.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "30/05/25",
+    "narration": "UPI-MR NEHERUL ALAM.Q900083679YBL-YES BOYBLUPI-820382615256-POLISH 30/05/25",
+    "debit": 30.0,
+    "credit": null,
+    "balance": 695023.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "30.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "695.023.42",
+      "parsed_debit": 30.0,
+      "parsed_credit": null,
+      "parsed_balance": 695023.42
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0010",
+        "diff": 1499.0,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -1499.0"
+      }
+    },
+    "ocr_amount": 30.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00075",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      1686.0,
+      1576.0,
+      1759.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "30/05/25",
+        "x0": 81.0,
+        "y0": 1686.0,
+        "x1": 162.0,
+        "y1": 1712.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 1699.0
+      },
+      {
+        "text": "UPI-MR NEHERUL ALAM.Q900083679YBL-YES",
+        "x0": 169.0,
+        "y0": 1686.0,
+        "x1": 640.0,
+        "y1": 1710.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 1698.0
+      },
+      {
+        "text": "0000820382615256",
+        "x0": 724.0,
+        "y0": 1689.0,
+        "x1": 895.0,
+        "y1": 1712.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 1700.5
+      },
+      {
+        "text": "30/05/25",
+        "x0": 907.0,
+        "y0": 1689.0,
+        "x1": 983.0,
+        "y1": 1715.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 1702.0
+      },
+      {
+        "text": "30.00",
+        "x0": 1131.0,
+        "y0": 1686.0,
+        "x1": 1186.0,
+        "y1": 1715.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 1700.5
+      },
+      {
+        "text": "695.023.42",
+        "x0": 1479.0,
+        "y0": 1689.0,
+        "x1": 1576.0,
+        "y1": 1715.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 1702.0
+      },
+      {
+        "text": "BOYBLUPI-820382615256-POLISH",
+        "x0": 174.0,
+        "y0": 1726.0,
+        "x1": 483.0,
+        "y1": 1759.0,
+        "page": 8,
+        "source": "paddleocr",
+        "yc": 1742.5
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 696552.42,
+      "expected_delta": 1529.0,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "30/05/25",
+    "narration": "MAHADEV-Q384651153@YBL-Y UPI-MR KRISHNA ESB0YBLUPI-748063526509-AUTO 30/05/25",
+    "debit": 130.0,
+    "credit": null,
+    "balance": 694893.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "130.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "694,893.42",
+      "parsed_debit": 130.0,
+      "parsed_credit": null,
+      "parsed_balance": 694893.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 130.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00076",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      1770.0,
+      1576.0,
+      1887.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 695023.42,
+      "expected_delta": 130.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "30/05/25",
+    "narration": "UPI-ANAND KESHAV KAMBLE-AKKAMBLE08-2@OKH DFCBANK-SBIN0008043-857431332668-AUTO 30/05/25 is that ou secord with the Bank as at the day of requestirg",
+    "debit": 200.0,
+    "credit": null,
+    "balance": 694693.42,
+    "page": 8,
+    "raw_extraction": {
+      "ocr_debit_text": "200.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "694,693.42",
+      "parsed_debit": 200.0,
+      "parsed_credit": null,
+      "parsed_balance": 694693.42
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 200.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00077",
+    "_source_page": 8,
+    "_source_bbox": [
+      81.0,
+      1901.0,
+      1576.0,
+      2115.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 694893.42,
+      "expected_delta": 200.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "03/05/25",
+    "narration": "UPI-NAIDU RAJATHI PANDI-BHARATPE.900629 O BHARATPE ME 1164@FBPE-FDRL0001382-923908372230-PAYT 000092390837223003/05/25",
+    "debit": 500.0,
+    "credit": null,
+    "balance": 775514.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "500.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,514.97",
+      "parsed_debit": 500.0,
+      "parsed_credit": null,
+      "parsed_balance": 775514.97
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0011",
+        "diff": 81321.55,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of 81321.55"
+      }
+    },
+    "ocr_amount": 500.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00079",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      693.0,
+      1574.0,
+      809.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "03/05/25",
+        "x0": 81.0,
+        "y0": 696.0,
+        "x1": 162.0,
+        "y1": 722.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 709.0
+      },
+      {
+        "text": "UPI-NAIDU RAJATHI PANDI-BHARATPE.900629",
+        "x0": 174.0,
+        "y0": 698.0,
+        "x1": 629.0,
+        "y1": 722.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 710.0
+      },
+      {
+        "text": "000092390837223003/05/25",
+        "x0": 719.0,
+        "y0": 693.0,
+        "x1": 986.0,
+        "y1": 724.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 708.5
+      },
+      {
+        "text": "500.00",
+        "x0": 1119.0,
+        "y0": 696.0,
+        "x1": 1186.0,
+        "y1": 722.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 709.0
+      },
+      {
+        "text": "775,514.97",
+        "x0": 1479.0,
+        "y0": 696.0,
+        "x1": 1574.0,
+        "y1": 722.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 709.0
+      },
+      {
+        "text": "1164@FBPE-FDRL0001382-923908372230-PAYT",
+        "x0": 179.0,
+        "y0": 741.0,
+        "x1": 610.0,
+        "y1": 764.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 752.5
+      },
+      {
+        "text": "O BHARATPE ME",
+        "x0": 176.0,
+        "y0": 783.0,
+        "x1": 340.0,
+        "y1": 809.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 796.0
+      }
+    ],
+    "agreement_state": "CONFLICT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 694693.42,
+      "expected_delta": 80821.55,
+      "expected_direction": "credit",
+      "balance_trust": "LOW",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "conflict_record": {
+      "unexplained_delta": 80321.55,
+      "candidate_causes": [
+        "ocr_amount_corruption",
+        "column_boundary_failure",
+        "token_ownership_failure",
+        "statement_contradiction"
+      ]
+    }
+  },
+  {
+    "date": "03/05/25",
+    "narration": "RAIMAN-Q991665194@YBL UPI-KUMAR MAHADEV YESB0YBLUPI-233906403378-TOAST 000023390640337803/05/25",
+    "debit": 240.0,
+    "credit": null,
+    "balance": 775274.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "240.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "775,274.97",
+      "parsed_debit": 240.0,
+      "parsed_credit": null,
+      "parsed_balance": 775274.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 240.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00080",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      821.0,
+      1576.0,
+      936.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775514.97,
+      "expected_delta": 240.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "04/05/25",
+    "narration": "UPI-SAYALI PRINIERS-GPAY-11186467426@OKB ESH IZAXIS-UTIB0000553-294880829462-STAMP UM 04/05/25",
+    "debit": 300.0,
+    "credit": null,
+    "balance": 774974.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "300.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "774,974.97",
+      "parsed_debit": 300.0,
+      "parsed_credit": null,
+      "parsed_balance": 774974.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 300.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00081",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      950.0,
+      1574.0,
+      1072.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 775274.97,
+      "expected_delta": 300.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "04/05/25",
+    "narration": "NASTA-7297922771@OKBIZAXIS UPI-GURUMAULI -UIIB0000553-360919046851-NASTHA 04/05/25",
+    "debit": 380.0,
+    "credit": null,
+    "balance": 774594.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "380.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "774,594.97",
+      "parsed_debit": 380.0,
+      "parsed_credit": null,
+      "parsed_balance": 774594.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 380.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00082",
+    "_source_page": 9,
+    "_source_bbox": [
+      78.0,
+      1077.0,
+      1577.0,
+      1198.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 774974.97,
+      "expected_delta": 380.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "04/05/25",
+    "narration": "WALE-GPAY-11249775681@ UPI-RAMLEELA PEDE OKBIZAXIS-UTIB0000553-003213873926-PEDHE 04/05/25",
+    "debit": 400.0,
+    "credit": null,
+    "balance": 774194.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "400.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "774,194.97",
+      "parsed_debit": 400.0,
+      "parsed_credit": null,
+      "parsed_balance": 774194.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 400.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00083",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      1209.0,
+      1574.0,
+      1323.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 774594.97,
+      "expected_delta": 400.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "04/05/25",
+    "narration": "UPI-VIAYVISHNU HONMANE-7756954163@IBL BKID0000703.950054329176-MOBILE POUCH 04/05/25",
+    "debit": 150.0,
+    "credit": null,
+    "balance": 774044.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "150.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "774,044.97",
+      "parsed_debit": 150.0,
+      "parsed_credit": null,
+      "parsed_balance": 774044.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 150.0,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00084",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      1342.0,
+      1574.0,
+      1415.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 774194.97,
+      "expected_delta": 150.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "04/05/25",
+    "narration": "UPI-BAJRANG GANPATI KALE-BAJRANG.KALE99@ OKSBI-SBIN0001152-023376942215-ADVANCE 0/05/25",
+    "debit": 3000.0,
+    "credit": null,
+    "balance": 771044.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "3,000.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "771,044.97",
+      "parsed_debit": 3000.0,
+      "parsed_credit": null,
+      "parsed_balance": 771044.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 3000.0,
+    "ocr_x": 1107.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00085",
+    "_source_page": 9,
+    "_source_bbox": [
+      78.0,
+      1424.0,
+      1576.0,
+      1540.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 774044.97,
+      "expected_delta": 3000.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "05/05/25",
+    "narration": "PA-8999416530HDFC@ UPI-SHUBHANJALI UMESH IBL-HDFC0000222-538334877366-FORSHARES 000053833487736605/05/25",
+    "debit": 3275.0,
+    "credit": null,
+    "balance": 767769.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "3,275.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "767,769.97",
+      "parsed_debit": 3275.0,
+      "parsed_credit": null,
+      "parsed_balance": 767769.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 3275.0,
+    "ocr_x": 1104.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00086",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      1554.0,
+      1576.0,
+      1670.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 771044.97,
+      "expected_delta": 3275.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "05/05/25",
+    "narration": "UPI-UJJVILAS ENTERPRISES-8999416530-2@IB L-HDFC0000222-987357529597-FOR SSL 05/05/25",
+    "debit": 7080.0,
+    "credit": null,
+    "balance": 760689.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "7,080.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "760.689.97",
+      "parsed_debit": 7080.0,
+      "parsed_credit": null,
+      "parsed_balance": 760689.97
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "760.689.97",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 7080.0,
+    "ocr_x": 1105.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00087",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      1681.0,
+      1577.0,
+      1757.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 767769.97,
+      "expected_delta": 7080.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "05/05/25",
+    "narration": "P-BHARATPE.9NOKOT UPI-DHANAJI RAMCHANDRA 7R3H367012@FBPE-FDRL0001382-548745951502 PAY TOBHARATPE ME 05/05/25",
+    "debit": 125.0,
+    "credit": null,
+    "balance": 760564.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "125.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "760,564.97",
+      "parsed_debit": 125.0,
+      "parsed_credit": null,
+      "parsed_balance": 760564.97
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 125.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00088",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      1770.0,
+      1574.0,
+      1929.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 760689.97,
+      "expected_delta": 125.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "06/05/25",
+    "narration": "t branchGSTN27AAACH2702HZ0 SUNIL-PAYTMQRIATOFYMQ UPI-MASTER SOURABH 06/05/25 t is that ou secord with the Bank as at the day of requesting",
+    "debit": 7.0,
+    "credit": null,
+    "balance": 760477.97,
+    "page": 9,
+    "raw_extraction": {
+      "ocr_debit_text": "$7.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "760,477.97",
+      "parsed_debit": 7.0,
+      "parsed_credit": null,
+      "parsed_balance": 760477.97
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0012",
+        "diff": 80.0,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -80.0"
+      }
+    },
+    "ocr_amount": 7.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00089",
+    "_source_page": 9,
+    "_source_bbox": [
+      81.0,
+      1946.0,
+      1574.0,
+      2146.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "06/05/25",
+        "x0": 81.0,
+        "y0": 1948.0,
+        "x1": 160.0,
+        "y1": 1972.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 1960.0
+      },
+      {
+        "text": "UPI-MASTER SOURABH",
+        "x0": 176.0,
+        "y0": 1948.0,
+        "x1": 407.0,
+        "y1": 1972.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 1960.0
+      },
+      {
+        "text": "0000855742328652",
+        "x0": 724.0,
+        "y0": 1948.0,
+        "x1": 890.0,
+        "y1": 1972.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 1960.0
+      },
+      {
+        "text": "06/05/25",
+        "x0": 907.0,
+        "y0": 1948.0,
+        "x1": 983.0,
+        "y1": 1972.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 1960.0
+      },
+      {
+        "text": "$7.00",
+        "x0": 1131.0,
+        "y0": 1946.0,
+        "x1": 1186.0,
+        "y1": 1974.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 1960.0
+      },
+      {
+        "text": "760,477.97",
+        "x0": 1479.0,
+        "y0": 1948.0,
+        "x1": 1574.0,
+        "y1": 1972.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 1960.0
+      },
+      {
+        "text": "SUNIL-PAYTMQRIATOFYMQ",
+        "x0": 167.0,
+        "y0": 1986.0,
+        "x1": 448.0,
+        "y1": 2019.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 2002.5
+      },
+      {
+        "text": "t is that ou secord with the Bank as at the day of requesting",
+        "x0": 1069.0,
+        "y0": 2092.0,
+        "x1": 1488.0,
+        "y1": 2115.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 2103.5
+      },
+      {
+        "text": "t branchGSTN27AAACH2702HZ0",
+        "x0": 164.0,
+        "y0": 2130.0,
+        "x1": 452.0,
+        "y1": 2146.0,
+        "page": 9,
+        "source": "paddleocr",
+        "yc": 2138.0
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 760564.97,
+      "expected_delta": 87.0,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "09/05/25",
+    "narration": "UPI-MOHITE SUDHIR RAJARA-8826140203@PTYE S-S3IN0006491-613842042552-SENTFROMPAY TM 000061384204255209/05/25",
+    "debit": null,
+    "credit": 1690.0,
+    "balance": 754960.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": null,
+      "ocr_credit_text": "1,690.00",
+      "ocr_balance_text": "754,960.39",
+      "parsed_debit": null,
+      "parsed_credit": 1690.0,
+      "parsed_balance": 754960.39
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0013",
+        "diff": 7207.58,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -7207.58"
+      }
+    },
+    "ocr_amount": 1690.0,
+    "ocr_x": 1302.0,
+    "assigned_column": "credit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00091",
+    "_source_page": 10,
+    "_source_bbox": [
+      81.0,
+      648.0,
+      1579.0,
+      766.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "09/05/25",
+        "x0": 81.0,
+        "y0": 653.0,
+        "x1": 162.0,
+        "y1": 677.0,
+        "page": 10,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "UPI-MOHITE SUDHIR RAJARA-8826140203@PTYE",
+        "x0": 169.0,
+        "y0": 648.0,
+        "x1": 638.0,
+        "y1": 682.0,
+        "page": 10,
+        "source": "paddleocr",
+        "yc": 665.0
+      },
+      {
+        "text": "000061384204255209/05/25",
+        "x0": 721.0,
+        "y0": 651.0,
+        "x1": 986.0,
+        "y1": 682.0,
+        "page": 10,
+        "source": "paddleocr",
+        "yc": 666.5
+      },
+      {
+        "text": "1,690.00",
+        "x0": 1302.0,
+        "y0": 653.0,
+        "x1": 1381.0,
+        "y1": 679.0,
+        "page": 10,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "754,960.39",
+        "x0": 1481.0,
+        "y0": 653.0,
+        "x1": 1579.0,
+        "y1": 679.0,
+        "page": 10,
+        "source": "paddleocr",
+        "yc": 666.0
+      },
+      {
+        "text": "S-S3IN0006491-613842042552-SENTFROMPAY",
+        "x0": 176.0,
+        "y0": 698.0,
+        "x1": 607.0,
+        "y1": 722.0,
+        "page": 10,
+        "source": "paddleocr",
+        "yc": 710.0
+      },
+      {
+        "text": "TM",
+        "x0": 176.0,
+        "y0": 738.0,
+        "x1": 217.0,
+        "y1": 766.0,
+        "page": 10,
+        "source": "paddleocr",
+        "yc": 752.0
+      }
+    ],
+    "agreement_state": "CONFLICT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 760477.97,
+      "expected_delta": 5517.58,
+      "expected_direction": "debit",
+      "balance_trust": "LOW",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "conflict_record": {
+      "unexplained_delta": 3827.58,
+      "candidate_causes": [
+        "ocr_amount_corruption",
+        "column_boundary_failure",
+        "token_ownership_failure",
+        "statement_contradiction"
+      ]
+    }
+  },
+  {
+    "date": "09/05/25",
+    "narration": "UPI-HARMAN CHAHAWALA COL-GPAY-1125157392 THA 9@OKBIZAXIS-UIIB0000553-385121128725-NAS 09/05/25",
+    "debit": 75.0,
+    "credit": null,
+    "balance": 754885.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "75.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "754.885.39",
+      "parsed_debit": 75.0,
+      "parsed_credit": null,
+      "parsed_balance": 754885.39
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "754.885.39",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 75.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00092",
+    "_source_page": 10,
+    "_source_bbox": [
+      79.0,
+      775.0,
+      1579.0,
+      939.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 754960.39,
+      "expected_delta": 75.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "09/05/25",
+    "narration": "KRUSHN-PAYTMQRSXQXSR@P UPI-AYYANGAR SHRI TYS-YESB0PTMUPI-789558326982-CAKE 09/05/25",
+    "debit": 470.0,
+    "credit": null,
+    "balance": 754415.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "470.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "754,415.39",
+      "parsed_debit": 470.0,
+      "parsed_credit": null,
+      "parsed_balance": 754415.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 470.0,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00093",
+    "_source_page": 10,
+    "_source_bbox": [
+      83.0,
+      955.0,
+      1576.0,
+      1066.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 754885.39,
+      "expected_delta": 470.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "09/05/25",
+    "narration": "UPI-SML-Q934845467@YBL-YESB0YBLUPI-91382 8575719-KAJU KARI 09/05/25",
+    "debit": 170.0,
+    "credit": null,
+    "balance": 754245.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "170.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "754,245.39",
+      "parsed_debit": 170.0,
+      "parsed_credit": null,
+      "parsed_balance": 754245.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 170.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00094",
+    "_source_page": 10,
+    "_source_bbox": [
+      81.0,
+      1080.0,
+      1576.0,
+      1156.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 754415.39,
+      "expected_delta": 170.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "09/05/25",
+    "narration": "SIGNURE TECHNO-KM467NT 09/05/25",
+    "debit": null,
+    "credit": 2.0,
+    "balance": 754247.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": null,
+      "ocr_credit_text": "2.00",
+      "ocr_balance_text": "754,247.39",
+      "parsed_debit": null,
+      "parsed_credit": 2.0,
+      "parsed_balance": 754247.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 2.0,
+    "ocr_x": 1336.0,
+    "assigned_column": "credit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00095",
+    "_source_page": 10,
+    "_source_bbox": [
+      81.0,
+      1165.0,
+      1576.0,
+      1198.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 754245.39,
+      "expected_delta": 2.0,
+      "expected_direction": "credit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "10/05/25",
+    "narration": "SWAMI-GPAY-1119373978 UPI-RUPALIMAHADEV 0@OKBIZAXIS-UTIB0000553-493944532692-PAY MENT FROM PHONE 10/05/25",
+    "debit": 30.0,
+    "credit": null,
+    "balance": 754217.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "30.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "754,217.39",
+      "parsed_debit": 30.0,
+      "parsed_credit": null,
+      "parsed_balance": 754217.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 30.0,
+    "ocr_x": 1128.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00096",
+    "_source_page": 10,
+    "_source_bbox": [
+      81.0,
+      1209.0,
+      1579.0,
+      1368.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 754247.39,
+      "expected_delta": 30.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "10/05/25",
+    "narration": "UPI-SAGAR GOPALRAO PATIL-PAYIMQR6BMASD@P TYS-YESB0PTMUPI-182964059648-ICECREAM 10/05/25",
+    "debit": 350.0,
+    "credit": null,
+    "balance": 753867.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "350.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "753.867.39",
+      "parsed_debit": 350.0,
+      "parsed_credit": null,
+      "parsed_balance": 753867.39
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "753.867.39",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 350.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00097",
+    "_source_page": 10,
+    "_source_bbox": [
+      78.0,
+      1379.0,
+      1579.0,
+      1495.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 754217.39,
+      "expected_delta": 350.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "11/05/25",
+    "narration": "UPI-JUBER SHABBIR SHAIKH-Q276324094@YBL YESB0YBLUPI-102288673118-SHEVPURI 11/05/25",
+    "debit": 100.0,
+    "credit": null,
+    "balance": 753767.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "100.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "753,767.39",
+      "parsed_debit": 100.0,
+      "parsed_credit": null,
+      "parsed_balance": 753767.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 100.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00098",
+    "_source_page": 10,
+    "_source_bbox": [
+      81.0,
+      1512.0,
+      1579.0,
+      1585.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753867.39,
+      "expected_delta": 100.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "11/05/25",
+    "narration": "SHABBIR-Q925017862@YBL UPI-SADDAMHUSAIN YESB0YBLUPI.940695565773.MANCHURIAN 11/05/25",
+    "debit": 100.0,
+    "credit": null,
+    "balance": 753667.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "100.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "753,667.39",
+      "parsed_debit": 100.0,
+      "parsed_credit": null,
+      "parsed_balance": 753667.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 100.0,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00099",
+    "_source_page": 10,
+    "_source_bbox": [
+      81.0,
+      1596.0,
+      1579.0,
+      1710.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753767.39,
+      "expected_delta": 100.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "12/05/25",
+    "narration": "BHARATPE.9ZOROQ UPI-VINAYAK CHANDRAKANT 7K3O232259@FBPE-FDRL0001382-914484770595 PAY TO BHARATPE ME 12/05/25",
+    "debit": 60.0,
+    "credit": null,
+    "balance": 753607.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "60.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "753,607.39",
+      "parsed_debit": 60.0,
+      "parsed_credit": null,
+      "parsed_balance": 753607.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 60.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00100",
+    "_source_page": 10,
+    "_source_bbox": [
+      81.0,
+      1731.0,
+      1579.0,
+      1887.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753667.39,
+      "expected_delta": 60.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "12/05/25",
+    "narration": "P-9420339391@YBL UPI-SUDHAKAR BAPUSAHEB TMBL0000296-815803839168-NRUSINH YATRA 12/05/25 is that ou secord with the Bank as at the day of requestirg",
+    "debit": 18000.0,
+    "credit": null,
+    "balance": 735607.39,
+    "page": 10,
+    "raw_extraction": {
+      "ocr_debit_text": "18,000.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "735,607.39",
+      "parsed_debit": 18000.0,
+      "parsed_credit": null,
+      "parsed_balance": 735607.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 18000.0,
+    "ocr_x": 1098.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00101",
+    "_source_page": 10,
+    "_source_bbox": [
+      78.0,
+      1898.0,
+      1577.0,
+      2115.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753607.39,
+      "expected_delta": 18000.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "06/05/25",
+    "narration": "UPI-BIRBAL MEHATRE FRUIT-GPAY-1125070624 NGES 7@OKBIZAXIS-UTIB0000553-851279926996-ORA 06/05/25",
+    "debit": 130.0,
+    "credit": null,
+    "balance": 760347.97,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "130.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "760,347.97",
+      "parsed_debit": 130.0,
+      "parsed_credit": null,
+      "parsed_balance": 760347.97
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0014",
+        "diff": 24870.58,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of 24870.58"
+      }
+    },
+    "ocr_amount": 130.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00103",
+    "_source_page": 11,
+    "_source_bbox": [
+      81.0,
+      693.0,
+      1574.0,
+      809.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "06/05/25",
+        "x0": 81.0,
+        "y0": 696.0,
+        "x1": 162.0,
+        "y1": 722.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 709.0
+      },
+      {
+        "text": "UPI-BIRBAL MEHATRE FRUIT-GPAY-1125070624",
+        "x0": 174.0,
+        "y0": 698.0,
+        "x1": 629.0,
+        "y1": 722.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 710.0
+      },
+      {
+        "text": "0000851279926996",
+        "x0": 719.0,
+        "y0": 693.0,
+        "x1": 910.0,
+        "y1": 724.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 708.5
+      },
+      {
+        "text": "06/05/25",
+        "x0": 900.0,
+        "y0": 696.0,
+        "x1": 983.0,
+        "y1": 722.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 709.0
+      },
+      {
+        "text": "130.00",
+        "x0": 1119.0,
+        "y0": 696.0,
+        "x1": 1186.0,
+        "y1": 722.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 709.0
+      },
+      {
+        "text": "760,347.97",
+        "x0": 1479.0,
+        "y0": 696.0,
+        "x1": 1574.0,
+        "y1": 722.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 709.0
+      },
+      {
+        "text": "7@OKBIZAXIS-UTIB0000553-851279926996-ORA",
+        "x0": 179.0,
+        "y0": 741.0,
+        "x1": 621.0,
+        "y1": 764.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 752.5
+      },
+      {
+        "text": "NGES",
+        "x0": 174.0,
+        "y0": 783.0,
+        "x1": 238.0,
+        "y1": 809.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 796.0
+      }
+    ],
+    "agreement_state": "CONFLICT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 735607.39,
+      "expected_delta": 24740.58,
+      "expected_direction": "credit",
+      "balance_trust": "LOW",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "conflict_record": {
+      "unexplained_delta": 24610.58,
+      "candidate_causes": [
+        "ocr_amount_corruption",
+        "column_boundary_failure",
+        "token_ownership_failure",
+        "statement_contradiction"
+      ]
+    }
+  },
+  {
+    "date": "06/05/25",
+    "narration": "COM-FIRSTCRYPAYU@HDFCB UPI-WWWFIRSTCRY ANK-HDFC0MERUPI-100505648405-UPI TRANSAC TION 06/05/25",
+    "debit": 749.72,
+    "credit": null,
+    "balance": 759598.25,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "749.72",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "759,598.25",
+      "parsed_debit": 749.72,
+      "parsed_credit": null,
+      "parsed_balance": 759598.25
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 749.72,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00104",
+    "_source_page": 11,
+    "_source_bbox": [
+      81.0,
+      823.0,
+      1576.0,
+      981.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 760347.97,
+      "expected_delta": 749.72,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "07/05/25",
+    "narration": "CF-IRCTC.CF@HDFCBANK-HDFCOMERU UPI-IRCTC PI-094848917464-IRCTC TICKET BOOKI 07/05/25",
+    "debit": 127.25,
+    "credit": null,
+    "balance": 759471.0,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "127.25",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "759,471.00",
+      "parsed_debit": 127.25,
+      "parsed_credit": null,
+      "parsed_balance": 759471.0
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 127.25,
+    "ocr_x": 1121.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00105",
+    "_source_page": 11,
+    "_source_bbox": [
+      81.0,
+      992.0,
+      1577.0,
+      1113.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 759598.25,
+      "expected_delta": 127.25,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "07/05/25",
+    "narration": "LTD-YESBANKCARD BDPG@ICICI- UPI-YES BANK ICIC0DC0099-661969632254-PAY 000066196963225407/05/25",
+    "debit": 7438.61,
+    "credit": null,
+    "balance": 751982.39,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "7,438.61",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "751,982.39",
+      "parsed_debit": 7438.61,
+      "parsed_credit": null,
+      "parsed_balance": 751982.39
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0015",
+        "diff": 50.0,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -50.0"
+      }
+    },
+    "ocr_amount": 7438.61,
+    "ocr_x": 1105.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00106",
+    "_source_page": 11,
+    "_source_bbox": [
+      78.0,
+      1122.0,
+      1579.0,
+      1238.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "07/05/25",
+        "x0": 78.0,
+        "y0": 1122.0,
+        "x1": 165.0,
+        "y1": 1154.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1138.0
+      },
+      {
+        "text": "UPI-YES BANK",
+        "x0": 171.0,
+        "y0": 1127.0,
+        "x1": 321.0,
+        "y1": 1153.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1140.0
+      },
+      {
+        "text": "000066196963225407/05/25",
+        "x0": 721.0,
+        "y0": 1125.0,
+        "x1": 988.0,
+        "y1": 1156.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1140.5
+      },
+      {
+        "text": "7,438.61",
+        "x0": 1105.0,
+        "y0": 1127.0,
+        "x1": 1183.0,
+        "y1": 1153.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1140.0
+      },
+      {
+        "text": "751,982.39",
+        "x0": 1479.0,
+        "y0": 1127.0,
+        "x1": 1579.0,
+        "y1": 1153.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1140.0
+      },
+      {
+        "text": "LTD-YESBANKCARD BDPG@ICICI-",
+        "x0": 164.0,
+        "y0": 1165.0,
+        "x1": 498.0,
+        "y1": 1198.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1181.5
+      },
+      {
+        "text": "ICIC0DC0099-661969632254-PAY",
+        "x0": 176.0,
+        "y0": 1215.0,
+        "x1": 476.0,
+        "y1": 1238.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1226.5
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 759471.0,
+      "expected_delta": 7488.61,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "08/05/25",
+    "narration": "UPI-MR DASHRATH SHAMRAO PAYIMQRICAS5SZP DW@PAYTM-YESB0PTMUPI-554794827923-PANEER 08/05/25",
+    "debit": 115.0,
+    "credit": null,
+    "balance": 751867.39,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "115.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "751,867.39",
+      "parsed_debit": 115.0,
+      "parsed_credit": null,
+      "parsed_balance": 751867.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 115.0,
+    "ocr_x": 1118.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00107",
+    "_source_page": 11,
+    "_source_bbox": [
+      78.0,
+      1254.0,
+      1576.0,
+      1368.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 751982.39,
+      "expected_delta": 115.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "08/05/25",
+    "narration": "UPI-MAHESH DINKAR PATIL-9309808303@YBL-H DFC0000222-851223964979-SAYAJIRAJE WATER P 08/05/25",
+    "debit": null,
+    "credit": 1690.0,
+    "balance": 753557.39,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": null,
+      "ocr_credit_text": "1,690.00",
+      "ocr_balance_text": "753,557.39",
+      "parsed_debit": null,
+      "parsed_credit": 1690.0,
+      "parsed_balance": 753557.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 1690.0,
+    "ocr_x": 1300.0,
+    "assigned_column": "credit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00108",
+    "_source_page": 11,
+    "_source_bbox": [
+      81.0,
+      1379.0,
+      1579.0,
+      1498.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 751867.39,
+      "expected_delta": 1690.0,
+      "expected_direction": "credit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "08/05/25",
+    "narration": "P-BHARATPE.9NOK0T UPI-DHANAJI RAMCHANDRA 7R3H367012@FBPE-FDRL0001382-160942752317 PAY TOBHARATPE ME 08/05/25",
+    "debit": 117.0,
+    "credit": null,
+    "balance": 753440.39,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "117.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "753,440.39",
+      "parsed_debit": 117.0,
+      "parsed_credit": null,
+      "parsed_balance": 753440.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 117.0,
+    "ocr_x": 1119.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00109",
+    "_source_page": 11,
+    "_source_bbox": [
+      81.0,
+      1516.0,
+      1579.0,
+      1670.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753557.39,
+      "expected_delta": 117.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "08/05/25",
+    "narration": "RAJU-BHARATPE9FOT7S2I9D UPI-MUJAWAR AYAJ 98-PAY TO BHARATPE ME 485150@YESBANKLTD-YESB0YESUPI-0677449611 08/05/25",
+    "debit": 10000.0,
+    "credit": null,
+    "balance": 753340.39,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "10000",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "753,340.39",
+      "parsed_debit": 10000.0,
+      "parsed_credit": null,
+      "parsed_balance": 753340.39
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "POWER_OF_TEN_DRIFT",
+        "severity": "HIGH",
+        "diff": 9900.0,
+        "magnitude": 4,
+        "detail": "Difference of 9900.0 indicates single digit OCR substitution",
+        "anomaly_id": "A0016",
+        "affected_rows": []
+      }
+    },
+    "ocr_amount": 10000.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00110",
+    "_source_page": 11,
+    "_source_bbox": [
+      81.0,
+      1681.0,
+      1579.0,
+      1847.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "08/05/25",
+        "x0": 81.0,
+        "y0": 1689.0,
+        "x1": 162.0,
+        "y1": 1712.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1700.5
+      },
+      {
+        "text": "UPI-MUJAWAR AYAJ",
+        "x0": 171.0,
+        "y0": 1689.0,
+        "x1": 381.0,
+        "y1": 1712.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1700.5
+      },
+      {
+        "text": "0000067744961198",
+        "x0": 724.0,
+        "y0": 1689.0,
+        "x1": 910.0,
+        "y1": 1712.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1700.5
+      },
+      {
+        "text": "08/05/25",
+        "x0": 900.0,
+        "y0": 1689.0,
+        "x1": 983.0,
+        "y1": 1715.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1702.0
+      },
+      {
+        "text": "10000",
+        "x0": 1117.0,
+        "y0": 1684.0,
+        "x1": 1188.0,
+        "y1": 1717.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1700.5
+      },
+      {
+        "text": "753,340.39",
+        "x0": 1473.0,
+        "y0": 1681.0,
+        "x1": 1579.0,
+        "y1": 1720.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1700.5
+      },
+      {
+        "text": "RAJU-BHARATPE9FOT7S2I9D",
+        "x0": 169.0,
+        "y0": 1733.0,
+        "x1": 440.0,
+        "y1": 1757.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1745.0
+      },
+      {
+        "text": "485150@YESBANKLTD-YESB0YESUPI-0677449611",
+        "x0": 179.0,
+        "y0": 1776.0,
+        "x1": 640.0,
+        "y1": 1799.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1787.5
+      },
+      {
+        "text": "98-PAY TO BHARATPE ME",
+        "x0": 171.0,
+        "y0": 1811.0,
+        "x1": 431.0,
+        "y1": 1847.0,
+        "page": 11,
+        "source": "paddleocr",
+        "yc": 1829.0
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753440.39,
+      "expected_delta": 100.0,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "08/05/25",
+    "narration": "SAPKAL-BOISM-7507614777@ UPI-GANESH ARUN QR BOI-BKID0001508-722952656414-MERCHANT20 000072295265641408/05/25 is that ou secord with the Bank as at the day of requesting",
+    "debit": 70.0,
+    "credit": null,
+    "balance": 753270.39,
+    "page": 11,
+    "raw_extraction": {
+      "ocr_debit_text": "70.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "753,270.39",
+      "parsed_debit": 70.0,
+      "parsed_credit": null,
+      "parsed_balance": 753270.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 70.0,
+    "ocr_x": 1133.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00111",
+    "_source_page": 11,
+    "_source_bbox": [
+      80.0,
+      1858.0,
+      1576.0,
+      2115.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753340.39,
+      "expected_delta": 70.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "18/05/25",
+    "narration": "PAT-ROHAN.PATIL49@Y UPI-ROHAN SHASHIKANT BL-HDFC0000437-044449440210-MATTRESS 18/05/25",
+    "debit": 14640.0,
+    "credit": null,
+    "balance": 714022.39,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "14,640.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "714.022.39",
+      "parsed_debit": 14640.0,
+      "parsed_credit": null,
+      "parsed_balance": 714022.39
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "PRIMARY_BALANCE_ANOMALY",
+        "severity": "HIGH",
+        "anomaly_id": "A0017",
+        "diff": 24608.0,
+        "affected_rows": [],
+        "detail": "Unexplained ledger drift of -24608.0"
+      }
+    },
+    "ocr_amount": 14640.0,
+    "ocr_x": 1098.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "FAIL",
+    "_evidence_id": "txn_00113",
+    "_source_page": 12,
+    "_source_bbox": [
+      81.0,
+      781.0,
+      1576.0,
+      896.0
+    ],
+    "_source_tokens": [
+      {
+        "text": "18/05/25",
+        "x0": 81.0,
+        "y0": 783.0,
+        "x1": 162.0,
+        "y1": 807.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "UPI-ROHAN SHASHIKANT",
+        "x0": 169.0,
+        "y0": 781.0,
+        "x1": 426.0,
+        "y1": 809.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "0000044449440210",
+        "x0": 721.0,
+        "y0": 783.0,
+        "x1": 910.0,
+        "y1": 807.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 795.0
+      },
+      {
+        "text": "18/05/25",
+        "x0": 905.0,
+        "y0": 783.0,
+        "x1": 983.0,
+        "y1": 809.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 796.0
+      },
+      {
+        "text": "14,640.00",
+        "x0": 1098.0,
+        "y0": 783.0,
+        "x1": 1186.0,
+        "y1": 809.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 796.0
+      },
+      {
+        "text": "714.022.39",
+        "x0": 1479.0,
+        "y0": 783.0,
+        "x1": 1576.0,
+        "y1": 809.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 796.0
+      },
+      {
+        "text": "PAT-ROHAN.PATIL49@Y",
+        "x0": 167.0,
+        "y0": 823.0,
+        "x1": 405.0,
+        "y1": 851.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 837.0
+      },
+      {
+        "text": "BL-HDFC0000437-044449440210-MATTRESS",
+        "x0": 171.0,
+        "y0": 863.0,
+        "x1": 579.0,
+        "y1": 896.0,
+        "page": 12,
+        "source": "paddleocr",
+        "yc": 879.5
+      }
+    ],
+    "agreement_state": "PARTIAL_AGREEMENT",
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 753270.39,
+      "expected_delta": 39248.0,
+      "expected_direction": "debit",
+      "balance_trust": "MEDIUM",
+      "trust_reason": "LOCAL_CONSERVATION"
+    }
+  },
+  {
+    "date": "18/05/25",
+    "narration": "P-9284069940@YBL UPI-BABURAO VISHVANATH UBIN0542423-694663898588-PAYMENTFROM PH ONE 18/05/25",
+    "debit": 170.0,
+    "credit": null,
+    "balance": 713852.39,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "170.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "713,852.39",
+      "parsed_debit": 170.0,
+      "parsed_credit": null,
+      "parsed_balance": 713852.39
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 170.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00114",
+    "_source_page": 12,
+    "_source_bbox": [
+      81.0,
+      908.0,
+      1576.0,
+      1068.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 714022.39,
+      "expected_delta": 170.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "19/05/25",
+    "narration": "KAMB-8975354483-2@YB UPI-PRAVINRAVSAHEB L-FDRL0001485-100952615466-PETROL 19/05/25",
+    "debit": 3500.27,
+    "credit": null,
+    "balance": 710352.12,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "3,500.27",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "710,352.12",
+      "parsed_debit": 3500.27,
+      "parsed_credit": null,
+      "parsed_balance": 710352.12
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 3500.27,
+    "ocr_x": 1102.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00115",
+    "_source_page": 12,
+    "_source_bbox": [
+      78.0,
+      1077.0,
+      1579.0,
+      1198.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 713852.39,
+      "expected_delta": 3500.27,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "19/05/25",
+    "narration": "-BHARAIPE.9ZOROQ UPI-VINAYAK CHANDRAKANT 7K3O232259@FBPE-FDRL0001382-625589777170 PAY TO BHARATPE ME 19/05/25",
+    "debit": 60.0,
+    "credit": null,
+    "balance": 710292.12,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "60.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "710,292.12",
+      "parsed_debit": 60.0,
+      "parsed_credit": null,
+      "parsed_balance": 710292.12
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 60.0,
+    "ocr_x": 1131.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00116",
+    "_source_page": 12,
+    "_source_bbox": [
+      81.0,
+      1207.0,
+      1579.0,
+      1368.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 710352.12,
+      "expected_delta": 60.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "20/05/25",
+    "narration": "UPI-IRCTC CF-IRCTC.CF@HDFCBANK-HDFCOMERU PI-100588095624-IRCTC TICKETBOOKI 20/05/25",
+    "debit": 1453.6,
+    "credit": null,
+    "balance": 708838.52,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "1,453.60",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "708,838.52",
+      "parsed_debit": 1453.6,
+      "parsed_credit": null,
+      "parsed_balance": 708838.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 1453.6,
+    "ocr_x": 1107.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00117",
+    "_source_page": 12,
+    "_source_bbox": [
+      81.0,
+      1387.0,
+      1576.0,
+      1502.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 710292.12,
+      "expected_delta": 1453.6,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "21/05/25",
+    "narration": "SAWAN-Q851606438@YBL- UPI-SUDHIR MANOHAR YESB0YBLUPI-555764175005-PAYMENT FROM PH ONE 21/05/25",
+    "debit": 200.0,
+    "credit": null,
+    "balance": 708638.52,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "200.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "708,638.52",
+      "parsed_debit": 200.0,
+      "parsed_credit": null,
+      "parsed_balance": 708638.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 200.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00118",
+    "_source_page": 12,
+    "_source_bbox": [
+      81.0,
+      1512.0,
+      1579.0,
+      1670.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 708838.52,
+      "expected_delta": 200.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "21/05/25",
+    "narration": "UPI-SHAILESH PRAKASH NAY-Q871654607@YBL YESB0YBLUPI-7551296305S2-PAYMENT FROM PH ONE 21/05/25",
+    "debit": 105.0,
+    "credit": null,
+    "balance": 708533.52,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "105.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "708,533.52",
+      "parsed_debit": 105.0,
+      "parsed_credit": null,
+      "parsed_balance": 708533.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 105.0,
+    "ocr_x": 1117.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00119",
+    "_source_page": 12,
+    "_source_bbox": [
+      81.0,
+      1681.0,
+      1579.0,
+      1844.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 708638.52,
+      "expected_delta": 105.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "22/05/25",
+    "narration": "BILLDE-HDFCBANK BILLDE SK@HDFCBANK-HDFC0MERUPI-734804162001-PAY UPI-HDFC BANK LTD 22/05/25",
+    "debit": 7373.0,
+    "credit": null,
+    "balance": 701160.52,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "7,373.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "701,160.52",
+      "parsed_debit": 7373.0,
+      "parsed_credit": null,
+      "parsed_balance": 701160.52
+    },
+    "suspicious_fields": {},
+    "ocr_amount": 7373.0,
+    "ocr_x": 1105.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00120",
+    "_source_page": 12,
+    "_source_bbox": [
+      81.0,
+      1858.0,
+      1576.0,
+      1972.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 708533.52,
+      "expected_delta": 7373.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  },
+  {
+    "date": "22/05/25",
+    "narration": "Contes of this statemen will be considered correct if ao error is reported within 30 days of receipt of statmea.The address on this stareme UPI-POCKIT TECHNOLOGIES 22/05/25 t is that ou secord with the Bank as at the day of requesting",
+    "debit": 1.0,
+    "credit": null,
+    "balance": 701159.52,
+    "page": 12,
+    "raw_extraction": {
+      "ocr_debit_text": "1.00",
+      "ocr_credit_text": null,
+      "ocr_balance_text": "701.159.52",
+      "parsed_debit": 1.0,
+      "parsed_credit": null,
+      "parsed_balance": 701159.52
+    },
+    "suspicious_fields": {
+      "balance": {
+        "reason": "MULTIPLE_DOTS",
+        "severity": "HIGH",
+        "raw_text": "701.159.52",
+        "detail": "2 periods in numeric token \u2014 commas were read as dots"
+      }
+    },
+    "ocr_amount": 1.0,
+    "ocr_x": 1140.0,
+    "assigned_column": "debit",
+    "debit_zone": [
+      999.0,
+      1219.0
+    ],
+    "credit_zone": [
+      1219.0,
+      1402.0
+    ],
+    "job_id": "unknown",
+    "statement_id": "unknown",
+    "pdf_name": "Unknown",
+    "bank": "Unknown",
+    "contamination_detected": true,
+    "extraction_method": "coordinate_v2",
+    "conservation_state": "PASS",
+    "_evidence_id": "txn_00121",
+    "_source_page": 12,
+    "_source_bbox": [
+      67.0,
+      1988.0,
+      1576.0,
+      2118.0
+    ],
+    "ledger_truth": {
+      "available": true,
+      "prev_balance": 701160.52,
+      "expected_delta": 1.0,
+      "expected_direction": "debit",
+      "balance_trust": "HIGH",
+      "trust_reason": "LOCAL_CONSERVATION"
+    },
+    "agreement_state": "FULL_AGREEMENT"
+  }
+]

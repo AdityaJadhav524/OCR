@@ -1,0 +1,1401 @@
+﻿python : 2026-06-17 10:41:00,539  core.layout.row_detector                INFO     Detected 1215 physical rows from 
+2400 tokens.
+At line:1 char:1
++ python scratch/pipeline_trace.py 2>&1 | Out-File -FilePath "scratch/r ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-06-17 10:4...om 2400 tokens.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-06-17 10:41:00,540  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 326.0], 'narration_zone': [326.0, 997.0], 'debit_zone': [997.0, 1263.5], 'credit_zone': [1263.5, 9999.0]}
+2026-06-17 10:41:00,541  core.layout.row_detector                INFO     Grouped 91 rows into 19 transaction blocks.
+2026-06-17 10:41:00,541  core.layout.row_detector                INFO     Grouped 82 rows into 16 transaction blocks.
+2026-06-17 10:41:00,541  core.layout.row_detector                INFO     Grouped 92 rows into 20 transaction blocks.
+2026-06-17 10:41:00,542  core.layout.row_detector                INFO     Grouped 67 rows into 15 transaction blocks.
+2026-06-17 10:41:00,542  core.layout.row_detector                INFO     Grouped 74 rows into 14 transaction blocks.
+2026-06-17 10:41:00,542  core.layout.row_detector                INFO     Grouped 92 rows into 20 transaction blocks.
+2026-06-17 10:41:00,542  core.layout.row_detector                INFO     Grouped 92 rows into 22 transaction blocks.
+2026-06-17 10:41:00,543  core.layout.row_detector                INFO     Grouped 81 rows into 17 transaction blocks.
+2026-06-17 10:41:00,543  core.layout.row_detector                INFO     Grouped 84 rows into 18 transaction blocks.
+2026-06-17 10:41:00,543  core.layout.row_detector                INFO     Grouped 88 rows into 21 transaction blocks.
+2026-06-17 10:41:00,544  core.layout.row_detector                INFO     Grouped 94 rows into 21 transaction blocks.
+2026-06-17 10:41:00,544  core.layout.row_detector                INFO     Grouped 88 rows into 18 transaction blocks.
+2026-06-17 10:41:00,544  core.layout.row_detector                INFO     Grouped 96 rows into 23 transaction blocks.
+2026-06-17 10:41:00,544  core.layout.row_detector                INFO     Grouped 94 rows into 20 transaction blocks.
+2026-06-17 10:41:00,548  core.layout.row_detector                INFO     Detected 1215 physical rows from 2400 tokens.
+2026-06-17 10:41:00,548  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 326.0], 'narration_zone': [326.0, 997.0], 'debit_zone': [997.0, 1263.5], 'credit_zone': [1263.5, 9999.0]}
+2026-06-17 10:41:00,549  core.layout.row_detector                INFO     Grouped 91 rows into 19 transaction blocks.
+2026-06-17 10:41:00,549  core.layout.row_detector                INFO     Grouped 82 rows into 16 transaction blocks.
+2026-06-17 10:41:00,550  core.layout.row_detector                INFO     Grouped 92 rows into 20 transaction blocks.
+2026-06-17 10:41:00,550  core.layout.row_detector                INFO     Grouped 67 rows into 15 transaction blocks.
+2026-06-17 10:41:00,551  core.layout.row_detector                INFO     Grouped 74 rows into 14 transaction blocks.
+2026-06-17 10:41:00,551  core.layout.row_detector                INFO     Grouped 92 rows into 20 transaction blocks.
+2026-06-17 10:41:00,552  core.layout.row_detector                INFO     Grouped 92 rows into 22 transaction blocks.
+2026-06-17 10:41:00,552  core.layout.row_detector                INFO     Grouped 81 rows into 17 transaction blocks.
+2026-06-17 10:41:00,553  core.layout.row_detector                INFO     Grouped 84 rows into 18 transaction blocks.
+2026-06-17 10:41:00,553  core.layout.row_detector                INFO     Grouped 88 rows into 21 transaction blocks.
+2026-06-17 10:41:00,554  core.layout.row_detector                INFO     Grouped 94 rows into 21 transaction blocks.
+2026-06-17 10:41:00,554  core.layout.row_detector                INFO     Grouped 88 rows into 18 transaction blocks.
+2026-06-17 10:41:00,555  core.layout.row_detector                INFO     Grouped 96 rows into 23 transaction blocks.
+2026-06-17 10:41:00,555  core.layout.row_detector                INFO     Grouped 94 rows into 20 transaction blocks.
+2026-06-17 10:41:00,555  core.parsers.coordinate_parser_v2       INFO     PDF TYPE: Unknown
+2026-06-17 10:41:00,556  core.parsers.coordinate_parser_v2       INFO     OCR TOKENS: 2400
+2026-06-17 10:41:00,556  core.parsers.coordinate_parser_v2       INFO     COLUMN ZONES: {'date_zone': [0.0, 326.0], 
+'narration_zone': [326.0, 997.0], 'debit_zone': [997.0, 1263.5], 'credit_zone': [1263.5, 9999.0]}
+2026-06-17 10:41:00,556  core.parsers.coordinate_parser_v2       INFO     ROWS DETECTED: 1215
+2026-06-17 10:41:00,556  core.parsers.coordinate_parser_v2       INFO     BLOCKS DETECTED: 264
+2026-06-17 10:41:00,557  core.parsers.coordinate_parser_v2       DEBUG    PageSeed: page 5 opening=153008.95
+2026-06-17 10:41:00,559  core.parsers.coordinate_parser_v2       INFO     V2: Page balance seeds found: {5: 153008.95}
+2026-06-17 10:41:00,559  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[1] page=1 
+date='30/11/2024' dr=661.0 cr=None bal=21078.0 prev=21078.0 \u2192 
+conservation_conflict(residual=65439.00,prev=87178.0)
+2026-06-17 10:41:00,560  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[2] page=1 
+date='30-11-2024' dr=9617.0 cr=None bal=982778.0 prev=982778.0 \u2192 
+conservation_conflict(residual=971317.00,prev=21078.0)
+2026-06-17 10:41:00,560  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[3] page=1 
+date='30-11-2024' dr=2797.0 cr=None bal=1262478.0 prev=1262478.0 \u2192 
+conservation_conflict(residual=282497.00,prev=982778.0)
+2026-06-17 10:41:00,560  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[4] page=1 
+date='02-12-2024' dr=43840.0 cr=None bal=5646478.0 prev=5646478.0 \u2192 
+conservation_conflict(residual=4427840.00,prev=1262478.0)
+2026-06-17 10:41:00,560  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[5] page=1 
+date='02/12/2024' dr=150.0 cr=None bal=5631478.0 prev=5631478.0 \u2192 
+conservation_conflict(residual=14850.00,prev=5646478.0)
+2026-06-17 10:41:00,560  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[6] page=1 
+date='02/12/2024' dr=200.0 cr=None bal=5611478.0 prev=5611478.0 \u2192 
+conservation_conflict(residual=19800.00,prev=5631478.0)
+2026-06-17 10:41:00,560  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[7] page=1 
+date='03/12/2024' dr=10083.0 cr=None bal=4603178.0 prev=4603178.0 \u2192 
+conservation_conflict(residual=998217.00,prev=5611478.0)
+2026-06-17 10:41:00,561  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[8] page=1 
+date='03/12/2024' dr=60.0 cr=None bal=4597178.0 prev=4597178.0 \u2192 
+conservation_conflict(residual=5940.00,prev=4603178.0)
+2026-06-17 10:41:00,561  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[9] page=1 
+date='03/12/2024' dr=1000.0 cr=None bal=4497178.0 prev=4497178.0 \u2192 
+conservation_conflict(residual=99000.00,prev=4597178.0)
+2026-06-17 10:41:00,561  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[10] page=1 
+date='04/12/2024' dr=80.0 cr=None bal=4489178.0 prev=4489178.0 \u2192 
+conservation_conflict(residual=7920.00,prev=4497178.0)
+2026-06-17 10:41:00,561  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[11] page=1 
+date='04/12/2024' dr=1388.0 cr=None bal=4350378.0 prev=4350378.0 \u2192 
+conservation_conflict(residual=137412.00,prev=4489178.0)
+2026-06-17 10:41:00,561  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[12] page=1 
+date='04/12/2024' dr=5000.0 cr=None bal=3850378.0 prev=3850378.0 \u2192 
+conservation_conflict(residual=495000.00,prev=4350378.0)
+2026-06-17 10:41:00,561  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[13] page=1 
+date='04/12/2024' dr=70.0 cr=None bal=3843378.0 prev=3843378.0 \u2192 
+conservation_conflict(residual=6930.00,prev=3850378.0)
+2026-06-17 10:41:00,562  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[14] page=1 
+date='04/12/2024' dr=902.0 cr=None bal=3753178.0 prev=3753178.0 \u2192 
+conservation_conflict(residual=89298.00,prev=3843378.0)
+2026-06-17 10:41:00,562  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[15] page=1 
+date='05/12/2024' dr=260.0 cr=None bal=3727178.0 prev=3727178.0 \u2192 
+conservation_conflict(residual=25740.00,prev=3753178.0)
+2026-06-17 10:41:00,562  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[16] page=1 
+date='05/12/2024' dr=1000.0 cr=None bal=3627178.0 prev=3627178.0 \u2192 
+conservation_conflict(residual=99000.00,prev=3727178.0)
+2026-06-17 10:41:00,562  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[17] page=1 
+date='06/12/2024' dr=1345.0 cr=None bal=3492678.0 prev=3492678.0 \u2192 
+conservation_conflict(residual=133155.00,prev=3627178.0)
+2026-06-17 10:41:00,562  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[18] page=1 
+date='06/12/2024' dr=50.0 cr=None bal=3487678.0 prev=3487678.0 \u2192 
+conservation_conflict(residual=4950.00,prev=3492678.0)
+2026-06-17 10:41:00,562  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 1\u21922, carrying 
+prev_balance=3487678.0
+2026-06-17 10:41:00,562  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[19] page=2 
+date='15/02/2025' dr=230.0 cr=None bal=2901971.0 prev=2901971.0 \u2192 
+conservation_conflict(residual=585477.00,prev=3487678.0)
+2026-06-17 10:41:00,563  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[20] page=2 
+date='15/02/2025' dr=50.0 cr=None bal=2896971.0 prev=2896971.0 \u2192 
+conservation_conflict(residual=4950.00,prev=2901971.0)
+2026-06-17 10:41:00,563  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[21] page=2 
+date='15/02/2025' dr=150.0 cr=None bal=2881971.0 prev=2881971.0 \u2192 
+conservation_conflict(residual=14850.00,prev=2896971.0)
+2026-06-17 10:41:00,563  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[22] page=2 
+date='15/02/2025' dr=50.0 cr=None bal=2876971.0 prev=2876971.0 \u2192 
+conservation_conflict(residual=4950.00,prev=2881971.0)
+2026-06-17 10:41:00,563  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[23] page=2 
+date='15/02/2025' dr=270.0 cr=None bal=2849971.0 prev=2849971.0 \u2192 
+conservation_conflict(residual=26730.00,prev=2876971.0)
+2026-06-17 10:41:00,563  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[24] page=2 
+date='15/02/2025' dr=69.0 cr=None bal=2843071.0 prev=2843071.0 \u2192 
+conservation_conflict(residual=6831.00,prev=2849971.0)
+2026-06-17 10:41:00,563  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[25] page=2 
+date='16/02/2025' dr=149.0 cr=None bal=2828171.0 prev=2828171.0 \u2192 
+conservation_conflict(residual=14751.00,prev=2843071.0)
+2026-06-17 10:41:00,564  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[26] page=2 
+date='17/02/2025' dr=10000.0 cr=None bal=1828171.0 prev=1828171.0 \u2192 
+conservation_conflict(residual=990000.00,prev=2828171.0)
+2026-06-17 10:41:00,564  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[27] page=2 
+date='18/02/2025' dr=200.0 cr=None bal=1808171.0 prev=1808171.0 \u2192 
+conservation_conflict(residual=19800.00,prev=1828171.0)
+2026-06-17 10:41:00,564  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[28] page=2 
+date='20/02/2025' dr=200.0 cr=None bal=1788171.0 prev=1788171.0 \u2192 
+conservation_conflict(residual=19800.00,prev=1808171.0)
+2026-06-17 10:41:00,564  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[29] page=2 
+date='20/02/2025' dr=250.0 cr=None bal=1763171.0 prev=1763171.0 \u2192 
+conservation_conflict(residual=24750.00,prev=1788171.0)
+2026-06-17 10:41:00,564  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[30] page=2 
+date='20/02/2025' dr=456.0 cr=None bal=1717571.0 prev=1717571.0 \u2192 
+conservation_conflict(residual=45144.00,prev=1763171.0)
+2026-06-17 10:41:00,564  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[31] page=2 
+date='22/02/2025' dr=500.0 cr=None bal=1667571.0 prev=1667571.0 \u2192 
+conservation_conflict(residual=49500.00,prev=1717571.0)
+2026-06-17 10:41:00,565  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[32] page=2 
+date='24-02-2025' dr=2565.0 cr=None bal=1924071.0 prev=1924071.0 \u2192 
+conservation_conflict(residual=259065.00,prev=1667571.0)
+2026-06-17 10:41:00,565  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[33] page=2 
+date='24/02/2025' dr=1014.12 cr=None bal=1822659.0 prev=1822659.0 \u2192 
+conservation_conflict(residual=100397.88,prev=1924071.0)
+2026-06-17 10:41:00,565  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[34] page=2 
+date='25/02/2025' dr=5.0 cr=None bal=1822159.0 prev=1822159.0 \u2192 
+conservation_conflict(residual=495.00,prev=1822659.0)
+2026-06-17 10:41:00,565  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 2\u21923, carrying 
+prev_balance=1822159.0
+2026-06-17 10:41:00,565  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[35] page=3 
+date='15/11/2024' dr=5552.06 cr=None bal=4800629.0 prev=4800629.0 \u2192 
+conservation_conflict(residual=2984022.06,prev=1822159.0)
+2026-06-17 10:41:00,565  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[36] page=3 
+date='15/11/2024' dr=4000.0 cr=None bal=4400629.0 prev=4400629.0 \u2192 
+conservation_conflict(residual=396000.00,prev=4800629.0)
+2026-06-17 10:41:00,565  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[37] page=3 
+date='15/11/2024' dr=600.0 cr=None bal=4340629.0 prev=4340629.0 \u2192 
+conservation_conflict(residual=59400.00,prev=4400629.0)
+2026-06-17 10:41:00,566  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[38] page=3 
+date='15/11/2024' dr=550.0 cr=None bal=4285629.0 prev=4285629.0 \u2192 
+conservation_conflict(residual=54450.00,prev=4340629.0)
+2026-06-17 10:41:00,566  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[39] page=3 
+date='15/11/2024' dr=300.0 cr=None bal=4255629.0 prev=4255629.0 \u2192 
+conservation_conflict(residual=29700.00,prev=4285629.0)
+2026-06-17 10:41:00,566  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[40] page=3 
+date='15/11/2024' dr=1268.0 cr=None bal=4128829.0 prev=4128829.0 \u2192 
+conservation_conflict(residual=125532.00,prev=4255629.0)
+2026-06-17 10:41:00,566  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[41] page=3 
+date='15/11/2024' dr=2800.0 cr=None bal=3848829.0 prev=3848829.0 \u2192 
+conservation_conflict(residual=277200.00,prev=4128829.0)
+2026-06-17 10:41:00,566  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[42] page=3 
+date='15/11/2024' dr=149.0 cr=None bal=3833929.0 prev=3833929.0 \u2192 
+conservation_conflict(residual=14751.00,prev=3848829.0)
+2026-06-17 10:41:00,566  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[43] page=3 
+date='16/11/2024' dr=80.0 cr=None bal=3825929.0 prev=3825929.0 \u2192 
+conservation_conflict(residual=7920.00,prev=3833929.0)
+2026-06-17 10:41:00,567  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[44] page=3 
+date='16/11/2024' dr=226.79 cr=None bal=3803250.0 prev=3803250.0 \u2192 
+conservation_conflict(residual=22452.21,prev=3825929.0)
+2026-06-17 10:41:00,567  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[45] page=3 
+date='16/11/2024' dr=60.0 cr=None bal=3797250.0 prev=3797250.0 \u2192 
+conservation_conflict(residual=5940.00,prev=3803250.0)
+2026-06-17 10:41:00,567  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[46] page=3 
+date='16/11/2024' dr=200.0 cr=None bal=3777250.0 prev=3777250.0 \u2192 
+conservation_conflict(residual=19800.00,prev=3797250.0)
+2026-06-17 10:41:00,567  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[47] page=3 
+date='16/11/2024' dr=4195.8 cr=None bal=3357670.0 prev=3357670.0 \u2192 
+conservation_conflict(residual=415384.20,prev=3777250.0)
+2026-06-17 10:41:00,568  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[48] page=3 
+date='16/11/2024' dr=1400.0 cr=None bal=3217670.0 prev=3217670.0 \u2192 
+conservation_conflict(residual=138600.00,prev=3357670.0)
+2026-06-17 10:41:00,568  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[49] page=3 
+date='16/11/2024' dr=578.0 cr=None bal=3159870.0 prev=3159870.0 \u2192 
+conservation_conflict(residual=57222.00,prev=3217670.0)
+2026-06-17 10:41:00,568  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[50] page=3 
+date='17/11/2024' dr=238.36 cr=None bal=3136034.0 prev=3136034.0 \u2192 
+conservation_conflict(residual=23597.64,prev=3159870.0)
+2026-06-17 10:41:00,568  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[53] page=3 
+date='17-11-2024' dr=1000.0 cr=None bal=2930656.0 prev=2930656.0 \u2192 
+conservation_conflict(residual=101000.00,prev=2830656.0)
+2026-06-17 10:41:00,569  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[54] page=3 
+date='17/11/2024' dr=350.0 cr=None bal=2895656.0 prev=2895656.0 \u2192 
+conservation_conflict(residual=34650.00,prev=2930656.0)
+2026-06-17 10:41:00,569  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 3\u21924, carrying 
+prev_balance=2895656.0
+2026-06-17 10:41:00,569  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[55] page=4 
+date='16/03/2025' dr=149.0 cr=None bal=292359.0 prev=292359.0 \u2192 
+conservation_conflict(residual=2603148.00,prev=2895656.0)
+2026-06-17 10:41:00,569  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[56] page=4 
+date='17/03/2025' dr=250.9 cr=None bal=267269.0 prev=267269.0 \u2192 
+conservation_conflict(residual=24839.10,prev=292359.0)
+2026-06-17 10:41:00,569  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[57] page=4 
+date='18/03/2025' dr=2.09 cr=None bal=267060.0 prev=267060.0 \u2192 
+conservation_conflict(residual=206.91,prev=267269.0)
+2026-06-17 10:41:00,569  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[58] page=4 
+date='18/03/2025' dr=271.0 cr=None bal=239960.0 prev=239960.0 \u2192 
+conservation_conflict(residual=26829.00,prev=267060.0)
+2026-06-17 10:41:00,569  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[59] page=4 
+date='19/03/2025' dr=760.0 cr=None bal=163960.0 prev=163960.0 \u2192 
+conservation_conflict(residual=75240.00,prev=239960.0)
+2026-06-17 10:41:00,570  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[60] page=4 
+date='19-03-2025' dr=75.0 cr=None bal=171460.0 prev=171460.0 \u2192 
+conservation_conflict(residual=7575.00,prev=163960.0)
+2026-06-17 10:41:00,570  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[61] page=4 
+date='20-03-2025' dr=53277.0 cr=None bal=5499160.0 prev=5499160.0 \u2192 
+conservation_conflict(residual=5380977.00,prev=171460.0)
+2026-06-17 10:41:00,570  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[62] page=4 
+date='27/03/2025' dr=43.0 cr=None bal=5494860.0 prev=5494860.0 \u2192 
+conservation_conflict(residual=4257.00,prev=5499160.0)
+2026-06-17 10:41:00,570  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[63] page=4 
+date='27/03/2025' dr=3.87 cr=None bal=5494473.0 prev=5494473.0 \u2192 
+conservation_conflict(residual=383.13,prev=5494860.0)
+2026-06-17 10:41:00,570  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[64] page=4 
+date='27/03/2025' dr=3.87 cr=None bal=5494086.0 prev=5494086.0 \u2192 
+conservation_conflict(residual=383.13,prev=5494473.0)
+2026-06-17 10:41:00,570  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[65] page=4 
+date='28/03/2025' dr=14800.0 cr=None bal=4014086.0 prev=4014086.0 \u2192 
+conservation_conflict(residual=1465200.00,prev=5494086.0)
+2026-06-17 10:41:00,571  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[68] page=4 
+date='29/03/2025' dr=100000.0 cr=None bal=24014186.0 prev=24014186.0 \u2192 
+conservation_conflict(residual=9900000.00,prev=34014186.0)
+2026-06-17 10:41:00,571  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[69] page=4 
+date='31-03-2025' dr=143.0 cr=None bal=24028486.0 prev=24028486.0 \u2192 
+conservation_conflict(residual=14443.00,prev=24014186.0)
+2026-06-17 10:41:00,571  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 4\u21925, carrying 
+prev_balance=24028486.0
+2026-06-17 10:41:00,571  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[70] page=5 date=None dr=None 
+cr=None bal=None prev=24028486.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:41:00,571  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[73] page=5 
+date='07/10/2024' dr=119.0 cr=None bal=1020679.0 prev=1020679.0 \u2192 
+conservation_conflict(residual=11781.00,prev=1032579.0)
+2026-06-17 10:41:00,572  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[74] page=5 
+date='09/10/2024' dr=118.0 cr=None bal=1008879.0 prev=1008879.0 \u2192 
+conservation_conflict(residual=11682.00,prev=1020679.0)
+2026-06-17 10:41:00,572  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[75] page=5 
+date='09/10/2024' dr=200.0 cr=None bal=988879.0 prev=988879.0 \u2192 
+conservation_conflict(residual=19800.00,prev=1008879.0)
+2026-06-17 10:41:00,572  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[76] page=5 
+date='10-10-2024' dr=15000.0 cr=None bal=2488879.0 prev=2488879.0 \u2192 
+conservation_conflict(residual=1515000.00,prev=988879.0)
+2026-06-17 10:41:00,572  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[77] page=5 
+date='12/10/2024' dr=120.0 cr=None bal=2476879.0 prev=2476879.0 \u2192 
+conservation_conflict(residual=11880.00,prev=2488879.0)
+2026-06-17 10:41:00,572  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[78] page=5 
+date='13/10/2024' dr=75.0 cr=None bal=2469379.0 prev=2469379.0 \u2192 
+conservation_conflict(residual=7425.00,prev=2476879.0)
+2026-06-17 10:41:00,572  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[79] page=5 
+date='13/10/2024' dr=12700.0 cr=None bal=1199379.0 prev=1199379.0 \u2192 
+conservation_conflict(residual=1257300.00,prev=2469379.0)
+2026-06-17 10:41:00,572  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[80] page=5 
+date='16/10/2024' dr=149.0 cr=None bal=1184479.0 prev=1184479.0 \u2192 
+conservation_conflict(residual=14751.00,prev=1199379.0)
+2026-06-17 10:41:00,573  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[81] page=5 
+date='17/10/2024' dr=528.63 cr=None bal=1131616.0 prev=1131616.0 \u2192 
+conservation_conflict(residual=52334.37,prev=1184479.0)
+2026-06-17 10:41:00,573  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[82] page=5 
+date='18-10-2024' dr=50000.0 cr=None bal=6131616.0 prev=6131616.0 \u2192 
+conservation_conflict(residual=5050000.00,prev=1131616.0)
+2026-06-17 10:41:00,573  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[83] page=5 
+date='18/10/2024' dr=25000.0 cr=None bal=3631616.0 prev=3631616.0 \u2192 
+conservation_conflict(residual=2475000.00,prev=6131616.0)
+2026-06-17 10:41:00,573  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 5\u21926, carrying 
+prev_balance=3631616.0
+2026-06-17 10:41:00,573  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[84] page=6 
+date='29-10-2024' dr=10000.0 cr=None bal=2103816.0 prev=2103816.0 \u2192 
+conservation_conflict(residual=1517800.00,prev=3631616.0)
+2026-06-17 10:41:00,573  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[85] page=6 
+date='29/10/2024' dr=2501.0 cr=None bal=1853716.0 prev=1853716.0 \u2192 
+conservation_conflict(residual=247599.00,prev=2103816.0)
+2026-06-17 10:41:00,574  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[86] page=6 
+date='30/10/2024' dr=450.0 cr=None bal=1808716.0 prev=1808716.0 \u2192 
+conservation_conflict(residual=44550.00,prev=1853716.0)
+2026-06-17 10:41:00,574  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[87] page=6 
+date='31/10/2024' dr=16018.81 cr=None bal=206835.0 prev=206835.0 \u2192 
+conservation_conflict(residual=1585862.19,prev=1808716.0)
+2026-06-17 10:41:00,574  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[88] page=6 
+date='02/11/2024' dr=160.0 cr=None bal=190835.0 prev=190835.0 \u2192 
+conservation_conflict(residual=15840.00,prev=206835.0)
+2026-06-17 10:41:00,574  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[89] page=6 
+date='02/11/2024' dr=101.0 cr=None bal=180735.0 prev=180735.0 \u2192 
+conservation_conflict(residual=9999.00,prev=190835.0)
+2026-06-17 10:41:00,574  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[90] page=6 
+date='02/11/2024' dr=50.0 cr=None bal=175735.0 prev=175735.0 \u2192 
+conservation_conflict(residual=4950.00,prev=180735.0)
+2026-06-17 10:41:00,575  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[91] page=6 
+date='02/11/2024' dr=20.0 cr=None bal=173735.0 prev=173735.0 \u2192 
+conservation_conflict(residual=1980.00,prev=175735.0)
+2026-06-17 10:41:00,575  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[92] page=6 
+date='03/11/2024' dr=1.0 cr=None bal=173635.0 prev=173635.0 \u2192 conservation_conflict(residual=99.00,prev=173735.0)
+2026-06-17 10:41:00,575  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[93] page=6 
+date='04-11-2024' dr=2000.0 cr=None bal=373635.0 prev=373635.0 \u2192 
+conservation_conflict(residual=202000.00,prev=173635.0)
+2026-06-17 10:41:00,575  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[94] page=6 
+date='07/11/2024' dr=119.0 cr=None bal=361735.0 prev=361735.0 \u2192 
+conservation_conflict(residual=11781.00,prev=373635.0)
+2026-06-17 10:41:00,575  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[95] page=6 
+date='07/11/2024' dr=220.0 cr=None bal=339735.0 prev=339735.0 \u2192 
+conservation_conflict(residual=21780.00,prev=361735.0)
+2026-06-17 10:41:00,575  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[96] page=6 
+date='09/11/2024' dr=120.0 cr=None bal=327735.0 prev=327735.0 \u2192 
+conservation_conflict(residual=11880.00,prev=339735.0)
+2026-06-17 10:41:00,575  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[97] page=6 
+date='10/11/2024' dr=30.0 cr=None bal=324735.0 prev=324735.0 \u2192 
+conservation_conflict(residual=2970.00,prev=327735.0)
+2026-06-17 10:41:00,576  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[98] page=6 
+date='13/11/2024' dr=355.0 cr=None bal=289235.0 prev=289235.0 \u2192 
+conservation_conflict(residual=35145.00,prev=324735.0)
+2026-06-17 10:41:00,576  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[99] page=6 
+date='13-11-2024' dr=10000.0 cr=None bal=1289235.0 prev=1289235.0 \u2192 
+conservation_conflict(residual=1010000.00,prev=289235.0)
+2026-06-17 10:41:00,576  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[100] page=6 
+date='13-11-2024' dr=49049.0 cr=None bal=6194135.0 prev=6194135.0 \u2192 
+conservation_conflict(residual=4953949.00,prev=1289235.0)
+2026-06-17 10:41:00,576  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[101] page=6 
+date='13/11/2024' dr=7223.0 cr=None bal=5471835.0 prev=5471835.0 \u2192 
+conservation_conflict(residual=715077.00,prev=6194135.0)
+2026-06-17 10:41:00,576  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[102] page=6 
+date='15/11/2024' dr=160.0 cr=None bal=5455835.0 prev=5455835.0 \u2192 
+conservation_conflict(residual=15840.00,prev=5471835.0)
+2026-06-17 10:41:00,576  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[103] page=6 
+date='15/11/2024' dr=1000.0 cr=None bal=5355835.0 prev=5355835.0 \u2192 
+conservation_conflict(residual=99000.00,prev=5455835.0)
+2026-06-17 10:41:00,577  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 6\u21927, carrying 
+prev_balance=5355835.0
+2026-06-17 10:41:00,577  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[104] page=7 
+date='07/12/2024' dr=1250.0 cr=None bal=3362678.0 prev=3362678.0 \u2192 
+conservation_conflict(residual=1991907.00,prev=5355835.0)
+2026-06-17 10:41:00,577  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[105] page=7 
+date='07/12/2024' dr=119.0 cr=None bal=3350778.0 prev=3350778.0 \u2192 
+conservation_conflict(residual=11781.00,prev=3362678.0)
+2026-06-17 10:41:00,577  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[106] page=7 
+date='07/12/2024' dr=500.0 cr=None bal=3300778.0 prev=3300778.0 \u2192 
+conservation_conflict(residual=49500.00,prev=3350778.0)
+2026-06-17 10:41:00,577  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[107] page=7 
+date='07-12-2024' dr=41253.0 cr=None bal=7426078.0 prev=7426078.0 \u2192 
+conservation_conflict(residual=4166553.00,prev=3300778.0)
+2026-06-17 10:41:00,577  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[108] page=7 
+date='07/12/2024' dr=50000.0 cr=None bal=2426078.0 prev=2426078.0 \u2192 
+conservation_conflict(residual=4950000.00,prev=7426078.0)
+2026-06-17 10:41:00,577  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[109] page=7 
+date='07/12/2024' dr=252.0 cr=None bal=2400878.0 prev=2400878.0 \u2192 
+conservation_conflict(residual=24948.00,prev=2426078.0)
+2026-06-17 10:41:00,630  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[110] page=7 
+date='09/12/2024' dr=40.0 cr=None bal=2396878.0 prev=2396878.0 \u2192 
+conservation_conflict(residual=3960.00,prev=2400878.0)
+2026-06-17 10:41:00,630  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[111] page=7 
+date='09/12/2024' dr=160.0 cr=None bal=2380878.0 prev=2380878.0 \u2192 
+conservation_conflict(residual=15840.00,prev=2396878.0)
+2026-06-17 10:41:00,631  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[112] page=7 
+date='10-12-2024' dr=11000.0 cr=None bal=3480878.0 prev=3480878.0 \u2192 
+conservation_conflict(residual=1111000.00,prev=2380878.0)
+2026-06-17 10:41:00,631  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[113] page=7 
+date='10/12/2024' dr=11000.0 cr=None bal=2380878.0 prev=2380878.0 \u2192 
+conservation_conflict(residual=1089000.00,prev=3480878.0)
+2026-06-17 10:41:00,631  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[114] page=7 
+date='11/12/2024' dr=10000.0 cr=None bal=1380878.0 prev=1380878.0 \u2192 
+conservation_conflict(residual=990000.00,prev=2380878.0)
+2026-06-17 10:41:00,631  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[115] page=7 
+date='16/12/2024' dr=149.0 cr=None bal=1365978.0 prev=1365978.0 \u2192 
+conservation_conflict(residual=14751.00,prev=1380878.0)
+2026-06-17 10:41:00,631  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[116] page=7 
+date='17/12/2024' dr=130.0 cr=None bal=1352978.0 prev=1352978.0 \u2192 
+conservation_conflict(residual=12870.00,prev=1365978.0)
+2026-06-17 10:41:00,631  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[117] page=7 
+date='19/12/2024' dr=500.0 cr=None bal=1302978.0 prev=1302978.0 \u2192 
+conservation_conflict(residual=49500.00,prev=1352978.0)
+2026-06-17 10:41:00,632  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[118] page=7 
+date='19/12/2024' dr=800.0 cr=None bal=1222978.0 prev=1222978.0 \u2192 
+conservation_conflict(residual=79200.00,prev=1302978.0)
+2026-06-17 10:41:00,632  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[119] page=7 
+date='19/12/2024' dr=400.0 cr=None bal=1182978.0 prev=1182978.0 \u2192 
+conservation_conflict(residual=39600.00,prev=1222978.0)
+2026-06-17 10:41:00,632  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[120] page=7 
+date='21/12/2024' dr=30.0 cr=None bal=1179978.0 prev=1179978.0 \u2192 
+conservation_conflict(residual=2970.00,prev=1182978.0)
+2026-06-17 10:41:00,632  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[121] page=7 
+date='21/12/2024' dr=100.0 cr=None bal=1169978.0 prev=1169978.0 \u2192 
+conservation_conflict(residual=9900.00,prev=1179978.0)
+2026-06-17 10:41:00,632  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[122] page=7 
+date='23/12/2024' dr=75.0 cr=None bal=1162478.0 prev=1162478.0 \u2192 
+conservation_conflict(residual=7425.00,prev=1169978.0)
+2026-06-17 10:41:00,632  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[123] page=7 
+date='25/12/2024' dr=4.32 cr=None bal=1162046.0 prev=1162046.0 \u2192 
+conservation_conflict(residual=427.68,prev=1162478.0)
+2026-06-17 10:41:00,632  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[124] page=7 
+date='25/12/2024' dr=48.0 cr=None bal=1157246.0 prev=1157246.0 \u2192 
+conservation_conflict(residual=4752.00,prev=1162046.0)
+2026-06-17 10:41:00,633  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[125] page=7 
+date='25/12/2024' dr=4.32 cr=None bal=1156814.0 prev=1156814.0 \u2192 
+conservation_conflict(residual=427.68,prev=1157246.0)
+2026-06-17 10:41:00,633  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 7\u21928, carrying 
+prev_balance=1156814.0
+2026-06-17 10:41:00,639  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[126] page=8 
+date='30/01/2025' dr=1000.0 cr=None bal=26488.0 prev=26488.0 \u2192 
+conservation_conflict(residual=1129326.00,prev=1156814.0)
+2026-06-17 10:41:00,639  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[127] page=8 
+date='01/02/2025' dr=30.0 cr=None bal=23488.0 prev=23488.0 \u2192 conservation_conflict(residual=2970.00,prev=26488.0)
+2026-06-17 10:41:00,639  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[128] page=8 
+date='01-02-2025' dr=10000.0 cr=None bal=1023488.0 prev=1023488.0 \u2192 
+conservation_conflict(residual=1010000.00,prev=23488.0)
+2026-06-17 10:41:00,640  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[129] page=8 
+date='02/02/2025' dr=220.0 cr=None bal=1001488.0 prev=1001488.0 \u2192 
+conservation_conflict(residual=21780.00,prev=1023488.0)
+2026-06-17 10:41:00,640  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[130] page=8 
+date='02/02/2025' dr=1505.0 cr=None bal=850988.0 prev=850988.0 \u2192 
+conservation_conflict(residual=148995.00,prev=1001488.0)
+2026-06-17 10:41:00,640  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[131] page=8 
+date='03-02-2025' dr=9000.0 cr=None bal=1750988.0 prev=1750988.0 \u2192 
+conservation_conflict(residual=909000.00,prev=850988.0)
+2026-06-17 10:41:00,640  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[132] page=8 
+date='04/02/2025' dr=5000.0 cr=None bal=1250988.0 prev=1250988.0 \u2192 
+conservation_conflict(residual=495000.00,prev=1750988.0)
+2026-06-17 10:41:00,640  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[133] page=8 
+date='04/02/2025' dr=10083.0 cr=None bal=242688.0 prev=242688.0 \u2192 
+conservation_conflict(residual=998217.00,prev=1250988.0)
+2026-06-17 10:41:00,640  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[134] page=8 
+date='04/02/2025' dr=330.0 cr=None bal=209688.0 prev=209688.0 \u2192 
+conservation_conflict(residual=32670.00,prev=242688.0)
+2026-06-17 10:41:00,641  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[135] page=8 
+date='05/02/2025' dr=400.0 cr=None bal=169688.0 prev=169688.0 \u2192 
+conservation_conflict(residual=39600.00,prev=209688.0)
+2026-06-17 10:41:00,641  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[136] page=8 
+date='05/02/2025' dr=30.0 cr=None bal=166688.0 prev=166688.0 \u2192 
+conservation_conflict(residual=2970.00,prev=169688.0)
+2026-06-17 10:41:00,641  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[137] page=8 
+date='05/02/2025' dr=25.0 cr=None bal=164188.0 prev=164188.0 \u2192 
+conservation_conflict(residual=2475.00,prev=166688.0)
+2026-06-17 10:41:00,641  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[138] page=8 
+date='06/02/2025' dr=64.0 cr=None bal=157788.0 prev=157788.0 \u2192 
+conservation_conflict(residual=6336.00,prev=164188.0)
+2026-06-17 10:41:00,641  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[139] page=8 
+date='06/02/2025' dr=75.0 cr=None bal=150288.0 prev=150288.0 \u2192 
+conservation_conflict(residual=7425.00,prev=157788.0)
+2026-06-17 10:41:00,641  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[140] page=8 
+date='07/02/2025' dr=119.0 cr=None bal=138388.0 prev=138388.0 \u2192 
+conservation_conflict(residual=11781.00,prev=150288.0)
+2026-06-17 10:41:00,641  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[141] page=8 
+date='07/02/2025' dr=65.0 cr=None bal=131888.0 prev=131888.0 \u2192 
+conservation_conflict(residual=6435.00,prev=138388.0)
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[142] page=8 
+date='07/02/2025' dr=83.0 cr=None bal=123588.0 prev=123588.0 \u2192 
+conservation_conflict(residual=8217.00,prev=131888.0)
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 8\u21929, carrying 
+prev_balance=123588.0
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[143] page=9 
+date='26/02/2025' dr=50.0 cr=None bal=1817159.0 prev=1817159.0 \u2192 
+conservation_conflict(residual=1693621.00,prev=123588.0)
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[144] page=9 
+date='27/02/2025' dr=50.0 cr=None bal=1812159.0 prev=1812159.0 \u2192 
+conservation_conflict(residual=4950.00,prev=1817159.0)
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[145] page=9 
+date='27/02/2025' dr=900.0 cr=None bal=1722159.0 prev=1722159.0 \u2192 
+conservation_conflict(residual=89100.00,prev=1812159.0)
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[146] page=9 
+date='28/02/2025' dr=61.0 cr=None bal=1716059.0 prev=1716059.0 \u2192 
+conservation_conflict(residual=6039.00,prev=1722159.0)
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[147] page=9 
+date='28/02/2025' dr=14800.0 cr=None bal=236059.0 prev=236059.0 \u2192 
+conservation_conflict(residual=1465200.00,prev=1716059.0)
+2026-06-17 10:41:00,642  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[148] page=9 
+date='28-02-2025' dr=5.0 cr=None bal=236559.0 prev=236559.0 \u2192 conservation_conflict(residual=505.00,prev=236059.0)
+2026-06-17 10:41:00,643  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[149] page=9 
+date='01-03-2025' dr=31000.0 cr=None bal=3336559.0 prev=3336559.0 \u2192 
+conservation_conflict(residual=3131000.00,prev=236559.0)
+2026-06-17 10:41:00,643  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[150] page=9 
+date='01/03/2025' dr=19329.0 cr=None bal=1403659.0 prev=1403659.0 \u2192 
+conservation_conflict(residual=1913571.00,prev=3336559.0)
+2026-06-17 10:41:00,643  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[151] page=9 
+date='01/03/2025' dr=30.0 cr=None bal=1400659.0 prev=1400659.0 \u2192 
+conservation_conflict(residual=2970.00,prev=1403659.0)
+2026-06-17 10:41:00,643  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[152] page=9 
+date='01/03/2025' dr=830.0 cr=None bal=1317659.0 prev=1317659.0 \u2192 
+conservation_conflict(residual=82170.00,prev=1400659.0)
+2026-06-17 10:41:00,643  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[153] page=9 
+date='03/03/2025' dr=3299.0 cr=None bal=987759.0 prev=987759.0 \u2192 
+conservation_conflict(residual=326601.00,prev=1317659.0)
+2026-06-17 10:41:00,643  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[154] page=9 
+date='03-03-2025' dr=10000.0 cr=None bal=1987759.0 prev=1987759.0 \u2192 
+conservation_conflict(residual=1010000.00,prev=987759.0)
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[155] page=9 
+date='03/03/2025' dr=10083.0 cr=None bal=979459.0 prev=979459.0 \u2192 
+conservation_conflict(residual=998217.00,prev=1987759.0)
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[156] page=9 
+date='04/03/2025' dr=902.0 cr=None bal=889259.0 prev=889259.0 \u2192 
+conservation_conflict(residual=89298.00,prev=979459.0)
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[157] page=9 
+date='06/03/2025' dr=8800.0 cr=None bal=9259.0 prev=9259.0 \u2192 
+conservation_conflict(residual=871200.00,prev=889259.0)
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[158] page=9 
+date='07-03-2025' dr=3299.0 cr=None bal=339159.0 prev=339159.0 \u2192 
+conservation_conflict(residual=333199.00,prev=9259.0)
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[159] page=9 
+date='08/03/2025' dr=200.0 cr=None bal=319159.0 prev=319159.0 \u2192 
+conservation_conflict(residual=19800.00,prev=339159.0)
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[160] page=9 
+date='09/03/2025' dr=119.0 cr=None bal=307259.0 prev=307259.0 \u2192 
+conservation_conflict(residual=11781.00,prev=319159.0)
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 9\u219210, carrying 
+prev_balance=307259.0
+2026-06-17 10:41:00,644  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[161] page=10 
+date='09/01/2025' dr=994.0 cr=None bal=7039.0 prev=7039.0 \u2192 
+conservation_conflict(residual=299226.00,prev=307259.0)
+2026-06-17 10:41:00,645  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[162] page=10 
+date='10-01-2025' dr=34551.49 cr=None bal=3462188.0 prev=3462188.0 \u2192 
+conservation_conflict(residual=3489700.49,prev=7039.0)
+2026-06-17 10:41:00,645  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[163] page=10 
+date='10-01-2025' dr=10000.0 cr=None bal=4462188.0 prev=4462188.0 \u2192 
+conservation_conflict(residual=1010000.00,prev=3462188.0)
+2026-06-17 10:41:00,645  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[164] page=10 
+date='10/01/2025' dr=340.0 cr=None bal=4428188.0 prev=4428188.0 \u2192 
+conservation_conflict(residual=33660.00,prev=4462188.0)
+2026-06-17 10:41:00,645  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[165] page=10 
+date='10/01/2025' dr=501.0 cr=None bal=4378088.0 prev=4378088.0 \u2192 
+conservation_conflict(residual=49599.00,prev=4428188.0)
+2026-06-17 10:41:00,646  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[166] page=10 
+date='11/01/2025' dr=10000.0 cr=None bal=3378088.0 prev=3378088.0 \u2192 
+conservation_conflict(residual=990000.00,prev=4378088.0)
+2026-06-17 10:41:00,646  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[167] page=10 
+date='11/01/2025' dr=30.0 cr=None bal=3375088.0 prev=3375088.0 \u2192 
+conservation_conflict(residual=2970.00,prev=3378088.0)
+2026-06-17 10:41:00,646  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[168] page=10 
+date='11-01-2025' dr=750.0 cr=None bal=3450088.0 prev=3450088.0 \u2192 
+conservation_conflict(residual=75750.00,prev=3375088.0)
+2026-06-17 10:41:00,646  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[169] page=10 
+date='11/01/2025' dr=31201.0 cr=None bal=329988.0 prev=329988.0 \u2192 
+conservation_conflict(residual=3088899.00,prev=3450088.0)
+2026-06-17 10:41:00,646  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[170] page=10 
+date='11/01/2025' dr=750.0 cr=None bal=254988.0 prev=254988.0 \u2192 
+conservation_conflict(residual=74250.00,prev=329988.0)
+2026-06-17 10:41:00,647  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[171] page=10 
+date='12/01/2025' dr=130.0 cr=None bal=241988.0 prev=241988.0 \u2192 
+conservation_conflict(residual=12870.00,prev=254988.0)
+2026-06-17 10:41:00,647  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[172] page=10 
+date='12/01/2025' dr=80.0 cr=None bal=233988.0 prev=233988.0 \u2192 
+conservation_conflict(residual=7920.00,prev=241988.0)
+2026-06-17 10:41:00,647  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[173] page=10 
+date='16/01/2025' dr=149.0 cr=None bal=219088.0 prev=219088.0 \u2192 
+conservation_conflict(residual=14751.00,prev=233988.0)
+2026-06-17 10:41:00,647  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[174] page=10 
+date='16/01/2025' dr=271.0 cr=None bal=191988.0 prev=191988.0 \u2192 
+conservation_conflict(residual=26829.00,prev=219088.0)
+2026-06-17 10:41:00,647  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[175] page=10 
+date='17/01/2025' dr=300.0 cr=None bal=161988.0 prev=161988.0 \u2192 
+conservation_conflict(residual=29700.00,prev=191988.0)
+2026-06-17 10:41:00,647  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[176] page=10 
+date='18/01/2025' dr=30.0 cr=None bal=158988.0 prev=158988.0 \u2192 
+conservation_conflict(residual=2970.00,prev=161988.0)
+2026-06-17 10:41:00,648  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[177] page=10 
+date='20/01/2025' dr=38.0 cr=None bal=155188.0 prev=155188.0 \u2192 
+conservation_conflict(residual=3762.00,prev=158988.0)
+2026-06-17 10:41:00,648  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[178] page=10 
+date='20/01/2025' dr=110.0 cr=None bal=144188.0 prev=144188.0 \u2192 
+conservation_conflict(residual=10890.00,prev=155188.0)
+2026-06-17 10:41:00,648  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[179] page=10 
+date='28/01/2025' dr=150.0 cr=None bal=129188.0 prev=129188.0 \u2192 
+conservation_conflict(residual=14850.00,prev=144188.0)
+2026-06-17 10:41:00,648  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[180] page=10 
+date='28/01/2025' dr=13.5 cr=None bal=127838.0 prev=127838.0 \u2192 
+conservation_conflict(residual=1336.50,prev=129188.0)
+2026-06-17 10:41:00,648  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[181] page=10 
+date='28/01/2025' dr=13.5 cr=None bal=126488.0 prev=126488.0 \u2192 
+conservation_conflict(residual=1336.50,prev=127838.0)
+2026-06-17 10:41:00,648  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 10\u219211, carrying 
+prev_balance=126488.0
+2026-06-17 10:41:00,648  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[182] page=11 
+date='20/10/2024' dr=50.0 cr=None bal=3626616.0 prev=3626616.0 \u2192 
+conservation_conflict(residual=3500178.00,prev=126488.0)
+2026-06-17 10:41:00,649  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[183] page=11 
+date='20/10/2024' dr=380.0 cr=None bal=3588616.0 prev=3588616.0 \u2192 
+conservation_conflict(residual=37620.00,prev=3626616.0)
+2026-06-17 10:41:00,649  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[184] page=11 
+date='20/10/2024' dr=5000.0 cr=None bal=3088616.0 prev=3088616.0 \u2192 
+conservation_conflict(residual=495000.00,prev=3588616.0)
+2026-06-17 10:41:00,649  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[185] page=11 
+date='22/10/2024' dr=5000.0 cr=None bal=2588616.0 prev=2588616.0 \u2192 
+conservation_conflict(residual=495000.00,prev=3088616.0)
+2026-06-17 10:41:00,649  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[186] page=11 
+date='22-10-2024' dr=50000.0 cr=None bal=7588616.0 prev=7588616.0 \u2192 
+conservation_conflict(residual=5050000.00,prev=2588616.0)
+2026-06-17 10:41:00,649  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[187] page=11 
+date='22/10/2024' dr=20.0 cr=None bal=7586616.0 prev=7586616.0 \u2192 
+conservation_conflict(residual=1980.00,prev=7588616.0)
+2026-06-17 10:41:00,649  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[188] page=11 
+date='22/10/2024' dr=50.0 cr=None bal=7581616.0 prev=7581616.0 \u2192 
+conservation_conflict(residual=4950.00,prev=7586616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[189] page=11 
+date='22/10/2024' dr=50.0 cr=None bal=7576616.0 prev=7576616.0 \u2192 
+conservation_conflict(residual=4950.00,prev=7581616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[190] page=11 
+date='22/10/2024' dr=50000.0 cr=None bal=2576616.0 prev=2576616.0 \u2192 
+conservation_conflict(residual=4950000.00,prev=7576616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[191] page=11 
+date='23/10/2024' dr=60.0 cr=None bal=2570616.0 prev=2570616.0 \u2192 
+conservation_conflict(residual=5940.00,prev=2576616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[192] page=11 
+date='23/10/2024' dr=5000.0 cr=None bal=2070616.0 prev=2070616.0 \u2192 
+conservation_conflict(residual=495000.00,prev=2570616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[193] page=11 
+date='25-10-2024' dr=150.0 cr=None bal=2085616.0 prev=2085616.0 \u2192 
+conservation_conflict(residual=15150.00,prev=2070616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[194] page=11 
+date='25-10-2024' dr=10.0 cr=None bal=2086616.0 prev=2086616.0 \u2192 
+conservation_conflict(residual=1010.00,prev=2085616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[195] page=11 
+date='26/10/2024' dr=200.0 cr=None bal=2066616.0 prev=2066616.0 \u2192 
+conservation_conflict(residual=19800.00,prev=2086616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[196] page=11 
+date='26/10/2024' dr=1070.0 cr=None bal=1959616.0 prev=1959616.0 \u2192 
+conservation_conflict(residual=105930.00,prev=2066616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[199] page=11 
+date='28/10/2024' dr=14800.0 cr=None bal=1149616.0 prev=1149616.0 \u2192 
+conservation_conflict(residual=1465200.00,prev=2629616.0)
+2026-06-17 10:41:00,662  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '3-28/10' from 
+concatenated token '3-28/10/2024'
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '3-28/10' from 
+concatenated token '3-28/10/2024'
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[200] page=11 date='3-28/10' 
+dr=None cr=None bal=None prev=1149616.0 \u2192 NO_TRANSACTION_SEED [UNSEEDED]
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[201] page=11 
+date='28/10/2024' dr=48.0 cr=None bal=1144816.0 prev=1144816.0 \u2192 
+conservation_conflict(residual=4752.00,prev=1149616.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[202] page=11 
+date='28/10/2024' dr=410.0 cr=None bal=1103816.0 prev=1103816.0 \u2192 
+conservation_conflict(residual=40590.00,prev=1144816.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 11\u219212, carrying 
+prev_balance=1103816.0
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[203] page=12 
+date='07/02/2025' dr=1000.0 cr=None bal=23588.0 prev=23588.0 \u2192 
+conservation_conflict(residual=1079228.00,prev=1103816.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[204] page=12 
+date='11-02-2025' dr=31671.0 cr=None bal=3190688.0 prev=3190688.0 \u2192 
+conservation_conflict(residual=3198771.00,prev=23588.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[205] page=12 
+date='11/02/2025' dr=11137.17 cr=None bal=2076971.0 prev=2076971.0 \u2192 
+conservation_conflict(residual=1102579.83,prev=3190688.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[206] page=12 
+date='11/02/2025' dr=1925.0 cr=None bal=1884471.0 prev=1884471.0 \u2192 
+conservation_conflict(residual=190575.00,prev=2076971.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[207] page=12 
+date='12/02/2025' dr=200.0 cr=None bal=1864471.0 prev=1864471.0 \u2192 
+conservation_conflict(residual=19800.00,prev=1884471.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[208] page=12 
+date='12-02-2025' dr=11700.0 cr=None bal=3034471.0 prev=3034471.0 \u2192 
+conservation_conflict(residual=1181700.00,prev=1864471.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[209] page=12 
+date='12/02/2025' dr=200.0 cr=None bal=3014471.0 prev=3014471.0 \u2192 
+conservation_conflict(residual=19800.00,prev=3034471.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[210] page=12 
+date='13/02/2025' dr=50.0 cr=None bal=3009471.0 prev=3009471.0 \u2192 
+conservation_conflict(residual=4950.00,prev=3014471.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[211] page=12 
+date='14/02/2025' dr=61.0 cr=None bal=3003371.0 prev=3003371.0 \u2192 
+conservation_conflict(residual=6039.00,prev=3009471.0)
+2026-06-17 10:41:00,663  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[212] page=12 
+date='14/02/2025' dr=118.0 cr=None bal=2991571.0 prev=2991571.0 \u2192 
+conservation_conflict(residual=11682.00,prev=3003371.0)
+2026-06-17 10:41:00,664  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[213] page=12 
+date='15/02/2025' dr=61.0 cr=None bal=2985471.0 prev=2985471.0 \u2192 
+conservation_conflict(residual=6039.00,prev=2991571.0)
+2026-06-17 10:41:00,664  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[214] page=12 
+date='15/02/2025' dr=40.0 cr=None bal=2981471.0 prev=2981471.0 \u2192 
+conservation_conflict(residual=3960.00,prev=2985471.0)
+2026-06-17 10:41:00,664  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[215] page=12 
+date='15/02/2025' dr=50.0 cr=None bal=2976471.0 prev=2976471.0 \u2192 
+conservation_conflict(residual=4950.00,prev=2981471.0)
+2026-06-17 10:41:00,664  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[216] page=12 
+date='15/02/2025' dr=120.0 cr=None bal=2964471.0 prev=2964471.0 \u2192 
+conservation_conflict(residual=11880.00,prev=2976471.0)
+2026-06-17 10:41:00,664  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[217] page=12 
+date='15/02/2025' dr=60.0 cr=None bal=2958471.0 prev=2958471.0 \u2192 
+conservation_conflict(residual=5940.00,prev=2964471.0)
+2026-06-17 10:41:00,664  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[218] page=12 
+date='15/02/2025' dr=50.0 cr=None bal=2953471.0 prev=2953471.0 \u2192 
+conservation_conflict(residual=4950.00,prev=2958471.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[219] page=12 
+date='15/02/2025' dr=100.0 cr=None bal=2943471.0 prev=2943471.0 \u2192 
+conservation_conflict(residual=9900.00,prev=2953471.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[220] page=12 
+date='15/02/2025' dr=185.0 cr=None bal=2924971.0 prev=2924971.0 \u2192 
+conservation_conflict(residual=18315.00,prev=2943471.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 12\u219213, carrying 
+prev_balance=2924971.0
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[221] page=13 
+date='25/12/2024' dr=36.0 cr=None bal=1153214.0 prev=1153214.0 \u2192 
+conservation_conflict(residual=1771721.00,prev=2924971.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[222] page=13 
+date='26/12/2024' dr=200.0 cr=None bal=1133214.0 prev=1133214.0 \u2192 
+conservation_conflict(residual=19800.00,prev=1153214.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[223] page=13 
+date='26-12-2024' dr=16000.0 cr=None bal=2733214.0 prev=2733214.0 \u2192 
+conservation_conflict(residual=1616000.00,prev=1133214.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[224] page=13 
+date='28/12/2024' dr=14800.0 cr=None bal=1253214.0 prev=1253214.0 \u2192 
+conservation_conflict(residual=1465200.00,prev=2733214.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[225] page=13 date=None 
+dr=None cr=None bal=None prev=1253214.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[226] page=13 
+date='30/12/2024' dr=8000.0 cr=None bal=453214.0 prev=453214.0 \u2192 
+conservation_conflict(residual=792000.00,prev=1253214.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[227] page=13 
+date='30/12/2024' dr=390.0 cr=None bal=414214.0 prev=414214.0 \u2192 
+conservation_conflict(residual=38610.00,prev=453214.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[228] page=13 date=None 
+dr=None cr=None bal=None prev=414214.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[229] page=13 
+date='31-12-2024' dr=115.0 cr=None bal=425714.0 prev=425714.0 \u2192 
+conservation_conflict(residual=11615.00,prev=414214.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[230] page=13 
+date='31-12-2024' dr=70000.0 cr=None bal=7425714.0 prev=7425714.0 \u2192 
+conservation_conflict(residual=7070000.00,prev=425714.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[231] page=13 
+date='01/01/2025' dr=30.0 cr=None bal=7422714.0 prev=7422714.0 \u2192 
+conservation_conflict(residual=2970.00,prev=7425714.0)
+2026-06-17 10:41:00,665  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[232] page=13 
+date='01/01/2025' dr=74054.07 cr=None bal=17307.0 prev=17307.0 \u2192 
+conservation_conflict(residual=7331352.93,prev=7422714.0)
+2026-06-17 10:41:00,666  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[233] page=13 
+date='01-01-2025' dr=15000.0 cr=None bal=1517307.0 prev=1517307.0 \u2192 
+conservation_conflict(residual=1515000.00,prev=17307.0)
+2026-06-17 10:41:00,666  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[234] page=13 
+date='02/01/2025' dr=2000.0 cr=None bal=1317307.0 prev=1317307.0 \u2192 
+conservation_conflict(residual=198000.00,prev=1517307.0)
+2026-06-17 10:41:00,667  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[235] page=13 
+date='02/01/2025' dr=90.0 cr=None bal=1308307.0 prev=1308307.0 \u2192 
+conservation_conflict(residual=8910.00,prev=1317307.0)
+2026-06-17 10:41:00,667  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[236] page=13 
+date='03/01/2025' dr=10082.0 cr=None bal=300107.0 prev=300107.0 \u2192 
+conservation_conflict(residual=998118.00,prev=1308307.0)
+2026-06-17 10:41:00,667  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[237] page=13 
+date='04/01/2025' dr=500.0 cr=None bal=250107.0 prev=250107.0 \u2192 
+conservation_conflict(residual=49500.00,prev=300107.0)
+2026-06-17 10:41:00,667  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[238] page=13 
+date='04-01-2025' dr=214.32 cr=None bal=271539.0 prev=271539.0 \u2192 
+conservation_conflict(residual=21646.32,prev=250107.0)
+2026-06-17 10:41:00,668  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[239] page=13 
+date='05/01/2025' dr=10.0 cr=None bal=270539.0 prev=270539.0 \u2192 
+conservation_conflict(residual=990.00,prev=271539.0)
+2026-06-17 10:41:00,668  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[240] page=13 
+date='05/01/2025' dr=170.0 cr=None bal=253539.0 prev=253539.0 \u2192 
+conservation_conflict(residual=16830.00,prev=270539.0)
+2026-06-17 10:41:00,668  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[241] page=13 
+date='07/01/2025' dr=119.0 cr=None bal=241639.0 prev=241639.0 \u2192 
+conservation_conflict(residual=11781.00,prev=253539.0)
+2026-06-17 10:41:00,668  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[242] page=13 
+date='08/01/2025' dr=252.0 cr=None bal=216439.0 prev=216439.0 \u2192 
+conservation_conflict(residual=24948.00,prev=241639.0)
+2026-06-17 10:41:00,668  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[243] page=13 
+date='09/01/2025' dr=1100.0 cr=None bal=106439.0 prev=106439.0 \u2192 
+conservation_conflict(residual=108900.00,prev=216439.0)
+2026-06-17 10:41:00,668  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 13\u219214, carrying 
+prev_balance=106439.0
+2026-06-17 10:41:00,668  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[244] page=14 
+date='17/11/2024' dr=80.0 cr=None bal=2887656.0 prev=2887656.0 \u2192 
+conservation_conflict(residual=2781297.00,prev=106439.0)
+2026-06-17 10:41:00,669  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[245] page=14 
+date='18/11/2024' dr=50.0 cr=None bal=2882656.0 prev=2882656.0 \u2192 
+conservation_conflict(residual=4950.00,prev=2887656.0)
+2026-06-17 10:41:00,669  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[246] page=14 
+date='18/11/2024' dr=1213.78 cr=None bal=2761278.0 prev=2761278.0 \u2192 
+conservation_conflict(residual=120164.22,prev=2882656.0)
+2026-06-17 10:41:00,669  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[247] page=14 
+date='19/11/2024' dr=475.0 cr=None bal=2713778.0 prev=2713778.0 \u2192 
+conservation_conflict(residual=47025.00,prev=2761278.0)
+2026-06-17 10:41:00,669  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[248] page=14 
+date='20/11/2024' dr=120.0 cr=None bal=2701778.0 prev=2701778.0 \u2192 
+conservation_conflict(residual=11880.00,prev=2713778.0)
+2026-06-17 10:41:00,669  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[249] page=14 
+date='20/11/2024' dr=200.0 cr=None bal=2681778.0 prev=2681778.0 \u2192 
+conservation_conflict(residual=19800.00,prev=2701778.0)
+2026-06-17 10:41:00,669  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[250] page=14 
+date='20/11/2024' dr=48.0 cr=None bal=2676978.0 prev=2676978.0 \u2192 
+conservation_conflict(residual=4752.00,prev=2681778.0)
+2026-06-17 10:41:00,669  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[251] page=14 
+date='21/11/2024' dr=26700.0 cr=None bal=6978.0 prev=6978.0 \u2192 
+conservation_conflict(residual=2643300.00,prev=2676978.0)
+2026-06-17 10:41:00,670  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[252] page=14 
+date='21-11-2024' dr=10000.0 cr=None bal=1006978.0 prev=1006978.0 \u2192 
+conservation_conflict(residual=1010000.00,prev=6978.0)
+2026-06-17 10:41:00,670  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[253] page=14 
+date='21/11/2024' dr=10000.0 cr=None bal=6978.0 prev=6978.0 \u2192 
+conservation_conflict(residual=990000.00,prev=1006978.0)
+2026-06-17 10:41:00,670  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[254] page=14 
+date='22-11-2024' dr=1.0 cr=None bal=7078.0 prev=7078.0 \u2192 conservation_conflict(residual=101.00,prev=6978.0)
+2026-06-17 10:41:00,670  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[255] page=14 
+date='22-11-2024' dr=1.0 cr=None bal=7178.0 prev=7178.0 \u2192 conservation_conflict(residual=101.00,prev=7078.0)
+2026-06-17 10:41:00,670  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[256] page=14 
+date='26-11-2024' dr=20000.0 cr=None bal=2007178.0 prev=2007178.0 \u2192 
+conservation_conflict(residual=2020000.00,prev=7178.0)
+2026-06-17 10:41:00,670  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[257] page=14 
+date='28/11/2024' dr=1000.0 cr=None bal=1907178.0 prev=1907178.0 \u2192 
+conservation_conflict(residual=99000.00,prev=2007178.0)
+2026-06-17 10:41:00,671  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[258] page=14 
+date='28/11/2024' dr=14800.0 cr=None bal=427178.0 prev=427178.0 \u2192 
+conservation_conflict(residual=1465200.00,prev=1907178.0)
+2026-06-17 10:41:00,671  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[259] page=14 date=None 
+dr=None cr=None bal=None prev=427178.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:41:00,671  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[260] page=14 
+date='29-11-2024' dr=2000.0 cr=None bal=627178.0 prev=627178.0 \u2192 
+conservation_conflict(residual=202000.00,prev=427178.0)
+2026-06-17 10:41:00,671  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[261] page=14 
+date='29/11/2024' dr=5000.0 cr=None bal=127178.0 prev=127178.0 \u2192 
+conservation_conflict(residual=495000.00,prev=627178.0)
+2026-06-17 10:41:00,671  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[262] page=14 
+date='29/11/2024' dr=100.0 cr=None bal=117178.0 prev=117178.0 \u2192 
+conservation_conflict(residual=9900.00,prev=127178.0)
+2026-06-17 10:41:00,671  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[263] page=14 
+date='29/11/2024' dr=220.0 cr=None bal=95178.0 prev=95178.0 \u2192 
+conservation_conflict(residual=21780.00,prev=117178.0)
+2026-06-17 10:41:00,671  core.parsers.coordinate_parser_v2       INFO     V2: 259 accepted | 5 rejected | 
+zones=['date_zone', 'narration_zone', 'debit_zone', 'credit_zone'] | page_seeds=[5]
+2026-06-17 10:43:24,290  core.layout.row_detector                INFO     Detected 658 physical rows from 1551 tokens.
+2026-06-17 10:43:24,305  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 347.0], 'narration_zone': [347.0, 999.0], 'debit_zone': [999.0, 1219.0], 'credit_zone': [1219.0, 1402.0], 
+'balance_zone': [1402.0, 9999.0]}
+2026-06-17 10:43:24,305  core.layout.row_detector                INFO     Grouped 57 rows into 13 transaction blocks.
+2026-06-17 10:43:24,306  core.layout.row_detector                INFO     Grouped 52 rows into 8 transaction blocks.
+2026-06-17 10:43:24,306  core.layout.row_detector                INFO     Grouped 28 rows into 0 transaction blocks.
+2026-06-17 10:43:24,306  core.layout.row_detector                INFO     Grouped 58 rows into 10 transaction blocks.
+2026-06-17 10:43:24,306  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,307  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,307  core.layout.row_detector                INFO     Grouped 57 rows into 11 transaction blocks.
+2026-06-17 10:43:24,307  core.layout.row_detector                INFO     Grouped 58 rows into 11 transaction blocks.
+2026-06-17 10:43:24,307  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,307  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,308  core.layout.row_detector                INFO     Grouped 58 rows into 10 transaction blocks.
+2026-06-17 10:43:24,308  core.layout.row_detector                INFO     Grouped 58 rows into 10 transaction blocks.
+2026-06-17 10:43:24,310  core.layout.row_detector                INFO     Detected 658 physical rows from 1551 tokens.
+2026-06-17 10:43:24,324  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 347.0], 'narration_zone': [347.0, 999.0], 'debit_zone': [999.0, 1219.0], 'credit_zone': [1219.0, 1402.0], 
+'balance_zone': [1402.0, 9999.0]}
+2026-06-17 10:43:24,324  core.layout.row_detector                INFO     Grouped 57 rows into 13 transaction blocks.
+2026-06-17 10:43:24,325  core.layout.row_detector                INFO     Grouped 52 rows into 8 transaction blocks.
+2026-06-17 10:43:24,325  core.layout.row_detector                INFO     Grouped 28 rows into 0 transaction blocks.
+2026-06-17 10:43:24,325  core.layout.row_detector                INFO     Grouped 58 rows into 10 transaction blocks.
+2026-06-17 10:43:24,325  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,325  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,326  core.layout.row_detector                INFO     Grouped 57 rows into 11 transaction blocks.
+2026-06-17 10:43:24,326  core.layout.row_detector                INFO     Grouped 58 rows into 11 transaction blocks.
+2026-06-17 10:43:24,326  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,326  core.layout.row_detector                INFO     Grouped 58 rows into 12 transaction blocks.
+2026-06-17 10:43:24,327  core.layout.row_detector                INFO     Grouped 58 rows into 10 transaction blocks.
+2026-06-17 10:43:24,327  core.layout.row_detector                INFO     Grouped 58 rows into 10 transaction blocks.
+2026-06-17 10:43:24,327  core.parsers.coordinate_parser_v2       INFO     PDF TYPE: Unknown
+2026-06-17 10:43:24,327  core.parsers.coordinate_parser_v2       INFO     OCR TOKENS: 1551
+2026-06-17 10:43:24,327  core.parsers.coordinate_parser_v2       INFO     COLUMN ZONES: {'date_zone': [0.0, 347.0], 
+'narration_zone': [347.0, 999.0], 'debit_zone': [999.0, 1219.0], 'credit_zone': [1219.0, 1402.0], 'balance_zone': 
+[1402.0, 9999.0]}
+2026-06-17 10:43:24,327  core.parsers.coordinate_parser_v2       INFO     ROWS DETECTED: 658
+2026-06-17 10:43:24,327  core.parsers.coordinate_parser_v2       INFO     BLOCKS DETECTED: 121
+2026-06-17 10:43:24,329  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[0] page=1 date='01/05/2025' 
+dr=None cr=None bal=None prev=None \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,330  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 1\u21922, carrying 
+prev_balance=728662.39
+2026-06-17 10:43:24,330  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[13] page=2 date='01/05/2025' 
+dr=None cr=None bal=None prev=728662.39 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,330  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[14] page=2 
+date='30/05/25' dr=800.0 cr=None bal=693893.42 prev=693893.42 \u2192 
+conservation_conflict(residual=33968.97,prev=728662.39)
+2026-06-17 10:43:24,330  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[16] page=2 
+date='30/05/25' dr=100.0 cr=None bal=693443.42 prev=693443.42 \u2192 
+conservation_conflict(residual=280.00,prev=693823.42)
+2026-06-17 10:43:24,331  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[20] page=2 date=None dr=None 
+cr=None bal=None prev=691773.7 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:24,331  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 2\u21924, carrying 
+prev_balance=691773.7
+2026-06-17 10:43:24,331  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[21] page=4 date=None dr=None 
+cr=None bal=None prev=691773.7 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:24,331  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[22] page=4 
+date='23/05/25' dr=80.0 cr=None bal=701079.52 prev=701079.52 \u2192 
+conservation_conflict(residual=9385.82,prev=691773.7)
+2026-06-17 10:43:24,331  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[26] page=4 
+date='24/05/25' dr=55.0 cr=None bal=700452.52 prev=700452.52 \u2192 
+conservation_conflict(residual=10.00,prev=700517.52)
+2026-06-17 10:43:24,331  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 4\u21925, carrying 
+prev_balance=698933.52
+2026-06-17 10:43:24,331  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[31] page=5 date='01/05/2025' 
+dr=None cr=None bal=None prev=698933.52 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,332  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[32] page=5 
+date='02/05/25' dr=None cr=100.0 bal=775686.97 prev=775686.97 \u2192 
+conservation_conflict(residual=76653.45,prev=698933.52)
+2026-06-17 10:43:24,332  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 5\u21926, carrying 
+prev_balance=776014.97
+2026-06-17 10:43:24,332  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[43] page=6 date='01/05/2025' 
+dr=None cr=None bal=None prev=776014.97 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,332  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[44] page=6 
+date='27/05/25' dr=125.0 cr=None bal=698808.52 prev=698808.52 \u2192 
+conservation_conflict(residual=77081.45,prev=776014.97)
+2026-06-17 10:43:24,332  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '28/05/25' from 
+concatenated token '28/05/25UP1-Y0GESHWAR1-VYAPAR1'
+2026-06-17 10:43:24,332  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '28/05/25' from 
+concatenated token '28/05/25UP1-Y0GESHWAR1-VYAPAR1'
+2026-06-17 10:43:24,333  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[48] page=6 date='28/05/25' 
+dr=740.0 cr=1810.0 bal=699490.42 prev=697680.42 \u2192 both_debit_and_credit [UNSEEDED]
+2026-06-17 10:43:24,333  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[49] page=6 
+date='29/05/25' dr=116.0 cr=None bal=698634.42 prev=698634.42 \u2192 
+conservation_conflict(residual=1070.00,prev=697680.42)
+2026-06-17 10:43:24,334  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 6\u21927, carrying 
+prev_balance=697729.42
+2026-06-17 10:43:24,334  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[55] page=7 date='01/05/2025' 
+dr=None cr=None bal=None prev=697729.42 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,334  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[56] page=7 
+date='01/05/25' dr=30.0 cr=None bal=775733.61 prev=775733.61 \u2192 
+conservation_conflict(residual=78034.19,prev=697729.42)
+2026-06-17 10:43:24,335  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 7\u21928, carrying 
+prev_balance=775586.97
+2026-06-17 10:43:24,335  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[66] page=8 date='01/05/2025' 
+dr=None cr=None bal=None prev=775586.97 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,335  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[67] page=8 
+date='29/05/25' dr=10.0 cr=None bal=697719.42 prev=697719.42 \u2192 
+conservation_conflict(residual=77857.55,prev=775586.97)
+2026-06-17 10:43:24,335  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[74] page=8 
+date='30/05/25' dr=30.0 cr=None bal=695023.42 prev=695023.42 \u2192 
+conservation_conflict(residual=1499.00,prev=696552.42)
+2026-06-17 10:43:24,335  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 8\u21929, carrying 
+prev_balance=694693.42
+2026-06-17 10:43:24,335  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[77] page=9 date='01/05/2025' 
+dr=None cr=None bal=None prev=694693.42 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,335  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[78] page=9 
+date='03/05/25' dr=500.0 cr=None bal=775514.97 prev=775514.97 \u2192 
+conservation_conflict(residual=81321.55,prev=694693.42)
+2026-06-17 10:43:24,336  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[88] page=9 
+date='06/05/25' dr=7.0 cr=None bal=760477.97 prev=760477.97 \u2192 conservation_conflict(residual=80.00,prev=760564.97)
+2026-06-17 10:43:24,336  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 9\u219210, carrying 
+prev_balance=760477.97
+2026-06-17 10:43:24,336  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[89] page=10 
+date='01/05/2025' dr=None cr=None bal=None prev=760477.97 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,336  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[90] page=10 
+date='09/05/25' dr=None cr=1690.0 bal=754960.39 prev=754960.39 \u2192 
+conservation_conflict(residual=7207.58,prev=760477.97)
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 10\u219211, carrying 
+prev_balance=735607.39
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[101] page=11 
+date='01/05/2025' dr=None cr=None bal=None prev=735607.39 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[102] page=11 
+date='06/05/25' dr=130.0 cr=None bal=760347.97 prev=760347.97 \u2192 
+conservation_conflict(residual=24870.58,prev=735607.39)
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[105] page=11 
+date='07/05/25' dr=7438.61 cr=None bal=751982.39 prev=751982.39 \u2192 
+conservation_conflict(residual=50.00,prev=759471.0)
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[109] page=11 
+date='08/05/25' dr=10000.0 cr=None bal=753340.39 prev=753340.39 \u2192 
+conservation_conflict(residual=9900.00,prev=753440.39)
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 11\u219212, carrying 
+prev_balance=753270.39
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[111] page=12 date=None 
+dr=None cr=None bal=None prev=753270.39 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:24,337  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[112] page=12 
+date='18/05/25' dr=14640.0 cr=None bal=714022.39 prev=714022.39 \u2192 
+conservation_conflict(residual=24608.00,prev=753270.39)
+2026-06-17 10:43:24,338  core.parsers.coordinate_parser_v2       INFO     V2: 108 accepted | 13 rejected | 
+zones=['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone'] | page_seeds=[]
+2026-06-17 10:43:25,296  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (12) << 
+rows_before_merge (53)
+2026-06-17 10:43:25,353  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (12) << 
+rows_before_merge (53)
+2026-06-17 10:43:25,362  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (25) << 
+rows_before_merge (57)
+2026-06-17 10:43:25,423  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (26) << 
+rows_before_merge (59)
+2026-06-17 10:43:25,432  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (22) << 
+rows_before_merge (56)
+2026-06-17 10:43:25,497  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (22) << 
+rows_before_merge (56)
+2026-06-17 10:43:25,508  core.layout.row_detector                INFO     Detected 166 physical rows from 635 tokens.
+2026-06-17 10:43:25,509  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 158.0], 'narration_zone': [158.0, 269.0], 'debit_zone': [269.0, 320.0], 'credit_zone': [320.0, 380.0], 
+'balance_zone': [380.0, 9999.0]}
+2026-06-17 10:43:25,509  core.layout.row_detector                INFO     Grouped 53 rows into 20 transaction blocks.
+2026-06-17 10:43:25,509  core.layout.row_detector                INFO     Grouped 57 rows into 29 transaction blocks.
+2026-06-17 10:43:25,509  core.layout.row_detector                INFO     Grouped 56 rows into 29 transaction blocks.
+2026-06-17 10:43:25,510  core.layout.row_detector                INFO     Detected 166 physical rows from 635 tokens.
+2026-06-17 10:43:25,511  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 158.0], 'narration_zone': [158.0, 269.0], 'debit_zone': [269.0, 320.0], 'credit_zone': [320.0, 380.0], 
+'balance_zone': [380.0, 9999.0]}
+2026-06-17 10:43:25,511  core.layout.row_detector                INFO     Grouped 53 rows into 20 transaction blocks.
+2026-06-17 10:43:25,512  core.layout.row_detector                INFO     Grouped 57 rows into 29 transaction blocks.
+2026-06-17 10:43:25,512  core.layout.row_detector                INFO     Grouped 56 rows into 29 transaction blocks.
+2026-06-17 10:43:25,512  core.parsers.coordinate_parser_v2       INFO     PDF TYPE: Unknown
+2026-06-17 10:43:25,512  core.parsers.coordinate_parser_v2       INFO     OCR TOKENS: 635
+2026-06-17 10:43:25,512  core.parsers.coordinate_parser_v2       INFO     COLUMN ZONES: {'date_zone': [0.0, 158.0], 
+'narration_zone': [158.0, 269.0], 'debit_zone': [269.0, 320.0], 'credit_zone': [320.0, 380.0], 'balance_zone': [380.0, 
+9999.0]}
+2026-06-17 10:43:25,512  core.parsers.coordinate_parser_v2       INFO     ROWS DETECTED: 166
+2026-06-17 10:43:25,512  core.parsers.coordinate_parser_v2       INFO     BLOCKS DETECTED: 78
+2026-06-17 10:43:25,513  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[1] page=1 
+date='01-10-2021' dr=29571.0 cr=None bal=161032245.0 prev=161032245.0 \u2192 
+conservation_conflict(residual=161030636.00,prev=31180.0)
+2026-06-17 10:43:25,513  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[2] page=1 date='02-10-2021' 
+dr=None cr=None bal=None prev=161032245.0 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:25,513  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[3] page=1 date='04-0-2021' 
+dr=None cr=2600.0 bal=None prev=161032245.0 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:25,513  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[4] page=1 date='04-10.202' 
+dr=402000.0 cr=None bal=None prev=161032245.0 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[5] page=1 date=None dr=None 
+cr=2950.0 bal=None prev=161032245.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[6] page=1 date=None 
+dr=150000.0 cr=None bal=13212.37 prev=161032245.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[7] page=1 
+date='04-10-2021' dr=None cr=1000000.0 bal=2321237.0 prev=2321237.0 \u2192 
+conservation_conflict(residual=159711008.00,prev=161032245.0)
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[8] page=1 
+date='05-10-2021' dr=None cr=14502.0 bal=214.82 prev=214.82 \u2192 
+conservation_conflict(residual=2335524.18,prev=2321237.0)
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[9] page=1 
+date='05-10-2021' dr=None cr=9.0 bal=133714.82 prev=133714.82 \u2192 
+conservation_conflict(residual=133491.00,prev=214.82)
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[10] page=1 
+date='05-10-2021' dr=22218.0 cr=None bal=1149682.0 prev=1149682.0 \u2192 
+conservation_conflict(residual=1038185.18,prev=133714.82)
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[11] page=1 
+date='05-10-2021' dr=5000.0 cr=None bal=96496.8 prev=96496.8 \u2192 
+conservation_conflict(residual=1048185.20,prev=1149682.0)
+2026-06-17 10:43:25,514  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[12] page=1 date='05-0-2021' 
+dr=40000090.0 cr=None bal=None prev=96496.8 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[13] page=1 date='06-0-2' 
+dr=None cr=5500.0 bal=None prev=96496.8 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[14] page=1 date='07-10-202' 
+dr=None cr=19669.6 bal=None prev=96496.8 \u2192 no_balance [UNSEEDED]
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[15] page=1 
+date='07-10-2021' dr=3374.0 cr=None bal=23293.0 prev=23293.0 \u2192 
+conservation_conflict(residual=69829.80,prev=96496.8)
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[17] page=1 
+date='08-10-202' dr=None cr=235158.0 bal=23595142.0 prev=23595142.0 \u2192 
+conservation_conflict(residual=23359191.00,prev=793.0)
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[18] page=1 
+date='08-10-2021' dr=None cr=700000.0 bal=93595142.0 prev=93595142.0 \u2192 
+conservation_conflict(residual=69300000.00,prev=23595142.0)
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[19] page=1 date='08-10-2021' 
+dr=935000.0 cr=90100.0 bal=95142.0 prev=93595142.0 \u2192 both_debit_and_credit [UNSEEDED]
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 1\u21922, carrying 
+prev_balance=93595142.0
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[20] page=2 date='9-10-2021' 
+dr=125011.8 cr=137992.0 bal=138943.42 prev=93595142.0 \u2192 both_debit_and_credit [UNSEEDED]
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[21] page=2 
+date='10-10-2021' dr=1500.0 cr=None bal=101243162.0 prev=101243162.0 \u2192 
+conservation_conflict(residual=7649520.00,prev=93595142.0)
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[22] page=2 
+date='10-10-2021' dr=6000.0 cr=None bal=1006431.62 prev=1006431.62 \u2192 
+conservation_conflict(residual=100230730.38,prev=101243162.0)
+2026-06-17 10:43:25,515  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[23] page=2 date='10-10-2021' 
+dr=None cr=None bal=643262.0 prev=1006431.62 \u2192 no_debit_or_credit [UNSEEDED]
+2026-06-17 10:43:25,516  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[24] page=2 
+date='11-10-2021' dr=100000.0 cr=None bal=32.62 prev=32.62 \u2192 
+conservation_conflict(residual=906399.00,prev=1006431.62)
+2026-06-17 10:43:25,516  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[25] page=2 
+date='11-10-2021' dr=100000.0 cr=None bal=4432.62 prev=4432.62 \u2192 
+conservation_conflict(residual=104400.00,prev=32.62)
+2026-06-17 10:43:25,516  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[27] page=2 date='16-10-2021' 
+dr=None cr=None bal=500932.62 prev=932.62 \u2192 no_debit_or_credit [UNSEEDED]
+2026-06-17 10:43:25,516  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[28] page=2 date='16-10-2021' 
+dr=None cr=None bal=932.62 prev=932.62 \u2192 no_debit_or_credit [UNSEEDED]
+2026-06-17 10:43:25,516  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[29] page=2 
+date='16-10-202' dr=765.36 cr=None bal=90312.0 prev=90312.0 \u2192 conservation_conflict(residual=90144.74,prev=932.62)
+2026-06-17 10:43:25,517  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[30] page=2 
+date='21-10-2021' dr=699000.0 cr=None bal=70000900.0 prev=70000900.0 \u2192 
+conservation_conflict(residual=70609588.00,prev=90312.0)
+2026-06-17 10:43:25,517  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[31] page=2 date=None dr=59.0 
+cr=None bal=94.0 prev=70000900.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:25,517  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[32] page=2 
+date='21-10-2021' dr=None cr=600000.0 bal=600941.0 prev=600941.0 \u2192 
+conservation_conflict(residual=69999959.00,prev=70000900.0)
+2026-06-17 10:43:25,517  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[33] page=2 date=None 
+dr=600000.0 cr=None bal=941.0 prev=600941.0 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:25,517  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[34] page=2 
+date='22-10-2021' dr=59.0 cr=None bal=882.0 prev=882.0 \u2192 conservation_conflict(residual=600000.00,prev=600941.0)
+2026-06-17 10:43:25,517  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[35] page=2 
+date='23-10-2021' dr=None cr=200000.0 bal=20088200.0 prev=20088200.0 \u2192 
+conservation_conflict(residual=19887318.00,prev=882.0)
+2026-06-17 10:43:25,517  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[36] page=2 
+date='23-10-2021' dr=108000.0 cr=None bal=9288200.0 prev=9288200.0 \u2192 
+conservation_conflict(residual=10692000.00,prev=20088200.0)
+2026-06-17 10:43:25,518  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[37] page=2 
+date='23-10-2021' dr=25000.0 cr=None bal=6788200.0 prev=6788200.0 \u2192 
+conservation_conflict(residual=2475000.00,prev=9288200.0)
+2026-06-17 10:43:25,518  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[38] page=2 
+date='23-10-2021' dr=2500000.0 cr=None bal=42882.0 prev=42882.0 \u2192 
+conservation_conflict(residual=4245318.00,prev=6788200.0)
+2026-06-17 10:43:25,518  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[39] page=2 
+date='23-10-2021' dr=25000.0 cr=None bal=1782.0 prev=1782.0 \u2192 
+conservation_conflict(residual=16100.00,prev=42882.0)
+2026-06-17 10:43:25,518  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[40] page=2 
+date='23-10-2021' dr=None cr=20000000.0 bal=22882.0 prev=22882.0 \u2192 
+conservation_conflict(residual=19978900.00,prev=1782.0)
+2026-06-17 10:43:25,518  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[41] page=2 
+date='23-1-2021' dr=199999.0 cr=None bal=1783.0 prev=1783.0 \u2192 
+conservation_conflict(residual=178900.00,prev=22882.0)
+2026-06-17 10:43:25,518  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[42] page=2 
+date='23-10-2021' dr=710000.0 cr=None bal=10783.0 prev=10783.0 \u2192 
+conservation_conflict(residual=719000.00,prev=1783.0)
+2026-06-17 10:43:25,518  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[43] page=2 
+date='25-10-2021' dr=None cr=300000.0 bal=300784.0 prev=300784.0 \u2192 
+conservation_conflict(residual=9999.00,prev=10783.0)
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[47] page=2 
+date='27-10-2021' dr=957000.0 cr=None bal=85.0 prev=85.0 \u2192 conservation_conflict(residual=700.00,prev=957785.0)
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[48] page=2 
+date='28-16-2021' dr=None cr=50000000.0 bal=1500785.0 prev=1500785.0 \u2192 
+conservation_conflict(residual=48499300.00,prev=85.0)
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '28-10-202' from 
+concatenated token '28-10-202L'
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '28-10-202' from 
+concatenated token '28-10-202L'
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 2\u21923, carrying 
+prev_balance=1500785.0
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[49] page=3 
+date='28-10-202' dr=None cr=490000.0 bal=199078500.0 prev=199078500.0 \u2192 
+conservation_conflict(residual=197087715.00,prev=1500785.0)
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[50] page=3 
+date='28-10-2021' dr=1900000.0 cr=None bal=78500.0 prev=78500.0 \u2192 
+conservation_conflict(residual=197100000.00,prev=199078500.0)
+2026-06-17 10:43:25,519  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[51] page=3 
+date='28-10-2021' dr=9.0 cr=None bal=72600.0 prev=72600.0 \u2192 conservation_conflict(residual=5891.00,prev=78500.0)
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '30-10-202' from 
+concatenated token '30-10-202t'
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '30-10-202' from 
+concatenated token '30-10-202t'
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[52] page=3 date='30-10-202' 
+dr=None cr=None bal=300726.0 prev=72600.0 \u2192 no_debit_or_credit [UNSEEDED]
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[53] page=3 
+date='30-10-2021' dr=300000.0 cr=None bal=726.0 prev=726.0 \u2192 
+conservation_conflict(residual=228126.00,prev=72600.0)
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[54] page=3 date='30-10-2021' 
+dr=29.5 cr=10000.0 bal=696.5 prev=726.0 \u2192 both_debit_and_credit [UNSEEDED]
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[55] page=3 
+date='31-10-2021' dr=None cr=14000.0 bal=2469650.0 prev=2469650.0 \u2192 
+conservation_conflict(residual=2454924.00,prev=726.0)
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[56] page=3 
+date='31-10-2021' dr=None cr=19000.0 bal=34696.0 prev=34696.0 \u2192 
+conservation_conflict(residual=2453954.00,prev=2469650.0)
+2026-06-17 10:43:25,520  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[57] page=3 
+date='01-11-2021' dr=1.0 cr=None bal=34196.0 prev=34196.0 \u2192 conservation_conflict(residual=499.00,prev=34696.0)
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[59] page=3 date='01-11-2021' 
+dr=3000.0 cr=22400.0 bal=1625.0 prev=4625.9 \u2192 both_debit_and_credit [UNSEEDED]
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[60] page=3 date='0-11-2021' 
+dr=None cr=None bal=24025.5 prev=4625.9 \u2192 no_debit_or_credit [UNSEEDED]
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[61] page=3 
+date='02-11-2021' dr=2999.0 cr=None bal=2102650.0 prev=2102650.0 \u2192 
+conservation_conflict(residual=2101023.10,prev=4625.9)
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[62] page=3 date='03-11-2021' 
+dr=1400000.0 cr=1000000.0 bal=102102650.0 prev=2102650.0 \u2192 both_debit_and_credit [UNSEEDED]
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[63] page=3 date='03-11-2021' 
+dr=986000.0 cr=2000.0 bal=78.0 prev=2102650.0 \u2192 both_debit_and_credit [UNSEEDED]
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[64] page=3 
+date='0-1-2021' dr=None cr=3000.0 bal=4008.5 prev=4008.5 \u2192 
+conservation_conflict(residual=2101641.50,prev=2102650.0)
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       DEBUG    V2 REJECT block[65] page=3 date=None 
+dr=3374.09 cr=290000.0 bal=290634.0 prev=4008.5 \u2192 no_date [UNSEEDED]
+2026-06-17 10:43:25,521  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[66] page=3 
+date='12-11-2021' dr=29000000.0 cr=None bal=634.5 prev=634.5 \u2192 
+conservation_conflict(residual=28996626.00,prev=4008.5)
+2026-06-17 10:43:25,522  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[67] page=3 
+date='13-11-2021' dr=96.79 cr=None bal=33771.0 prev=33771.0 \u2192 conservation_conflict(residual=33233.29,prev=634.5)
+2026-06-17 10:43:25,522  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[68] page=3 
+date='13-11-2021' dr=537.71 cr=None bal=90.0 prev=90.0 \u2192 conservation_conflict(residual=33143.29,prev=33771.0)
+2026-06-17 10:43:25,522  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[69] page=3 
+date='17-11-2021' dr=None cr=20000000.0 bal=200000.0 prev=200000.0 \u2192 
+conservation_conflict(residual=19800090.00,prev=90.0)
+2026-06-17 10:43:25,523  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[71] page=3 
+date='17-11-2021' dr=379.0 cr=None bal=20.0 prev=20.0 \u2192 conservation_conflict(residual=601.00,prev=1000.0)
+2026-06-17 10:43:25,523  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[72] page=3 
+date='12-1-2021' dr=251.0 cr=None bal=37001.0 prev=37001.0 \u2192 conservation_conflict(residual=37232.00,prev=20.0)
+2026-06-17 10:43:25,523  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '18-11-202' from 
+concatenated token '18-11-202L'
+2026-06-17 10:43:25,523  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '18-11-202' from 
+concatenated token '18-11-202L'
+2026-06-17 10:43:25,523  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[73] page=3 
+date='18-11-202' dr=21030.0 cr=None bal=159.7 prev=159.7 \u2192 conservation_conflict(residual=15811.30,prev=37001.0)
+2026-06-17 10:43:25,523  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[74] page=3 
+date='19-11-2021' dr=None cr=9861.0 bal=169.0 prev=169.0 \u2192 conservation_conflict(residual=9851.70,prev=159.7)
+2026-06-17 10:43:25,524  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[77] page=3 
+date='30-1-2021' dr=550000.0 cr=None bal=91936.0 prev=91936.0 \u2192 
+conservation_conflict(residual=41767.00,prev=600169.0)
+2026-06-17 10:43:25,525  core.parsers.coordinate_parser_v2       INFO     V2: 56 accepted | 22 rejected | 
+zones=['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone'] | page_seeds=[]
+2026-06-17 10:44:28,472  core.layout.row_detector                INFO     Detected 227 physical rows from 739 tokens.
+2026-06-17 10:44:28,474  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 368.0], 'narration_zone': [368.0, 1007.0], 'debit_zone': [1007.0, 1221.0], 'credit_zone': [1221.0, 1407.0], 
+'balance_zone': [1407.0, 9999.0]}
+2026-06-17 10:44:28,475  core.layout.row_detector                INFO     Grouped 59 rows into 22 transaction blocks.
+2026-06-17 10:44:28,475  core.layout.row_detector                INFO     Grouped 60 rows into 24 transaction blocks.
+2026-06-17 10:44:28,476  core.layout.row_detector                INFO     Grouped 60 rows into 24 transaction blocks.
+2026-06-17 10:44:28,476  core.layout.row_detector                INFO     Grouped 48 rows into 13 transaction blocks.
+2026-06-17 10:44:28,478  core.layout.row_detector                INFO     Detected 227 physical rows from 739 tokens.
+2026-06-17 10:44:28,480  core.layout.column_detector             INFO     Detected columns dynamically: {'date_zone': 
+[0.0, 368.0], 'narration_zone': [368.0, 1007.0], 'debit_zone': [1007.0, 1221.0], 'credit_zone': [1221.0, 1407.0], 
+'balance_zone': [1407.0, 9999.0]}
+2026-06-17 10:44:28,481  core.layout.row_detector                INFO     Grouped 59 rows into 22 transaction blocks.
+2026-06-17 10:44:28,481  core.layout.row_detector                INFO     Grouped 60 rows into 24 transaction blocks.
+2026-06-17 10:44:28,481  core.layout.row_detector                INFO     Grouped 60 rows into 24 transaction blocks.
+2026-06-17 10:44:28,482  core.layout.row_detector                INFO     Grouped 48 rows into 13 transaction blocks.
+2026-06-17 10:44:28,482  core.parsers.coordinate_parser_v2       INFO     PDF TYPE: Unknown
+2026-06-17 10:44:28,482  core.parsers.coordinate_parser_v2       INFO     OCR TOKENS: 739
+2026-06-17 10:44:28,482  core.parsers.coordinate_parser_v2       INFO     COLUMN ZONES: {'date_zone': [0.0, 368.0], 
+'narration_zone': [368.0, 1007.0], 'debit_zone': [1007.0, 1221.0], 'credit_zone': [1221.0, 1407.0], 'balance_zone': 
+[1407.0, 9999.0]}
+2026-06-17 10:44:28,482  core.parsers.coordinate_parser_v2       INFO     ROWS DETECTED: 227
+2026-06-17 10:44:28,482  core.parsers.coordinate_parser_v2       INFO     BLOCKS DETECTED: 83
+2026-06-17 10:44:28,484  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[9] page=1 
+date='18/11/21' dr=8.97 cr=None bal=285201.63 prev=285201.63 \u2192 
+conservation_conflict(residual=1000.00,prev=286210.6)
+2026-06-17 10:44:28,484  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[10] page=1 
+date='19/11/21' dr=5000.0 cr=None bal=281201.63 prev=281201.63 \u2192 
+conservation_conflict(residual=1000.00,prev=285201.63)
+2026-06-17 10:44:28,485  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 1\u21922, carrying 
+prev_balance=244620.73
+2026-06-17 10:44:28,486  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[31] page=2 
+date='19/12/21' dr=5000.0 cr=None bal=208205.93 prev=208205.93 \u2192 
+conservation_conflict(residual=3.00,prev=213208.93)
+2026-06-17 10:44:28,486  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[32] page=2 
+date='22/12/21' dr=5000.0 cr=None bal=203208.93 prev=203208.93 \u2192 
+conservation_conflict(residual=3.00,prev=208205.93)
+2026-06-17 10:44:28,487  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[43] page=2 
+date='30/12/21' dr=None cr=1.31 bal=171109.18 prev=171109.18 \u2192 conservation_conflict(residual=4.00,prev=171103.87)
+2026-06-17 10:44:28,487  core.parsers.coordinate_parser_v2       INFO     V2 CONFLICT accepted block[44] page=2 
+date='31/12/21' dr=6180.0 cr=None bal=164925.18 prev=164925.18 \u2192 
+conservation_conflict(residual=4.00,prev=171109.18)
+2026-06-17 10:44:28,488  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 2\u21923, carrying 
+prev_balance=163835.18
+2026-06-17 10:44:28,490  core.parsers.coordinate_parser_v2       DEBUG    V2: Page transition 3\u21924, carrying 
+prev_balance=462336.1
+2026-06-17 10:44:28,490  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '07/02/22' from 
+concatenated token '07/02/22UP1-HARPREET S1NGH-'
+2026-06-17 10:44:28,490  core.parsers.coordinate_parser_v2       DEBUG    V2 date_prefix extracted '07/02/22' from 
+concatenated token '07/02/22UP1-HARPREET S1NGH-'
+2026-06-17 10:44:28,491  core.parsers.coordinate_parser_v2       INFO     V2: 83 accepted | 0 rejected | 
+zones=['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone'] | page_seeds=[]
+
+[STAGE 0] PDF: JOB_20260616_165708_19BA_24-25 -2 1 (2)_page-0006.pdf
+          Path: C:\Users\adity\Downloads\CA\validation_lab\backend\temp\JOB_20260616_165708_19BA_24-25 -2 1 (2)_page-0006.pdf
+
+[STAGE 1] Document type: SCANNED
+          Pages extracted: 14
+          Chars extracted: 35651
+          Merge stats: {'total_ocr_time': 130.14962339401245, 'pages': [{'page': 1, 'render_time': 0.03152171203068325, 'ocr_time': 10.53244662284851}, {'page': 2, 'render_time': 0.03152171203068325, 'ocr_time': 7.121517896652222}, {'page': 3, 'render_time': 0.03152171203068325, 'ocr_time': 8.110605716705322}, {'page': 4, 'render_time': 0.03152171203068325, 'ocr_time': 6.842660188674927}, {'page': 5, 'render_time': 0.03152171203068325, 'ocr_time': 7.126355886459351}, {'page': 6, 'render_time': 0.03152171203068325, 'ocr_time': 10.126896142959595}, {'page': 7, 'render_time': 0.03152171203068325, 'ocr_time': 10.761570692062378}, {'page': 8, 'render_time': 0.03152171203068325, 'ocr_time': 9.50229001045227}, {'page': 9, 'render_time': 0.03152171203068325, 'ocr_time': 10.281342029571533}, {'page': 10, 'render_time': 0.03152171203068325, 'ocr_time': 10.229312658309937}, {'page': 11, 'render_time': 0.03152171203068325, 'ocr_time': 8.948099136352539}, {'page': 12, 'render_time': 0.03152171203068325, 'ocr_time': 8.993799686431885}, {'page': 13, 'render_time': 0.03152171203068325, 'ocr_time': 11.147751331329346}, {'page': 14, 'render_time': 0.03152171203068325, 'ocr_time': 10.424975395202637}]}
+
+[STAGE 2] OCR Token Count: 2400
+[STAGE 3] Rows Detected: 1215
+[STAGE 4] Column Zones: {'date_zone': [0.0, 326.0], 'narration_zone': [326.0, 997.0], 'debit_zone': [997.0, 1263.5], 'credit_zone': [1263.5, 9999.0]}
+[STAGE 5] Transaction Blocks Detected: 264
+[STAGE 6] Accepted: 259 | Rejected: 5
+          Zones: ['date_zone', 'narration_zone', 'debit_zone', 'credit_zone']
+          Page seeds: [5]
+
+[STAGE 0] PDF: JOB_20260616_165708_19BA_Acct Statement_3644_14032026_13.08.12 1 (1)_page-0006.pdf
+          Path: C:\Users\adity\Downloads\CA\validation_lab\backend\temp\JOB_20260616_165708_19BA_Acct Statement_3644_14032026_13.08.12 1 (1)_page-0006.pdf
+
+[STAGE 1] Document type: SCANNED
+          Pages extracted: 12
+          Chars extracted: 28801
+          Merge stats: {'total_ocr_time': 141.21426725387573, 'pages': [{'page': 1, 'render_time': 0.05532215038935343, 'ocr_time': 18.285178661346436}, {'page': 2, 'render_time': 0.05532215038935343, 'ocr_time': 10.190989017486572}, {'page': 3, 'render_time': 0.05532215038935343, 'ocr_time': 5.326138257980347}, {'page': 4, 'render_time': 0.05532215038935343, 'ocr_time': 11.037098169326782}, {'page': 5, 'render_time': 0.05532215038935343, 'ocr_time': 12.183429479598999}, {'page': 6, 'render_time': 0.05532215038935343, 'ocr_time': 12.366484880447388}, {'page': 7, 'render_time': 0.05532215038935343, 'ocr_time': 13.135852575302124}, {'page': 8, 'render_time': 0.05532215038935343, 'ocr_time': 13.446550369262695}, {'page': 9, 'render_time': 0.05532215038935343, 'ocr_time': 11.944800615310669}, {'page': 10, 'render_time': 0.05532215038935343, 'ocr_time': 11.400559186935425}, {'page': 11, 'render_time': 0.05532215038935343, 'ocr_time': 10.999656438827515}, {'page': 12, 'render_time': 0.05532215038935343, 'ocr_time': 10.897529602050781}]}
+
+[STAGE 2] OCR Token Count: 1551
+[STAGE 3] Rows Detected: 658
+[STAGE 4] Column Zones: {'date_zone': [0.0, 347.0], 'narration_zone': [347.0, 999.0], 'debit_zone': [999.0, 1219.0], 'credit_zone': [1219.0, 1402.0], 'balance_zone': [1402.0, 9999.0]}
+[STAGE 5] Transaction Blocks Detected: 121
+[STAGE 6] Accepted: 108 | Rejected: 13
+          Zones: ['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone']
+          Page seeds: []
+
+[STAGE 0] PDF: JOB_20260616_165708_19BA_axis.pdf
+          Path: C:\Users\adity\Downloads\CA\validation_lab\backend\temp\JOB_20260616_165708_19BA_axis.pdf
+
+[STAGE 1] Document type: DIGITAL
+          Pages extracted: 3
+          Chars extracted: 11447
+          Merge stats: {'before': 0, 'after': 0, 'overlaid': 0, 'appended': 0, 'safe_rejected': 0}
+
+[STAGE 2] OCR Token Count: 635
+[STAGE 3] Rows Detected: 166
+[STAGE 4] Column Zones: {'date_zone': [0.0, 158.0], 'narration_zone': [158.0, 269.0], 'debit_zone': [269.0, 320.0], 'credit_zone': [320.0, 380.0], 'balance_zone': [380.0, 9999.0]}
+[STAGE 5] Transaction Blocks Detected: 78
+[STAGE 6] Accepted: 56 | Rejected: 22
+          Zones: ['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone']
+          Page seeds: []
+
+[STAGE 0] PDF: JOB_20260616_165708_19BA_YESBANK_page-0001.pdf
+          Path: C:\Users\adity\Downloads\CA\validation_lab\backend\temp\JOB_20260616_165708_19BA_YESBANK_page-0001.pdf
+
+[STAGE 1] Document type: SCANNED
+          Pages extracted: 4
+          Chars extracted: 12460
+          Merge stats: {'total_ocr_time': 60.96003246307373, 'pages': [{'page': 1, 'render_time': 0.05683094263076782, 'ocr_time': 17.039902448654175}, {'page': 2, 'render_time': 0.05683094263076782, 'ocr_time': 14.408288955688477}, {'page': 3, 'render_time': 0.05683094263076782, 'ocr_time': 15.964507579803467}, {'page': 4, 'render_time': 0.05683094263076782, 'ocr_time': 13.547333478927612}]}
+
+[STAGE 2] OCR Token Count: 739
+[STAGE 3] Rows Detected: 227
+[STAGE 4] Column Zones: {'date_zone': [0.0, 368.0], 'narration_zone': [368.0, 1007.0], 'debit_zone': [1007.0, 1221.0], 'credit_zone': [1221.0, 1407.0], 'balance_zone': [1407.0, 9999.0]}
+[STAGE 5] Transaction Blocks Detected: 83
+[STAGE 6] Accepted: 83 | Rejected: 0
+          Zones: ['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone']
+          Page seeds: []
+
+================================================================================
+PHASE 1 ù PIPELINE TRACE SUMMARY
+================================================================================
+PDF                                   Tokens   Rows  Blocks  Accepted  Rejected   Final
+---------------------------------------------------------------------------------------
+BOI                                     2400   1215     264       259         5     259
+HDFC                                    1551    658     121       108        13     108
+Axis                                     635    166      78        56        22      56
+YES                                      739    227      83        83         0      83
+
+================================================================================
+REJECT REASON BREAKDOWN
+================================================================================
+
+  [BOI]
+    no_date                                      4  (80.0%)
+    NO_TRANSACTION_SEED                          1  (20.0%)
+
+  [HDFC]
+    no_balance                                   9  (69.2%)
+    no_date                                      3  (23.1%)
+    both_debit_and_credit                        1  (7.7%)
+
+  [Axis]
+    no_balance                                   6  (27.3%)
+    both_debit_and_credit                        6  (27.3%)
+    no_date                                      5  (22.7%)
+    no_debit_or_credit                           5  (22.7%)
+
+================================================================================
+MISSING BLOCK ANALYSIS
+  (Blocks that were detected but NOT accepted)
+================================================================================
+
+  [BOI] ù 5 blocks not accepted
+  Date                Debit       Credit      Balance Reason                                  
+  ------------ ------------ ------------ ------------ ----------------------------------------
+  ù                       ù            ù            ù no_date                                 
+  3-28/10                 ù            ù            ù NO_TRANSACTION_SEED                     
+  ù                       ù            ù            ù no_date                                 
+  ù                       ù            ù            ù no_date                                 
+  ù                       ù            ù            ù no_date                                 
+
+  [HDFC] ù 13 blocks not accepted
+  Date                Debit       Credit      Balance Reason                                  
+  ------------ ------------ ------------ ------------ ----------------------------------------
+  01/05/2025              ù            ù            ù no_balance                              
+  01/05/2025              ù            ù            ù no_balance                              
+  ù                       ù            ù            ù no_date                                 
+  ù                       ù            ù            ù no_date                                 
+  01/05/2025              ù            ù            ù no_balance                              
+  01/05/2025              ù            ù            ù no_balance                              
+  28/05/25            740.0       1810.0    699490.42 both_debit_and_credit                   
+  01/05/2025              ù            ù            ù no_balance                              
+  01/05/2025              ù            ù            ù no_balance                              
+  01/05/2025              ù            ù            ù no_balance                              
+  01/05/2025              ù            ù            ù no_balance                              
+  01/05/2025              ù            ù            ù no_balance                              
+  ù                       ù            ù            ù no_date                                 
+
+  [Axis] ù 22 blocks not accepted
+  Date                Debit       Credit      Balance Reason                                  
+  ------------ ------------ ------------ ------------ ----------------------------------------
+  02-10-2021              ù            ù            ù no_balance                              
+  04-0-2021               ù       2600.0            ù no_balance                              
+  04-10.202        402000.0            ù            ù no_balance                              
+  ù                       ù       2950.0            ù no_date                                 
+  ù                150000.0            ù     13212.37 no_date                                 
+  05-0-2021      40000090.0            ù            ù no_balance                              
+  06-0-2                  ù       5500.0            ù no_balance                              
+  07-10-202               ù      19669.6            ù no_balance                              
+  08-10-2021       935000.0      90100.0      95142.0 both_debit_and_credit                   
+  9-10-2021        125011.8     137992.0    138943.42 both_debit_and_credit                   
+  10-10-2021              ù            ù     643262.0 no_debit_or_credit                      
+  16-10-2021              ù            ù    500932.62 no_debit_or_credit                      
+  16-10-2021              ù            ù       932.62 no_debit_or_credit                      
+  ù                    59.0            ù         94.0 no_date                                 
+  ù                600000.0            ù        941.0 no_date                                 
+  30-10-202               ù            ù     300726.0 no_debit_or_credit                      
+  30-10-2021           29.5      10000.0        696.5 both_debit_and_credit                   
+  01-11-2021         3000.0      22400.0       1625.0 both_debit_and_credit                   
+  0-11-2021               ù            ù      24025.5 no_debit_or_credit                      
+  03-11-2021      1400000.0    1000000.0  102102650.0 both_debit_and_credit                   
+  03-11-2021       986000.0       2000.0         78.0 both_debit_and_credit                   
+  ù                 3374.09     290000.0     290634.0 no_date                                 

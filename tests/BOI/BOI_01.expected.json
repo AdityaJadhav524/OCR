@@ -1,0 +1,85 @@
+{
+  "transaction_count": 11,
+  "debit_total": 26750.5,
+  "credit_total": 61500.0,
+  "closing_balance": 44749.5,
+  "transactions": [
+    {
+      "date": "01-Oct-2024",
+      "narration": "OPENING BALANCE",
+      "debit": null,
+      "credit": null,
+      "balance": 10000.0
+    },
+    {
+      "date": "03-Oct-2024",
+      "narration": "UPI/427719/MERCHANT",
+      "debit": 150.0,
+      "credit": null,
+      "balance": 9850.0
+    },
+    {
+      "date": "05-Oct-2024",
+      "narration": "NEFT/ABC CORP/SALARY",
+      "debit": null,
+      "credit": 50000.0,
+      "balance": 59850.0
+    },
+    {
+      "date": "08-Oct-2024",
+      "narration": "ATM WITHDRAWAL",
+      "debit": 2000.0,
+      "credit": null,
+      "balance": 57850.0
+    },
+    {
+      "date": "10-Oct-2024",
+      "narration": "UPI/428812/GROCERY",
+      "debit": 1200.5,
+      "credit": null,
+      "balance": 56649.5
+    },
+    {
+      "date": "12-Oct-2024",
+      "narration": "IMPS/XYZ/TRANSFER",
+      "debit": 5000.0,
+      "credit": null,
+      "balance": 51649.5
+    },
+    {
+      "date": "15-Oct-2024",
+      "narration": "APBS CR INW - MUKHYAMANTRI MAZI LA 9284901484 AK",
+      "debit": null,
+      "credit": 1500.0,
+      "balance": 53149.5
+    },
+    {
+      "date": "18-Oct-2024",
+      "narration": "POS/AMAZON/PURCHASE",
+      "debit": 2400.0,
+      "credit": null,
+      "balance": 50749.5
+    },
+    {
+      "date": "20-Oct-2024",
+      "narration": "UPI/429911/BILL",
+      "debit": 1000.0,
+      "credit": null,
+      "balance": 49749.5
+    },
+    {
+      "date": "25-Oct-2024",
+      "narration": "CASH DEPOSIT",
+      "debit": null,
+      "credit": 10000.0,
+      "balance": 59749.5
+    },
+    {
+      "date": "28-Oct-2024",
+      "narration": "UPI/430012/RENT",
+      "debit": 15000.0,
+      "credit": null,
+      "balance": 44749.5
+    }
+  ]
+}

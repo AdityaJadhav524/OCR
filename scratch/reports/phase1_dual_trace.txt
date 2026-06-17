@@ -1,0 +1,99 @@
+﻿python : ERROR:validation_lab.api:Bank Detection error
+At line:1 char:1
++ python scratch/pipeline_dual_trace.py 2>&1 | Out-File -FilePath "scra ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR:validatio...Detection error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Traceback (most recent call last):
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 260, in do_bank_detection
+    log_stage(session_id, "Bank Detection", "SUCCESS", identity_json.get("institution_name", "UNKNOWN"), int((t1 - t0) 
+* 1000), extra_data={"identity_json": identity_json})
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 106, in log_stage
+    SESSION_CACHE[session_id]["stages"].append(stage_info)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'stages'
+ERROR:validation_lab.api:Bank Detection error
+Traceback (most recent call last):
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 260, in do_bank_detection
+    log_stage(session_id, "Bank Detection", "SUCCESS", identity_json.get("institution_name", "UNKNOWN"), int((t1 - t0) 
+* 1000), extra_data={"identity_json": identity_json})
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 106, in log_stage
+    SESSION_CACHE[session_id]["stages"].append(stage_info)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'stages'
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (12) << rows_before_merge (53)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (12) << rows_before_merge (53)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (25) << rows_before_merge (57)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (26) << rows_before_merge (59)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (22) << rows_before_merge (56)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (22) << rows_before_merge (56)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (12) << rows_before_merge (53)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (12) << rows_before_merge (53)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (25) << rows_before_merge (57)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (26) << rows_before_merge (59)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (22) << rows_before_merge (56)
+WARNING:ledgerai.pdf_service:EXTRACTION_WARNING: rows_after_merge (22) << rows_before_merge (56)
+ERROR:validation_lab.api:Bank Detection error
+Traceback (most recent call last):
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 260, in do_bank_detection
+    log_stage(session_id, "Bank Detection", "SUCCESS", identity_json.get("institution_name", "UNKNOWN"), int((t1 - t0) 
+* 1000), extra_data={"identity_json": identity_json})
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 106, in log_stage
+    SESSION_CACHE[session_id]["stages"].append(stage_info)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'stages'
+ERROR:validation_lab.api:Bank Detection error
+Traceback (most recent call last):
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 260, in do_bank_detection
+    log_stage(session_id, "Bank Detection", "SUCCESS", identity_json.get("institution_name", "UNKNOWN"), int((t1 - t0) 
+* 1000), extra_data={"identity_json": identity_json})
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 106, in log_stage
+    SESSION_CACHE[session_id]["stages"].append(stage_info)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'stages'
+ERROR:validation_lab.api:Bank Detection error
+Traceback (most recent call last):
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 260, in do_bank_detection
+    log_stage(session_id, "Bank Detection", "SUCCESS", identity_json.get("institution_name", "UNKNOWN"), int((t1 - t0) 
+* 1000), extra_data={"identity_json": identity_json})
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\Downloads\CA\validation_lab\backend\api.py", line 106, in log_stage
+    SESSION_CACHE[session_id]["stages"].append(stage_info)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'stages'
+
+==========================================================================================
+PHASE 1 ù DUAL TRACE (DIRECT vs API)
+==========================================================================================
+Bank         | Path     |   Tokens |     Rows |   Blocks |   Accept |   Reject |    Final | Verify
+------------------------------------------------------------------------------------------
+Processing BOI...
+BOI          | DIRECT   |     2400 |     1215 |      264 |      259 |        5 |      259 | [OK][OK]
+BOI          | API      | ERROR: 'stages'
+------------------------------------------------------------------------------------------
+Processing HDFC...
+HDFC         | DIRECT   |     1551 |      658 |      121 |      108 |       13 |      108 | [OK][OK]
+HDFC         | API      | ERROR: 'stages'
+------------------------------------------------------------------------------------------
+Processing Axis...
+Axis         | DIRECT   |      635 |      166 |       78 |       56 |       22 |       56 | [OK][OK]
+Axis         | API      | ERROR: 'stages'
+------------------------------------------------------------------------------------------
+Processing YES...
+YES          | DIRECT   |      739 |      227 |       83 |       83 |        0 |       83 | [OK][OK]
+YES          | API      | ERROR: 'stages'
+------------------------------------------------------------------------------------------
+Processing CreditCard...
+CreditCard   | DIRECT   |      384 |        0 |        0 |       11 |        5 |       11 | [FAIL][OK]
+CreditCard   | API      | ERROR: 'stages'
+------------------------------------------------------------------------------------------

@@ -1,0 +1,105 @@
+﻿
+======================================================================
+PHASE 3 ù HDFC INVESTIGATION
+Expected: 108  |  PDF: JOB_20260616_165708_19BA_Acct Statement_3644_14032026_13.08.12 1 (1)_page-0006.pdf
+======================================================================
+
+[1/6] Loading tokens from PDF...
+  Document type: scanned
+      Tokens: 1551
+      Pages:  12
+
+[2/6] Detecting rows...
+      Rows: 658
+        Page 1: 57 rows
+        Page 2: 52 rows
+        Page 3: 28 rows
+        Page 4: 58 rows
+        Page 5: 58 rows
+        Page 6: 58 rows
+        Page 7: 57 rows
+        Page 8: 58 rows
+        Page 9: 58 rows
+        Page 10: 58 rows
+        Page 11: 58 rows
+        Page 12: 58 rows
+
+[3/6] Detecting columns...
+      Zones: {'date_zone': [0.0, 347.0], 'narration_zone': [347.0, 999.0], 'debit_zone': [999.0, 1219.0], 'credit_zone': [1219.0, 1402.0], 'balance_zone': [1402.0, 9999.0]}
+
+[4/6] Detecting transaction blocks (per page)...
+        Page 1: 13 blocks
+        Page 2: 8 blocks
+        Page 3: 0 blocks
+        Page 4: 10 blocks
+        Page 5: 12 blocks
+        Page 6: 12 blocks
+        Page 7: 11 blocks
+        Page 8: 11 blocks
+        Page 9: 12 blocks
+        Page 10: 12 blocks
+        Page 11: 10 blocks
+        Page 12: 10 blocks
+      Total Blocks: 121
+
+[5/6] Running coordinate_parser_v2 (full pipeline)...
+      Accepted: 108  |  Rejected: 13
+      Zones: ['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone']
+      Page seeds: {}
+
+[6/6] Reject breakdown:
+      no_balance                                       9  (69.2%)
+      no_date                                          3  (23.1%)
+      both_debit_and_credit                            1  (7.7%)
+
+======================================================================
+PER-PAGE BREAKDOWN
+======================================================================
+   Page   Rows  Blocks  Accepted  Rejected
+  ----- ------ ------- --------- ---------
+      1     57      13        12         1
+      2     52       8         6         2
+      3     28       0         0         0
+      4     58      10         9         1
+      5     58      12        11         1
+      6     58      12        10         2
+      7     57      11        10         1
+      8     58      11        10         1
+      9     58      12        11         1
+     10     58      12        11         1
+     11     58      10         9         1
+     12     58      10         9         1
+
+======================================================================
+ALL 13 REJECTED TRANSACTIONS
+======================================================================
+     #  Page Date                Debit       Credit      Balance Reason
+  ---- ----- ------------ ------------ ------------ ------------ ----------------------------------------
+     1     1 01/05/2025              ù            ù            ù no_balance
+     2     2 01/05/2025              ù            ù            ù no_balance
+     3     2 ù                       ù            ù            ù no_date
+     4     4 ù                       ù            ù            ù no_date
+     5     5 01/05/2025              ù            ù            ù no_balance
+     6     6 01/05/2025              ù            ù            ù no_balance
+     7     6 28/05/25           740.00     1,810.00   699,490.42 both_debit_and_credit
+     8     7 01/05/2025              ù            ù            ù no_balance
+     9     8 01/05/2025              ù            ù            ù no_balance
+    10     9 01/05/2025              ù            ù            ù no_balance
+    11    10 01/05/2025              ù            ù            ù no_balance
+    12    11 01/05/2025              ù            ù            ù no_balance
+    13    12 ù                       ù            ù            ù no_date
+
+======================================================================
+STAGE SUMMARY ù HDFC
+======================================================================
+  Expected transactions : 108
+  Document type         : scanned
+  Tokens extracted      : 1551
+  Rows detected         : 658
+  Blocks detected       : 121
+  V2 accepted           : 108
+  V2 rejected           : 13
+  Gap (Expected-Final)  : 0
+
+  ROOT CAUSE STAGE: Coordinate Parser V2 (_qualifies)
+  Dominant reject: no_balance (9 rows)

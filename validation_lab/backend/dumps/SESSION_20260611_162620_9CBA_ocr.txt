@@ -1,0 +1,179 @@
+================================================================================
+PAGE 1
+================================================================================
+                                                                          Page 1 of 4
+
+    Akshata Dhanyakumar Patil
+                                         Customer ID : 67798417
+    Indradhwaj Nivas, Plot No.6
+    Ramkrishna Parm Hans Society
+                                         RM Name     : Samrin Shaikh
+    Pol Mala 100 Futi Road Sangli        RM Contact No : --022-62763704
+    Sangli                               RM Email ID : samrinjahan.shaikh@hdfc.bank.in
+    Maharashtra
+    India
+    416416
+
+    Statement as on : 30/11/2025
+    Customer Email : AKSHATADPATIL@GMAIL.COM
+                                 Account Relationship Summary
+
+                                    CR   Limit  Sweep in FD Amt# Hold Total Withdrawable**
+     Ccy   Account Type   Balance
+                                    DR                       Amount    Balance
+     INR SAVINGS ACCOUNTS     85870.39 CR   0.00         0.00   0.00       85870.39
+
+    ** Total Withdrawable Balance does not include Hold Amount and Unclear Amount.
+    Total Withdrawable Balance=Balance+Limit+Sweep in FD Amt-Hold Amount.
+    # Sweep In FD may have linkages to multiple accounts.
+
+
+================================================================================
+PAGE 2
+================================================================================
+                                                                          Page 2 of 4
+
+     Akshata Dhanyakumar Patil
+     Customer ID : 67798417               Account Branch : 501
+
+     Account Number : 50100148868323      Churchgate Industry House
+     Joint Holders 1 : Not Applicable     Ground Floor, Industry House
+                                          Opp Ramon House,159 H T Parekh Marg
+     Joint Holders 2 : Not Applicable
+                                          Churchgate
+     Account Type : INSTANT SAVING SALARY PREMIUM
+               (161)                      Mumbai
+     Statement From : 01/11/2025 To 30/11/2025 Maharashtra
+     Currency  : INR                      400 020
+     Nomination : Registered              RTGS/NEFT IFSC : HDFC0000501 MICR: 400240003
+
+        Txn Date        Narration        Withdrawals Deposits    Closing Balance
+       02/11/2025 UPI-Redbus India           2,680.00      0.00         5,66,438.40
+               Private-redbus1online.gpay@
+               okpayaxis-UTIB0000553-113530410597-UP
+               I Value Dt 02/11/2025 Ref 113530410597
+       02/11/2025 UPI-SWAPNIL                  0.00      2,000.00       5,68,438.40
+               DHANYAKUMAR-swapnilpatil93@
+               okaxis-RATN0000000-567287982952-UPI
+               Value Dt 02/11/2025 Ref 567287982952
+       02/11/2025 IMPS-530618983562-Akshata    0.00    1,00,000.00      6,68,438.40
+               Dhanyakumar -FDRL-xxxxxxxxxx5618-Sent
+               via Jupiter Value Dt 02/11/2025 Ref
+               530618983562
+       04/11/2025 ACH D- FIN INDIAN         2,00,000.00    0.00         4,68,438.40
+               CLEARING-225039246 Value Dt 04/11/2025
+               Ref 008132721308
+       04/11/2025 ACH D- FIN INDIAN         2,00,000.00    0.00         2,68,438.40
+               CLEARING-225039247 Value Dt 04/11/2025
+               Ref 008132722308
+       04/11/2025 ACH D- FIN INDIAN         2,00,000.00    0.00         68,438.40
+               CLEARING-225039248 Value Dt 04/11/2025
+               Ref 008132723308
+       04/11/2025 UPI-Airtel-airtelpaymentsb258202.rzp@ 299.00 0.00     68,139.40
+               axisbank-UTIB0000100-113620778586-UPI
+               Value Dt 04/11/2025 Ref 113620778586
+       04/11/2025 IMPS-530815745300-Akshata    0.00     10,000.00       78,139.40
+               Dhanyakumar -FDRL-xxxxxxxxxx5618-Sent
+               via Jupiter Value Dt 04/11/2025 Ref
+               530815745300
+       07/11/2025 UPI-Challa Swathi-basispay16669@ 246.01  0.00         77,893.39
+               icici-ICIC0DC0099-113797717715-UPI
+               Value Dt 07/11/2025 Ref 113797717715
+       07/11/2025 UPI-ASHISHKUMAR              0.00      3,000.00       80,893.39
+               CHANDRAK-ashish.rc25-1@
+               okhdfcbank-HDFC0000685-113809543268-
+               UPI Value Dt 07/11/2025 Ref 113809543268
+       10/11/2025 ACH D- FIN INDIAN          5,000.00      0.00         75,893.39
+               CLEARING-228634776 Value Dt 10/11/2025
+               Ref 008834899314
+
+
+================================================================================
+PAGE 3
+================================================================================
+                                                                          Page 3 of 4
+
+     Akshata Dhanyakumar Patil
+     Customer ID : 67798417               Account Branch : 501
+
+     Account Number : 50100148868323      Churchgate Industry House
+     Joint Holders 1 : Not Applicable     Ground Floor, Industry House
+                                          Opp Ramon House,159 H T Parekh Marg
+     Joint Holders 2 : Not Applicable
+                                          Churchgate
+     Account Type : INSTANT SAVING SALARY PREMIUM
+               (161)                      Mumbai
+     Statement From : 01/11/2025 To 30/11/2025 Maharashtra
+     Currency  : INR                      400 020
+     Nomination : Registered              RTGS/NEFT IFSC : HDFC0000501 MICR: 400240003
+
+        Txn Date        Narration        Withdrawals Deposits    Closing Balance
+       10/11/2025 ACH D- FIN INDIAN          5,000.00      0.00         70,893.39
+               CLEARING-229254741 Value Dt 10/11/2025
+               Ref 008857114314
+       12/11/2025 UPI-ASHISHKUMAR            3,000.00      0.00         67,893.39
+               CHANDRAK-ashish.rc25-1@
+               okhdfcbank-HDFC0000685-568220383303-
+               return Value Dt 12/11/2025 Ref
+               568220383303
+       15/11/2025 UPI-ASHISHKUMAR             640.00       0.00         67,253.39
+               CHANDRAK-ashish.rc25-1@
+               okhdfcbank-HDFC0000685-114212666170-
+               UPI Value Dt 15/11/2025 Ref 114212666170
+       18/11/2025 IMPS-532208777586-Akshata    0.00     50,000.00       1,17,253.39
+               Dhanyakumar -FDRL-xxxxxxxxxx5618-Sent
+               via Jupiter Value Dt 18/11/2025 Ref
+               532208777586
+       18/11/2025 UPI-Google India Digital-gpay-utility@ 740.00 0.00    1,16,513.39
+               okpayaxis-UTIB0000553-568877923432-UP
+               I Value Dt 18/11/2025 Ref 568877923432
+       19/11/2025 UPI-532383988711-532383988711-502000 29,640.00 0.00   86,873.39
+               21339924 Value Dt 19/11/2025 Ref
+               000035252569
+       21/11/2025 UPI-XXXXXXXXXXX5848-UBIN0547174-11 1,000.00 0.00      85,873.39
+               4484881166-Nov Value Dt 21/11/2025 Ref
+               114484881166
+       23/11/2025 UPI-Seekho-seekhosirohionline@ 1.00      0.00         85,872.39
+               ybl-YESB0YBLUPI-532788729462-Collect
+               request fr Value Dt 23/11/2025 Ref
+               532788729462
+       29/11/2025 UPI-KukuFM-kukufmonline@     2.00        0.00         85,870.39
+               ybl-YESB0YBLUPI-533304379712-Collect
+               request fr Value Dt 29/11/2025 Ref
+               533304379712
+
+
+================================================================================
+PAGE 4
+================================================================================
+                                                                          Page 4 of 4
+
+     Akshata Dhanyakumar Patil
+     Customer ID : 67798417               Account Branch : 501
+
+     Account Number : 50100148868323      Churchgate Industry House
+     Joint Holders 1 : Not Applicable     Ground Floor, Industry House
+                                          Opp Ramon House,159 H T Parekh Marg
+     Joint Holders 2 : Not Applicable
+                                          Churchgate
+     Account Type : INSTANT SAVING SALARY PREMIUM
+               (161)                      Mumbai
+     Statement From : 01/11/2025 To 30/11/2025 Maharashtra
+     Currency  : INR                      400 020
+     Nomination : Registered              RTGS/NEFT IFSC : HDFC0000501 MICR: 400240003
+
+      SUMMARY
+
+                  Opening Balance Debit Amount Credit Amount  Closing Balance
+                  5,69,118.40     6,48,248.01  1,65,000.00    85,870.39
+
+                               Debit Count  Credit Count
+                                  15           5
+          Total Withdrawal Balance*** : 85,870.39
+
+          Total Sweep In FD Linked** : 0.00
+
+     **FD may be linked to other Accounts as well
+     *** Total withdrawable Balance=Available Balance+Limit+Sweep In FD Amount-Hold Amount
+
+        Your Combined statement generation frequency is monthly and the next statement will be generated on next month end. Contents of

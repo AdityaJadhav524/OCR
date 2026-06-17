@@ -1,0 +1,3427 @@
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 277.56,
+      "x_end": 400.185
+    },
+    "credit": {
+      "x_start": 217.56,
+      "x_end": 277.56
+    },
+    "balance": {
+      "x_start": 400.185,
+      "x_end": 9999.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "narration_mismatch"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 18,
+  "credit_count": 1,
+  "balance_count": 21,
+  "narration_count": 1,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 217.56,
+      "x_end": 277.56
+    },
+    "credit": {
+      "x_start": 277.56,
+      "x_end": 400.185
+    },
+    "balance": {
+      "x_start": 400.185,
+      "x_end": 9999.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "narration_mismatch"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 1,
+  "credit_count": 18,
+  "balance_count": 21,
+  "narration_count": 1,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 262.56,
+      "x_end": 385.185
+    },
+    "credit": {
+      "x_start": 202.56,
+      "x_end": 262.56
+    },
+    "balance": {
+      "x_start": 385.185,
+      "x_end": 9984.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 18,
+  "credit_count": 1,
+  "balance_count": 21,
+  "narration_count": 0,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 292.56,
+      "x_end": 415.185
+    },
+    "credit": {
+      "x_start": 232.56,
+      "x_end": 292.56
+    },
+    "balance": {
+      "x_start": 415.185,
+      "x_end": 10014.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "fallback_mismatch"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "narration_mismatch"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 18,
+  "credit_count": 0,
+  "balance_count": 21,
+  "narration_count": 1,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 118.805,
+      "x_end": 344.995
+    },
+    "debit": null,
+    "credit": {
+      "x_start": 62.95,
+      "x_end": 118.805
+    },
+    "balance": {
+      "x_start": 528.1750000000001,
+      "x_end": 585.275
+    },
+    "narration": {
+      "x_start": 344.995,
+      "x_end": 9999.0
+    }
+  },
+  "amount_tokens": [],
+  "rows_detected": 56,
+  "amount_tokens_count": 0,
+  "debit_count": 0,
+  "credit_count": 0,
+  "balance_count": 0,
+  "narration_count": 0,
+  "confidence_breakdown": {
+    "signal_a": 0.9500000000000001,
+    "signal_b": 0.55,
+    "recon_rate": 1.0,
+    "final_confidence": 0.9700000000000001
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 277.56,
+      "x_end": 400.185
+    },
+    "credit": {
+      "x_start": 217.56,
+      "x_end": 277.56
+    },
+    "balance": {
+      "x_start": 400.185,
+      "x_end": 9999.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "narration_mismatch"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 18,
+  "credit_count": 1,
+  "balance_count": 21,
+  "narration_count": 1,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 217.56,
+      "x_end": 277.56
+    },
+    "credit": {
+      "x_start": 277.56,
+      "x_end": 400.185
+    },
+    "balance": {
+      "x_start": 400.185,
+      "x_end": 9999.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "narration_mismatch"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 1,
+  "credit_count": 18,
+  "balance_count": 21,
+  "narration_count": 1,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 262.56,
+      "x_end": 385.185
+    },
+    "credit": {
+      "x_start": 202.56,
+      "x_end": 262.56
+    },
+    "balance": {
+      "x_start": 385.185,
+      "x_end": 9984.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "credit"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 18,
+  "credit_count": 1,
+  "balance_count": 21,
+  "narration_count": 0,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+
+{
+  "zones": {
+    "date": {
+      "x_start": 56.879999999999995,
+      "x_end": 123.855
+    },
+    "debit": {
+      "x_start": 292.56,
+      "x_end": 415.185
+    },
+    "credit": {
+      "x_start": 232.56,
+      "x_end": 292.56
+    },
+    "balance": {
+      "x_start": 415.185,
+      "x_end": 10014.0
+    },
+    "narration": {
+      "x_start": 123.855,
+      "x_end": 217.56
+    }
+  },
+  "amount_tokens": [
+    {
+      "token": "0.00",
+      "x0": 319.84,
+      "x": 326.65,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 414.36,
+      "x": 421.17,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 463.56,
+      "x": 470.37,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2,680.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "2,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,438.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "299.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "68,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "10,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "78,139.40",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "246.01",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "77,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 412.18,
+      "x": 427.75,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "80,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "75,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "5,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "70,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "3,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,893.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "640.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "67,253.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "0.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "50,000.00",
+      "x0": 407.73,
+      "x": 425.52,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "740.00",
+      "x0": 333.43,
+      "x": 345.65999999999997,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "29,640.00",
+      "x0": 322.31,
+      "x": 340.1,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "86,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1,000.00",
+      "x0": 326.75,
+      "x": 342.32,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,873.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "1.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,872.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "2.00",
+      "x0": 342.32,
+      "x": 350.105,
+      "ttype": "AMOUNT",
+      "assigned": "debit"
+    },
+    {
+      "token": "0.00",
+      "x0": 427.75,
+      "x": 435.53499999999997,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 525.51,
+      "x": 543.3,
+      "ttype": "AMOUNT",
+      "assigned": "unassigned"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 445.88,
+      "x": 463.66999999999996,
+      "ttype": "AMOUNT",
+      "assigned": "balance"
+    },
+    {
+      "token": "85,870.39",
+      "x0": 199.78,
+      "x": 217.575,
+      "ttype": "AMOUNT",
+      "assigned": "fallback_mismatch"
+    },
+    {
+      "token": "0.00",
+      "x0": 199.78,
+      "x": 207.565,
+      "ttype": "AMOUNT",
+      "assigned": "narration_mismatch"
+    }
+  ],
+  "rows_detected": 141,
+  "amount_tokens_count": 55,
+  "debit_count": 18,
+  "credit_count": 0,
+  "balance_count": 21,
+  "narration_count": 1,
+  "confidence_breakdown": {
+    "signal_a": 1.0,
+    "signal_b": 0.0,
+    "recon_rate": 0.0,
+    "final_confidence": 0.6
+  }
+}
+

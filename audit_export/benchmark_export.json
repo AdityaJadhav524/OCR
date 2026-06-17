@@ -1,0 +1,20 @@
+{
+  "summary": {},
+  "banks": {
+    "BOI": {
+      "pdf_name": "BOI_01.pdf",
+      "expected_count": 11,
+      "actual_count": 10,
+      "audit_passed": false,
+      "missing_rows": 1,
+      "extra_rows": 0,
+      "parser_used": "V2",
+      "negative_amounts": 0,
+      "impossible_jumps": 0,
+      "running_balance_issues": 0,
+      "warnings": [
+        "Expected 11 transactions, but extracted 10."
+      ]
+    }
+  }
+}

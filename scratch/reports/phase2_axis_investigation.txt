@@ -1,0 +1,106 @@
+﻿python : 2026-06-17 10:43:53,198  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: 
+rows_after_merge (12) << rows_before_merge (53)
+At line:1 char:1
++ python scratch/investigate_axis_pipeline.py 2>&1 | Out-File -FilePath ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-06-17 10:4...fore_merge (53):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-06-17 10:43:53,291  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (12) << 
+rows_before_merge (53)
+2026-06-17 10:43:53,311  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (25) << 
+rows_before_merge (57)
+2026-06-17 10:43:53,482  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (26) << 
+rows_before_merge (59)
+2026-06-17 10:43:53,513  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (22) << 
+rows_before_merge (56)
+2026-06-17 10:43:53,674  ledgerai.pdf_service                    WARNING  EXTRACTION_WARNING: rows_after_merge (22) << 
+rows_before_merge (56)
+
+======================================================================
+PHASE 2 ù AXIS INVESTIGATION
+Expected: 89  |  PDF: JOB_20260616_165708_19BA_axis.pdf
+======================================================================
+
+[1/6] Loading tokens from PDF...
+  Document type: digital
+      Tokens: 635
+
+[2/6] Detecting rows...
+      Rows: 166
+        Page 1: 53 rows
+        Page 2: 57 rows
+        Page 3: 56 rows
+
+[3/6] Detecting columns...
+      Zones: {'date_zone': [0.0, 158.0], 'narration_zone': [158.0, 269.0], 'debit_zone': [269.0, 320.0], 'credit_zone': [320.0, 380.0], 'balance_zone': [380.0, 9999.0]}
+
+[4/6] Detecting transaction blocks (per page)...
+        Page 1: 20 blocks
+        Page 2: 29 blocks
+        Page 3: 29 blocks
+      Total Blocks: 78
+
+      *** BLOCK DEFICIT: Only 78 blocks for 89 expected ***
+      Root cause is BEFORE the parser (row_detector or anchor detection).
+      Investigating anchor detection failure...
+
+  Rows with date-like tokens NOT in date_zone:
+    Page 1 y=151 x0=283.0 zone=[0.0, 158.0] text='(rom:01-10-2021'
+    Page 1 y=151 x0=368.0 zone=[0.0, 158.0] text=':08-07-2022)'
+    Page 3 y=238 x0=201.0 zone=[0.0, 158.0] text='01-11-2021'
+  Date tokens IN zone: 59
+  Date tokens OUT of zone: 3
+
+[5/6] Running coordinate_parser_v2 (full pipeline)...
+      Accepted: 56  |  Rejected: 22
+      Zones used: ['date_zone', 'narration_zone', 'debit_zone', 'credit_zone', 'balance_zone']
+      Page seeds: {}
+
+[6/6] Reject breakdown:
+      no_balance                                       6  (27.3%)
+      both_debit_and_credit                            6  (27.3%)
+      no_date                                          5  (22.7%)
+      no_debit_or_credit                               5  (22.7%)
+
+======================================================================
+MISSING TRANSACTION DUMP (22 rejects)
+======================================================================
+     # Date                Debit       Credit      Balance Reason
+  ---- ------------ ------------ ------------ ------------ ----------------------------------------
+     1 p1   02-10-2021              ù            ù            ù no_balance
+     2 p1   04-0-2021               ù     s02600.0            ù no_balance
+     3 p1   04-10.202       402000.00            ù            ù no_balance
+     4 p1   ù                       ù     2950n.00            ù no_date
+     5 p1   ù                 1500,00            ù     13212.37 no_date
+     6 p1   05-0-2021      400000,90i            ù            ù no_balance
+     7 p1   06-0-2                  ù      5500.00            ù no_balance
+     8 p1   07-10-202               ù     19669.60            ù no_balance
+     9 p1   08-10-2021      935000.0o     S90100.0        95142 both_debit_and_credit
+    10 p2   9-10-2021       125011.80     137992.0    138943.42 both_debit_and_credit
+    11 p2   10-10-2021              ù            ù      6432,62 no_debit_or_credit
+    12 p2   16-10-2021              ù            ù    500932.62 no_debit_or_credit
+    13 p2   16-10-2021              ù            ù       932.62 no_debit_or_credit
+    14 p2   ù                   59.00            ù        94.00 no_date
+    15 p2   ù               600000.0e            ù       941.00 no_date
+    16 p3   30-10-202               ù            ù     300726.0 no_debit_or_credit
+    17 p3   30-10-2021          29.50     10000.00       696.50 both_debit_and_credit
+    18 p3   01-11-2021        3000.00        22400         1625 both_debit_and_credit
+    19 p3   0-11-2021               ù            ù     24025.5o no_debit_or_credit
+    20 p3   03-11-2021       14000,00   1000000.00   1021026,50 both_debit_and_credit
+    21 p3   03-11-2021      986000.00         2000       solu78 both_debit_and_credit
+    22 p3   ù                 3374.09    290000.0o      290634. no_date
+
+======================================================================
+STAGE SUMMARY
+======================================================================
+  Expected transactions : 89
+  Tokens extracted      : 635
+  Rows detected         : 166
+  Blocks detected       : 78
+  V2 accepted           : 56
+  V2 rejected           : 22
+  Gap (Expected-Final)  : 33
+
+  ROOT CAUSE STAGE: Row Detector / Block Detector
+  Missing blocks: 11
