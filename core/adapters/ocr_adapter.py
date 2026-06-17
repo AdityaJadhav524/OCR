@@ -31,7 +31,7 @@ logger = logging.getLogger("core.adapters.ocr_adapter")
 _PAGE_SEP = "=" * 80
 
 
-def document_to_text(document) -> Tuple[str, List[str]]:
+def document_to_text(document) -> Tuple[str, List[str], List[dict]]:
     """
     Convert an ocr_core Document layout tree into parser-compatible text.
 
@@ -47,12 +47,14 @@ def document_to_text(document) -> Tuple[str, List[str]]:
           pages     : List[str]  — list where pages[n] is the plain text of
                                    page n+1. This is the exact format that
                                    bank_detector.classify_document_llm() expects.
+          page_tokens: List[dict] — Coordinate parser V2 tokens.
     """
     if not document or not document.pages:
         logger.warning("ocr_adapter: received empty Document — returning empty strings")
-        return "", []
+        return "", [], []
 
     page_texts: List[str] = []
+    page_tokens: List[dict] = []
 
     for page in document.pages:
         # Lines are already sorted top→bottom, left→right by reading_order.py.
@@ -60,6 +62,19 @@ def document_to_text(document) -> Tuple[str, List[str]]:
         lines = [line.text for line in page.lines if line.text and line.text.strip()]
         page_text = "\n".join(lines)
         page_texts.append(page_text)
+        
+        for w in page.words:
+            if not w.text or not str(w.text).strip():
+                continue
+            page_tokens.append({
+                "text": w.text,
+                "x0": float(w.x1),
+                "y0": float(w.y1),
+                "x1": float(w.x2),
+                "y1": float(w.y2),
+                "page": page.page_number,
+                "source": "paddleocr"
+            })
 
         logger.debug(
             "ocr_adapter: page %d → %d lines, %d chars",
@@ -82,4 +97,4 @@ def document_to_text(document) -> Tuple[str, List[str]]:
         len(page_texts), len(full_text),
     )
 
-    return full_text, page_texts
+    return full_text, page_texts, page_tokens

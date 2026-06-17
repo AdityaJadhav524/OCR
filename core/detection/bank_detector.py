@@ -1,12 +1,263 @@
 import re
 import json
 import logging
+import time
 from typing import Dict, List, Optional
 
-from config import CLASSIFIER_MODEL
+try:
+    from config import CLASSIFIER_MODEL
+except ModuleNotFoundError:
+    from core.config import CLASSIFIER_MODEL
 from core.llm.provider import call_llm
 
 logger = logging.getLogger("ledgerai.identifier_service")
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# LAYER 1 — KEYWORD / BRAND PATTERN MATCHING  (< 10 ms)
+# ════════════════════════════════════════════════════════════════════════════
+
+# Each entry: canonical name → list of keyword patterns (searched in UPPERCASE text)
+_BANK_PATTERNS: Dict[str, List[str]] = {
+    "BANK OF INDIA":         ["BANK OF INDIA", "BKID"],
+    "HDFC BANK":             ["HDFC BANK", "HDFC"],
+    "STATE BANK OF INDIA":   ["STATE BANK OF INDIA", "SBI"],
+    "ICICI BANK":            ["ICICI BANK", "ICICI"],
+    "AXIS BANK":             ["AXIS BANK"],
+    "KOTAK MAHINDRA BANK":   ["KOTAK MAHINDRA BANK", "KOTAK"],
+    "YES BANK":              ["YES BANK"],
+    "TJSB SAHAKARI BANK":    ["TJSB", "SAVINGACCOUNTSTATEMENT"],
+    "UNION BANK OF INDIA":   ["UNION BANK OF INDIA"],
+    "CANARA BANK":           ["CANARA BANK"],
+    "PUNJAB NATIONAL BANK":  ["PUNJAB NATIONAL BANK", "PNB"],
+    "BANK OF BARODA":        ["BANK OF BARODA", "BOB"],
+    "IDBI BANK":             ["IDBI BANK", "IDBI"],
+    "FEDERAL BANK":          ["FEDERAL BANK"],
+    "INDUSIND BANK":         ["INDUSIND BANK"],
+    "IDFC FIRST BANK":       ["IDFC FIRST BANK", "IDFC FIRST"],
+}
+
+def _detect_by_keywords(first_page_text: str) -> Optional[str]:
+    """
+    Layer 1: Scan the first page for known bank name patterns.
+    Returns canonical bank name or None.
+    Expected time: < 10 ms.
+    """
+    t0 = time.monotonic()
+    text_upper = first_page_text.upper()
+    # Remove spaces for collapsed-word patterns like "SAVINGACCOUNTSTATEMENT"
+    text_nospace = text_upper.replace(" ", "")
+
+    for bank_name, patterns in _BANK_PATTERNS.items():
+        for pat in patterns:
+            # Try both normal (spaced) and no-space text
+            if pat in text_upper or pat.replace(" ", "") in text_nospace:
+                elapsed_ms = (time.monotonic() - t0) * 1000
+                logger.info(
+                    "bank_detector Layer1: matched %r → %s  (%.1f ms)",
+                    pat, bank_name, elapsed_ms,
+                )
+                return bank_name
+
+    elapsed_ms = (time.monotonic() - t0) * 1000
+    logger.info("bank_detector Layer1: no keyword match  (%.1f ms)", elapsed_ms)
+    return None
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# LAYER 2 — IFSC PREFIX DETECTION  (< 5 ms)
+# ════════════════════════════════════════════════════════════════════════════
+
+_IFSC_MAP: Dict[str, str] = {
+    "BKID": "BANK OF INDIA",
+    "SBIN": "STATE BANK OF INDIA",
+    "HDFC": "HDFC BANK",
+    "ICIC": "ICICI BANK",
+    "UTIB": "AXIS BANK",
+    "KKBK": "KOTAK MAHINDRA BANK",
+    "YESB": "YES BANK",
+    "TJSB": "TJSB SAHAKARI BANK",
+    "UBIN": "UNION BANK OF INDIA",
+    "CNRB": "CANARA BANK",
+    "PUNB": "PUNJAB NATIONAL BANK",
+    "BARB": "BANK OF BARODA",
+    "IBKL": "IDBI BANK",
+    "FDRL": "FEDERAL BANK",
+    "INDB": "INDUSIND BANK",
+    "IDFB": "IDFC FIRST BANK",
+}
+
+# IFSC codes are always 11 chars: 4-letter bank code + 0 + 6-char branch code
+_IFSC_RE = re.compile(r"\b([A-Z]{4})0[A-Z0-9]{6}\b")
+
+def _detect_by_ifsc(all_pages_text: str) -> Optional[str]:
+    """
+    Layer 2: Scan all pages for an IFSC code and map the 4-letter prefix.
+    Returns canonical bank name or None.
+    Expected time: < 5 ms.
+    """
+    t0 = time.monotonic()
+    text_upper = all_pages_text.upper()
+    for m in _IFSC_RE.finditer(text_upper):
+        prefix = m.group(1)
+        if prefix in _IFSC_MAP:
+            bank_name = _IFSC_MAP[prefix]
+            elapsed_ms = (time.monotonic() - t0) * 1000
+            logger.info(
+                "bank_detector Layer2: IFSC %s → %s  (%.1f ms)",
+                m.group(0), bank_name, elapsed_ms,
+            )
+            return bank_name
+
+    elapsed_ms = (time.monotonic() - t0) * 1000
+    logger.info("bank_detector Layer2: no IFSC match  (%.1f ms)", elapsed_ms)
+    return None
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# LAYER 3 — OCR HEADER TEXT SCAN  (uses already-extracted OCR, no extra cost)
+# ════════════════════════════════════════════════════════════════════════════
+
+def _detect_by_ocr_header(pages: List[str]) -> Optional[str]:
+    """
+    Layer 3: Look at the top 20% of the first page OCR output (header area).
+    Same patterns as Layer 1 but restricted to the header slice so noise from
+    transaction narrations (e.g. "HDFC UPI" as a counterparty) is excluded.
+    Returns canonical bank name or None.
+    """
+    if not pages:
+        return None
+    t0 = time.monotonic()
+    first_page = pages[0]
+    lines = first_page.splitlines()
+    header_lines = lines[: max(1, len(lines) // 5)]  # top 20%
+    header_text = " ".join(header_lines).upper().replace(" ", "")
+
+    for bank_name, patterns in _BANK_PATTERNS.items():
+        for pat in patterns:
+            if pat.replace(" ", "") in header_text:
+                elapsed_ms = (time.monotonic() - t0) * 1000
+                logger.info(
+                    "bank_detector Layer3: OCR header matched %r → %s  (%.1f ms)",
+                    pat, bank_name, elapsed_ms,
+                )
+                return bank_name
+
+    elapsed_ms = (time.monotonic() - t0) * 1000
+    logger.info("bank_detector Layer3: no OCR header match  (%.1f ms)", elapsed_ms)
+    return None
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# MINIMAL IDENTITY JSON BUILDER — used when a fast layer succeeds
+# ════════════════════════════════════════════════════════════════════════════
+
+def _detect_document_family(text: str) -> str:
+    """
+    Score the document to determine if it is a credit card statement or a bank statement.
+    """
+    score = 0
+    text_upper = text.upper()
+    
+    if "TOTAL AMOUNT DUE" in text_upper:
+        score += 3
+    if "MINIMUM AMOUNT DUE" in text_upper:
+        score += 3
+    if "AVAILABLE CREDIT LIMIT" in text_upper:
+        score += 3
+    if "PAYMENT DUE DATE" in text_upper:
+        score += 3
+    if "CREDIT CARD" in text_upper:
+        score += 5
+    if "CARD STATEMENT" in text_upper:
+        score += 3
+    if "LEGEND CREDIT CARD" in text_upper:
+        score += 3
+    if "PLATINUM CREDIT CARD" in text_upper:
+        score += 3
+    if "CASH LIMIT" in text_upper:
+        score += 3
+        
+    return "CREDIT_CARD" if score >= 5 else "BANK_STATEMENT"
+
+def _build_minimal_identity(bank_name: str, layer: str, all_text: str = "") -> Dict:
+    """
+    Build the same identity JSON shape the LLM would return, but with safe
+    defaults, so that the rest of the pipeline is unchanged.
+    """
+    abbr = bank_name.split()[0]  # first word e.g. "HDFC", "TJSB"
+    doc_family = _detect_document_family(all_text)
+    subtype = "CreditCard" if doc_family == "CREDIT_CARD" else "Savings"
+    
+    return {
+        "id": f"{doc_family}_{abbr}_{subtype.upper()}_V1",
+        "document_family": doc_family,
+        "document_subtype": subtype,
+        "institution_name": bank_name,
+        "country": "India",
+        "confidence_score": 0.95,
+        "detection_layer": layer,
+        "exclusion_markers": {"patterns": []},
+        "parsing_hints": {
+            "layout_type": "SINGLE_COLUMN",
+            "summary_section_labels": [],
+            "transaction_boundary_signals": ["DATE"],
+            "ref_no_pattern": None,
+            "page_break_pattern": r"Page \d+ of \d+",
+            "details_strip_patterns": [],
+            "known_summary_amounts": [],
+        },
+        "identity_markers": {
+            "issuer_identity": {
+                "issuer_name": {"rule": "keyword", "patterns": [bank_name]},
+                "regulatory_identifiers": {
+                    "ifsc": {"rule": "regex", "pattern": None},
+                    "swift": {"rule": "regex", "pattern": None},
+                    "iban": {"rule": "regex", "pattern": None},
+                    "gstin": {"rule": "regex", "pattern": None},
+                    "other": [],
+                },
+            },
+            "document_structure_identity": {
+                "document_title_phrase": {"rule": "keyword", "patterns": ["ACCOUNT STATEMENT"]},
+                "document_reference_number": {"rule": "regex", "pattern": None},
+                "generation_phrase": {"rule": "keyword", "patterns": []},
+            },
+            "period_identity": {
+                "statement_period": {"rule": "regex", "pattern": None},
+                "statement_date": {"rule": "regex", "pattern": None},
+                "billing_cycle": {"rule": "regex", "pattern": None},
+                "tax_period": {"rule": "regex", "pattern": None},
+            },
+            "entity_identity": {
+                "account_number": {"rule": "regex", "pattern": None},
+                "masked_card_number": {"rule": "regex", "pattern": None},
+                "loan_account_number": {"rule": "regex", "pattern": None},
+                "customer_id": {"rule": "regex", "pattern": None},
+                "wallet_id": {"rule": "regex", "pattern": None},
+                "merchant_id": {"rule": "regex", "pattern": None},
+                "pan": {"rule": "regex", "pattern": None},
+                "bo_id": {"rule": "regex", "pattern": None},
+                "dp_id": {"rule": "regex", "pattern": None},
+            },
+            "transaction_table_identity": {
+                "table_header_markers": ["Date", "Narration", "Debit", "Credit", "Balance"],
+                "minimum_column_count": 4,
+                "presence_of_running_balance": True,
+                "debit_credit_style": True,
+            },
+            "financial_summary_identity": {
+                "total_outstanding": {"rule": "regex", "pattern": None},
+                "minimum_due": {"rule": "regex", "pattern": None},
+                "emi_amount": {"rule": "regex", "pattern": None},
+                "credit_limit": {"rule": "regex", "pattern": None},
+                "drawing_power": {"rule": "regex", "pattern": None},
+                "portfolio_value": {"rule": "regex", "pattern": None},
+                "total_tax": {"rule": "regex", "pattern": None},
+            },
+            "footer_identity": {"footer_markers": []},
+        },
+    }
 
 
 # â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
@@ -82,10 +333,10 @@ def normalise_institution_name(raw: str) -> str:
     return name
 
 
-# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+# ════════════════════════════════════════════════════════════════════════════
 # FIRST N PAGES EXTRACTION
-# Own function â€” does not reuse any existing service function
-# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+# Own function — does not reuse any existing service function
+# ════════════════════════════════════════════════════════════════════════════
 
 def _get_first_pages_text(pages: List[str], max_pages: int = 3) -> str:
     """
@@ -112,10 +363,16 @@ def classify_document_llm(pages: List[str]) -> Dict:
     """
     Generate the identification marker JSON for a new document.
 
-    The identification prompt is defined inline as a local variable.
-    Sends only the first 2-3 pages to the LLM to conserve tokens â€”
-    structural signals (title, column headers, account/entity patterns)
-    are always present within the first pages of a financial statement.
+    Detection order (fastest first):
+      1. Layer 1 -- keyword / brand pattern match on first page   (< 10 ms)
+      2. Layer 2 -- IFSC prefix scan on all pages                 (<  5 ms)
+      3. Layer 3 -- OCR header text scan (top 20% of first page)  (<  5 ms)
+      4. Layer 4 -- LLM fallback (first 2-3 pages sent to Gemini)
+
+    The LLM is invoked ONLY when all three fast layers fail to identify
+    the issuing bank.  For the vast majority of Indian bank statements,
+    the bank name or an IFSC code appears in plain text, so the LLM is
+    almost never needed for detection.
 
     Args:
         pages: Per-page text list produced by the page-split logic in
@@ -124,8 +381,47 @@ def classify_document_llm(pages: List[str]) -> Dict:
     Returns:
         Parsed identification JSON dict with institution_name normalised.
     """
-    # â”€â”€ Build page text (first 2-3 pages only) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    t_start = time.monotonic()
+    first_page_text = pages[0] if pages else ""
+    all_text = "\n".join(pages)
+
+    # -- LAYER 3: OCR header text scan (SAFEST FIRST) ------------------------
+    bank_name = _detect_by_ocr_header(pages)
+    if bank_name:
+        logger.info(
+            "classify_document_llm: FAST-PATH Layer3 -> %s  (%.1f ms total)",
+            bank_name, (time.monotonic() - t_start) * 1000,
+        )
+        return _build_minimal_identity(bank_name, "Layer3-ocr-header", all_text)
+
+    # -- LAYER 1: keyword / brand name match ---------------------------------
+    bank_name = _detect_by_keywords(first_page_text)
+    if bank_name:
+        logger.info(
+            "classify_document_llm: FAST-PATH Layer1 -> %s  (%.1f ms total)",
+            bank_name, (time.monotonic() - t_start) * 1000,
+        )
+        return _build_minimal_identity(bank_name, "Layer1-keyword", all_text)
+
+    # -- LAYER 2: IFSC prefix match ------------------------------------------
+    bank_name = _detect_by_ifsc(all_text)
+    if bank_name:
+        logger.info(
+            "classify_document_llm: FAST-PATH Layer2 -> %s  (%.1f ms total)",
+            bank_name, (time.monotonic() - t_start) * 1000,
+        )
+        return _build_minimal_identity(bank_name, "Layer2-ifsc", all_text)
+
+    # -- LAYER 4: LLM fallback -----------------------------------------------
+    logger.info(
+        "classify_document_llm: all fast layers missed -- falling back to LLM  (%.1f ms so far)",
+        (time.monotonic() - t_start) * 1000,
+    )
+
+    # -- Build page text (first 2-3 pages only) ------------------------------
     first_pages_text = _get_first_pages_text(pages, max_pages=3)
+
+
 
     prompt = f"""
 You are a financial document structure analyst. Your task is to analyze a financial statement PDF and generate a comprehensive identification marker JSON that captures all unique structural, textual, and formatting patterns that distinguish this specific statement type.
@@ -333,11 +629,12 @@ Analyze this financial statement and generate identification markers:
 {first_pages_text}
 """
 
-    raw = call_llm(
+    llm_result = call_llm(
         prompt=prompt,
         model=CLASSIFIER_MODEL,
-        temperature=0
+        temperature=0,
     )
+    raw = llm_result["raw_response"]
 
     # â”€â”€ Clean and parse the LLM JSON response â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     def _clean_json(s: str) -> str:

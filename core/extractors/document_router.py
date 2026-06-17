@@ -1,84 +1,90 @@
-"""
-core/extractors/document_router.py
-────────────────────────────────────
-Phase 3: Digital vs Scanned PDF Detection and Routing
-
-Flow:
-  Input PDF
-    ↓
-  detect_document_type()       — fitz word-count heuristic
-    ↓
-  "digital" → pdf_extractor.extract_pdf_text()    → (full_text, pages)
-  "scanned" → ocr_core pipeline → ocr_adapter     → (full_text, pages)
-    ↓
-  Both paths return identical (full_text: str, pages: List[str])
-  The rest of the parse pipeline is UNCHANGED.
-
-Detection heuristic:
-  - Open PDF with PyMuPDF (zero rendering, cheap)
-  - Sample first min(3, total) pages
-  - Count embedded text words per sampled page
-  - Average < SCANNED_WORD_THRESHOLD → scanned
-  - Average ≥ SCANNED_WORD_THRESHOLD → digital
-
-SCANNED_WORD_THRESHOLD = 30 words/page
-  Rationale: a blank cover page or header-only page typically has 5-20 words.
-  A genuine digital text page of a bank statement has 100-500+ words.
-  30 words catches images-only pages while tolerating sparse pages.
-"""
-
 import logging
 import os
 import sys
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 
 logger = logging.getLogger("core.extractors.document_router")
 
-# ── Scanned/Digital threshold ──────────────────────────────────────────────────
-SCANNED_WORD_THRESHOLD = 30      # avg words/page below this → treat as scanned
+# -- Scanned/Digital threshold --------------------------------------------------
+SCANNED_WORD_THRESHOLD = 30      # avg words/page below this ? treat as scanned
 SAMPLE_PAGES           = 3       # number of pages to sample for detection
 
 
-# ── OCR Core path injection ────────────────────────────────────────────────────
-# ocr_core sits alongside core/ in the workspace root Z:\CA\.
-# We add it to sys.path here so all ocr_core imports resolve without
-# making core/ depend on a package install.
+# -- OCR Core path injection ----------------------------------------------------
 _WORKSPACE_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", ".."))
 _OCR_CORE_PATH  = os.path.join(_WORKSPACE_ROOT, "ocr_core")
 
 if _OCR_CORE_PATH not in sys.path:
     sys.path.insert(0, _OCR_CORE_PATH)
-    logger.debug("document_router: added ocr_core to sys.path → %s", _OCR_CORE_PATH)
+    logger.debug("document_router: added ocr_core to sys.path ? %s", _OCR_CORE_PATH)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Detection
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
+# Security
+# -----------------------------------------------------------------------------
 
-def detect_document_type(pdf_path: str) -> str:
+def check_pdf_security(pdf_path: str, password: str = None) -> Dict[str, Any]:
     """
-    Detect whether a PDF is digitally-encoded or a scanned image.
-
-    Returns:
-        "digital" or "scanned"
+    Checks if a PDF is encrypted, password-protected, or requires a password.
+    Returns a dict with state.
     """
     try:
-        import fitz  # PyMuPDF — already a dependency of pdf_extractor
+        import fitz
+        doc = fitz.open(pdf_path)
+        needs_pass = doc.needs_pass
+        
+        if not needs_pass:
+            doc.close()
+            return {"status": "PASS", "is_encrypted": False}
+            
+        if password:
+            success = doc.authenticate(password)
+            doc.close()
+            if success:
+                return {"status": "UNLOCKED", "is_encrypted": True}
+            else:
+                return {"status": "INVALID_PASSWORD", "is_encrypted": True}
+                
+        doc.close()
+        return {"status": "PASSWORD_REQUIRED", "is_encrypted": True}
+        
+    except Exception as e:
+        logger.error("document_router: security check failed (%s)", e)
+        # If fitz fails, we just pass it on and let the pipeline crash normally if invalid
+        return {"status": "PASS", "is_encrypted": False}
+
+
+# -----------------------------------------------------------------------------
+# Detection
+# -----------------------------------------------------------------------------
+
+def detect_document_type(pdf_path: str, password: str = None) -> str:
+    """
+    Detect whether a PDF is digitally-encoded or a scanned image.
+    """
+    try:
+        import fitz
 
         doc = fitz.open(pdf_path)
+        if doc.needs_pass and password:
+            doc.authenticate(password)
+            
         total_pages = len(doc)
         n_sample    = min(SAMPLE_PAGES, total_pages)
 
         word_counts = []
         for i in range(n_sample):
-            page  = doc.load_page(i)
-            words = page.get_text("words")   # cheap: no rendering
-            word_counts.append(len(words))
+            try:
+                page  = doc.load_page(i)
+                words = page.get_text("words")   # cheap: no rendering
+                word_counts.append(len(words))
+            except Exception:
+                pass
 
         doc.close()
 
         if not word_counts:
-            logger.warning("document_router: no words found — defaulting to scanned")
+            logger.warning("document_router: no words found - defaulting to scanned")
             return "scanned"
 
         avg_words = sum(word_counts) / len(word_counts)
@@ -92,28 +98,23 @@ def detect_document_type(pdf_path: str) -> str:
         return doc_type
 
     except ImportError:
-        logger.warning("document_router: PyMuPDF not available — defaulting to scanned")
+        logger.warning("document_router: PyMuPDF not available - defaulting to scanned")
         return "scanned"
     except Exception as e:
-        logger.error("document_router: detection failed (%s) — defaulting to scanned", e)
+        logger.error("document_router: detection failed (%s) - defaulting to scanned", e)
         return "scanned"
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Digital path
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 
-def _extract_digital(pdf_path: str, password: str = None) -> Tuple[str, List[str]]:
-    """
-    Use the existing pdf_extractor for digitally-encoded PDFs.
-    Returns (full_text, pages) using the exact same format parse.py already uses.
-    """
+def _extract_digital(pdf_path: str, password: str = None) -> Tuple[str, List[str], dict, list]:
     import re
     from core.extractors.pdf_extractor import extract_pdf_text
 
-    full_text = extract_pdf_text(pdf_path, password=password)
+    full_text, merge_stats, page_tokens = extract_pdf_text(pdf_path, password=password)
 
-    # Split on the same separator that statement_parser.py uses
     pages = [
         block.strip()
         for block in re.split(r"={80}", full_text)
@@ -126,70 +127,39 @@ def _extract_digital(pdf_path: str, password: str = None) -> Tuple[str, List[str
         "document_router [digital]: %d pages, %d chars",
         len(pages), len(full_text),
     )
-    return full_text, pages
+    return full_text, pages, merge_stats, page_tokens
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Scanned path
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 
-def _extract_scanned(pdf_path: str) -> Tuple[str, List[str]]:
-    """
-    Use OCR Core for scanned/image-only PDFs.
-    Passes the resulting Document through the OCR adapter.
-    Returns (full_text, pages) in the same format as _extract_digital().
-    """
-    from pipeline import run_pipeline
-    from core.adapters.ocr_adapter import document_to_text
-    from core.validators.ocr_validation import validate_ocr_output
-
-    with open(pdf_path, "rb") as f:
-        file_bytes = f.read()
+def _extract_scanned(pdf_path: str, password: str = None) -> Tuple[str, List[str], dict, list]:
+    from core.adapters.ocr_subprocess import extract_via_subprocess
 
     filename = os.path.basename(pdf_path)
-    logger.info("document_router [scanned]: running OCR pipeline on %s", filename)
+    logger.info(
+        "document_router [scanned]: delegating to OCR subprocess for '%s'", filename
+    )
 
-    doc = run_pipeline(file_bytes=file_bytes, filename=filename)
-
-    # Validate before passing to parser
-    issues = validate_ocr_output(doc)
-    if issues:
-        raise ValueError(
-            f"OCR output failed validation for {filename}: {'; '.join(issues)}"
-        )
-
-    full_text, pages = document_to_text(doc)
+    full_text, pages, telemetry, page_tokens = extract_via_subprocess(pdf_path, password=password)
 
     logger.info(
-        "document_router [scanned]: %d pages, %d chars",
+        "document_router [scanned]: %d page(s), %d chars",
         len(pages), len(full_text),
     )
-    return full_text, pages
+    return full_text, pages, telemetry, page_tokens
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Public API
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 
-def route_document(pdf_path: str, password: str = None) -> Tuple[str, List[str]]:
-    """
-    Main entry point. Detects document type and routes to the correct extractor.
-
-    Args:
-        pdf_path : Absolute path to a PDF file.
-        password : PDF password (digital PDFs only; ignored for scanned).
-
-    Returns:
-        Tuple of:
-          full_text : str        — page-separated text string ready for parse_with_llm()
-          pages     : List[str]  — per-page strings ready for classify_document_llm()
-
-    Both outputs are in the IDENTICAL format that parse.py expects,
-    regardless of whether the PDF was digital or scanned.
-    """
-    doc_type = detect_document_type(pdf_path)
+def route_document(pdf_path: str, password: str = None) -> Tuple[str, List[str], dict, list]:
+    doc_type = detect_document_type(pdf_path, password=password)
 
     if doc_type == "digital":
         return _extract_digital(pdf_path, password=password)
     else:
-        return _extract_scanned(pdf_path)
+        return _extract_scanned(pdf_path, password=password)
+

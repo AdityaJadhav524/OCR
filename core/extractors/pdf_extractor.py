@@ -75,7 +75,12 @@ HYPHEN_WRAP = re.compile(r'-$')
 
 # Date patterns used in scoring & narration-join detection
 DATE_RE = re.compile(
-    r'\b(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4}|\d{4}[/\-]\d{1,2}[/\-]\d{1,2})\b'
+    r'\b('
+    r'\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4}|'           
+    r'\d{4}[/\-\.]\d{1,2}[/\-\.]\d{1,2}|'           
+    r'\d{1,2}[\s\-\.][A-Za-z]{3,9}[\s\-\.]\d{2,4}'  
+    r')\b',
+    re.IGNORECASE
 )
 AMOUNT_RE = re.compile(r'[\d,]+\.\d{2}')
 
@@ -105,6 +110,17 @@ def _is_cont_line(line: str) -> bool:
     return leading >= _MIN_LEADING and not _has_date_at_left(line)
 
 
+def _can_safely_overlay(line1: str, line2: str) -> bool:
+    """
+    Returns True ONLY if no non-space character collision exists.
+    Data preservation must always win.
+    """
+    min_len = min(len(line1), len(line2))
+    for col in range(min_len):
+        if line1[col] != ' ' and line2[col] != ' ':
+            return False
+    return True
+
 def _overlay_lines(group: List[str]) -> str:
     """
     Merge a list of lines by character-grid overlay.
@@ -124,15 +140,19 @@ def _overlay_lines(group: List[str]) -> str:
     return ''.join(grid).rstrip()
 
 
-def _merge_continuation_rows(lines: List[str]) -> List[str]:
+def _merge_continuation_rows(lines: List[str]) -> tuple[List[str], dict]:
     """
     Bank-agnostic fix for wrapped table-cell rows and stacked headers.
     """
     if not lines:
-        return lines
+        return lines, {"before": 0, "after": 0, "overlaid": 0, "appended": 0, "safe_rejected": 0}
 
     result: List[str] = []
     i, n = 0, len(lines)
+    
+    rows_overlaid = 0
+    rows_appended = 0
+    safe_overlay_rejected = 0
 
     while i < n:
         line = lines[i]
@@ -140,6 +160,7 @@ def _merge_continuation_rows(lines: List[str]) -> List[str]:
         # ── Stop merging at page breaks or summary blocks ──
         if 'PAGE' in line or 'Opening Balance' in line or 'TOTAL' in line:
             result.append(line)
+            rows_appended += 1
             i += 1
             continue
 
@@ -158,13 +179,22 @@ def _merge_continuation_rows(lines: List[str]) -> List[str]:
                     post.append(lines[i])
                     i += 1
                 result.append(_overlay_lines([anchor] + pre + post))
+                rows_overlaid += len(pre) + len(post)
             else:
                 # Sparse header handling
                 merged_pre = _overlay_lines(pre)
                 if result and not _has_date_at_left(result[-1]):
-                    result[-1] = _overlay_lines([result[-1], merged_pre])
+                    if _can_safely_overlay(result[-1], merged_pre):
+                        result[-1] = _overlay_lines([result[-1], merged_pre])
+                        rows_overlaid += len(pre)
+                    else:
+                        result.append(merged_pre)
+                        rows_appended += 1
+                        safe_overlay_rejected += 1
+                        logger.warning("SAFE_OVERLAY_REJECTED: Pre-continuation collision detected.")
                 else:
                     result.append(merged_pre)
+                    rows_appended += 1
 
         # ── anchor line ──
         elif _has_date_at_left(line):
@@ -176,18 +206,40 @@ def _merge_continuation_rows(lines: List[str]) -> List[str]:
                 i += 1
             if post:
                 result.append(_overlay_lines([anchor] + post))
+                rows_overlaid += len(post)
             else:
                 result.append(anchor)
+                rows_appended += 1
 
         # ── regular line (header / title / footer) ──
         else:
             if result and not _has_date_at_left(result[-1]) and line.strip() and not _has_date_at_left(line):
-                result[-1] = _overlay_lines([result[-1], line])
+                if _can_safely_overlay(result[-1], line):
+                    result[-1] = _overlay_lines([result[-1], line])
+                    rows_overlaid += 1
+                else:
+                    result.append(line)
+                    rows_appended += 1
+                    safe_overlay_rejected += 1
+                    logger.warning(f"SAFE_OVERLAY_REJECTED: Collision between\n'{result[-1]}'\n'{line}'")
             else:
                 result.append(line)
+                rows_appended += 1
             i += 1
 
-    return [l for l in result if l.strip()]
+    final_lines = [l for l in result if l.strip()]
+    if len(final_lines) < n * 0.5:
+        logger.warning(f"EXTRACTION_WARNING: rows_after_merge ({len(final_lines)}) << rows_before_merge ({n})")
+    
+    stats = {
+        "before": n,
+        "after": len(final_lines),
+        "overlaid": rows_overlaid,
+        "appended": rows_appended,
+        "safe_rejected": safe_overlay_rejected
+    }
+    logger.info(f"Merge Stats: {stats}")
+    return final_lines, stats
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -255,16 +307,29 @@ def _score_text(text: str) -> float:
 # Strategy A  — PyMuPDF (fitz)
 # ──────────────────────────────────────────────────────────────────────────────
 
-def _fitz_page_text(page_fitz) -> str:
+def _fitz_page_text(page_fitz, page_num: int) -> tuple[str, dict, list]:
     try:
         words = page_fitz.get_text("words", sort=True)
     except Exception:
-        return ''
-    if not words: return ''
+        return '', {"before": 0, "after": 0, "overlaid": 0, "appended": 0, "safe_rejected": 0}, []
+    if not words: return '', {"before": 0, "after": 0, "overlaid": 0, "appended": 0, "safe_rejected": 0}, []
 
     word_dicts = [{'x0': w[0], 'y0': w[1], 'x1': w[2], 'y1': w[3], 'text': w[4], 'yc': (w[1] + w[3]) / 2.0}
                   for w in words if w[4].strip()]
-    if not word_dicts: return ''
+    if not word_dicts: return '', {"before": 0, "after": 0, "overlaid": 0, "appended": 0, "safe_rejected": 0}, []
+
+    page_tokens = []
+    for w in words:
+        if w[4].strip():
+            page_tokens.append({
+                "text": w[4],
+                "x0": round(w[0], 2),
+                "y0": round(w[1], 2),
+                "x1": round(w[2], 2),
+                "y1": round(w[3], 2),
+                "page": page_num + 1,
+                "source": "fitz"
+            })
 
     y_tol = _compute_y_tolerance(word_dicts)
     rows = _group_words_by_y(word_dicts, y_tol)
@@ -275,8 +340,8 @@ def _fitz_page_text(page_fitz) -> str:
     for row in rows:
         lines.append(_render_row_to_grid(row, page_width, char_w))
 
-    lines = _merge_continuation_rows(lines)
-    return '\n'.join(lines)
+    lines, merge_stats = _merge_continuation_rows(lines)
+    return '\n'.join(lines), merge_stats, page_tokens
 
 
 def _compute_y_tolerance(word_dicts: list) -> float:
@@ -392,14 +457,28 @@ def _render_table(table: list) -> str:
 # Strategy D — pdfplumber word-row
 # ──────────────────────────────────────────────────────────────────────────────
 
-def _plumber_word_row_text(page_plumber) -> str:
+def _plumber_word_row_text(page_plumber, page_num: int) -> tuple[str, dict, list]:
     try:
         words = page_plumber.extract_words(x_tolerance=3, y_tolerance=3)
-        if not words: return ''
+        if not words: return '', {}, []
         words = _filter_sidebar_words(words, page_plumber.width)
-        if not words: return ''
+        if not words: return '', {}, []
         
         standard_words = [{'x0':w['x0'],'x1':w['x1'],'y0':w['top'],'y1':w['bottom'],'text':w['text']} for w in words]
+        
+        page_tokens = []
+        for w in standard_words:
+            if w['text'].strip():
+                page_tokens.append({
+                    "text": w['text'],
+                    "x0": round(w['x0'], 2),
+                    "y0": round(w['y0'], 2),
+                    "x1": round(w['x1'], 2),
+                    "y1": round(w['y1'], 2),
+                    "page": page_num + 1,
+                    "source": "plumber"
+                })
+
         y_tol = _compute_y_tolerance(standard_words)
         
         # Simple grouping by Y-center
@@ -416,10 +495,10 @@ def _plumber_word_row_text(page_plumber) -> str:
         
         char_w = _estimate_page_char_w(standard_words)
         lines = [_render_row_to_grid(r, page_plumber.width, char_w) for r in rows]
-        lines = _merge_continuation_rows(lines)
-        return '\n'.join(lines)
+        lines, merge_stats = _merge_continuation_rows(lines)
+        return '\n'.join(lines), merge_stats, page_tokens
     except Exception:
-        return ''
+        return '', {}, []
 
 
 def _filter_sidebar_words(words: list, page_width: float) -> list:
@@ -446,10 +525,12 @@ class EnhancedFinancialPDFExtractor:
     def __init__(self, pdf_path: str):
         self.pdf_path = pdf_path
         self.password: Optional[str] = None
+        self.merge_stats = {"before": 0, "after": 0, "overlaid": 0, "appended": 0, "safe_rejected": 0}
 
-    def extract_all_text(self) -> str:
+    def extract_all_text(self) -> tuple[str, dict, list]:
         pdf_path = self.pdf_path
         pages_text: List[str] = []
+        all_tokens: List[dict] = []
         fitz_doc, plumber_pdf = None, None
         try:
             if FITZ_OK:
@@ -477,19 +558,29 @@ class EnhancedFinancialPDFExtractor:
 
                 candidates = []
                 if pg_fitz:
-                    t = _fitz_page_text(pg_fitz)
-                    if t.strip(): candidates.append(('fitz', _clean_cid(t)))
+                    t, stats, toks = _fitz_page_text(pg_fitz, page_num)
+                    if t.strip(): candidates.append(('fitz', _clean_cid(t), stats, toks))
                 if pg_plum:
                     t = _plumber_table_text(pg_plum)
-                    if t.strip(): candidates.append(('table', _clean_cid(t)))
-                    t = _plumber_word_row_text(pg_plum)
-                    if t.strip(): candidates.append(('words', _clean_cid(t)))
+                    if t.strip(): candidates.append(('table', _clean_cid(t), {}, []))
+                    t, stats, toks = _plumber_word_row_text(pg_plum, page_num)
+                    if t.strip(): candidates.append(('words', _clean_cid(t), stats, toks))
                     t = pg_plum.extract_text(layout=True)
-                    if t and t.strip(): candidates.append(('layout', _clean_cid(t)))
+                    if t and t.strip(): candidates.append(('layout', _clean_cid(t), {}, []))
 
                 if not candidates: continue
-                scored = sorted([(c[1], _score_text(c[1])) for c in candidates], key=lambda x: x[1], reverse=True)
+                scored = sorted([(c[1], _score_text(c[1]), c[2], c[3]) for c in candidates], key=lambda x: x[1], reverse=True)
                 best_txt = scored[0][0]
+                best_stats = scored[0][2]
+                
+                # Always grab the tokens from 'fitz' or 'words' if available, otherwise fallback to the winner's tokens
+                valid_toks_cands = [c[3] for c in candidates if c[3]]
+                best_toks = valid_toks_cands[0] if valid_toks_cands else scored[0][3]
+                
+                for k, v in best_stats.items():
+                    self.merge_stats[k] = self.merge_stats.get(k, 0) + v
+
+                all_tokens.extend(best_toks)
 
                 lines = best_txt.split('\n')
                 lines = _join_hyphen_wraps(lines)
@@ -509,7 +600,7 @@ class EnhancedFinancialPDFExtractor:
             if fitz_doc: fitz_doc.close()
             if plumber_pdf: plumber_pdf.close()
 
-        return '\n'.join(pages_text)
+        return '\n'.join(pages_text), self.merge_stats, all_tokens
 
 
 def _is_encrypted(pdf_path: str) -> bool:
@@ -536,7 +627,7 @@ def _is_encrypted(pdf_path: str) -> bool:
     return False
 
 
-def extract_pdf_text(pdf_path: str, password: str = None) -> str:
+def extract_pdf_text(pdf_path: str, password: str = None) -> tuple[str, dict, list]:
     logger.info("extract_pdf_text: %s (password provided=%s)", pdf_path, bool(password))
     extractor = EnhancedFinancialPDFExtractor(pdf_path)
     if password:

@@ -30,6 +30,11 @@ class Transaction:
     debit:     Optional[float] = None
     credit:    Optional[float] = None
     balance:   Optional[float] = None
+    
+    # Truth Layer telemetry
+    ocr_amount:      Optional[float] = None
+    delta_amount:    Optional[float] = None
+    amount_conflict: bool = False
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -42,6 +47,9 @@ class Transaction:
             debit=d.get("debit"),
             credit=d.get("credit"),
             balance=d.get("balance"),
+            ocr_amount=d.get("ocr_amount"),
+            delta_amount=d.get("delta_amount"),
+            amount_conflict=d.get("amount_conflict", False),
         )
 
     def is_valid(self) -> bool:

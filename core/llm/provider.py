@@ -6,17 +6,30 @@ import requests
 from google import genai
 from google.genai import types
 
-from config import (
-    GEMINI_API_KEY,
-    CLASSIFIER_MODEL,
-    LLM_PARSER_MODEL,
-    CODE_GEN_PROVIDER,
-    OPENROUTER_API_KEY,
-    OPENROUTER_URL,
-    NINEROUTER_API_KEY,
-    NINEROUTER_MODEL,
-    NINEROUTER_URL,
-)
+try:
+    from config import (
+        GEMINI_API_KEY,
+        CLASSIFIER_MODEL,
+        LLM_PARSER_MODEL,
+        CODE_GEN_PROVIDER,
+        OPENROUTER_API_KEY,
+        OPENROUTER_URL,
+        NINEROUTER_API_KEY,
+        NINEROUTER_MODEL,
+        NINEROUTER_URL,
+    )
+except ModuleNotFoundError:
+    from core.config import (
+        GEMINI_API_KEY,
+        CLASSIFIER_MODEL,
+        LLM_PARSER_MODEL,
+        CODE_GEN_PROVIDER,
+        OPENROUTER_API_KEY,
+        OPENROUTER_URL,
+        NINEROUTER_API_KEY,
+        NINEROUTER_MODEL,
+        NINEROUTER_URL,
+    )
 
 logger = logging.getLogger("ledgerai.llm_provider")
 
@@ -52,7 +65,7 @@ def call_llm(
     parts:   Union[list, None] = None,
     model:   str = None,
     temperature: float = 0,
-) -> str:
+) -> dict:
     """
     Call the LLM with automatic fallback chain:
       1. 9router (local, cheapest — if NINEROUTER_API_KEY is set)
@@ -68,7 +81,7 @@ def call_llm(
         temperature: Sampling temperature (default 0 for deterministic extraction).
 
     Returns:
-        Model response as a plain string.
+        Dict with raw_response, prompt_text, provider, model
 
     Raises:
         RuntimeError: If all providers fail.
@@ -89,20 +102,30 @@ def call_llm(
     primary_provider = CODE_GEN_PROVIDER.lower()
     
     def try_ninerouter():
-        if NINEROUTER_API_KEY:
-            try:
-                result = _call_ninerouter(prompt=prompt, parts=parts, model=model, temperature=temperature)
-                logger.info("9router OK (model=%s)", model if model else NINEROUTER_MODEL)
-                return result
-            except Exception as e:
-                err_str = str(e)
-                errors.append(f"9router: {err_str}")
-                logger.warning("9router failed: %s", err_str)
+        if not NINEROUTER_API_KEY:
+            errors.append("MISSING_API_KEY: NINEROUTER_API_KEY is missing")
+            return None
+        try:
+            result = _call_ninerouter(prompt=prompt, parts=parts, model=model, temperature=temperature)
+            logger.info("9router OK (model=%s)", model if model else NINEROUTER_MODEL)
+            return {
+                "raw_response": result,
+                "prompt_text": prompt or str(parts),
+                "provider": "9router",
+                "model": model if model else NINEROUTER_MODEL
+            }
+        except Exception as e:
+            err_str = str(e)
+            errors.append(f"9router: {err_str}")
+            logger.warning("9router failed: %s", err_str)
         return None
 
     def try_gemini_direct():
-        if _gemini_client:
-            for attempt in range(_GEMINI_RETRY_ATTEMPTS):
+        if not _gemini_client:
+            errors.append("MISSING_API_KEY: GEMINI_API_KEY is missing or invalid")
+            return None
+            
+        for attempt in range(_GEMINI_RETRY_ATTEMPTS):
                 try:
                     response = _gemini_client.models.generate_content(
                         model=model,
@@ -110,7 +133,12 @@ def call_llm(
                         config=types.GenerateContentConfig(temperature=temperature),
                     )
                     logger.debug("Gemini direct OK (attempt %d)", attempt + 1)
-                    return response.text.strip()
+                    return {
+                        "raw_response": response.text.strip(),
+                        "prompt_text": prompt or str(parts),
+                        "provider": "gemini_direct",
+                        "model": model
+                    }
                 except Exception as e:
                     err_str = str(e)
                     errors.append(f"gemini_direct[{attempt+1}]: {err_str}")
@@ -124,13 +152,21 @@ def call_llm(
         return None
 
     def try_openrouter():
-        if OPENROUTER_API_KEY:
-            # Map Gemini model to OR equivalent
+        if not OPENROUTER_API_KEY:
+            errors.append("MISSING_API_KEY: OPENROUTER_API_KEY is missing")
+            return None
+            
+        # Map Gemini model to OR equivalent
             or_model = _GEMINI_TO_OPENROUTER.get(model, "google/gemini-2.0-flash-001")
             try:
                 result = _call_openrouter(model=or_model, prompt=prompt, parts=parts, temperature=temperature)
                 logger.info("OpenRouter Gemini fallback OK (model=%s)", or_model)
-                return result
+                return {
+                    "raw_response": result,
+                    "prompt_text": prompt or str(parts),
+                    "provider": "openrouter",
+                    "model": or_model
+                }
             except Exception as e:
                 errors.append(f"openrouter_gemini: {e}")
                 logger.warning("OpenRouter Gemini fallback failed: %s", e)
@@ -139,7 +175,12 @@ def call_llm(
             try:
                 result = _call_openrouter(model=_OPENROUTER_FALLBACK_MODEL, prompt=prompt, parts=parts, temperature=temperature)
                 logger.info("OpenRouter fallback model OK (model=%s)", _OPENROUTER_FALLBACK_MODEL)
-                return result
+                return {
+                    "raw_response": result,
+                    "prompt_text": prompt or str(parts),
+                    "provider": "openrouter_fallback",
+                    "model": _OPENROUTER_FALLBACK_MODEL
+                }
             except Exception as e:
                 errors.append(f"openrouter_fallback: {e}")
                 logger.warning("OpenRouter fallback model failed: %s", e)

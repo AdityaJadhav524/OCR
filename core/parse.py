@@ -88,6 +88,7 @@ def parse_statement(file_path: str, password: str = None) -> list:
     from core.detection.bank_detector import classify_document_llm
     from core.parsers.statement_parser import parse_with_llm
     from core.parsers.validation import extract_json_from_response, normalize_date
+    from core.validators.financial_audit import run_financial_audit
 
     abs_path = os.path.abspath(file_path)
     if not os.path.exists(abs_path):
@@ -102,7 +103,7 @@ def parse_statement(file_path: str, password: str = None) -> list:
     logger.info("STEP 1 — Extracting text from: %s", abs_path)
 
     if ext == ".pdf":
-        full_text, pages = route_document(abs_path, password=password)
+        full_text, pages, merge_stats, page_tokens = route_document(abs_path, password=password)
         if not full_text or not full_text.strip():
             raise ValueError("PDF text extraction returned empty content.")
     elif ext in (".csv", ".xlsx", ".xls"):
@@ -126,11 +127,19 @@ def parse_statement(file_path: str, password: str = None) -> list:
         identity_json.get("institution_name"),
     )
 
-    # ── STEP 3: Extract transactions via LLM ──────────────────────────────────
+    # ── STEP 3: Extract transactions ──────────────────────────────────────────
     logger.info("STEP 3 — Parsing transactions...")
-    raw_response  = parse_with_llm(full_text, identity_json)
-    transactions  = extract_json_from_response(raw_response)
-    logger.info("STEP 3 — Done: %d transactions extracted", len(transactions))
+    
+    from core.parsers.deterministic_parser import parse_deterministic_transactions
+    transactions, telemetry = parse_deterministic_transactions(full_text)
+    
+    if transactions:
+        logger.info("STEP 3 — Done: %d transactions extracted (Deterministic)", len(transactions))
+    else:
+        logger.info("STEP 3 — Deterministic failed/empty, falling back to LLM...")
+        raw_response  = parse_with_llm(full_text, identity_json)
+        transactions  = extract_json_from_response(raw_response)
+        logger.info("STEP 3 — Done: %d transactions extracted (LLM)", len(transactions))
 
     # ── STEP 4: Normalize dates + unify field names ───────────────────────────
     normalized = []
@@ -142,7 +151,15 @@ def parse_statement(file_path: str, password: str = None) -> list:
         normalized.append(txn)
 
     logger.info("STEP 4 — Done: dates normalized.")
-    return normalized
+    
+    # ── STEP 5: Financial Audit ───────────────────────────────────────────────
+    logger.info("STEP 5 — Running Financial Audit...")
+    audit_results = run_financial_audit(normalized)
+    
+    return {
+        "transactions": normalized,
+        "audit": audit_results
+    }
 
 
 def main():
@@ -165,9 +182,9 @@ Examples:
     args = parser.parse_args()
 
     try:
-        transactions = parse_statement(file_path=args.file, password=args.password)
+        result = parse_statement(file_path=args.file, password=args.password)
         indent = 2 if args.pretty else None
-        print(json.dumps(transactions, indent=indent, ensure_ascii=False))
+        print(json.dumps(result, indent=indent, ensure_ascii=False))
         sys.exit(0)
 
     except FileNotFoundError as e:

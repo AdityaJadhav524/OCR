@@ -21,6 +21,11 @@ logger = logging.getLogger("ledgerai.llm_parser")
 _CHUNK_SIZE = 10
 
 
+class TransactionExtractionFailure(Exception):
+    def __init__(self, message, partial_result):
+        super().__init__(message)
+        self.partial_result = partial_result
+
 def parse_with_llm(full_text: str, identifier_json: dict) -> str:
     """
     Split full_text into page chunks, extract transactions per chunk,
@@ -39,12 +44,26 @@ def parse_with_llm(full_text: str, identifier_json: dict) -> str:
         pages = [full_text]
 
     total_pages = len(pages)
+    
+    from core.extractors.pdf_extractor import DATE_RE
+    expected_transactions = False
+    upper_text = full_text.upper()
+    keywords = ["UPI", "IMPS", "NEFT", "RTGS", "ATM", "POS", "ACH", "NACH"]
+    if any(kw in upper_text for kw in keywords):
+        expected_transactions = True
+    elif len(DATE_RE.findall(full_text)) > 5:
+        expected_transactions = True
+        
     logger.info(
-        "LLM parse start: family=%s institution=%s pages=%d chunk_size=%d",
-        doc_family, institution, total_pages, _CHUNK_SIZE,
+        "LLM parse start: family=%s institution=%s pages=%d chunk_size=%d expected_txns=%s",
+        doc_family, institution, total_pages, _CHUNK_SIZE, expected_transactions
     )
 
     all_txns = []
+    combined_raw_response = []
+    combined_prompts = []
+    last_provider = "unknown"
+    last_model = "unknown"
 
     for chunk_start in range(0, total_pages, _CHUNK_SIZE):
         chunk_pages = pages[chunk_start: chunk_start + _CHUNK_SIZE]
@@ -52,26 +71,46 @@ def parse_with_llm(full_text: str, identifier_json: dict) -> str:
         chunk_text  = "\n\n".join(chunk_pages)
 
         logger.info(
-            "LLM chunk pages %dâ€“%d of %d (text_len=%d)",
+            "LLM chunk pages %d–%d of %d (text_len=%d)",
             chunk_start + 1, chunk_end, total_pages, len(chunk_text),
         )
 
         try:
-            raw_response = _parse_chunk(
+            llm_result = _parse_chunk(
                 chunk_text=chunk_text,
                 doc_family=doc_family,
                 doc_subtype=doc_subtype,
                 institution=institution,
             )
+            raw_response = llm_result["raw_response"]
             chunk_txns = _safe_parse_json(raw_response, chunk_start + 1, chunk_end)
+
+            if not chunk_txns and len(chunk_text.splitlines()) > 50:
+                logger.warning("LLM returned [] but chunk has >50 lines. Retrying with strict directive.")
+                retry_llm_result = _parse_chunk(
+                    chunk_text=chunk_text,
+                    doc_family=doc_family,
+                    doc_subtype=doc_subtype,
+                    institution=institution,
+                    strict_retry=True
+                )
+                llm_result = retry_llm_result
+                raw_response = llm_result["raw_response"]
+                chunk_txns = _safe_parse_json(raw_response, chunk_start + 1, chunk_end)
+
+            combined_raw_response.append(raw_response)
+            combined_prompts.append(llm_result["prompt_text"])
+            last_provider = llm_result["provider"]
+            last_model = llm_result["model"]
+            
             all_txns.extend(chunk_txns)
             logger.info(
-                "LLM chunk pages %dâ€“%d: extracted %d transactions (running total=%d)",
+                "LLM chunk pages %d–%d: extracted %d transactions (running total=%d)",
                 chunk_start + 1, chunk_end, len(chunk_txns), len(all_txns),
             )
         except Exception as e:
             logger.error(
-                "LLM chunk pages %dâ€“%d FAILED: %s â€” skipping chunk",
+                "LLM chunk pages %d–%d FAILED: %s — skipping chunk",
                 chunk_start + 1, chunk_end, e,
             )
 
@@ -80,25 +119,38 @@ def parse_with_llm(full_text: str, identifier_json: dict) -> str:
         len(all_txns), total_pages,
     )
 
-    return json.dumps(all_txns)
+    result = {
+        "raw_response": "\n\n---\n\n".join(combined_raw_response) if combined_raw_response else "[]",
+        "prompt_text": "\n\n---\n\n".join(combined_prompts) if combined_prompts else "",
+        "provider": last_provider,
+        "model": last_model,
+        "transactions": all_txns
+    }
+
+    if expected_transactions and len(all_txns) == 0:
+        raise TransactionExtractionFailure("TRANSACTION_EXTRACTION_FAILURE: Expected transactions based on text heuristic, but LLM returned 0 transactions.", result)
+
+    return result
 
 
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ————————————————————————————————————————————————————————————————————————————————————
 # INTERNAL HELPERS
-# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ————————————————————————————————————————————————————————————————————————————————————
 
 def _parse_chunk(
     chunk_text: str,
     doc_family: str,
     doc_subtype: str,
     institution: str,
-) -> str:
+    strict_retry: bool = False
+) -> dict:
+    strict_msg = "CRITICAL INSTRUCTION: Return every transaction row visible in the statement. Do not return [] unless absolutely no transactions exist. You MUST find transactions if they are present in the text below.\n\n" if strict_retry else ""
     prompt = f"""
 You are a financial data extraction engine.
 
 Extract ALL transaction entries from the provided document text.
 
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+{strict_msg}â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 DOCUMENT INFO
 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 Document Family: {doc_family}
