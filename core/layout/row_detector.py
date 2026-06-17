@@ -115,23 +115,53 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
             
         is_anchor = False
         import re
+
+        # OCR_TOLERANT_DATE_RE — matches date-column tokens with common OCR corruptions.
+        # Approved substitutions: O/o->0, l->1, |->-, :->-
+        # Also matches tokens with a leading J/j (e.g. "J03-11-2021", "Jo3-11-2021")
+        # and tokens with a trailing alpha (e.g. "05-11-2021l", "30-10-202t").
+        # NOT approved: s->5, missing separator insertion, date fabrication.
         OCR_TOLERANT_DATE_RE = re.compile(
-            r'^([Ool\d]{1,2}[\-\.\/\|\)][Ool\d]{1,2}[\-\.\/\|\)]\d{2,4}|'
-            r'[Ool\d]{1,2}[\-\.\/\|\)]\d{2,4}|'
-            r'[a-zA-Z]{3}[\-\.\/\|\)]\d{2,4})',
+            r'^[Jj\|]?[Ool\d]{1,2}[\-\.\/\|\):][Ool\d]{1,2}[\-\.\/\|\):]\d{2,4}[a-zA-Z]?$|'
+            r'^[Jj\|]?[Ool\d]{1,2}[\-\.\/\|\):]\d{2,4}[a-zA-Z]?$|'
+            r'^[Jj\|]?[a-zA-Z]{3}[\-\.\/\|\):]\d{2,4}[a-zA-Z]?$',
             re.IGNORECASE
         )
-        
+
+        # LEADING_J_RE: only strip J/j when followed by a digit or O/o (not "JOURNAL", "JNPT", etc.)
+        LEADING_J_RE = re.compile(r'^[Jj]([0-9Oo])', re.IGNORECASE)
+
         for t in tokens:
             is_date = DATE_RE.search(t['text']) or DATE_PREFIX_RE.match(t['text'])
-            
-            # If not a strict date, see if it matches the tolerant OCR regex
-            if not is_date and OCR_TOLERANT_DATE_RE.search(t['text']):
-                # Heal the token in-place
-                t['text'] = t['text'].replace('O', '0').replace('o', '0').replace('l', '1').replace('|', '-').replace(')', '-')
-                if DATE_RE.search(t['text']) or DATE_PREFIX_RE.match(t['text']):
+
+            # If not a strict date, attempt safe in-place OCR healing
+            if not is_date and OCR_TOLERANT_DATE_RE.match(t['text']):
+                healed = t['text']
+
+                # 1. Strip safe leading stray characters:
+                #    J/j only if next char is digit/O (avoids JOURNAL, JNPT etc.)
+                #    | always safe as a leading stray
+                if LEADING_J_RE.match(healed):
+                    healed = healed[1:]
+                elif healed and healed[0] in ('|',):
+                    healed = healed[1:]
+
+                # 2. Strip single trailing alpha (e.g. "05-11-2021l", "30-10-202t")
+                if healed and healed[-1].isalpha():
+                    healed = healed[:-1]
+
+                # 3. Core character repairs (approved list only — no s->5)
+                healed = (healed
+                          .replace('O', '0').replace('o', '0')  # O/o -> 0
+                          .replace('l', '1')                     # l   -> 1
+                          .replace('|', '-')                     # |   -> -
+                          .replace(':', '-')                     # :   -> - (colon separator)
+                          .replace(')', '-'))                    # )   -> -
+
+                if DATE_RE.search(healed) or DATE_PREFIX_RE.match(healed):
+                    t['text'] = healed
                     is_date = True
-                    
+
             if is_date:
                 # Check if it falls within a very generous tolerance of the detected date column
                 if date_x_bounds and (date_x_bounds[0] - 70 <= t['x0'] <= date_x_bounds[1] + 70):
