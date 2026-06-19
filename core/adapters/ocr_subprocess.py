@@ -42,7 +42,7 @@ _OCR_PYTHON = os.environ.get(
 _EXTRACT_JSON_SCRIPT = os.path.join(_WORKSPACE_ROOT, "ocr_core", "extract_json.py")
 
 # Hard timeout: total document execution (e.g. 5 minutes watchdog)
-_TIMEOUT_SECONDS = 300
+_TIMEOUT_SECONDS = 600
 
 
 # ── Public API ─────────────────────────────────────────────────────────────────
@@ -90,7 +90,7 @@ def extract_via_subprocess(pdf_path: str, password: str = None) -> Tuple[str, Li
         proc = subprocess.run(
             cmd,
             capture_output=True,
-            timeout=120.0,
+            timeout=600.0,
             env=env,
         )
     except subprocess.TimeoutExpired as exc:
@@ -98,7 +98,7 @@ def extract_via_subprocess(pdf_path: str, password: str = None) -> Tuple[str, Li
         if exc.stderr:
             stderr_tail = exc.stderr.decode("utf-8", errors="replace")[-2000:]
         raise TimeoutError(
-            f"OCR subprocess timed out after 120.0s "
+            f"OCR subprocess timed out after 600.0s "
             f"processing '{os.path.basename(pdf_path)}'.\n"
             f"Stderr tail:\n{stderr_tail}\n"
             "Consider increasing OCR timeout or splitting the document."

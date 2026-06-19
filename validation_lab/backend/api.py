@@ -32,6 +32,7 @@ from core.detection.bank_detector import classify_document_llm
 from core.parsers.statement_parser import parse_with_llm
 from core.parsers.validation import extract_json_from_response, normalize_date
 from pipeline import run_pipeline
+from core.telemetry.lifecycle_tracker import LifecycleTracker
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("validation_lab.api")
@@ -286,6 +287,8 @@ def do_extraction(session_id):
     try:
         tokens = session.get("tokens", [])
         if tokens:
+            from core.layout.structural_token_protection import protect_table_header_tokens
+            tokens = protect_table_header_tokens(tokens, session)
             from core.detection.header_suppression import suppress_headers_and_footers
             tokens = suppress_headers_and_footers(tokens)
             
@@ -486,10 +489,10 @@ async def process_document(file: UploadFile = File(...), password: Optional[str]
     else:
         try:
             t0 = time.time()
-            doc_type = detect_document_type(file_path, password)
+            doc_type, doc_reason = detect_document_type(file_path, password)
             SESSION_CACHE[session_id]["document_type"] = doc_type
             t1 = time.time()
-            log_stage(session_id, "PDF Classification", "SUCCESS", doc_type, int((t1 - t0) * 1000), extra_data={"pdf_type": doc_type})
+            log_stage(session_id, "PDF Classification", "SUCCESS", doc_type, int((t1 - t0) * 1000), extra_data={"pdf_type": doc_type, "reason": doc_reason})
     
             full_text = ""
             pages = []
@@ -800,7 +803,7 @@ BENCHMARK_JOBS = {}
 
 from fastapi import BackgroundTasks
 
-async def run_benchmark_job(job_id: str, file_paths: List[str]):
+async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = None, original_filenames: List[str] = None):
     try:
         from core.adapters.ocr_subprocess import extract_via_subprocess
         from core.parsers.coordinate_parser_v2 import parse_with_coordinates
@@ -809,20 +812,76 @@ async def run_benchmark_job(job_id: str, file_paths: List[str]):
         
         import uuid
         for idx, file_path in enumerate(file_paths):
+            t0_job = time.time()
             BENCHMARK_JOBS[job_id]["current_idx"] = idx
             BENCHMARK_JOBS[job_id]["status"] = "processing"
+            BENCHMARK_JOBS[job_id]["stage"] = "Starting"
             
             # Extract PDF name and generate statement_id
             base_name = os.path.basename(file_path)
             prefix = f"{job_id}_"
-            pdf_name = base_name[len(prefix):] if base_name.startswith(prefix) else base_name
+            pdf_name = original_filenames[idx] if original_filenames and idx < len(original_filenames) else (base_name[len(prefix):] if base_name.startswith(prefix) else base_name)
             statement_id = str(uuid.uuid4())
             logger.info(f"Processing file {idx + 1}/{len(file_paths)}: {pdf_name} (statement_id: {statement_id})")
             
+            bank_name = "Unknown"
+            doc_class = "UNKNOWN"
+            parser_used_name = "Unknown"
+            doc_family = "BANK_STATEMENT"
+
+            def update_live_state(stage_name):
+                BENCHMARK_JOBS[job_id]["stage"] = stage_name
+                BENCHMARK_JOBS[job_id]["live_result"] = {
+                    "pdf_name": pdf_name,
+                    "bank_name": bank_name,
+                    "document_class": doc_class,
+                    "parser_used": parser_used_name,
+                    "status": "processing"
+                }
+            
+            tracker = BENCHMARK_JOBS[job_id]["trackers"][idx]
+            tracker.log_state("QUEUED")
+            if password:
+                tracker.stamp("password_received_at")
+            
             try:
-                # 1. OCR
-                full_text, pages, telemetry, page_tokens = extract_via_subprocess(file_path)
+                t_file_start = time.time()
+                update_live_state("Detecting Document Class")
+                # Detect document class (digital vs scanned)
+                try:
+                    tracker.stamp("engine_start")
+                    doc_type, _ = detect_document_type(file_path, password=password)
+                    doc_class = doc_type.upper()
+                    tracker.stamp("classification_at")
+                    tracker.log_state("CLASSIFIED")
+                except ValueError as ve:
+                    if "PASSWORD" in str(ve):
+                        tracker.stamp("password_detected_at")
+                        tracker.stamp("password_validated_at") # For invalid it throws different or same? Wait, 'needs_pass' doesn't mean invalid. It just means required.
+                        tracker.stamp("engine_end")
+                        tracker.stamp("engine_result", "PASSWORD_REQUIRED")
+                        tracker.stamp("engine", "PyMuPDF")
+                        tracker.log_state("PASSWORD_REQUIRED")
+                        tracker.stamp("backend_state_available_at")
+                        raise ve
+                    doc_class = "UNKNOWN"
+                except Exception:
+                    doc_class = "UNKNOWN"
+
+                tracker.stamp("engine", "PyMuPDF" if doc_class == "DIGITAL" else "PaddleOCR")
+                update_live_state(f"Extracting Text ({doc_class})")
+                tracker.stamp("extraction_started_at")
+                tracker.log_state("EXTRACTING")
+                # 1. Extract (uses route_document to avoid OCR on digital PDFs)
+                from core.extractors.document_router import route_document
+                full_text, pages, telemetry, page_tokens = route_document(file_path, password=password)
+                if password:
+                    tracker.stamp("password_validated_at")
+                tracker.stamp("extraction_finished_at")
+                tracker.stamp("engine_end")
+                tracker.stamp("engine_result", "SUCCESS")
                 
+                update_live_state("Detecting Bank")
                 # 1.1 Bank Detection
                 from core.detection.bank_detector import classify_document_llm
                 from core.parsers.credit_card_parser import parse_credit_card_transactions
@@ -830,22 +889,59 @@ async def run_benchmark_job(job_id: str, file_paths: List[str]):
                 bank_name = identity.get("institution_name", "Unknown")
                 doc_family = identity.get("document_family", "BANK_STATEMENT")
                 
+                update_live_state("Suppressing Headers")
                 # 1.5 Header Suppression (P1)
+                from core.layout.structural_token_protection import protect_table_header_tokens
+                # Telemetry dictionary for extraction
+                suppression_telemetry = {}
+                page_tokens = protect_table_header_tokens(page_tokens, suppression_telemetry)
+                
+                # Merge into tracker if needed
+                if "protection_events" in suppression_telemetry:
+                    for ev in suppression_telemetry["protection_events"]:
+                        tracker.log_state("PROTECTED_HEADER", details=ev)
+                        
+                from core.detection.header_suppression import suppress_headers_and_footers
                 page_tokens = suppress_headers_and_footers(page_tokens)
                 
+                update_live_state("Parsing Transactions")
+                tracker.stamp("parser_started_at")
+                tracker.log_state("PARSING")
                 # 2. Extract
                 if doc_family == "CREDIT_CARD":
                     txns, tel = parse_credit_card_transactions(page_tokens)
+                    parser_used_name = "credit_card_parser"
                 else:
+                    pdf_type = "SCANNED" if "SCANNED" in base_name.upper() else "DIGITAL"
                     txns, tel = parse_with_coordinates(
                         page_tokens, 
                         pdf_name=pdf_name, 
                         statement_id=statement_id, 
                         job_id=job_id, 
-                        bank=bank_name
+                        bank=bank_name,
+                        pdf_type=pdf_type
                     )
+                    parser_used_name = "coordinate_parser_v2"
+                tracker.stamp("parser_finished_at")
+                update_live_state("Validating")
+                tracker.log_state("VALIDATING")
                 # 3. Validation
-                final_txns = annotate_ledger_truth(txns)
+                doc_family = identity.get("family", "BANK_STATEMENT") if "identity" in locals() and identity else "BANK_STATEMENT"
+                final_txns = annotate_ledger_truth(txns, document_family=doc_family, full_text=full_text)
+                tracker.stamp("validation_completed_at")
+
+                BENCHMARK_JOBS[job_id]["stage"] = "Finalizing Results"
+                # Enriched metadata
+                rows_detected_val = tel.get("rows_detected", len(txns) + tel.get("rejected_rows", len(tel.get("reject_log", []))))
+                rejected_txns_count = tel.get("rejected_rows", len(tel.get("reject_log", [])))
+                token_count_val = len(page_tokens) if page_tokens else 0
+                processing_time_ms_val = int((time.time() - t0_job) * 1000)
+                
+                reject_log = tel.get("reject_log", [])
+                if reject_log:
+                    from collections import Counter
+                    counts = Counter([r.get("reject_reason", "unknown") for r in reject_log])
+                    logger.info(f"REJECT REASON COUNTS FOR {pdf_name}: {dict(counts)}")
                 
                 # Compute aggregates similar to the frozen architecture
                 primary_anomalies = []
@@ -878,6 +974,15 @@ async def run_benchmark_job(job_id: str, file_paths: List[str]):
                     "statement_id": statement_id,
                     "pdf_name": pdf_name,
                     "bank": bank_name,
+                    "bank_name": bank_name,
+                    "document_class": doc_class,
+                    "parser_used": parser_used_name,
+                    "ocr_used": doc_class != "DIGITAL",
+                    "token_count": token_count_val,
+                    "rows_detected": rows_detected_val,
+                    "accepted_transactions": len(final_txns),
+                    "rejected_transactions": rejected_txns_count,
+                    "processing_time_ms": processing_time_ms_val,
                     "pages": len(pages) if "pages" in locals() else 0,
                     "summary": {
                         "transactions": len(final_txns),
@@ -900,14 +1005,34 @@ async def run_benchmark_job(job_id: str, file_paths: List[str]):
                 
             except Exception as e:
                 logger.exception(f"Error processing {file_path}")
-
-                BENCHMARK_JOBS[job_id]["results"].append({
-                    "statement_id": statement_id,
-                    "pdf_name": pdf_name,
-                    "bank": bank_name,
-                    "status": "error",
-                    "error": str(e)
-                })
+                err_msg = str(e)
+                # Password detection fallback in batch
+                if "PyCryptodome" in err_msg or "password" in err_msg.lower() or "encrypted" in err_msg.lower():
+                    BENCHMARK_JOBS[job_id]["results"].append({
+                        "statement_id": statement_id,
+                        "pdf_name": pdf_name,
+                        "status": "password_required",
+                        "error_code": "PASSWORD_REQUIRED"
+                    })
+                else:
+                    BENCHMARK_JOBS[job_id]["results"].append({
+                        "statement_id": statement_id,
+                        "pdf_name": pdf_name,
+                        "bank": bank_name,
+                        "status": "error",
+                        "error": err_msg
+                    })
+                
+            tracker.stamp("completed_at")
+            if "PASSWORD" not in str(err_msg if 'err_msg' in locals() else ""):
+                tracker.log_state("COMPLETED")
+                tracker.stamp("backend_state_available_at")
+                
+            try:
+                out_dir = os.path.join(_WORKSPACE_ROOT, "tests", "audit_reports", "timelines")
+                tracker.dump(out_dir)
+            except Exception as e:
+                logger.error(f"Failed to dump timeline: {e}")
                 
         BENCHMARK_JOBS[job_id]["status"] = "completed"
         
@@ -917,9 +1042,14 @@ async def run_benchmark_job(job_id: str, file_paths: List[str]):
         BENCHMARK_JOBS[job_id]["error"] = str(e)
 
 @app.post("/api/benchmark/upload")
-async def benchmark_upload(background_tasks: BackgroundTasks, files: List[UploadFile] = File(...)):
+async def benchmark_upload(
+    background_tasks: BackgroundTasks, 
+    files: List[UploadFile] = File(...),
+    password: Optional[str] = Form(None)
+):
     job_id = f"JOB_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:4].upper()}"
     file_paths = []
+    original_filenames = []
     
     os.makedirs(os.path.join(os.path.dirname(__file__), "temp"), exist_ok=True)
     for f in files:
@@ -927,23 +1057,44 @@ async def benchmark_upload(background_tasks: BackgroundTasks, files: List[Upload
         with open(temp_path, "wb") as buffer:
             buffer.write(await f.read())
         file_paths.append(temp_path)
+        original_filenames.append(f.filename)
+        
+    trackers = []
+    for f in original_filenames:
+        t = LifecycleTracker(job_id, f)
+        t.stamp("uploaded_at")
+        trackers.append(t)
         
     BENCHMARK_JOBS[job_id] = {
         "status": "pending",
+        "stage": "Pending",
         "total_files": len(files),
         "current_idx": 0,
         "results": [],
-        "file_names": [f.filename for f in files]
+        "file_names": [f.filename for f in files],
+        "trackers": trackers
     }
     
-    background_tasks.add_task(run_benchmark_job, job_id, file_paths)
+    background_tasks.add_task(run_benchmark_job, job_id, file_paths, password, original_filenames)
     return {"job_id": job_id, "total_files": len(files)}
 
 @app.get("/api/benchmark/status/{job_id}")
 async def benchmark_status(job_id: str):
     if job_id not in BENCHMARK_JOBS:
         raise HTTPException(status_code=404, detail="Job not found")
-    return BENCHMARK_JOBS[job_id]
+        
+    job_info = BENCHMARK_JOBS[job_id]
+    
+    for tracker in job_info.get("trackers", []):
+        if job_info["status"] == "completed" or any(r.get("status") == "password_required" for r in job_info.get("results", [])):
+            if tracker.timestamps.get("frontend_polled_at") is None:
+                tracker.stamp("frontend_polled_at")
+                try:
+                    out_dir = os.path.join(_WORKSPACE_ROOT, "tests", "audit_reports", "timelines")
+                    tracker.dump(out_dir)
+                except: pass
+                
+    return job_info
 
 if __name__ == "__main__":
     import uvicorn
