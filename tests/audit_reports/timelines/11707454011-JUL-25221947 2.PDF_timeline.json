@@ -1,0 +1,73 @@
+{
+  "job_id": "JOB_20260619_154951_DAF6",
+  "pdf_name": "11707454011-JUL-25221947 2.PDF",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T15:49:51.370983",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-19T15:49:51.371880",
+    "password_validated_at": "2026-06-19T15:49:52.192589",
+    "classification_at": "2026-06-19T15:49:51.426333",
+    "backend_state_available_at": "2026-06-19T15:49:52.209562",
+    "frontend_polled_at": "2026-06-19T15:49:53.378530",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T15:49:51.371884",
+    "engine_end": "2026-06-19T15:49:52.192596",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T15:49:51.426351",
+    "extraction_finished_at": "2026-06-19T15:49:52.192595",
+    "parser_started_at": "2026-06-19T15:49:52.204655",
+    "parser_finished_at": "2026-06-19T15:49:52.209103",
+    "validation_completed_at": "2026-06-19T15:49:52.209156",
+    "completed_at": "2026-06-19T15:49:52.209546"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T15:49:51.371870"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T15:49:51.426343"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T15:49:51.426353"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T15:49:52.202404",
+      {
+        "protected_row": 24,
+        "protected_tokens": [
+          "Date",
+          "Particulars",
+          "Chq/Vouch",
+          "Withdrawal",
+          "Deposit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "WITHDRAWAL",
+          "CHQ",
+          "DATE",
+          "PARTICULARS",
+          "BALANCE",
+          "DEPOSIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T15:49:52.204659"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T15:49:52.209115"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T15:49:52.209559"
+    ]
+  ]
+}

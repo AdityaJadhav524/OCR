@@ -1,0 +1,432 @@
+[
+  {
+    "label": "BOI Digital",
+    "before_rows": 0,
+    "after_rows": 11,
+    "change": "Expected",
+    "protected_token_count": 5,
+    "protection_events": [
+      {
+        "protected_row": 29,
+        "protected_tokens": [
+          "Date",
+          "Particulars",
+          "Withdrawal",
+          "Deposit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "WITHDRAWAL",
+          "DEPOSIT",
+          "PARTICULARS",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "label": "BOI Scanned",
+    "before_rows": 259,
+    "after_rows": 0,
+    "change": "ERR: -259",
+    "protected_token_count": 71,
+    "protection_events": [
+      {
+        "protected_row": 0,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 91,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 173,
+        "protected_tokens": [
+          "Transaction Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "TRANSACTION",
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 265,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit Amount(Running Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 327,
+        "protected_tokens": [
+          "Total Transactlons",
+          "Number of Credits",
+          "Number of Debits",
+          "Debit Amount",
+          "Credit Amount"
+        ],
+        "matched_keywords": [
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 343,
+        "protected_tokens": [
+          "Transaction Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "TRANSACTION",
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 406,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 498,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 590,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 671,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 755,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 843,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 937,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 1025,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 1121,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT",
+          "CREDIT",
+          "AMOUNT",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "label": "YES Bank",
+    "before_rows": 83,
+    "after_rows": 83,
+    "change": "0",
+    "protected_token_count": 7,
+    "protection_events": [
+      {
+        "protected_row": 22,
+        "protected_tokens": [
+          "Date",
+          "Narration",
+          "Chq/Ref.No.",
+          "Value Dt",
+          "Withdrawal Amt.",
+          "Deposit Amt.",
+          "Closing Balance"
+        ],
+        "matched_keywords": [
+          "NARRATION",
+          "BALANCE",
+          "WITHDRAWAL",
+          "DEPOSIT",
+          "REF",
+          "CHQ",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "label": "HDFC",
+    "before_rows": 110,
+    "after_rows": 108,
+    "change": "ERR: -2",
+    "protected_token_count": 13,
+    "protection_events": [
+      {
+        "protected_row": 101,
+        "protected_tokens": [
+          "Opening Balance",
+          "Dr Count",
+          "Cr Count",
+          "Debits",
+          "Credits",
+          "Closing Bal"
+        ],
+        "matched_keywords": [
+          "CR",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 331,
+        "protected_tokens": [
+          "Date",
+          "Narration",
+          "Chq./Ref.No.",
+          "ValueDt",
+          "Withdrawal Amt.",
+          "Deposit Amt.",
+          "Closing Balance"
+        ],
+        "matched_keywords": [
+          "NARRATION",
+          "BALANCE",
+          "WITHDRAWAL",
+          "DEPOSIT",
+          "REF",
+          "CHQ",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ]
+  },
+  {
+    "label": "ICICI CC",
+    "before_rows": 32,
+    "after_rows": 108,
+    "change": "ERR: 76",
+    "protected_token_count": 13,
+    "protection_events": [
+      {
+        "protected_row": 101,
+        "protected_tokens": [
+          "Opening Balance",
+          "Dr Count",
+          "Cr Count",
+          "Debits",
+          "Credits",
+          "Closing Bal"
+        ],
+        "matched_keywords": [
+          "CR",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      },
+      {
+        "protected_row": 331,
+        "protected_tokens": [
+          "Date",
+          "Narration",
+          "Chq./Ref.No.",
+          "ValueDt",
+          "Withdrawal Amt.",
+          "Deposit Amt.",
+          "Closing Balance"
+        ],
+        "matched_keywords": [
+          "NARRATION",
+          "BALANCE",
+          "WITHDRAWAL",
+          "DEPOSIT",
+          "REF",
+          "CHQ",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ]
+  }
+]

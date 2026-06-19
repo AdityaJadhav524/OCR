@@ -1,0 +1,33 @@
+{
+  "job_id": "JOB_20260619_154925_87A2",
+  "pdf_name": "8865628880531032026.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T15:49:25.990185",
+    "password_detected_at": "2026-06-19T15:49:26.005742",
+    "password_received_at": "2026-06-19T15:49:25.991219",
+    "password_validated_at": "2026-06-19T15:49:26.005755",
+    "classification_at": null,
+    "backend_state_available_at": "2026-06-19T15:49:26.005762",
+    "frontend_polled_at": "2026-06-19T15:49:28.002663",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T15:49:25.991223",
+    "engine_end": "2026-06-19T15:49:26.005757",
+    "engine_result": "PASSWORD_REQUIRED",
+    "extraction_started_at": null,
+    "extraction_finished_at": null,
+    "parser_started_at": null,
+    "parser_finished_at": null,
+    "validation_completed_at": null,
+    "completed_at": "2026-06-19T15:49:26.006767"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T15:49:25.991210"
+    ],
+    [
+      "PASSWORD_REQUIRED",
+      "2026-06-19T15:49:26.005759"
+    ]
+  ]
+}

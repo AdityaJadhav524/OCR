@@ -1,0 +1,122 @@
+{
+  "job_id": "JOB_20260619_193821_39C9",
+  "pdf_name": "E_STATEMENT_20260301_20260331_054506_27011738 1.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T19:38:21.051130",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-19T19:38:21.051958",
+    "password_validated_at": "2026-06-19T19:38:22.477668",
+    "classification_at": "2026-06-19T19:38:21.087667",
+    "backend_state_available_at": "2026-06-19T19:38:22.508889",
+    "frontend_polled_at": "2026-06-19T19:38:23.071255",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T19:38:21.051962",
+    "engine_end": "2026-06-19T19:38:22.477683",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T19:38:21.087707",
+    "extraction_finished_at": "2026-06-19T19:38:22.477681",
+    "parser_started_at": "2026-06-19T19:38:22.493325",
+    "parser_finished_at": "2026-06-19T19:38:22.508585",
+    "validation_completed_at": "2026-06-19T19:38:22.508728",
+    "completed_at": "2026-06-19T19:38:22.508875"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T19:38:21.051951"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T19:38:21.087677"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T19:38:21.087714"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T19:38:22.486738",
+      {
+        "protected_row": 17,
+        "protected_tokens": [
+          "Transaction",
+          "Details",
+          ":",
+          "Opening",
+          "Balance",
+          "87,174.17",
+          "CR"
+        ],
+        "matched_keywords": [
+          "CR",
+          "BALANCE",
+          "TRANSACTION"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T19:38:22.486746",
+      {
+        "protected_row": 19,
+        "protected_tokens": [
+          "Transaction",
+          "Description",
+          "Cheque",
+          "No.",
+          "Debit",
+          "Credit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DESCRIPTION",
+          "TRANSACTION",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T19:38:22.486747",
+      {
+        "protected_row": 273,
+        "protected_tokens": [
+          "Total",
+          "Transactions",
+          "Number",
+          "of",
+          "Credits",
+          "Number",
+          "of",
+          "Debits",
+          "Debit",
+          "Amount",
+          "Credit",
+          "Amount"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "AMOUNT",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T19:38:22.493334"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T19:38:22.508593"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T19:38:22.508887"
+    ]
+  ]
+}

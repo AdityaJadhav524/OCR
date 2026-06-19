@@ -90,5 +90,45 @@ def suppress_headers_and_footers(tokens: List[Dict[str, Any]]) -> List[Dict[str,
         logger.info(f"Header/Footer suppression removed {len(suppressed_texts)} unique strings (normalized).")
         logger.debug(f"Suppressed strings: {suppressed_texts}")
         
-    filtered = [t for t in tokens if normalize_text(str(t.get('text', '')).strip()) not in suppressed_texts]
+    # --- Targeted Fingerprint Suppression (e.g. HDFC Page Boundaries) ---
+    fingerprint_suppressed_token_ids = set()
+    date_pattern = re.compile(r'\d{1,2}[/\-.]\d{1,2}[/\-.]\d{2,4}')
+    
+    for p in pages:
+        page_t = [t for t in tokens if t.get('page', 0) == p]
+        
+        statement_tokens = [t for t in page_t if "statement of account" in str(t.get('text', '')).lower()]
+        
+        for stmt_tok in statement_tokens:
+            stmt_yc = (stmt_tok.get('y0', 0) + stmt_tok.get('y1', 0)) / 2
+            
+            # Find tokens in the same horizontal band (+/- 20 pixels)
+            band_tokens = [t for t in page_t if abs((t.get('y0', 0) + t.get('y1', 0))/2 - stmt_yc) <= 20]
+            
+            band_text = " ".join([str(t.get('text', '')).lower() for t in band_tokens])
+            dates_found = date_pattern.findall(band_text)
+            
+            if len(dates_found) >= 2 and ("from" in band_text or "to" in band_text):
+                # Fingerprint matched! Suppress the structural parts of this band.
+                for t in band_tokens:
+                    txt = str(t.get('text', '')).lower()
+                    if ("statement of account" in txt or 
+                        "from" in txt or 
+                        "to" in txt or 
+                        date_pattern.search(txt)):
+                        fingerprint_suppressed_token_ids.add(id(t))
+                        
+    if fingerprint_suppressed_token_ids:
+        logger.info(f"Targeted Fingerprint Suppression removed {len(fingerprint_suppressed_token_ids)} tokens matching specific bank headers.")
+
+    # Do not suppress tokens that are structurally protected
+    filtered = []
+    for t in tokens:
+        if t.get('protected') is True:
+            filtered.append(t)
+        elif id(t) in fingerprint_suppressed_token_ids:
+            continue
+        elif normalize_text(str(t.get('text', '')).strip()) not in suppressed_texts:
+            filtered.append(t)
+            
     return filtered

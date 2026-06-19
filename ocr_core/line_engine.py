@@ -11,6 +11,7 @@ Adaptive tolerance means dense bank-statement fonts (height ~14px)
 get a 10px band, while large header fonts (height ~40px) get a 28px
 band — preventing both line collisions AND line splits.
 """
+import re as _re
 import numpy as np
 from layout_tree import Word, Line
 from reading_order import sort_reading_order
@@ -21,6 +22,15 @@ from reading_order import sort_reading_order
 Y_BAND_FACTOR = 0.70
 Y_BAND_MIN    = 3.0   # never narrower than 3px regardless of font
 Y_BAND_MAX    = 30.0  # never wider than 30px (prevents cross-row merges)
+
+# Detects standalone decimal amounts like 1234.56 or 1,23,456.78
+# These indicate a financial data row, NOT a narration continuation.
+_AMOUNT_PATTERN = _re.compile(r'(?<![\d])\d{1,3}(?:,\d{2,3})*\.\d{2}(?![\d])')
+
+
+def _has_standalone_amount(line) -> bool:
+    """True if the line text contains a standalone decimal amount."""
+    return bool(_AMOUNT_PATTERN.search(line.text))
 
 
 def build_lines(words: list[Word]) -> list[Line]:
@@ -67,10 +77,15 @@ def build_lines(words: list[Word]) -> list[Line]:
 
     return _merge_multiline_blocks(lines, page_left_margin, median_h_lines)
 
+
 def _merge_multiline_blocks(lines: list[Line], page_margin: float, line_spacing: float) -> list[Line]:
     """
     Second pass: detects wrapped text (e.g. multi-line narration in a cell)
     by pure X-alignment and indentation, merging them into logical rows.
+
+    Financial table guard: lines with standalone numeric amounts (debit/credit/
+    balance values) are NEVER treated as narration continuations — they are always
+    independent data rows. This prevents adjacent transaction rows from being merged.
     """
     if not lines:
         return []
@@ -106,8 +121,13 @@ def _merge_multiline_blocks(lines: list[Line], page_margin: float, line_spacing:
         word_count = len(next_line.words)
         is_short = word_count < 5
 
+        # Financial table guard: a line with a standalone numeric amount is a
+        # transaction data row, never a narration continuation.
+        next_has_amount = _has_standalone_amount(next_line)
+        financial_guard = next_has_amount  # next line has its own amounts → independent row
+
         # Heuristic
-        if is_indented and overlap and gap_small and (is_short or next_line.x1 >= current_logical.x1):
+        if is_indented and overlap and gap_small and not financial_guard and (is_short or next_line.x1 >= current_logical.x1):
             # Merge!
             current_logical.visual_lines.append(next_line)
             # Update logical row bounds

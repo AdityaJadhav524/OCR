@@ -1,0 +1,180 @@
+{
+  "job_id": "JOB_20260619_160647_F08A",
+  "pdf_name": "ACC_STATEMENT_XXXXX5618_07FEB2026_06MAR2026_1772844273100660 2.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T16:06:47.751498",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-19T16:06:47.752360",
+    "password_validated_at": "2026-06-19T16:06:50.284735",
+    "classification_at": "2026-06-19T16:06:47.808803",
+    "backend_state_available_at": "2026-06-19T16:06:50.312632",
+    "frontend_polled_at": "2026-06-19T16:06:50.315127",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T16:06:47.752363",
+    "engine_end": "2026-06-19T16:06:50.284743",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T16:06:47.808819",
+    "extraction_finished_at": "2026-06-19T16:06:50.284742",
+    "parser_started_at": "2026-06-19T16:06:50.301421",
+    "parser_finished_at": "2026-06-19T16:06:50.312233",
+    "validation_completed_at": "2026-06-19T16:06:50.312442",
+    "completed_at": "2026-06-19T16:06:50.312619"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T16:06:47.752352"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T16:06:47.808812"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T16:06:47.808821"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:06:50.295075",
+      {
+        "protected_row": 37,
+        "protected_tokens": [
+          "Date",
+          "Particulars",
+          "Tran",
+          "id",
+          "Withdrawal",
+          "Deposits",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "WITHDRAWAL",
+          "PARTICULARS",
+          "BALANCE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:06:50.295082",
+      {
+        "protected_row": 89,
+        "protected_tokens": [
+          "Date",
+          "Particulars",
+          "Tran",
+          "id",
+          "Withdrawal",
+          "Deposits",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "WITHDRAWAL",
+          "PARTICULARS",
+          "BALANCE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:06:50.295083",
+      {
+        "protected_row": 153,
+        "protected_tokens": [
+          "Date",
+          "Particulars",
+          "Tran",
+          "id",
+          "Withdrawal",
+          "Deposits",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "WITHDRAWAL",
+          "PARTICULARS",
+          "BALANCE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:06:50.295084",
+      {
+        "protected_row": 217,
+        "protected_tokens": [
+          "Date",
+          "Value",
+          "Particulars",
+          "Tran",
+          "Tran",
+          "id",
+          "Cheque",
+          "Withdrawal",
+          "Deposits",
+          "Balance",
+          "Dr/"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "WITHDRAWAL",
+          "PARTICULARS",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:06:50.295085",
+      {
+        "protected_row": 229,
+        "protected_tokens": [
+          "\u2022",
+          "Each",
+          "depositor",
+          "is",
+          "insured",
+          "by",
+          "the",
+          "Deposit",
+          "Insurance",
+          "and",
+          "Credit",
+          "CASH",
+          ":",
+          "Cash",
+          "Transaction",
+          "CLG",
+          ":",
+          "Clearing",
+          "Transaction"
+        ],
+        "matched_keywords": [
+          "TRANSACTION",
+          "CREDIT",
+          "DEPOSIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T16:06:50.301433"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T16:06:50.312244"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T16:06:50.312630"
+    ]
+  ]
+}

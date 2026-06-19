@@ -1,0 +1,17 @@
+{
+  "classification": "Unknown",
+  "classification_reason": null,
+  "engine": "Unknown",
+  "fallback": false,
+  "pages": 0,
+  "token_count": 0,
+  "header_candidates": [],
+  "chosen_header": null,
+  "zones": {},
+  "rows_detected": 0,
+  "rows_accepted": 0,
+  "rows_rejected": 0,
+  "reject_reasons": {},
+  "abort_reason": "Crash: PDF not found: C:\\Users\\adity\\Downloads\\CA\\tests\\pdfs_digital\\dumps\\YESBANK_SAVINGS_DIGITAL.pdf",
+  "healed_rows": 0
+}

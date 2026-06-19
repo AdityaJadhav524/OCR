@@ -1,0 +1,104 @@
+{
+  "job_id": "JOB_20260619_175123_9E6A",
+  "pdf_name": "Acct Statement_3644_14032026_13.08.12 2 (1).pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:51:23.892199",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-19T17:51:23.893021",
+    "password_validated_at": "2026-06-19T17:51:26.088000",
+    "classification_at": "2026-06-19T17:51:23.926858",
+    "backend_state_available_at": "2026-06-19T17:51:26.203219",
+    "frontend_polled_at": "2026-06-19T17:51:26.205890",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T17:51:23.893029",
+    "engine_end": "2026-06-19T17:51:26.088031",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:51:23.926871",
+    "extraction_finished_at": "2026-06-19T17:51:26.088029",
+    "parser_started_at": "2026-06-19T17:51:26.146998",
+    "parser_finished_at": "2026-06-19T17:51:26.201865",
+    "validation_completed_at": "2026-06-19T17:51:26.202710",
+    "completed_at": "2026-06-19T17:51:26.203198"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:51:23.893007"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:51:23.926865"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:51:23.926872"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:51:26.117729",
+      {
+        "protected_row": 13,
+        "protected_tokens": [
+          "Date",
+          "Narration",
+          "Chq./Ref.No.",
+          "Value",
+          "Dt",
+          "Withdrawal",
+          "Amt.",
+          "Deposit",
+          "Amt.",
+          "Closing",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "CHQ",
+          "WITHDRAWAL",
+          "DATE",
+          "BALANCE",
+          "NARRATION",
+          "DEPOSIT",
+          "REF"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:51:26.117742",
+      {
+        "protected_row": 526,
+        "protected_tokens": [
+          "Opening",
+          "Balance",
+          "Dr",
+          "Count",
+          "Cr",
+          "Count",
+          "Debits",
+          "Credits",
+          "Closing",
+          "Bal"
+        ],
+        "matched_keywords": [
+          "CR",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:51:26.147006"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:51:26.201879"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:51:26.203216"
+    ]
+  ]
+}

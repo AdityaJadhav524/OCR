@@ -1,0 +1,75 @@
+{
+  "job_id": "JOB_20260619_172539_4680",
+  "pdf_name": "axis.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:25:39.971494",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:36:13.904830",
+    "backend_state_available_at": "2026-06-19T17:36:14.322947",
+    "frontend_polled_at": "2026-06-19T17:36:14.339719",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T17:36:13.892601",
+    "engine_end": "2026-06-19T17:36:14.292002",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:36:13.904842",
+    "extraction_finished_at": "2026-06-19T17:36:14.291995",
+    "parser_started_at": "2026-06-19T17:36:14.303004",
+    "parser_finished_at": "2026-06-19T17:36:14.322408",
+    "validation_completed_at": "2026-06-19T17:36:14.322726",
+    "completed_at": "2026-06-19T17:36:14.322930"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:36:13.892592"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:36:13.904836"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:36:13.904843"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:36:14.297841",
+      {
+        "protected_row": 9,
+        "protected_tokens": [
+          "Tran",
+          "Date",
+          "Chq",
+          "No",
+          "Particulars",
+          "Debit",
+          "Credit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "CHQ",
+          "PARTICULARS",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:36:14.303010"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:36:14.322420"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:36:14.322944"
+    ]
+  ]
+}

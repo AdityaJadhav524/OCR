@@ -1004,10 +1004,10 @@ async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = 
                 })
                 
             except Exception as e:
-                logger.exception(f"Error processing {file_path}")
                 err_msg = str(e)
                 # Password detection fallback in batch
-                if "PyCryptodome" in err_msg or "password" in err_msg.lower() or "encrypted" in err_msg.lower():
+                if "PyCryptodome" in err_msg or "password" in err_msg.lower() or "encrypted" in err_msg.lower() or "PASSWORD_REQUIRED" in err_msg:
+                    logger.info(f"Password required for {file_path} - skipping.")
                     BENCHMARK_JOBS[job_id]["results"].append({
                         "statement_id": statement_id,
                         "pdf_name": pdf_name,
@@ -1015,6 +1015,7 @@ async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = 
                         "error_code": "PASSWORD_REQUIRED"
                     })
                 else:
+                    logger.exception(f"Error processing {file_path}")
                     BENCHMARK_JOBS[job_id]["results"].append({
                         "statement_id": statement_id,
                         "pdf_name": pdf_name,

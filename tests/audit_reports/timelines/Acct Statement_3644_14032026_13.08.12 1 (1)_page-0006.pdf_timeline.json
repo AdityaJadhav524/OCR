@@ -1,0 +1,96 @@
+{
+  "job_id": "JOB_20260619_172539_4680",
+  "pdf_name": "Acct Statement_3644_14032026_13.08.12 1 (1)_page-0006.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:25:39.971472",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:30:39.980181",
+    "backend_state_available_at": "2026-06-19T17:33:28.178797",
+    "frontend_polled_at": "2026-06-19T17:36:14.332117",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T17:30:39.975350",
+    "engine_end": "2026-06-19T17:33:28.030222",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:30:39.980197",
+    "extraction_finished_at": "2026-06-19T17:33:28.030209",
+    "parser_started_at": "2026-06-19T17:33:28.068342",
+    "parser_finished_at": "2026-06-19T17:33:28.177254",
+    "validation_completed_at": "2026-06-19T17:33:28.178282",
+    "completed_at": "2026-06-19T17:33:28.178772"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:30:39.975342"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:30:39.980190"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:30:39.980199"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:33:28.051353",
+      {
+        "protected_row": 101,
+        "protected_tokens": [
+          "Opening Balance",
+          "Dr Count",
+          "Cr Count",
+          "Debits",
+          "Credits",
+          "Closing Bal"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DR",
+          "CR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:33:28.051366",
+      {
+        "protected_row": 331,
+        "protected_tokens": [
+          "Date",
+          "Narration",
+          "Chq./Ref.No.",
+          "ValueDt",
+          "Withdrawal Amt.",
+          "Deposit Amt.",
+          "Closing Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "WITHDRAWAL",
+          "CHQ",
+          "REF",
+          "NARRATION",
+          "DEPOSIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:33:28.068354"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:33:28.177271"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:33:28.178793"
+    ]
+  ]
+}

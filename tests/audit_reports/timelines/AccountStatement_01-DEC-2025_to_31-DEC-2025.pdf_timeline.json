@@ -1,0 +1,194 @@
+{
+  "job_id": "JOB_20260619_161136_8D73",
+  "pdf_name": "AccountStatement_01-DEC-2025_to_31-DEC-2025.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T16:11:36.612089",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T16:11:36.632639",
+    "backend_state_available_at": "2026-06-19T16:11:37.611246",
+    "frontend_polled_at": "2026-06-19T16:11:38.629750",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T16:11:36.613009",
+    "engine_end": "2026-06-19T16:11:37.589186",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T16:11:36.632657",
+    "extraction_finished_at": "2026-06-19T16:11:37.589181",
+    "parser_started_at": "2026-06-19T16:11:37.602009",
+    "parser_finished_at": "2026-06-19T16:11:37.611087",
+    "validation_completed_at": "2026-06-19T16:11:37.611111",
+    "completed_at": "2026-06-19T16:11:37.611238"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T16:11:36.612995"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T16:11:36.632650"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T16:11:36.632659"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:11:37.597478",
+      {
+        "protected_row": 19,
+        "protected_tokens": [
+          "Date",
+          "Value",
+          "Date",
+          "Particulars",
+          "Tran",
+          "Type",
+          "Cheque",
+          "Details",
+          "Withdrawals",
+          "Deposits",
+          "Balance",
+          "Dr/Cr"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CR",
+          "PARTICULARS",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:11:37.597485",
+      {
+        "protected_row": 39,
+        "protected_tokens": [
+          "Date",
+          "Value",
+          "Date",
+          "Particulars",
+          "Tran",
+          "Type",
+          "Cheque",
+          "Details",
+          "Withdrawals",
+          "Deposits",
+          "Balance",
+          "Dr/Cr"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CR",
+          "PARTICULARS",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:11:37.597487",
+      {
+        "protected_row": 70,
+        "protected_tokens": [
+          "Date",
+          "Value",
+          "Date",
+          "Particulars",
+          "Tran",
+          "Type",
+          "Cheque",
+          "Details",
+          "Withdrawals",
+          "Deposits",
+          "Balance",
+          "Dr/Cr"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CR",
+          "PARTICULARS",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:11:37.597488",
+      {
+        "protected_row": 100,
+        "protected_tokens": [
+          "Date",
+          "Value",
+          "Date",
+          "Particulars",
+          "Tran",
+          "Type",
+          "Cheque",
+          "Details",
+          "Withdrawals",
+          "Deposits",
+          "Balance",
+          "Dr/Cr"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CR",
+          "PARTICULARS",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:11:37.597489",
+      {
+        "protected_row": 131,
+        "protected_tokens": [
+          "Date",
+          "Value",
+          "Date",
+          "Particulars",
+          "Tran",
+          "Type",
+          "Cheque",
+          "Details",
+          "Withdrawals",
+          "Deposits",
+          "Balance",
+          "Dr/Cr"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CR",
+          "PARTICULARS",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T16:11:37.602014"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T16:11:37.611096"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T16:11:37.611244"
+    ]
+  ]
+}

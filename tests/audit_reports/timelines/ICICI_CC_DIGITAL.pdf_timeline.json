@@ -1,0 +1,33 @@
+{
+  "job_id": "JOB_20260618_164847_9EC3",
+  "pdf_name": "ICICI_CC_DIGITAL.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-18T16:48:47.456355",
+    "password_detected_at": "2026-06-18T16:48:47.464973",
+    "password_received_at": null,
+    "password_validated_at": "2026-06-18T16:48:47.464981",
+    "classification_at": null,
+    "backend_state_available_at": "2026-06-18T16:48:47.464984",
+    "frontend_polled_at": "2026-06-18T16:48:49.515168",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-18T16:48:47.457193",
+    "engine_end": "2026-06-18T16:48:47.464981",
+    "engine_result": "PASSWORD_REQUIRED",
+    "extraction_started_at": null,
+    "extraction_finished_at": null,
+    "parser_started_at": null,
+    "parser_finished_at": null,
+    "validation_completed_at": null,
+    "completed_at": "2026-06-18T16:48:47.465949"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-18T16:48:47.457173"
+    ],
+    [
+      "PASSWORD_REQUIRED",
+      "2026-06-18T16:48:47.464983"
+    ]
+  ]
+}

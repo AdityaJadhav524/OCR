@@ -1,0 +1,16 @@
+PDF,Engine,Tokens,Rows,Abort
+BOI_01.pdf,PyMuPDF,65,10,None
+BOI_SAVINGS_DIGITAL.pdf,Unknown,0,0,Crash: PASSWORD_REQUIRED
+BOI_SAVINGS_SCANNED.pdf,PaddleOCR,2350,257,None
+HDFC_SAVINGS_SCANNED.pdf,PaddleOCR,1109,110,None
+ICICI_CC_DIGITAL.pdf,Unknown,0,0,Crash: PASSWORD_REQUIRED
+YESBANK_SAVINGS_DIGITAL.pdf,PaddleOCR,620,83,None
+BOI_SAVINGS_DIGITAL.pdf,Unknown,0,0,Crash: PDF not found: C:\Users\adity\Downloads\CA\tests\pdfs\dumps\BOI_SAVINGS_DIGITAL.pdf
+BOI_SAVINGS_SCANNED.pdf,Unknown,0,0,Crash: PDF not found: C:\Users\adity\Downloads\CA\tests\pdfs\dumps\BOI_SAVINGS_SCANNED.pdf
+HDFC_SAVINGS_SCANNED.pdf,Unknown,0,0,Crash: PDF not found: C:\Users\adity\Downloads\CA\tests\pdfs\dumps\HDFC_SAVINGS_SCANNED.pdf
+ICICI_CC_DIGITAL.pdf,Unknown,0,0,Crash: PDF not found: C:\Users\adity\Downloads\CA\tests\pdfs\dumps\ICICI_CC_DIGITAL.pdf
+YESBANK_SAVINGS_DIGITAL.pdf,Unknown,0,0,Crash: PDF not found: C:\Users\adity\Downloads\CA\tests\pdfs\dumps\YESBANK_SAVINGS_DIGITAL.pdf
+BOI_SAVINGS_DIGITAL.pdf,Unknown,0,0,Crash: PASSWORD_REQUIRED
+YESBANK_SAVINGS_DIGITAL.pdf,PaddleOCR,620,83,None
+BOI_SAVINGS_DIGITAL.pdf,Unknown,0,0,Crash: PDF not found: C:\Users\adity\Downloads\CA\tests\pdfs_digital\dumps\BOI_SAVINGS_DIGITAL.pdf
+YESBANK_SAVINGS_DIGITAL.pdf,Unknown,0,0,Crash: PDF not found: C:\Users\adity\Downloads\CA\tests\pdfs_digital\dumps\YESBANK_SAVINGS_DIGITAL.pdf

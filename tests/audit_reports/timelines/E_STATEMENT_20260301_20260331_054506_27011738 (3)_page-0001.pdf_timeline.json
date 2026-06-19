@@ -1,0 +1,90 @@
+{
+  "job_id": "JOB_20260619_212252_A6D5",
+  "pdf_name": "E_STATEMENT_20260301_20260331_054506_27011738 (3)_page-0001.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T21:22:52.031718",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T21:22:52.082987",
+    "backend_state_available_at": "2026-06-19T21:23:32.173105",
+    "frontend_polled_at": "2026-06-19T21:23:32.178300",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T21:22:52.059213",
+    "engine_end": "2026-06-19T21:23:32.134790",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T21:22:52.083011",
+    "extraction_finished_at": "2026-06-19T21:23:32.134780",
+    "parser_started_at": "2026-06-19T21:23:32.152793",
+    "parser_finished_at": "2026-06-19T21:23:32.172659",
+    "validation_completed_at": "2026-06-19T21:23:32.172805",
+    "completed_at": "2026-06-19T21:23:32.173096"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T21:22:52.059201"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T21:22:52.082998"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T21:22:52.083013"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T21:23:32.147510",
+      {
+        "protected_row": 21,
+        "protected_tokens": [
+          "Description",
+          "Cheque No",
+          "Debit",
+          "Credit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T21:23:32.147523",
+      {
+        "protected_row": 270,
+        "protected_tokens": [
+          "Total Transactions",
+          "Number of Credits",
+          "Number of Debits",
+          "Debit Amount",
+          "Credit Amount"
+        ],
+        "matched_keywords": [
+          "AMOUNT",
+          "CREDIT",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T21:23:32.152813"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T21:23:32.172668"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T21:23:32.173104"
+    ]
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "classification": "digital",
+  "classification_reason": "avg_words_per_page=65.0 >= 30",
+  "engine": "PyMuPDF",
+  "fallback": false,
+  "pages": 1,
+  "token_count": 65,
+  "header_candidates": [],
+  "chosen_header": null,
+  "zones": {},
+  "rows_detected": 0,
+  "rows_accepted": 10,
+  "rows_rejected": 0,
+  "reject_reasons": {},
+  "abort_reason": null,
+  "healed_rows": 0
+}

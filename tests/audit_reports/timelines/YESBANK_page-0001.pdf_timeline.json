@@ -1,0 +1,75 @@
+{
+  "job_id": "JOB_20260619_172539_4680",
+  "pdf_name": "YESBANK_page-0001.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:25:39.971480",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:34:14.218433",
+    "backend_state_available_at": "2026-06-19T17:35:25.288233",
+    "frontend_polled_at": "2026-06-19T17:36:14.334431",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T17:34:14.214148",
+    "engine_end": "2026-06-19T17:35:25.254544",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:34:14.218442",
+    "extraction_finished_at": "2026-06-19T17:35:25.254537",
+    "parser_started_at": "2026-06-19T17:35:25.268173",
+    "parser_finished_at": "2026-06-19T17:35:25.287636",
+    "validation_completed_at": "2026-06-19T17:35:25.287988",
+    "completed_at": "2026-06-19T17:35:25.288222"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:34:14.214141"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:34:14.218438"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:34:14.218443"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:35:25.261595",
+      {
+        "protected_row": 22,
+        "protected_tokens": [
+          "Date",
+          "Narration",
+          "Chq/Ref.No.",
+          "Value Dt",
+          "Withdrawal Amt.",
+          "Deposit Amt.",
+          "Closing Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "WITHDRAWAL",
+          "CHQ",
+          "REF",
+          "NARRATION",
+          "DEPOSIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:35:25.268182"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:35:25.287647"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:35:25.288232"
+    ]
+  ]
+}

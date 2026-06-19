@@ -1,0 +1,54 @@
+[
+  {
+    "label": "BOI_DIGITAL",
+    "total_rows": 56,
+    "top_candidates": [
+      {
+        "row_index": 24,
+        "text": "DATE PARTICULARS CHQ/VOUCH WITHDRAWAL DEPOSIT BALANCE",
+        "matched_keywords": [
+          "PARTICULARS",
+          "CHQ",
+          "WITHDRAWAL",
+          "BALANCE",
+          "DEPOSIT",
+          "DATE"
+        ],
+        "keyword_count": 6
+      },
+      {
+        "row_index": 43,
+        "text": "08-MAR-2025 APBS CR INW - CREDIT 5691280942 AKSHATA 1,500.00 25,349.30",
+        "matched_keywords": [
+          "CREDIT",
+          "CR"
+        ],
+        "keyword_count": 2
+      },
+      {
+        "row_index": 9,
+        "text": "DEPOSIT ACCOUNTS:",
+        "matched_keywords": [
+          "DEPOSIT"
+        ],
+        "keyword_count": 1
+      },
+      {
+        "row_index": 10,
+        "text": "ACCOUNT TYPE ACCOUNT NUMBER BALANCE AS ON CURRENCY",
+        "matched_keywords": [
+          "BALANCE"
+        ],
+        "keyword_count": 1
+      },
+      {
+        "row_index": 15,
+        "text": "NEVER SHARE YOUR CVV/PIN/OTP/EXPIRY DATE OR ANY INFORMATION OF YOUR CARD/ACCOUNT OVER PHONE OR ANY OTHER MEDIA. BANK NEVER ASKS FOR ANY SUCH DETAILS F",
+        "matched_keywords": [
+          "DATE"
+        ],
+        "keyword_count": 1
+      }
+    ]
+  }
+]

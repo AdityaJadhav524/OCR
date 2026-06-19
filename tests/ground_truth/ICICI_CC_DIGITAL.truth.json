@@ -1,0 +1,13 @@
+{
+  "bank": "ICICI",
+  "document_family": "CREDIT_CARD",
+  "statement_type": "DIGITAL",
+  "expected_transactions": 0,
+  "expected_debit_total": 0.0,
+  "expected_credit_total": 0.0,
+  "closing_balance": 0.0,
+  "expected_healed_rows": 0,
+  "expected_statement_due": 0.0,
+  "expected_total_purchases": 0.0,
+  "expected_total_payments": 0.0
+}

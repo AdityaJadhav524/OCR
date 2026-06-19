@@ -1,0 +1,10 @@
+{
+  "bank": "HDFC",
+  "document_family": "BANK_STATEMENT",
+  "statement_type": "SCANNED",
+  "expected_transactions": 0,
+  "expected_debit_total": 0.0,
+  "expected_credit_total": 0.0,
+  "closing_balance": 0.0,
+  "expected_healed_rows": 0
+}

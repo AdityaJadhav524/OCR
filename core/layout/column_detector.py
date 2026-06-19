@@ -3,6 +3,8 @@ from typing import List, Dict, Any, Tuple
 
 logger = logging.getLogger("core.layout.column_detector")
 
+import re
+
 def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[str, Tuple[float, float]]:
     """
     Scans physical rows to find the table header and calculates exact x-coordinate
@@ -10,19 +12,19 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
     Returns a tuple of (zones, detected_headers)
     """
     
-    date_kws = ["DATE", "TXN DATE", "VALUE DATE"]
-    narration_kws = ["PARTICULARS", "NARRATION", "DESCRIPTION", "DETAILS"]
-    debit_kws = ["WITHDRAWAL", "DEBIT", "DR"]
-    credit_kws = ["DEPOSIT", "CREDIT", "CR"]
+    date_kws = ["DATE"]
+    narration_kws = ["PARTICULARS", "NARRATION", "DESCRIPTION", "DETAILS", "REMARKS"]
+    debit_kws = ["WITHDRAWAL", "WITHDRAWALS", "DEBIT", "DR"]
+    credit_kws = ["DEPOSIT", "DEPOSITS", "CREDIT", "CR"]
     balance_kws = ["BALANCE", "BAL"]
 
+    def matches_any(text: str, kws: List[str]) -> bool:
+        for kw in kws:
+            if re.search(r'\b' + re.escape(kw) + r'\b', text):
+                return True
+        return False
+
     if identity and "identity_markers" in identity and "transaction_table_identity" in identity["identity_markers"]:
-        # If we have explicit table headers from the template, we could overwrite the heuristics
-        # But wait, the LLM output is something like ["Date", "Description", "Debit", "Credit", "Balance"]
-        # which may vary wildly. So it's best to augment the keywords rather than strictly replace them
-        # if we are doing heuristic search, OR strict search if it's precise.
-        # Actually, let's keep the keywords broad for the header *row* detection,
-        # but if we know it's a single amount column or similar from parsing_hints, we could adapt.
         pass
 
     header_row = []
@@ -39,9 +41,9 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
         for j, w_row in enumerate(window_rows):
             text_upper = " ".join([t["text"].upper() for t in w_row.get("tokens", [])])
             
-            row_has_date = any(kw in text_upper for kw in date_kws)
-            row_has_bal = any(kw in text_upper for kw in balance_kws)
-            row_has_amt = any(kw in text_upper for kw in debit_kws + credit_kws)
+            row_has_date = matches_any(text_upper, date_kws)
+            row_has_bal = matches_any(text_upper, balance_kws)
+            row_has_amt = matches_any(text_upper, debit_kws + credit_kws)
             
             contributes = False
             if row_has_date and not found_date:
@@ -76,28 +78,44 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
         text = t["text"].upper().replace(".", "").strip()
         xc = (t["x0"] + t.get("x1", t["x0"] + 50)) / 2.0
         
-        is_debit = any(kw in text for kw in debit_kws) or 'WITHDRAWAL' in text
-        is_credit = any(kw in text for kw in credit_kws) or 'DEPOSIT' in text
+        is_debit = matches_any(text, debit_kws)
+        is_credit = matches_any(text, credit_kws)
         
-        if any(kw in text for kw in date_kws):
+        if matches_any(text, date_kws):
             cols_found.append({"type": "date", "x0": t["x0"], "xc": xc})
-        elif any(kw in text for kw in narration_kws):
+        elif matches_any(text, narration_kws):
             cols_found.append({"type": "narration", "x0": t["x0"], "xc": xc})
         elif is_debit and is_credit:
-            cols_found.append({"type": "debit", "x0": t["x0"], "xc": xc})
-            cols_found.append({"type": "credit", "x0": xc, "xc": xc})
+            pass
         elif is_debit:
             cols_found.append({"type": "debit", "x0": t["x0"], "xc": xc})
         elif is_credit:
             cols_found.append({"type": "credit", "x0": t["x0"], "xc": xc})
-        elif any(kw in text for kw in balance_kws):
+        elif matches_any(text, balance_kws):
             cols_found.append({"type": "balance", "x0": t["x0"], "xc": xc})
             
 
     cols_found.sort(key=lambda c: c["x0"])
 
-    # Let multiple columns of the same type overwrite each other (keeps the right-most one, which is usually Post Date)
-    # Assign zones using exactly adjacent boundaries to prevent overlap
+    # Deduplicate columns to prevent dictionary overwrite holes.
+    # We want the best candidate for each column type.
+    # For date and narration, the leftmost candidate is usually correct.
+    # For amounts and balance, the rightmost candidate (closest to the numbers) is usually correct.
+    best_cols = {}
+    for c in cols_found:
+        t = c["type"]
+        if t in ["date", "narration"]:
+            if t not in best_cols or c["x0"] < best_cols[t]["x0"]:
+                best_cols[t] = c
+        else:
+            if t not in best_cols or c["x0"] > best_cols[t]["x0"]:
+                best_cols[t] = c
+                
+    cols_found = list(best_cols.values())
+    cols_found.sort(key=lambda c: c["x0"])
+
+    # Assign zones using midpoints between adjacent column headers
+    # This naturally handles left/right/center alignment without hardcoded padding
     for i in range(len(cols_found)):
         col = cols_found[i]
         
@@ -105,11 +123,13 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
         if i == 0:
             start_x = 0.0
         else:
-            start_x = col["x0"] - 10
+            prev_col = cols_found[i-1]
+            start_x = (prev_col["x0"] + col["x0"]) / 2.0
             
         # Calculate end_x (right bound)
         if i < len(cols_found) - 1:
-            end_x = cols_found[i+1]["x0"] - 10
+            next_col = cols_found[i+1]
+            end_x = (col["x0"] + next_col["x0"]) / 2.0
         else:
             end_x = 9999.0  # infinite right bound for the last column
             

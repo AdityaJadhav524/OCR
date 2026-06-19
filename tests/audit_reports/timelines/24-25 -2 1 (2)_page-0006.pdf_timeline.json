@@ -1,0 +1,376 @@
+{
+  "job_id": "JOB_20260619_172539_4680",
+  "pdf_name": "24-25 -2 1 (2)_page-0006.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:25:39.971453",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:25:39.992910",
+    "backend_state_available_at": "2026-06-19T17:29:12.965553",
+    "frontend_polled_at": "2026-06-19T17:36:14.327070",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T17:25:39.972331",
+    "engine_end": "2026-06-19T17:29:12.860061",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:25:39.992926",
+    "extraction_finished_at": "2026-06-19T17:29:12.860049",
+    "parser_started_at": "2026-06-19T17:29:12.914719",
+    "parser_finished_at": "2026-06-19T17:29:12.965308",
+    "validation_completed_at": "2026-06-19T17:29:12.965469",
+    "completed_at": "2026-06-19T17:29:12.965540"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:25:39.972322"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:25:39.992919"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:25:39.992928"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889715",
+      {
+        "protected_row": 0,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889725",
+      {
+        "protected_row": 91,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889727",
+      {
+        "protected_row": 173,
+        "protected_tokens": [
+          "Transaction Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "TRANSACTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889729",
+      {
+        "protected_row": 265,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit Amount(Running Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889731",
+      {
+        "protected_row": 327,
+        "protected_tokens": [
+          "Total Transactlons",
+          "Number of Credits",
+          "Number of Debits",
+          "Debit Amount",
+          "Credit Amount"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889732",
+      {
+        "protected_row": 343,
+        "protected_tokens": [
+          "Transaction Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "TRANSACTION",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889733",
+      {
+        "protected_row": 406,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889735",
+      {
+        "protected_row": 498,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889736",
+      {
+        "protected_row": 590,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889738",
+      {
+        "protected_row": 671,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889739",
+      {
+        "protected_row": 755,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889741",
+      {
+        "protected_row": 843,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889742",
+      {
+        "protected_row": 937,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque NoDebit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889743",
+      {
+        "protected_row": 1025,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:29:12.889745",
+      {
+        "protected_row": 1121,
+        "protected_tokens": [
+          "Transactlon Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "DEBIT",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:29:12.914735"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:29:12.965327"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:29:12.965550"
+    ]
+  ]
+}

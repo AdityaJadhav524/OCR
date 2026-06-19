@@ -1,0 +1,99 @@
+{
+  "job_id": "JOB_20260619_160319_3C8A",
+  "pdf_name": "DepositAccountStatement.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T16:03:19.318795",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-19T16:03:19.319486",
+    "password_validated_at": "2026-06-19T16:03:19.698677",
+    "classification_at": "2026-06-19T16:03:19.340112",
+    "backend_state_available_at": "2026-06-19T16:03:19.710440",
+    "frontend_polled_at": "2026-06-19T16:03:21.330542",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T16:03:19.319489",
+    "engine_end": "2026-06-19T16:03:19.698686",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T16:03:19.340134",
+    "extraction_finished_at": "2026-06-19T16:03:19.698685",
+    "parser_started_at": "2026-06-19T16:03:19.705135",
+    "parser_finished_at": "2026-06-19T16:03:19.710281",
+    "validation_completed_at": "2026-06-19T16:03:19.710304",
+    "completed_at": "2026-06-19T16:03:19.710432"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T16:03:19.319481"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T16:03:19.340127"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T16:03:19.340136"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:03:19.701987",
+      {
+        "protected_row": 11,
+        "protected_tokens": [
+          "Txn",
+          "Date",
+          "Value",
+          "Date",
+          "Description",
+          "Debit",
+          "Credit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CREDIT",
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:03:19.701994",
+      {
+        "protected_row": 32,
+        "protected_tokens": [
+          "Txn",
+          "Date",
+          "Value",
+          "Date",
+          "Description",
+          "Debit",
+          "Credit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CREDIT",
+          "DESCRIPTION",
+          "BALANCE",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T16:03:19.705143"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T16:03:19.710290"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T16:03:19.710439"
+    ]
+  ]
+}

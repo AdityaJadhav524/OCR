@@ -1,0 +1,102 @@
+{
+  "job_id": "JOB_20260619_172539_4680",
+  "pdf_name": "CC_STMT_117048135_345073_1607202515082025 1 (1) 2_page-0001.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:25:39.971476",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:33:28.189099",
+    "backend_state_available_at": "2026-06-19T17:34:14.213258",
+    "frontend_polled_at": "2026-06-19T17:36:14.333251",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T17:33:28.180794",
+    "engine_end": "2026-06-19T17:34:14.193637",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:33:28.189120",
+    "extraction_finished_at": "2026-06-19T17:34:14.193630",
+    "parser_started_at": "2026-06-19T17:34:14.201051",
+    "parser_finished_at": "2026-06-19T17:34:14.213046",
+    "validation_completed_at": "2026-06-19T17:34:14.213078",
+    "completed_at": "2026-06-19T17:34:14.213250"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:33:28.180781"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:33:28.189111"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:33:28.189122"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:34:14.198973",
+      {
+        "protected_row": 33,
+        "protected_tokens": [
+          "Date",
+          "Transaction Details",
+          "Amount (in)"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "TRANSACTION",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:34:14.198979",
+      {
+        "protected_row": 71,
+        "protected_tokens": [
+          "Date",
+          "Transaction Details",
+          "Amount (in )"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "TRANSACTION",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:34:14.198980",
+      {
+        "protected_row": 125,
+        "protected_tokens": [
+          "timely credit to your card account and avoid levy of penal charges.",
+          "period during which there is any transaction/payment or any amount"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "TRANSACTION",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:34:14.201055"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:34:14.213055"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:34:14.213257"
+    ]
+  ]
+}

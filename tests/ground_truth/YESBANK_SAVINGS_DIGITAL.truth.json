@@ -1,0 +1,10 @@
+{
+  "bank": "YESBANK",
+  "document_family": "BANK_STATEMENT",
+  "statement_type": "DIGITAL",
+  "expected_transactions": 83,
+  "expected_debit_total": 253359.15,
+  "expected_credit_total": 468290.55,
+  "closing_balance": 529850.5,
+  "expected_healed_rows": 4
+}

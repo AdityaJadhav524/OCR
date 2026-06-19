@@ -4,13 +4,26 @@ from typing import List, Dict, Any
 logger = logging.getLogger("core.layout.row_detector")
 
 def _compute_y_tolerance(tokens: List[Dict[str, Any]]) -> float:
+    """
+    Compute adaptive Y-tolerance for row grouping.
+
+    Scales with actual word height so the same logic works for:
+      - Digital PDFs   (word height ~8-14px)  → tolerance ~4-7px
+      - Scanned PDFs   (word height ~25-40px at 1800px render) → tolerance ~13-20px
+
+    Cap is now 50% of median_h (not a fixed 10px), preventing tokens
+    from the same physical row being split into separate rows on high-DPI scans.
+    An absolute minimum of 3px prevents merging for very small text fragments.
+    """
     if not tokens:
         return 3.0
     heights = sorted(t['y1'] - t['y0'] for t in tokens if 'y1' in t and 'y0' in t)
     if not heights:
         return 3.0
     median_h = heights[len(heights) // 2]
-    return max(2.5, min(median_h * 0.85, 10.0))
+    # Use 50% of median height — safe for both digital and scanned coordinate spaces.
+    # Previous cap of 10.0px was too tight for scanned PDFs (25-40px word heights).
+    return max(3.0, median_h * 0.50)
 
 def detect_rows(tokens: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
@@ -80,7 +93,7 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
         r'\b('
         r'\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4}|'           
         r'\d{4}[/\-\.]\d{1,2}[/\-\.]\d{1,2}|'           
-        r'\d{1,2}[\s\-\.][A-Za-z]{3,9}[\s\-\.]\d{2,4}'  
+        r'\d{1,2}[\s\-\./][A-Za-z]{3,9}[\s\-\./]\d{2,4}'  
         r')\b',
         re.IGNORECASE
     )
@@ -131,44 +144,52 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
         # LEADING_J_RE: only strip J/j when followed by a digit or O/o (not "JOURNAL", "JNPT", etc.)
         LEADING_J_RE = re.compile(r'^[Jj]([0-9Oo])', re.IGNORECASE)
 
+        zone_tokens = []
         for t in tokens:
-            is_date = DATE_RE.search(t['text']) or DATE_PREFIX_RE.match(t['text'])
+            if date_x_bounds:
+                if date_x_bounds[0] - 70 <= t['x0'] <= date_x_bounds[1] + 70:
+                    zone_tokens.append(t)
+            elif t['x0'] < 150:
+                zone_tokens.append(t)
+                
+        # Also include the full row text for cases where date bleeds slightly outside the zone
+        row_str = " ".join([t['text'] for t in tokens])
+        zone_str = " ".join([t['text'] for t in zone_tokens]) if zone_tokens else row_str
+
+        # Check zone_str first, fallback to row_str if needed
+        for text_to_check in (zone_str, row_str):
+            is_date = DATE_RE.search(text_to_check) or DATE_PREFIX_RE.match(text_to_check)
 
             # If not a strict date, attempt safe in-place OCR healing
-            if not is_date and OCR_TOLERANT_DATE_RE.match(t['text']):
-                healed = t['text']
+            if not is_date and OCR_TOLERANT_DATE_RE.match(text_to_check):
+                healed = text_to_check
 
                 # 1. Strip safe leading stray characters:
-                #    J/j only if next char is digit/O (avoids JOURNAL, JNPT etc.)
-                #    | always safe as a leading stray
                 if LEADING_J_RE.match(healed):
                     healed = healed[1:]
                 elif healed and healed[0] in ('|',):
                     healed = healed[1:]
 
-                # 2. Strip single trailing alpha (e.g. "05-11-2021l", "30-10-202t")
+                # 2. Strip single trailing alpha
                 if healed and healed[-1].isalpha():
                     healed = healed[:-1]
 
-                # 3. Core character repairs (approved list only — no s->5)
+                # 3. Core character repairs
                 healed = (healed
-                          .replace('O', '0').replace('o', '0')  # O/o -> 0
-                          .replace('l', '1')                     # l   -> 1
-                          .replace('|', '-')                     # |   -> -
-                          .replace(':', '-')                     # :   -> - (colon separator)
-                          .replace(')', '-'))                    # )   -> -
+                          .replace('O', '0').replace('o', '0')
+                          .replace('l', '1')
+                          .replace('|', '-')
+                          .replace(':', '-')
+                          .replace(')', '-'))
 
                 if DATE_RE.search(healed) or DATE_PREFIX_RE.match(healed):
-                    t['text'] = healed
                     is_date = True
-
+                    
             if is_date:
-                # Check if it falls within a very generous tolerance of the detected date column
-                if date_x_bounds and (date_x_bounds[0] - 70 <= t['x0'] <= date_x_bounds[1] + 70):
-                    is_anchor = True
-                    break
-                # Fallback: if it's on the far left, it's likely a date anchor regardless of headers
-                elif t['x0'] < 150:
+                # To prevent matching a random date in the middle of a narration row as an anchor,
+                # ensure the date is found at the beginning of the string being checked.
+                match = DATE_RE.search(text_to_check)
+                if match and match.start() < 20: # Date must start within first 20 characters
                     is_anchor = True
                     break
                     

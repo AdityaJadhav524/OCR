@@ -1,0 +1,82 @@
+[
+  {
+    "label": "BOI_DIGITAL",
+    "status": "OK",
+    "num_pages": 2,
+    "tokens_before": 403,
+    "tokens_after": 170,
+    "tokens_removed": 233,
+    "structural_keywords_removed": [
+      "Date"
+    ],
+    "structural_keyword_details": {
+      "WITHDRAWAL": {
+        "total_occurrences": 1,
+        "removed": 0,
+        "safe": 1,
+        "at_risk": false
+      },
+      "DATE": {
+        "total_occurrences": 3,
+        "removed": 3,
+        "safe": 0,
+        "at_risk": true
+      },
+      "DEPOSIT": {
+        "total_occurrences": 2,
+        "removed": 0,
+        "safe": 2,
+        "at_risk": false
+      },
+      "BALANCE": {
+        "total_occurrences": 2,
+        "removed": 0,
+        "safe": 2,
+        "at_risk": false
+      },
+      "CREDIT": {
+        "total_occurrences": 1,
+        "removed": 0,
+        "safe": 1,
+        "at_risk": false
+      },
+      "PARTICULARS": {
+        "total_occurrences": 1,
+        "removed": 0,
+        "safe": 1,
+        "at_risk": false
+      },
+      "CR": {
+        "total_occurrences": 6,
+        "removed": 0,
+        "safe": 6,
+        "at_risk": false
+      }
+    },
+    "verdict": "AT_RISK: ['Date']"
+  },
+  {
+    "label": "BOI_SCANNED",
+    "status": "SCANNED_NO_TEXT_LAYER",
+    "note": "Suppression operates on OCR tokens. Cannot audit without running OCR."
+  },
+  {
+    "label": "YESBANK_SAVINGS",
+    "status": "SCANNED_NO_TEXT_LAYER",
+    "note": "Suppression operates on OCR tokens. Cannot audit without running OCR."
+  },
+  {
+    "label": "ICICI_CC_1",
+    "status": "SCANNED_NO_TEXT_LAYER",
+    "note": "Suppression operates on OCR tokens. Cannot audit without running OCR."
+  },
+  {
+    "label": "ICICI_CC_2",
+    "status": "INVALID_PASSWORD"
+  },
+  {
+    "label": "HDFC_SAVINGS_SCANNED",
+    "status": "SCANNED_NO_TEXT_LAYER",
+    "note": "Suppression operates on OCR tokens. Cannot audit without running OCR."
+  }
+]

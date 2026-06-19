@@ -1,0 +1,103 @@
+{
+  "job_id": "JOB_20260619_172415_73D1",
+  "pdf_name": "DetailedStatement24-25 2.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:24:15.947140",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:24:15.980933",
+    "backend_state_available_at": "2026-06-19T17:24:21.350416",
+    "frontend_polled_at": "2026-06-19T17:24:21.354675",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T17:24:15.947946",
+    "engine_end": "2026-06-19T17:24:21.151870",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:24:15.980949",
+    "extraction_finished_at": "2026-06-19T17:24:21.151862",
+    "parser_started_at": "2026-06-19T17:24:21.277012",
+    "parser_finished_at": "2026-06-19T17:24:21.349231",
+    "validation_completed_at": "2026-06-19T17:24:21.349890",
+    "completed_at": "2026-06-19T17:24:21.350393"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:24:15.947936"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:24:15.980942"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:24:15.980951"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:24:21.203243",
+      {
+        "protected_row": 17,
+        "protected_tokens": [
+          "Sl",
+          "Tran",
+          "Value",
+          "Transaction",
+          "Transaction",
+          "Cheque",
+          "no",
+          "/",
+          "Transaction",
+          "Withdra",
+          "Deposit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "TRANSACTION",
+          "DEPOSIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:24:21.203255",
+      {
+        "protected_row": 18,
+        "protected_tokens": [
+          "No",
+          "Id",
+          "Date",
+          "Date",
+          "Posted",
+          "Ref",
+          "No",
+          "Remarks",
+          "wal",
+          "(Dr)",
+          "(Cr)"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "REF",
+          "DR",
+          "CR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:24:21.277024"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:24:21.349241"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:24:21.350412"
+    ]
+  ]
+}

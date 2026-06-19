@@ -1,0 +1,92 @@
+{
+  "job_id": "JOB_20260619_172539_4680",
+  "pdf_name": "DocScanner 17-Apr-2026 11-07 AM 1.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:25:39.971490",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:35:57.465029",
+    "backend_state_available_at": "2026-06-19T17:36:13.891478",
+    "frontend_polled_at": "2026-06-19T17:36:14.338196",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T17:35:57.460637",
+    "engine_end": "2026-06-19T17:36:13.882372",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:35:57.465045",
+    "extraction_finished_at": "2026-06-19T17:36:13.882365",
+    "parser_started_at": "2026-06-19T17:36:13.885758",
+    "parser_finished_at": "2026-06-19T17:36:13.891406",
+    "validation_completed_at": "2026-06-19T17:36:13.891446",
+    "completed_at": "2026-06-19T17:36:13.891461"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:35:57.460628"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:35:57.465039"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:35:57.465046"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:36:13.884615",
+      {
+        "protected_row": 32,
+        "protected_tokens": [
+          "Value Date",
+          "Post Date",
+          "Details",
+          "Debit",
+          "Credit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:36:13.884623",
+      {
+        "protected_row": 52,
+        "protected_tokens": [
+          "Value Date Post Date",
+          "Details",
+          "Debit",
+          "Credit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "BALANCE",
+          "DATE",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:36:13.885763"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:36:13.891415"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:36:13.891476"
+    ]
+  ]
+}

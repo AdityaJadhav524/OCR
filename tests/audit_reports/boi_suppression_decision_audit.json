@@ -1,0 +1,966 @@
+{
+  "pdf": "C:\\Users\\adity\\Downloads\\CA\\scripts\\..\\validation_lab\\backend\\temp\\11707454011-JUL-25221947 2.PDF",
+  "num_pages": 2,
+  "tokens_total": 403,
+  "suppression_uses_position": true,
+  "suppression_uses_frequency": true,
+  "suppression_uses_keyword_list": true,
+  "suppression_keyword_list": [
+    "Bank",
+    "IFSC",
+    "MICR",
+    "Page",
+    "Statement",
+    "Account",
+    "Currency",
+    "Customer",
+    "Nomination"
+  ],
+  "candidates_evaluated": 103,
+  "candidates_suppressed": 96,
+  "structural_keywords_suppressed": [
+    {
+      "text": "Date",
+      "score": 5,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 3/3 tokens in top/bottom 15% (+2)"
+      ],
+      "positions": [
+        {
+          "page": 1,
+          "y0": 751.76,
+          "y1": 760.69,
+          "relative_y": 0.909,
+          "in_top_or_bottom_15pct": true
+        },
+        {
+          "page": 2,
+          "y0": 164.38,
+          "y1": 173.31,
+          "relative_y": 0.073,
+          "in_top_or_bottom_15pct": true
+        },
+        {
+          "page": 2,
+          "y0": 751.76,
+          "y1": 760.69,
+          "relative_y": 0.908,
+          "in_top_or_bottom_15pct": true
+        }
+      ]
+    }
+  ],
+  "structural_keywords_safe": [
+    "Deposit",
+    "Balance"
+  ],
+  "date_token_detail": {
+    "text": "Date",
+    "pages_appeared": 2,
+    "score": 5,
+    "will_suppress": true,
+    "reasons": [
+      "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+      "POSITION: 3/3 tokens in top/bottom 15% (+2)"
+    ],
+    "positions": [
+      {
+        "page": 1,
+        "y0": 751.76,
+        "y1": 760.69,
+        "relative_y": 0.909,
+        "in_top_or_bottom_15pct": true
+      },
+      {
+        "page": 2,
+        "y0": 164.38,
+        "y1": 173.31,
+        "relative_y": 0.073,
+        "in_top_or_bottom_15pct": true
+      },
+      {
+        "page": 2,
+        "y0": 751.76,
+        "y1": 760.69,
+        "relative_y": 0.908,
+        "in_top_or_bottom_15pct": true
+      }
+    ],
+    "is_structural_keyword": true
+  },
+  "all_suppressed_tokens": [
+    {
+      "text": "VISHRAMBAG",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "1",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 3/3 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "from",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/3 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "on",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 4/5 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "150710110010982",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/3 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Beware",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "of",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 14/14 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "cyber",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "criminals",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "and",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "save",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "your",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 8/8 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "hard",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "earned",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "money",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "!!",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Never",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "share",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "CVV/PIN/OTP/Expiry",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Date",
+      "score": 5,
+      "is_structural": true,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 3/3 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "or",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 4/4 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "any",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 8/8 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "information",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "card/account",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Account'] (+2)"
+      ]
+    },
+    {
+      "text": "over",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "phone",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "other",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "media.",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Bank",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 4/4 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Bank'] (+2)"
+      ]
+    },
+    {
+      "text": "never",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "asks",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "for",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "such",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "details",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "customer.",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Customer'] (+2)"
+      ]
+    },
+    {
+      "text": "If",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "you",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "receive",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "alerts",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "suspicious",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "transactions",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "in",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "account,",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Account'] (+2)"
+      ]
+    },
+    {
+      "text": "immediately",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "contact",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "our",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "customer",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Customer'] (+2)"
+      ]
+    },
+    {
+      "text": "care",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "centre",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "022-4091",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "9191",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "/",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 4/4 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "1800",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 4/4 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "220",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "229",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "103",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "1906.",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Contents",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "this",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 4/4 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "statement",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Statement'] (+2)"
+      ]
+    },
+    {
+      "text": "will",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "be",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "treated",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "correct",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "if",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "no",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "error",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "is",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "reported",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "within",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "30",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "days",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "receipt",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "statement.",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Statement'] (+2)"
+      ]
+    },
+    {
+      "text": "India",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "registered",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "office:",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Head",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Office,",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Star",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "House,",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "C-5,",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "G-Block,",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "2nd",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Floor,",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Bandra-Kurla",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "complex,",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Bandra(East),Mumbai-400051.",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Website:",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "www.bankofindia.co.in",
+      "score": 7,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)",
+        "KEYWORD_MATCH: ['Bank'] (+2)"
+      ]
+    },
+    {
+      "text": "Tel",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "No.",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "(022)-",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "40919191.",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "Contact",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    },
+    {
+      "text": "us",
+      "score": 5,
+      "is_structural": false,
+      "reasons": [
+        "FREQ_ACROSS_PAGES: appears on 2/2 pages (+3)",
+        "POSITION: 2/2 tokens in top/bottom 15% (+2)"
+      ]
+    }
+  ]
+}

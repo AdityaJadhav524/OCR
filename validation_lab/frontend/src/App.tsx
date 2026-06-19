@@ -132,32 +132,14 @@ export default function App() {
     setPasswordState({ activeItemId: null, input: '', show: false, capsLock: false })
   }
 
-  const processFile = async (item: QueueItem, password?: string): Promise<QueueItem> => {
-    try {
-      const fd = new FormData()
-      fd.append('file', item.file)
-      if (password) fd.append('password', password)
-
-      const res = await fetch('/api/process', { method: 'POST', body: fd })
-      const data = await res.json() as any
-
-      if (res.status === 401 && data.error_code === 'INVALID_PASSWORD') {
-        return { ...item, status: 'invalid_password' }
+  React.useEffect(() => {
+    if (!passwordState.activeItemId && !isProcessingQueue) {
+      const needsPassword = queue.find(q => q.status === 'password_required' || q.status === 'invalid_password')
+      if (needsPassword) {
+        setPasswordState({ activeItemId: needsPassword.id, input: '', show: false, capsLock: false })
       }
-      
-      if (res.status === 200 && data.error_code === 'PASSWORD_REQUIRED') {
-        return { ...item, status: 'password_required' }
-      }
-
-      if (!data.success) {
-        return { ...item, status: 'error', error: data.error || data.error_code || 'Unknown error', result: data }
-      }
-
-      return { ...item, status: 'success', result: data }
-    } catch (e) {
-      return { ...item, status: 'error', error: String(e) }
     }
-  }
+  }, [queue, passwordState.activeItemId, isProcessingQueue])
 
   const runQueue = async () => {
     if (queue.length === 0 || isProcessingQueue) return
@@ -170,7 +152,7 @@ export default function App() {
       return
     }
 
-    setQueue(prev => prev.map(q => pendingFiles.some(p => p.id === q.id) ? { ...q, status: 'processing' } : q))
+    setQueue(prev => prev.map(q => pendingFiles.some(p => p.id === q.id) ? { ...q, status: 'processing', result: undefined, error: undefined } : q))
 
     try {
       const fd = new FormData()
@@ -208,6 +190,8 @@ export default function App() {
                     newQueue[qIdx] = { ...newQueue[qIdx], status: 'success', result: resItem }
                   } else if (resItem.status === 'error') {
                     newQueue[qIdx] = { ...newQueue[qIdx], status: 'error', error: resItem.error }
+                  } else if (resItem.status === 'password_required') {
+                    newQueue[qIdx] = { ...newQueue[qIdx], status: 'password_required' }
                   }
                 }
               })
@@ -236,32 +220,57 @@ export default function App() {
     const item = queue.find(q => q.id === activeItemId)
     if (!item) { setIsProcessingQueue(false); return; }
 
-    setQueue(prev => prev.map(q => q.id === activeItemId ? { ...q, status: 'processing' } : q))
-    const updatedItem = await processFile(item, input)
-    setQueue(prev => prev.map(q => q.id === activeItemId ? updatedItem : q))
-
-    if (updatedItem.status === 'password_required' || updatedItem.status === 'invalid_password') {
-       setPasswordState(prev => ({ ...prev, activeItemId: updatedItem.id, input: '' }))
-       setIsProcessingQueue(false)
-       return
-    }
-
-    // Continue queue
-    let currentQueue = queue.map(q => q.id === activeItemId ? updatedItem : q)
-    for (let i = 0; i < currentQueue.length; i++) {
-      if (currentQueue[i].status !== 'pending') continue;
-
-      setQueue(prev => prev.map(q => q.id === currentQueue[i].id ? { ...q, status: 'processing' } : q))
-      const res = await processFile(currentQueue[i])
-      setQueue(prev => prev.map(q => q.id === currentQueue[i].id ? res : q))
-      if (res.status === 'password_required' || res.status === 'invalid_password') {
-        setPasswordState(prev => ({ ...prev, activeItemId: res.id, input: '' }))
-        setIsProcessingQueue(false)
-        return
-      }
-    }
+    setQueue(prev => prev.map(q => q.id === activeItemId ? { ...q, status: 'processing', result: undefined, error: undefined } : q))
     
-    setIsProcessingQueue(false)
+    try {
+      const fd = new FormData()
+      fd.append('files', item.file)
+      fd.append('password', input)
+
+      const res = await fetch('/api/benchmark/upload', { method: 'POST', body: fd })
+      const data = await res.json()
+      
+      if (!data.job_id) throw new Error("Failed to start benchmark job")
+
+      // Poll for status
+      const poll = setInterval(async () => {
+        try {
+          const statusRes = await fetch(`/api/benchmark/status/${data.job_id}`)
+          const statusData = await statusRes.json()
+          
+          if (statusData.status === 'completed' || statusData.status === 'error') {
+            clearInterval(poll)
+            setIsProcessingQueue(false)
+          }
+
+          if (statusData.results && statusData.results.length > 0) {
+            setQueue(prev => {
+              const newQueue = [...prev]
+              statusData.results.forEach((resItem: any) => {
+                const qIdx = newQueue.findIndex(q => q.id === activeItemId && q.status === 'processing')
+                if (qIdx >= 0) {
+                  if (resItem.status === 'success') {
+                    newQueue[qIdx] = { ...newQueue[qIdx], status: 'success', result: resItem }
+                  } else if (resItem.status === 'error') {
+                    newQueue[qIdx] = { ...newQueue[qIdx], status: 'error', error: resItem.error }
+                  } else if (resItem.status === 'password_required') {
+                    newQueue[qIdx] = { ...newQueue[qIdx], status: 'invalid_password' }
+                  }
+                }
+              })
+              return newQueue
+            })
+          }
+        } catch (e) {
+          console.error("Polling error:", e)
+        }
+      }, 2000)
+
+    } catch (e) {
+      console.error(e)
+      setQueue(prev => prev.map(q => q.id === activeItemId ? { ...q, status: 'error', error: String(e) } : q))
+      setIsProcessingQueue(false)
+    }
   }
 
   const exportJson = () => {
@@ -585,16 +594,13 @@ export default function App() {
                 )}
                 
                 {currentItem?.error && (
-                   <div className="mt-3 p-4 bg-red-50 border border-red-100 rounded-lg">
-                      <p className="text-sm font-semibold text-red-800 flex items-center gap-1.5 mb-2"><XCircle className="w-4 h-4"/> Extraction Failed</p>
-                      
-                      <p className="text-xs font-semibold text-red-700 mb-1">Reason:</p>
-                      <p className="text-xs text-red-600 mb-3 break-words">{currentItem.error}</p>
-                      
+                   <div className="mt-3 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="text-sm font-bold text-red-800 flex items-center gap-1.5 mb-2"><XCircle className="w-4 h-4"/> Backend Error</p>
+                      <p className="text-sm text-red-700 mb-3 font-mono break-words">{currentItem.error}</p>
                       <p className="text-xs font-semibold text-red-700 mb-1">Possible Causes:</p>
                       <ul className="list-disc list-inside text-xs text-red-600 space-y-0.5 ml-1">
+                         <li>Backend crash (check Advanced Debug for stack trace)</li>
                          <li>OCR quality issue or scanned artifact</li>
-                         <li>Unsupported statement layout</li>
                          <li>Missing column detection</li>
                       </ul>
                    </div>
@@ -610,44 +616,53 @@ export default function App() {
                  <CardHeader className="pb-3 border-b border-gray-100">
                   <CardTitle className="text-sm font-bold text-gray-800 tracking-wide uppercase">Result Summary</CardTitle>
                 </CardHeader>
-                <CardContent className="pt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Bank</p>
-                    <p className="font-semibold text-gray-900 truncate">
-                      {successfulItems.length > 0 
-                        ? (successfulItems[0].result?.bank_detection?.institution_name as string || 'Unknown')
-                        : '—'}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Type</p>
-                    <p className="font-semibold text-gray-900 capitalize">
-                      {successfulItems.length > 0 
-                        ? (successfulItems[0].result?.document_type || 'Unknown')
-                        : '—'}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Transactions</p>
-                    <p className="font-semibold text-indigo-600">{allTxns.length}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Confidence</p>
-                    <p className="font-semibold text-emerald-600">
-                      {successfulItems.length > 0 && successfulItems[0].result?.bank_detection?.confidence_score != null
-                        ? `${Math.round(Number(successfulItems[0].result.bank_detection.confidence_score) * 100)}%`
-                        : '—'}
-                    </p>
-                  </div>
-                  
-                  <div className="col-span-2 mt-2 p-3 bg-gray-50 rounded-lg border border-gray-100">
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Debits</p>
-                    <p className="text-lg font-bold text-red-600 tabular-nums">₹{totalDebits.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</p>
-                  </div>
-                  <div className="col-span-2 mt-2 p-3 bg-gray-50 rounded-lg border border-gray-100">
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Credits</p>
-                    <p className="text-lg font-bold text-emerald-600 tabular-nums">₹{totalCredits.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</p>
-                  </div>
+                <CardContent className="pt-4">
+                  {currentItem?.status === 'error' ? (
+                     <div className="p-4 bg-red-50 border border-red-100 rounded-lg flex flex-col justify-center h-full">
+                       <p className="text-red-800 font-bold uppercase tracking-wider text-xs mb-1">Status: Backend Error</p>
+                       <p className="text-red-600 text-sm">Processing was aborted due to an internal failure. No transactions were extracted.</p>
+                     </div>
+                  ) : (
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Bank</p>
+                        <p className="font-semibold text-gray-900 truncate">
+                          {successfulItems.length > 0 
+                            ? (successfulItems[0].result?.bank_detection?.institution_name as string || 'Unknown')
+                            : '—'}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Type</p>
+                        <p className="font-semibold text-gray-900 capitalize">
+                          {successfulItems.length > 0 
+                            ? (successfulItems[0].result?.document_type || 'Unknown')
+                            : '—'}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Transactions</p>
+                        <p className="font-semibold text-indigo-600">{allTxns.length}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Confidence</p>
+                        <p className="font-semibold text-emerald-600">
+                          {successfulItems.length > 0 && successfulItems[0].result?.bank_detection?.confidence_score != null
+                            ? `${Math.round(Number(successfulItems[0].result.bank_detection.confidence_score) * 100)}%`
+                            : '—'}
+                        </p>
+                      </div>
+                      
+                      <div className="col-span-2 mt-2 p-3 bg-gray-50 rounded-lg border border-gray-100">
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Debits</p>
+                        <p className="text-lg font-bold text-red-600 tabular-nums">₹{totalDebits.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</p>
+                      </div>
+                      <div className="col-span-2 mt-2 p-3 bg-gray-50 rounded-lg border border-gray-100">
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Credits</p>
+                        <p className="text-lg font-bold text-emerald-600 tabular-nums">₹{totalCredits.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</p>
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
 
@@ -744,7 +759,17 @@ export default function App() {
               <div className="p-6 border-t border-gray-100 bg-gray-50 space-y-6">
                 <p className="text-xs text-gray-500 mb-4">Technical telemetry and raw outputs for the most recently processed document.</p>
                 
-                {currentItem?.result ? (
+                {currentItem?.error ? (
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2 col-span-2">
+                      <h4 className="text-xs font-bold text-red-700 uppercase tracking-wider">Backend Crash Stack Trace</h4>
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-[11px] font-mono text-red-600 overflow-auto max-h-96 shadow-sm whitespace-pre">
+                         {currentItem.error}
+                         {currentItem.result?.traceback && `\n\n${currentItem.result.traceback}`}
+                      </div>
+                    </div>
+                  </div>
+                ) : currentItem?.result ? (
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <h4 className="text-xs font-bold text-gray-700 uppercase tracking-wider">Pipeline Inspector</h4>

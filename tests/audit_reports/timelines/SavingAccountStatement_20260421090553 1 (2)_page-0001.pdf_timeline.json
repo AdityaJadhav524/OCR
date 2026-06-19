@@ -1,0 +1,115 @@
+{
+  "job_id": "JOB_20260619_193607_F46D",
+  "pdf_name": "SavingAccountStatement_20260421090553 1 (2)_page-0001.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T19:36:07.187543",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T19:36:07.217286",
+    "backend_state_available_at": "2026-06-19T19:36:40.849251",
+    "frontend_polled_at": "2026-06-19T19:36:40.912839",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T19:36:07.190018",
+    "engine_end": "2026-06-19T19:36:40.838532",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T19:36:07.217305",
+    "extraction_finished_at": "2026-06-19T19:36:40.838521",
+    "parser_started_at": "2026-06-19T19:36:40.844374",
+    "parser_finished_at": "2026-06-19T19:36:40.848965",
+    "validation_completed_at": "2026-06-19T19:36:40.849002",
+    "completed_at": "2026-06-19T19:36:40.849239"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T19:36:07.189949"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T19:36:07.217295"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T19:36:07.217310"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T19:36:40.842697",
+      {
+        "protected_row": 11,
+        "protected_tokens": [
+          "Transaction Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit AmountCredit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "BALANCE",
+          "DESCRIPTION",
+          "TRANSACTION",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T19:36:40.842708",
+      {
+        "protected_row": 65,
+        "protected_tokens": [
+          "Transaction Date",
+          "Description",
+          "Txn Reference/Instrument",
+          "Cheque No",
+          "Debit Amount)Credit AmountRunning Balance"
+        ],
+        "matched_keywords": [
+          "DATE",
+          "CREDIT",
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "TRANSACTION",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T19:36:40.842710",
+      {
+        "protected_row": 92,
+        "protected_tokens": [
+          "Total Transactlons",
+          "Number of Credits",
+          "Number of Debits",
+          "Debit Amount",
+          "Credit Amount"
+        ],
+        "matched_keywords": [
+          "CREDIT",
+          "AMOUNT",
+          "DEBIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T19:36:40.844378"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T19:36:40.848978"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T19:36:40.849250"
+    ]
+  ]
+}

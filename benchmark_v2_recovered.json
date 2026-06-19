@@ -1,0 +1,32 @@
+{
+  "YES": {
+    "ACCEPTED": 83,
+    "REJECTED": 0,
+    "document_class": "scanned",
+    "ocr_used": true
+  },
+  "HDFC": {
+    "ACCEPTED": 108,
+    "REJECTED": 13,
+    "document_class": "scanned",
+    "ocr_used": true
+  },
+  "AXIS": {
+    "ACCEPTED": 59,
+    "REJECTED": 15,
+    "document_class": "digital",
+    "ocr_used": false
+  },
+  "CC": {
+    "ACCEPTED": 14,
+    "REJECTED": 0,
+    "document_class": "scanned",
+    "ocr_used": true
+  },
+  "BOI": {
+    "ACCEPTED": 259,
+    "REJECTED": 5,
+    "document_class": "scanned",
+    "ocr_used": true
+  }
+}

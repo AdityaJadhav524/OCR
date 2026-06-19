@@ -58,7 +58,7 @@ def check_pdf_security(pdf_path: str, password: str = None) -> Dict[str, Any]:
 # Detection
 # -----------------------------------------------------------------------------
 
-def detect_document_type(pdf_path: str, password: str = None) -> str:
+def detect_document_type(pdf_path: str, password: str = None) -> Tuple[str, str]:
     """
     Detect whether a PDF is digitally-encoded or a scanned image.
     """
@@ -66,8 +66,11 @@ def detect_document_type(pdf_path: str, password: str = None) -> str:
         import fitz
 
         doc = fitz.open(pdf_path)
-        if doc.needs_pass and password:
-            doc.authenticate(password)
+        if doc.needs_pass:
+            if not password:
+                raise ValueError("PASSWORD_REQUIRED")
+            if not doc.authenticate(password):
+                raise ValueError("INVALID_PASSWORD")
             
         total_pages = len(doc)
         n_sample    = min(SAMPLE_PAGES, total_pages)
@@ -85,24 +88,34 @@ def detect_document_type(pdf_path: str, password: str = None) -> str:
 
         if not word_counts:
             logger.warning("document_router: no words found - defaulting to scanned")
-            return "scanned"
+            return "scanned", "no_words_found"
 
         avg_words = sum(word_counts) / len(word_counts)
-        doc_type  = "digital" if avg_words >= SCANNED_WORD_THRESHOLD else "scanned"
+        if avg_words >= SCANNED_WORD_THRESHOLD:
+            doc_type = "digital"
+            reason = f"avg_words_per_page={avg_words:.1f} >= {SCANNED_WORD_THRESHOLD}"
+        else:
+            doc_type = "scanned"
+            reason = f"avg_words_per_page={avg_words:.1f} < {SCANNED_WORD_THRESHOLD}"
 
         logger.info(
             "document_router: detected=%s  avg_words/page=%.1f  threshold=%d  "
             "sampled=%d/%d pages",
             doc_type, avg_words, SCANNED_WORD_THRESHOLD, n_sample, total_pages,
         )
-        return doc_type
+        return doc_type, reason
 
     except ImportError:
         logger.warning("document_router: PyMuPDF not available - defaulting to scanned")
-        return "scanned"
+        return "scanned", "pymupdf_import_error"
+    except ValueError as ve:
+        if "PASSWORD" in str(ve):
+            raise ve
+        logger.error("document_router: detection failed (%s) - defaulting to scanned", ve)
+        return "scanned", f"detection_failed: {ve}"
     except Exception as e:
         logger.error("document_router: detection failed (%s) - defaulting to scanned", e)
-        return "scanned"
+        return "scanned", f"detection_failed: {e}"
 
 
 # -----------------------------------------------------------------------------
@@ -156,10 +169,22 @@ def _extract_scanned(pdf_path: str, password: str = None) -> Tuple[str, List[str
 # -----------------------------------------------------------------------------
 
 def route_document(pdf_path: str, password: str = None) -> Tuple[str, List[str], dict, list]:
-    doc_type = detect_document_type(pdf_path, password=password)
+    doc_type, reason = detect_document_type(pdf_path, password=password)
+
+    telemetry = {
+        "classification": doc_type,
+        "classification_reason": reason,
+        "fallback": False
+    }
 
     if doc_type == "digital":
-        return _extract_digital(pdf_path, password=password)
+        telemetry["engine"] = "PyMuPDF"
+        full_text, pages, ext_stats, page_tokens = _extract_digital(pdf_path, password=password)
+        telemetry.update(ext_stats)
+        return full_text, pages, telemetry, page_tokens
     else:
-        return _extract_scanned(pdf_path, password=password)
+        telemetry["engine"] = "PaddleOCR"
+        full_text, pages, ext_stats, page_tokens = _extract_scanned(pdf_path, password=password)
+        telemetry.update(ext_stats)
+        return full_text, pages, telemetry, page_tokens
 

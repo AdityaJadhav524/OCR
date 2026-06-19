@@ -48,11 +48,11 @@ CONSERVATION_FAIL     = "FAIL"
 CONSERVATION_UNSEEDED = "UNSEEDED"
 
 _DATE_RE = re.compile(
-    r'^\s*('
+    r'\b('
     r'\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4}|'
     r'\d{2,4}[/\-\.]\d{1,2}[/\-\.]\d{1,2}|'
-    r'\d{1,2}[\s\-][A-Za-z]{3,9}[\s\-]\d{2,4}'
-    r')\s*$',
+    r'\d{1,2}[\s\-\./][A-Za-z]{3,9}[\s\-\./]\d{2,4}'
+    r')\b',
     re.IGNORECASE
 )
 
@@ -306,17 +306,43 @@ def _extract_block(
     _raw_balance_text = None
     claimed: set = set()   # indices into all_tokens
 
+    # --- Pass 0: Claim Date by merging tokens in date_zone ---
+    if date is None and date_zone:
+        date_candidates = []
+        for idx, tok in enumerate(all_tokens):
+            if _in_zone(tok["x0"], date_zone):
+                date_candidates.append((idx, tok))
+                
+        if date_candidates:
+            # 1. First try checking individual tokens (fast path for normal dates)
+            for idx, tok in date_candidates:
+                d = _prove_date(tok, date_zone)
+                if d:
+                    date = d
+                    claimed.add(idx)
+                    break
+            
+            # 2. If no individual token matched, try merging them (for space-separated dates like '02 Feb 2026')
+            if not date:
+                merged_date_str = " ".join([t["text"] for _, t in date_candidates])
+                m = _DATE_RE.search(merged_date_str)
+                if m:
+                    date = m.group(1)
+                    for idx, _ in date_candidates:
+                        claimed.add(idx)
+                else:
+                    m2 = _DATE_PREFIX_RE.match(merged_date_str)
+                    if m2:
+                        date = m2.group(1)
+                        for idx, _ in date_candidates:
+                            claimed.add(idx)
+
     # --- Pass 1: Claim structural roles in priority order ---
     # Priority: DATE > BALANCE > DEBIT > CREDIT
     # (Balance before amounts avoids mis-claiming balance tokens as credit/debit)
     for idx, tok in enumerate(all_tokens):
-        # G1: Date
-        if date is None and date_zone:
-            d = _prove_date(tok, date_zone)
-            if d:
-                date = d
-                claimed.add(idx)
-                continue
+        if idx in claimed:
+            continue
 
         # G2: Balance — FIRST valid balance wins.
         # The real transaction balance is always in the anchor row (first row of block).

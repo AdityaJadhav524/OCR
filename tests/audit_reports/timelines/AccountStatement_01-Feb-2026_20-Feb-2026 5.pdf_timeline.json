@@ -1,0 +1,80 @@
+{
+  "job_id": "JOB_20260619_173931_78F1",
+  "pdf_name": "AccountStatement_01-Feb-2026_20-Feb-2026 5.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:39:31.309696",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:39:31.336703",
+    "backend_state_available_at": "2026-06-19T17:39:31.680568",
+    "frontend_polled_at": "2026-06-19T17:39:33.314558",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T17:39:31.310349",
+    "engine_end": "2026-06-19T17:39:31.663708",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:39:31.336755",
+    "extraction_finished_at": "2026-06-19T17:39:31.663698",
+    "parser_started_at": "2026-06-19T17:39:31.674617",
+    "parser_finished_at": "2026-06-19T17:39:31.680457",
+    "validation_completed_at": "2026-06-19T17:39:31.680529",
+    "completed_at": "2026-06-19T17:39:31.680560"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:39:31.310339"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:39:31.336713"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:39:31.336757"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:39:31.669106",
+      {
+        "protected_row": 12,
+        "protected_tokens": [
+          "#",
+          "Date",
+          "Description",
+          "Chq/Ref.",
+          "No.",
+          "Withdrawal",
+          "(Dr.)",
+          "Deposit",
+          "(Cr.)",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "WITHDRAWAL",
+          "CHQ",
+          "REF",
+          "DR",
+          "CR",
+          "DEPOSIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:39:31.674629"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:39:31.680471"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:39:31.680567"
+    ]
+  ]
+}

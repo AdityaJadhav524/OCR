@@ -9,7 +9,7 @@ NEVER modifies extracted values (debit, credit, balance).
 from typing import List, Dict, Optional
 from core.validators.ledger_suspicion_detector import detect_ledger_suspicion
 
-def annotate_ledger_truth(transactions: List[Dict]) -> List[Dict]:
+def annotate_ledger_truth(transactions: List[Dict], **kwargs) -> List[Dict]:
     unresolved_chain_error = 0.0
     unresolved_chain_root = None
     unresolved_chain_root_idx = None   # index of the primary anomaly txn

@@ -1,0 +1,84 @@
+{
+  "job_id": "JOB_20260619_160530_D7FC",
+  "pdf_name": "AccountStatement_02022026_233637 4.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T16:05:30.290591",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-19T16:05:30.291309",
+    "password_validated_at": "2026-06-19T16:05:30.932905",
+    "classification_at": "2026-06-19T16:05:30.308698",
+    "backend_state_available_at": "2026-06-19T16:05:30.943205",
+    "frontend_polled_at": "2026-06-19T16:05:32.304016",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-19T16:05:30.291311",
+    "engine_end": "2026-06-19T16:05:30.932912",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T16:05:30.308712",
+    "extraction_finished_at": "2026-06-19T16:05:30.932911",
+    "parser_started_at": "2026-06-19T16:05:30.938293",
+    "parser_finished_at": "2026-06-19T16:05:30.943127",
+    "validation_completed_at": "2026-06-19T16:05:30.943178",
+    "completed_at": "2026-06-19T16:05:30.943199"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T16:05:30.291302"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T16:05:30.308706"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T16:05:30.308714"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T16:05:30.936234",
+      {
+        "protected_row": 38,
+        "protected_tokens": [
+          "Brought",
+          "Forward",
+          "(",
+          ")",
+          "Dr",
+          "Count",
+          "Cr",
+          "Count",
+          "Total",
+          "Debits",
+          "(",
+          ")",
+          "Total",
+          "Credits",
+          "(",
+          ")",
+          "Closing",
+          "Balance",
+          "(",
+          ")"
+        ],
+        "matched_keywords": [
+          "CR",
+          "BALANCE",
+          "DR"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T16:05:30.938302"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T16:05:30.943136"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T16:05:30.943204"
+    ]
+  ]
+}

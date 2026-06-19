@@ -1,0 +1,11 @@
+{
+  "commit": "75395b804e661d723e6a2250eb89400da4356064",
+  "tag": "BASELINE_V2_RECOVERED",
+  "results": {
+    "BOI": {"accepted":259,"rejected":5},
+    "YES": {"accepted":83,"rejected":0},
+    "HDFC": {"accepted":108,"rejected":13},
+    "AXIS": {"accepted":59,"rejected":15},
+    "CC": {"accepted":14,"rejected":0}
+  }
+}

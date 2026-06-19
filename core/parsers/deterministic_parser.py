@@ -712,6 +712,15 @@ def parse_deterministic_transactions(full_text: str):
     global_candidate_rows = sum(page_candidate_rows.values())
     
     telemetry = {
+        "header_candidates": ["Balance-Delta Solver (No Headers Used)"],
+        "chosen_header": "N/A",
+        "zones": {},
+        "rows_detected": global_candidate_rows,
+        "rows_accepted": 0,
+        "rows_rejected": 0,
+        "reject_reasons": {},
+        "abort_reason": None,
+        
         "candidate_transaction_rows": global_candidate_rows,
         "extracted_transactions": 0,
         "missing_ratio": 1.0,
@@ -919,8 +928,18 @@ def parse_deterministic_transactions(full_text: str):
         
     if hard_fail:
         telemetry["status"] = "FAIL"
+        telemetry["abort_reason"] = telemetry["hard_failure"]
+        telemetry["rows_accepted"] = 0
+        telemetry["rows_rejected"] = len(raw_rows)
+        if len(raw_rows) > 0:
+            telemetry["reject_reasons"] = {"solver_failed": len(raw_rows)}
         logger.error(f"Deterministic Parser HARD FAILURE: {telemetry['hard_failure']}")
         return [], telemetry
+
+    telemetry["rows_accepted"] = extracted
+    telemetry["rows_rejected"] = telemetry["rejected_rows"]
+    if telemetry["rejected_rows"] > 0:
+        telemetry["reject_reasons"] = {"balance_solver_rejection": telemetry["rejected_rows"]}
 
     # Warning status
     if (0.05 <= telemetry["missing_ratio"] <= 0.15) or \

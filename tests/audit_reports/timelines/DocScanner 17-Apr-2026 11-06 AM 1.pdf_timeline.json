@@ -1,0 +1,74 @@
+{
+  "job_id": "JOB_20260619_172539_4680",
+  "pdf_name": "DocScanner 17-Apr-2026 11-06 AM 1.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T17:25:39.971486",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T17:35:44.671212",
+    "backend_state_available_at": "2026-06-19T17:35:57.459402",
+    "frontend_polled_at": "2026-06-19T17:36:14.337039",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T17:35:44.667556",
+    "engine_end": "2026-06-19T17:35:57.453249",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T17:35:44.671223",
+    "extraction_finished_at": "2026-06-19T17:35:57.453240",
+    "parser_started_at": "2026-06-19T17:35:57.454851",
+    "parser_finished_at": "2026-06-19T17:35:57.459188",
+    "validation_completed_at": "2026-06-19T17:35:57.459251",
+    "completed_at": "2026-06-19T17:35:57.459387"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T17:35:44.667534"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T17:35:44.671219"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T17:35:44.671225"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T17:35:57.454830",
+      {
+        "protected_row": 17,
+        "protected_tokens": [
+          "Date",
+          "Description",
+          "Chq/Ret.No.",
+          "Withdrawal (Dr.)Deposit (Cr.)",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "DATE",
+          "DESCRIPTION",
+          "WITHDRAWAL",
+          "CHQ",
+          "DR",
+          "CR",
+          "DEPOSIT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T17:35:57.454853"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T17:35:57.459196"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T17:35:57.459400"
+    ]
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "job_id": "JOB_20260618_164851_1E4C",
+  "pdf_name": "YESBANK_SAVINGS_DIGITAL.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-18T16:48:51.531636",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-18T16:48:51.532062",
+    "password_validated_at": "2026-06-18T16:49:35.369261",
+    "classification_at": "2026-06-18T16:48:51.543446",
+    "backend_state_available_at": "2026-06-18T16:49:35.385680",
+    "frontend_polled_at": "2026-06-18T16:49:37.403927",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-18T16:48:51.532065",
+    "engine_end": "2026-06-18T16:49:35.369269",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-18T16:48:51.543457",
+    "extraction_finished_at": "2026-06-18T16:49:35.369268",
+    "parser_started_at": "2026-06-18T16:49:35.377617",
+    "parser_finished_at": "2026-06-18T16:49:35.385395",
+    "validation_completed_at": "2026-06-18T16:49:35.385592",
+    "completed_at": "2026-06-18T16:49:35.385672"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-18T16:48:51.532059"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-18T16:48:51.543452"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-18T16:48:51.543457"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-18T16:49:35.374433",
+      {
+        "protected_row": 22,
+        "protected_tokens": [
+          "Date",
+          "Narration",
+          "Chq/Ref.No.",
+          "Value Dt",
+          "Withdrawal Amt.",
+          "Deposit Amt.",
+          "Closing Balance"
+        ],
+        "matched_keywords": [
+          "BALANCE",
+          "REF",
+          "DEPOSIT",
+          "CHQ",
+          "NARRATION",
+          "WITHDRAWAL",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-18T16:49:35.377621"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-18T16:49:35.385404"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-18T16:49:35.385678"
+    ]
+  ]
+}

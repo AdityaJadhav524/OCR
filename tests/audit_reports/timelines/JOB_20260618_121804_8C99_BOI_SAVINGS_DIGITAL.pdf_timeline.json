@@ -1,0 +1,73 @@
+{
+  "job_id": "JOB_20260618_161333_5935",
+  "pdf_name": "JOB_20260618_121804_8C99_BOI_SAVINGS_DIGITAL.pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-18T16:13:33.717568",
+    "password_detected_at": null,
+    "password_received_at": "2026-06-18T16:13:33.718031",
+    "password_validated_at": "2026-06-18T16:13:33.993578",
+    "classification_at": "2026-06-18T16:13:33.734870",
+    "backend_state_available_at": "2026-06-18T16:13:34.005221",
+    "frontend_polled_at": "2026-06-18T16:13:34.008221",
+    "engine": "PyMuPDF",
+    "engine_start": "2026-06-18T16:13:33.718035",
+    "engine_end": "2026-06-18T16:13:33.993584",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-18T16:13:33.734882",
+    "extraction_finished_at": "2026-06-18T16:13:33.993583",
+    "parser_started_at": "2026-06-18T16:13:33.999082",
+    "parser_finished_at": "2026-06-18T16:13:34.005041",
+    "validation_completed_at": "2026-06-18T16:13:34.005074",
+    "completed_at": "2026-06-18T16:13:34.005213"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-18T16:13:33.718027"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-18T16:13:33.734877"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-18T16:13:33.734883"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-18T16:13:33.997453",
+      {
+        "protected_row": 24,
+        "protected_tokens": [
+          "Date",
+          "Particulars",
+          "Chq/Vouch",
+          "Withdrawal",
+          "Deposit",
+          "Balance"
+        ],
+        "matched_keywords": [
+          "CHQ",
+          "PARTICULARS",
+          "WITHDRAWAL",
+          "DEPOSIT",
+          "BALANCE",
+          "DATE"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-18T16:13:33.999086"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-18T16:13:34.005046"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-18T16:13:34.005220"
+    ]
+  ]
+}

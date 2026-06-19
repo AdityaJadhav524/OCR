@@ -1,0 +1,80 @@
+[
+  {
+    "page": 4,
+    "date": "23/05/25",
+    "prev_balance": 691773.7,
+    "debit": 80.0,
+    "credit": 0.0,
+    "expected_balance": 691693.7,
+    "actual_balance": 701079.52,
+    "difference": 9385.820000000065,
+    "raw_debit": "80.00",
+    "raw_credit": null,
+    "raw_balance": "701,079.52"
+  },
+  {
+    "page": 6,
+    "date": "29/05/25",
+    "prev_balance": 697680.42,
+    "debit": 116.0,
+    "credit": 0.0,
+    "expected_balance": 697564.42,
+    "actual_balance": 698634.42,
+    "difference": 1070.0,
+    "raw_debit": "116.00",
+    "raw_credit": null,
+    "raw_balance": "698,634.42"
+  },
+  {
+    "page": 7,
+    "date": "01/05/25",
+    "prev_balance": 697729.42,
+    "debit": 30.0,
+    "credit": 0.0,
+    "expected_balance": 697699.42,
+    "actual_balance": 775733.61,
+    "difference": 78034.18999999994,
+    "raw_debit": "30.00",
+    "raw_credit": null,
+    "raw_balance": "775,733.61"
+  },
+  {
+    "page": 9,
+    "date": "03/05/25",
+    "prev_balance": 694693.42,
+    "debit": 500.0,
+    "credit": 0.0,
+    "expected_balance": 694193.42,
+    "actual_balance": 775514.97,
+    "difference": 81321.54999999993,
+    "raw_debit": "500.00",
+    "raw_credit": null,
+    "raw_balance": "775,514.97"
+  },
+  {
+    "page": 10,
+    "date": "09/05/25",
+    "prev_balance": 760477.97,
+    "debit": 0.0,
+    "credit": 1690.0,
+    "expected_balance": 762167.97,
+    "actual_balance": 754960.39,
+    "difference": 7207.579999999958,
+    "raw_debit": null,
+    "raw_credit": "1,690.00",
+    "raw_balance": "754,960.39"
+  },
+  {
+    "page": 11,
+    "date": "06/05/25",
+    "prev_balance": 735607.39,
+    "debit": 130.0,
+    "credit": 0.0,
+    "expected_balance": 735477.39,
+    "actual_balance": 760347.97,
+    "difference": 24870.579999999958,
+    "raw_debit": "130.00",
+    "raw_credit": null,
+    "raw_balance": "760,347.97"
+  }
+]

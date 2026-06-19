@@ -103,7 +103,7 @@ def parse_statement(file_path: str, password: str = None) -> list:
     logger.info("STEP 1 — Extracting text from: %s", abs_path)
 
     if ext == ".pdf":
-        full_text, pages, merge_stats, page_tokens = route_document(abs_path, password=password)
+        full_text, pages, routing_telemetry, page_tokens = route_document(abs_path, password=password)
         if not full_text or not full_text.strip():
             raise ValueError("PDF text extraction returned empty content.")
     elif ext in (".csv", ".xlsx", ".xls"):
@@ -111,6 +111,8 @@ def parse_statement(file_path: str, password: str = None) -> list:
         df = pd.read_csv(abs_path) if ext == ".csv" else pd.read_excel(abs_path)
         full_text = df.to_string(index=False)
         pages = _split_pages(full_text)
+        routing_telemetry = {"classification": "spreadsheet", "engine": "pandas", "fallback": False}
+        page_tokens = []
     else:
         raise ValueError(
             f"Unsupported file type: {ext!r}. Supported: .pdf  .csv  .xlsx  .xls"
@@ -158,7 +160,12 @@ def parse_statement(file_path: str, password: str = None) -> list:
     
     return {
         "transactions": normalized,
-        "audit": audit_results
+        "audit": audit_results,
+        "extraction_telemetry": {
+            "routing": routing_telemetry,
+            "parser": telemetry if 'telemetry' in locals() else {},
+            "tokens": len(page_tokens)
+        }
     }
 
 
