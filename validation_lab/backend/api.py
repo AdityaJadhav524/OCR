@@ -912,7 +912,7 @@ async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = 
                     txns, tel = parse_credit_card_transactions(page_tokens)
                     parser_used_name = "credit_card_parser"
                 else:
-                    pdf_type = "SCANNED" if "SCANNED" in base_name.upper() else "DIGITAL"
+                    pdf_type = "SCANNED" if doc_class == "SCANNED" else "DIGITAL"
                     txns, tel = parse_with_coordinates(
                         page_tokens, 
                         pdf_name=pdf_name, 
@@ -927,8 +927,39 @@ async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = 
                 tracker.log_state("VALIDATING")
                 # 3. Validation
                 doc_family = identity.get("family", "BANK_STATEMENT") if "identity" in locals() and identity else "BANK_STATEMENT"
-                final_txns = annotate_ledger_truth(txns, document_family=doc_family, full_text=full_text)
+                final_txns = annotate_ledger_truth(txns)
                 tracker.stamp("validation_completed_at")
+
+                # ── Ledger Audit Annotation (NON-DESTRUCTIVE) ─────────────────
+                # Add side-by-side comparison fields so the frontend and audit
+                # scripts can measure OCR vs ledger agreement WITHOUT touching
+                # the canonical debit / credit values.
+                for txn in final_txns:
+                    ocr_dr = txn.get("debit")
+                    ocr_cr = txn.get("credit")
+                    lt     = txn.get("ledger_truth", {})
+
+                    txn["ocr_debit"]  = ocr_dr
+                    txn["ocr_credit"] = ocr_cr
+
+                    if lt.get("available"):
+                        led_dir = lt.get("expected_direction")
+                        led_amt = lt.get("expected_delta", 0)
+                        txn["ledger_debit"]  = led_amt if led_dir == "debit"  else None
+                        txn["ledger_credit"] = led_amt if led_dir == "credit" else None
+
+                        # direction_match: True if both OCR and ledger agree
+                        # on which side of the ledger this row is
+                        ocr_dir = "debit" if ocr_dr is not None else ("credit" if ocr_cr is not None else None)
+                        txn["direction_match"] = (ocr_dir == led_dir) if ocr_dir else None
+                        txn["ledger_amount_match"] = (
+                            abs((ocr_dr if ocr_dr is not None else (ocr_cr or 0)) - led_amt) <= 1.50
+                        ) if ocr_dir else None
+                    else:
+                        txn["ledger_debit"]  = None
+                        txn["ledger_credit"] = None
+                        txn["direction_match"] = None
+                        txn["ledger_amount_match"] = None
 
                 BENCHMARK_JOBS[job_id]["stage"] = "Finalizing Results"
                 # Enriched metadata
@@ -976,6 +1007,8 @@ async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = 
                     "bank": bank_name,
                     "bank_name": bank_name,
                     "document_class": doc_class,
+                    "document_type": doc_class.lower() if doc_class else "unknown",
+                    "bank_detection": identity if identity else {},
                     "parser_used": parser_used_name,
                     "ocr_used": doc_class != "DIGITAL",
                     "token_count": token_count_val,

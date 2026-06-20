@@ -1,43 +1,43 @@
 {
-  "job_id": "JOB_20260619_172539_4680",
+  "job_id": "JOB_20260620_100023_B5C9",
   "pdf_name": "YESBANK_page-0001.pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T17:25:39.971480",
+    "uploaded_at": "2026-06-20T10:00:23.528117",
     "password_detected_at": null,
     "password_received_at": null,
     "password_validated_at": null,
-    "classification_at": "2026-06-19T17:34:14.218433",
-    "backend_state_available_at": "2026-06-19T17:35:25.288233",
-    "frontend_polled_at": "2026-06-19T17:36:14.334431",
+    "classification_at": "2026-06-20T10:06:21.762084",
+    "backend_state_available_at": "2026-06-20T10:07:14.510050",
+    "frontend_polled_at": "2026-06-20T10:07:50.534556",
     "engine": "PaddleOCR",
-    "engine_start": "2026-06-19T17:34:14.214148",
-    "engine_end": "2026-06-19T17:35:25.254544",
+    "engine_start": "2026-06-20T10:06:21.755337",
+    "engine_end": "2026-06-20T10:07:14.466251",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T17:34:14.218442",
-    "extraction_finished_at": "2026-06-19T17:35:25.254537",
-    "parser_started_at": "2026-06-19T17:35:25.268173",
-    "parser_finished_at": "2026-06-19T17:35:25.287636",
-    "validation_completed_at": "2026-06-19T17:35:25.287988",
-    "completed_at": "2026-06-19T17:35:25.288222"
+    "extraction_started_at": "2026-06-20T10:06:21.762104",
+    "extraction_finished_at": "2026-06-20T10:07:14.466243",
+    "parser_started_at": "2026-06-20T10:07:14.476475",
+    "parser_finished_at": "2026-06-20T10:07:14.509670",
+    "validation_completed_at": "2026-06-20T10:07:14.509882",
+    "completed_at": "2026-06-20T10:07:14.510041"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T17:34:14.214141"
+      "2026-06-20T10:06:21.755326"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T17:34:14.218438"
+      "2026-06-20T10:06:21.762096"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T17:34:14.218443"
+      "2026-06-20T10:06:21.762106"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:35:25.261595",
+      "2026-06-20T10:07:14.472000",
       {
-        "protected_row": 22,
+        "protected_row": 21,
         "protected_tokens": [
           "Date",
           "Narration",
@@ -48,28 +48,28 @@
           "Closing Balance"
         ],
         "matched_keywords": [
-          "BALANCE",
-          "DATE",
-          "WITHDRAWAL",
-          "CHQ",
           "REF",
           "NARRATION",
-          "DEPOSIT"
+          "CHQ",
+          "BALANCE",
+          "DEPOSIT",
+          "WITHDRAWAL",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PARSING",
-      "2026-06-19T17:35:25.268182"
+      "2026-06-20T10:07:14.476481"
     ],
     [
       "VALIDATING",
-      "2026-06-19T17:35:25.287647"
+      "2026-06-20T10:07:14.509679"
     ],
     [
       "COMPLETED",
-      "2026-06-19T17:35:25.288232"
+      "2026-06-20T10:07:14.510049"
     ]
   ]
 }

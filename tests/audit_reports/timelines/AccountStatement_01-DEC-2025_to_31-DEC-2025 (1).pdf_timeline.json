@@ -1,43 +1,43 @@
 {
-  "job_id": "JOB_20260619_193544_7022",
+  "job_id": "JOB_20260620_095902_D368",
   "pdf_name": "AccountStatement_01-DEC-2025_to_31-DEC-2025 (1).pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T19:35:44.655072",
+    "uploaded_at": "2026-06-20T09:59:02.980907",
     "password_detected_at": null,
     "password_received_at": null,
     "password_validated_at": null,
-    "classification_at": "2026-06-19T19:35:44.836419",
-    "backend_state_available_at": "2026-06-19T19:35:47.088163",
-    "frontend_polled_at": "2026-06-19T19:35:47.093211",
+    "classification_at": "2026-06-20T09:59:03.003208",
+    "backend_state_available_at": "2026-06-20T09:59:04.166724",
+    "frontend_polled_at": "2026-06-20T09:59:15.233013",
     "engine": "PyMuPDF",
-    "engine_start": "2026-06-19T19:35:44.727000",
-    "engine_end": "2026-06-19T19:35:47.002047",
+    "engine_start": "2026-06-20T09:59:02.981839",
+    "engine_end": "2026-06-20T09:59:04.106422",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T19:35:44.836441",
-    "extraction_finished_at": "2026-06-19T19:35:47.002035",
-    "parser_started_at": "2026-06-19T19:35:47.037616",
-    "parser_finished_at": "2026-06-19T19:35:47.086782",
-    "validation_completed_at": "2026-06-19T19:35:47.087267",
-    "completed_at": "2026-06-19T19:35:47.088139"
+    "extraction_started_at": "2026-06-20T09:59:03.003223",
+    "extraction_finished_at": "2026-06-20T09:59:04.106411",
+    "parser_started_at": "2026-06-20T09:59:04.125357",
+    "parser_finished_at": "2026-06-20T09:59:04.166049",
+    "validation_completed_at": "2026-06-20T09:59:04.166366",
+    "completed_at": "2026-06-20T09:59:04.166704"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T19:35:44.726980"
+      "2026-06-20T09:59:02.981830"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T19:35:44.836431"
+      "2026-06-20T09:59:03.003217"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T19:35:44.836444"
+      "2026-06-20T09:59:03.003224"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:35:47.023736",
+      "2026-06-20T09:59:04.116254",
       {
-        "protected_row": 19,
+        "protected_row": 20,
         "protected_tokens": [
           "Date",
           "Value",
@@ -53,20 +53,20 @@
           "Dr/Cr"
         ],
         "matched_keywords": [
-          "DATE",
           "CR",
           "BALANCE",
+          "PARTICULARS",
           "DR",
-          "PARTICULARS"
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:35:47.023750",
+      "2026-06-20T09:59:04.116268",
       {
-        "protected_row": 39,
+        "protected_row": 41,
         "protected_tokens": [
           "Date",
           "Value",
@@ -82,20 +82,20 @@
           "Dr/Cr"
         ],
         "matched_keywords": [
-          "DATE",
           "CR",
           "BALANCE",
+          "PARTICULARS",
           "DR",
-          "PARTICULARS"
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:35:47.023754",
+      "2026-06-20T09:59:04.116270",
       {
-        "protected_row": 70,
+        "protected_row": 73,
         "protected_tokens": [
           "Date",
           "Value",
@@ -111,20 +111,20 @@
           "Dr/Cr"
         ],
         "matched_keywords": [
-          "DATE",
           "CR",
           "BALANCE",
+          "PARTICULARS",
           "DR",
-          "PARTICULARS"
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:35:47.023756",
+      "2026-06-20T09:59:04.116272",
       {
-        "protected_row": 100,
+        "protected_row": 104,
         "protected_tokens": [
           "Date",
           "Value",
@@ -140,20 +140,20 @@
           "Dr/Cr"
         ],
         "matched_keywords": [
-          "DATE",
           "CR",
           "BALANCE",
+          "PARTICULARS",
           "DR",
-          "PARTICULARS"
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:35:47.023758",
+      "2026-06-20T09:59:04.116274",
       {
-        "protected_row": 131,
+        "protected_row": 135,
         "protected_tokens": [
           "Date",
           "Value",
@@ -169,26 +169,26 @@
           "Dr/Cr"
         ],
         "matched_keywords": [
-          "DATE",
           "CR",
           "BALANCE",
+          "PARTICULARS",
           "DR",
-          "PARTICULARS"
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PARSING",
-      "2026-06-19T19:35:47.037636"
+      "2026-06-20T09:59:04.125369"
     ],
     [
       "VALIDATING",
-      "2026-06-19T19:35:47.086801"
+      "2026-06-20T09:59:04.166066"
     ],
     [
       "COMPLETED",
-      "2026-06-19T19:35:47.088159"
+      "2026-06-20T09:59:04.166721"
     ]
   ]
 }

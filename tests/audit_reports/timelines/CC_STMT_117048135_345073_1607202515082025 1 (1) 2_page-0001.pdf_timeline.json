@@ -1,102 +1,85 @@
 {
-  "job_id": "JOB_20260619_172539_4680",
+  "job_id": "JOB_20260620_100023_B5C9",
   "pdf_name": "CC_STMT_117048135_345073_1607202515082025 1 (1) 2_page-0001.pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T17:25:39.971476",
+    "uploaded_at": "2026-06-20T10:00:23.528114",
     "password_detected_at": null,
     "password_received_at": null,
     "password_validated_at": null,
-    "classification_at": "2026-06-19T17:33:28.189099",
-    "backend_state_available_at": "2026-06-19T17:34:14.213258",
-    "frontend_polled_at": "2026-06-19T17:36:14.333251",
+    "classification_at": "2026-06-20T10:05:39.264730",
+    "backend_state_available_at": "2026-06-20T10:06:21.752083",
+    "frontend_polled_at": "2026-06-20T10:07:50.533969",
     "engine": "PaddleOCR",
-    "engine_start": "2026-06-19T17:33:28.180794",
-    "engine_end": "2026-06-19T17:34:14.193637",
+    "engine_start": "2026-06-20T10:05:39.257656",
+    "engine_end": "2026-06-20T10:06:21.714605",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T17:33:28.189120",
-    "extraction_finished_at": "2026-06-19T17:34:14.193630",
-    "parser_started_at": "2026-06-19T17:34:14.201051",
-    "parser_finished_at": "2026-06-19T17:34:14.213046",
-    "validation_completed_at": "2026-06-19T17:34:14.213078",
-    "completed_at": "2026-06-19T17:34:14.213250"
+    "extraction_started_at": "2026-06-20T10:05:39.264750",
+    "extraction_finished_at": "2026-06-20T10:06:21.714594",
+    "parser_started_at": "2026-06-20T10:06:21.725639",
+    "parser_finished_at": "2026-06-20T10:06:21.751804",
+    "validation_completed_at": "2026-06-20T10:06:21.751845",
+    "completed_at": "2026-06-20T10:06:21.752064"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T17:33:28.180781"
+      "2026-06-20T10:05:39.257647"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T17:33:28.189111"
+      "2026-06-20T10:05:39.264741"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T17:33:28.189122"
+      "2026-06-20T10:05:39.264752"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:34:14.198973",
+      "2026-06-20T10:06:21.722439",
       {
-        "protected_row": 33,
+        "protected_row": 64,
         "protected_tokens": [
           "Date",
           "Transaction Details",
-          "Amount (in)"
+          "Amount (in )",
+          "EGYFTR"
         ],
         "matched_keywords": [
-          "DATE",
           "TRANSACTION",
-          "AMOUNT"
+          "AMOUNT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:34:14.198979",
+      "2026-06-20T10:06:21.722448",
       {
-        "protected_row": 71,
-        "protected_tokens": [
-          "Date",
-          "Transaction Details",
-          "Amount (in )"
-        ],
-        "matched_keywords": [
-          "DATE",
-          "TRANSACTION",
-          "AMOUNT"
-        ],
-        "reason": "STRUCTURAL_HEADER_CANDIDATE"
-      }
-    ],
-    [
-      "PROTECTED_HEADER",
-      "2026-06-19T17:34:14.198980",
-      {
-        "protected_row": 125,
+        "protected_row": 116,
         "protected_tokens": [
           "timely credit to your card account and avoid levy of penal charges.",
           "period during which there is any transaction/payment or any amount"
         ],
         "matched_keywords": [
-          "CREDIT",
           "TRANSACTION",
-          "AMOUNT"
+          "AMOUNT",
+          "CREDIT"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PARSING",
-      "2026-06-19T17:34:14.201055"
+      "2026-06-20T10:06:21.725644"
     ],
     [
       "VALIDATING",
-      "2026-06-19T17:34:14.213055"
+      "2026-06-20T10:06:21.751817"
     ],
     [
       "COMPLETED",
-      "2026-06-19T17:34:14.213257"
+      "2026-06-20T10:06:21.752080"
     ]
   ]
 }

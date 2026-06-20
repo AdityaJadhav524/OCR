@@ -1,43 +1,43 @@
 {
-  "job_id": "JOB_20260619_193821_39C9",
+  "job_id": "JOB_20260620_074737_2682",
   "pdf_name": "E_STATEMENT_20260301_20260331_054506_27011738 1.pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T19:38:21.051130",
+    "uploaded_at": "2026-06-20T07:47:37.004010",
     "password_detected_at": null,
-    "password_received_at": "2026-06-19T19:38:21.051958",
-    "password_validated_at": "2026-06-19T19:38:22.477668",
-    "classification_at": "2026-06-19T19:38:21.087667",
-    "backend_state_available_at": "2026-06-19T19:38:22.508889",
-    "frontend_polled_at": "2026-06-19T19:38:23.071255",
+    "password_received_at": "2026-06-20T07:47:37.005162",
+    "password_validated_at": "2026-06-20T07:47:38.247030",
+    "classification_at": "2026-06-20T07:47:37.065861",
+    "backend_state_available_at": "2026-06-20T07:47:38.271892",
+    "frontend_polled_at": "2026-06-20T07:47:39.296164",
     "engine": "PyMuPDF",
-    "engine_start": "2026-06-19T19:38:21.051962",
-    "engine_end": "2026-06-19T19:38:22.477683",
+    "engine_start": "2026-06-20T07:47:37.005167",
+    "engine_end": "2026-06-20T07:47:38.247039",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T19:38:21.087707",
-    "extraction_finished_at": "2026-06-19T19:38:22.477681",
-    "parser_started_at": "2026-06-19T19:38:22.493325",
-    "parser_finished_at": "2026-06-19T19:38:22.508585",
-    "validation_completed_at": "2026-06-19T19:38:22.508728",
-    "completed_at": "2026-06-19T19:38:22.508875"
+    "extraction_started_at": "2026-06-20T07:47:37.065881",
+    "extraction_finished_at": "2026-06-20T07:47:38.247037",
+    "parser_started_at": "2026-06-20T07:47:38.258383",
+    "parser_finished_at": "2026-06-20T07:47:38.271393",
+    "validation_completed_at": "2026-06-20T07:47:38.271540",
+    "completed_at": "2026-06-20T07:47:38.271880"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T19:38:21.051951"
+      "2026-06-20T07:47:37.005146"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T19:38:21.087677"
+      "2026-06-20T07:47:37.065872"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T19:38:21.087714"
+      "2026-06-20T07:47:37.065884"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:38:22.486738",
+      "2026-06-20T07:47:38.254119",
       {
-        "protected_row": 17,
+        "protected_row": 18,
         "protected_tokens": [
           "Transaction",
           "Details",
@@ -48,20 +48,19 @@
           "CR"
         ],
         "matched_keywords": [
+          "TRANSACTION",
           "CR",
-          "BALANCE",
-          "TRANSACTION"
+          "BALANCE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:38:22.486746",
+      "2026-06-20T07:47:38.254128",
       {
-        "protected_row": 19,
+        "protected_row": 21,
         "protected_tokens": [
-          "Transaction",
           "Description",
           "Cheque",
           "No.",
@@ -70,20 +69,19 @@
           "Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
           "DESCRIPTION",
-          "TRANSACTION",
-          "DEBIT"
+          "CREDIT",
+          "DEBIT",
+          "BALANCE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:38:22.486747",
+      "2026-06-20T07:47:38.254130",
       {
-        "protected_row": 273,
+        "protected_row": 319,
         "protected_tokens": [
           "Total",
           "Transactions",
@@ -99,8 +97,8 @@
           "Amount"
         ],
         "matched_keywords": [
-          "CREDIT",
           "AMOUNT",
+          "CREDIT",
           "DEBIT"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
@@ -108,15 +106,15 @@
     ],
     [
       "PARSING",
-      "2026-06-19T19:38:22.493334"
+      "2026-06-20T07:47:38.258390"
     ],
     [
       "VALIDATING",
-      "2026-06-19T19:38:22.508593"
+      "2026-06-20T07:47:38.271403"
     ],
     [
       "COMPLETED",
-      "2026-06-19T19:38:22.508887"
+      "2026-06-20T07:47:38.271890"
     ]
   ]
 }

@@ -79,7 +79,7 @@ function UploadZone({ onFiles }: { onFiles: (f: File[]) => void }) {
           : "border-gray-200 bg-gray-50 hover:border-indigo-300 hover:bg-indigo-50/40"
       )}
     >
-      <input type="file" accept=".pdf" multiple className="hidden" onChange={e => {
+      <input id="file-upload" type="file" accept=".pdf" multiple className="hidden" onChange={e => {
         const files = Array.from(e.target.files || [])
         if (files.length > 0) onFiles(files)
         e.target.value = ''
@@ -88,6 +88,31 @@ function UploadZone({ onFiles }: { onFiles: (f: File[]) => void }) {
       <span className="text-lg font-semibold text-gray-700">Drop PDF Here</span>
       <span className="text-sm font-medium text-indigo-600 border border-indigo-200 bg-indigo-50 rounded-md px-3 py-1 mt-2">Choose Files</span>
     </label>
+  )
+}
+
+// ── Components ───────────────────────────────────────────────────────────────
+function BankListDisplay({ banks }: { banks: string[] }) {
+  const [open, setOpen] = React.useState(false)
+  if (banks.length === 0) return <span>—</span>
+  if (banks.length === 1) return <span className="truncate block" title={banks[0]}>{banks[0]}</span>
+  
+  if (open) {
+    return (
+      <div className="flex flex-col gap-1 mt-1">
+        {banks.map((b, i) => <span key={i} className="text-xs leading-tight">{b}</span>)}
+        <button onClick={() => setOpen(false)} className="text-[10px] text-indigo-600 font-bold uppercase mt-1 self-start hover:text-indigo-800 transition-colors">Hide List</button>
+      </div>
+    )
+  }
+  
+  return (
+    <div className="flex items-center gap-1.5 flex-wrap">
+      <span className="truncate max-w-[100px] inline-block" title={banks[0]}>{banks[0]}</span>
+      <button onClick={() => setOpen(true)} className="px-1.5 py-0.5 rounded bg-gray-100 hover:bg-gray-200 text-[10px] font-bold text-gray-600 transition-colors shrink-0">
+        +{banks.length - 1} MORE
+      </button>
+    </div>
   )
 }
 
@@ -105,11 +130,15 @@ export default function App() {
     capsLock: false
   })
 
+  const [liveStatus, setLiveStatus] = useState<{stage: string, live_result?: any} | null>(null)
+
   // Helpers for aggregated view
   const allTxns = useMemo(() => queue.flatMap(q => q.result?.transactions || q.result?.final_transactions || []), [queue])
   const successfulItems = queue.filter(q => q.status === 'success')
-  const totalDebits = allTxns.reduce((s, t) => s + (parseFloat(String(t.debit || 0)) || 0), 0)
+
+  const totalDebits  = allTxns.reduce((s, t) => s + (parseFloat(String(t.debit  || 0)) || 0), 0)
   const totalCredits = allTxns.reduce((s, t) => s + (parseFloat(String(t.credit || 0)) || 0), 0)
+  const totalProcessingTimeMs = successfulItems.reduce((acc, item) => acc + (item.result?.processing_time_ms || 0), 0)
   
   const currentItem = queue.find(q => q.status === 'processing') || queue[queue.length - 1]
   const isQueueDone = queue.length > 0 && !queue.some(q => q.status === 'pending' || q.status === 'processing' || q.status === 'password_required')
@@ -130,6 +159,7 @@ export default function App() {
     setQueue([])
     setIsProcessingQueue(false)
     setPasswordState({ activeItemId: null, input: '', show: false, capsLock: false })
+    setLiveStatus(null)
   }
 
   React.useEffect(() => {
@@ -176,6 +206,9 @@ export default function App() {
           if (statusData.status === 'completed' || statusData.status === 'error') {
             clearInterval(poll)
             setIsProcessingQueue(false)
+            setLiveStatus(null)
+          } else if (statusData.stage) {
+            setLiveStatus({ stage: statusData.stage, live_result: statusData.live_result })
           }
 
           // Update queue statuses based on results
@@ -241,6 +274,9 @@ export default function App() {
           if (statusData.status === 'completed' || statusData.status === 'error') {
             clearInterval(poll)
             setIsProcessingQueue(false)
+            setLiveStatus(null)
+          } else if (statusData.stage) {
+            setLiveStatus({ stage: statusData.stage, live_result: statusData.live_result })
           }
 
           if (statusData.results && statusData.results.length > 0) {
@@ -343,7 +379,11 @@ export default function App() {
                 Dashboard
               </button>
             </div>
-            <button onClick={clearSession} className="px-3 py-1.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
+            <button onClick={() => {
+              clearSession();
+              setActiveTab('upload');
+              setTimeout(() => document.getElementById('file-upload')?.click(), 100);
+            }} className="px-3 py-1.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
               New Document
             </button>
             <button onClick={() => {
@@ -513,8 +553,8 @@ export default function App() {
                      const res = q.result as any
                      if (!res || q.status !== 'success') return null;
                      const txns = res.transactions || []
-                     const debits = txns.reduce((sum: number, t: any) => sum + (parseFloat(String(t.debit||0))||0), 0)
-                     const credits = txns.reduce((sum: number, t: any) => sum + (parseFloat(String(t.credit||0))||0), 0)
+                     const debits  = txns.reduce((sum: number, t: any) => sum + (parseFloat(String(t.debit  || 0)) || 0), 0)
+                     const credits = txns.reduce((sum: number, t: any) => sum + (parseFloat(String(t.credit || 0)) || 0), 0)
                      const opening = txns.length > 0 ? (parseFloat(String(txns[0].balance||0)) - parseFloat(String(txns[0].credit||0)) + parseFloat(String(txns[0].debit||0))) : 0
                      const closing = txns.length > 0 ? parseFloat(String(txns[txns.length-1].balance||0)) : 0
 
@@ -564,32 +604,49 @@ export default function App() {
                 <CardTitle className="text-sm font-bold text-gray-800 tracking-wide uppercase">Status</CardTitle>
               </CardHeader>
               <CardContent className="pt-4 space-y-3">
-                {renderStatusCheck('PDF Loaded', true, false, false)}
-                {renderStatusCheck('OCR Complete', 
-                  currentItem?.result?.stages?.some((s: any) => s.name.includes('OCR') && s.status === 'SUCCESS') ?? false, 
-                  currentItem?.result?.stages?.some((s: any) => s.name.includes('OCR') && s.status === 'ERROR') ?? false,
-                  Boolean(currentItem?.status === 'processing' && !currentItem?.result?.stages?.some((s: any) => s.name.includes('OCR')))
-                )}
-                {renderStatusCheck('Bank Detected', 
-                  currentItem?.result?.stages?.some((s: any) => s.name === 'Bank Detection' && s.status === 'SUCCESS') ?? false,
-                  currentItem?.result?.stages?.some((s: any) => s.name === 'Bank Detection' && s.status === 'ERROR') ?? false,
-                  Boolean(currentItem?.status === 'processing' && currentItem?.result?.stages?.some((s: any) => s.name.includes('OCR') && s.status === 'SUCCESS') && !currentItem?.result?.stages?.some((s: any) => s.name === 'Bank Detection'))
-                )}
-                {renderStatusCheck('Transaction Extraction', 
-                  currentItem?.result?.stages?.some((s: any) => s.name.includes('Transaction Extraction') && s.status === 'SUCCESS') ?? false,
-                  currentItem?.result?.stages?.some((s: any) => s.name.includes('Transaction Extraction') && s.status === 'ERROR') ?? false,
-                  Boolean(currentItem?.status === 'processing' && currentItem?.result?.stages?.some((s: any) => s.name === 'Bank Detection' && s.status === 'SUCCESS') && !currentItem?.result?.stages?.some((s: any) => s.name.includes('Transaction Extraction')))
-                )}
-                {renderStatusCheck('Validation', 
-                  currentItem?.result?.stages?.some((s: any) => s.name === 'Normalization' && s.status === 'SUCCESS') ?? false,
-                  currentItem?.result?.stages?.some((s: any) => s.name === 'Normalization' && s.status === 'ERROR') ?? false,
-                  Boolean(currentItem?.status === 'processing' && currentItem?.result?.stages?.some((s: any) => s.name.includes('Transaction Extraction') && s.status === 'SUCCESS') && !currentItem?.result?.stages?.some((s: any) => s.name === 'Normalization'))
+                {currentItem?.status === 'processing' ? (
+                  <div className="space-y-4">
+                    {renderStatusCheck('PDF Loaded', true, false, false)}
+                    <div className="p-3 bg-indigo-50 border border-indigo-100 rounded-lg animate-in fade-in slide-in-from-bottom-2">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <Clock className="w-4 h-4 text-indigo-500 animate-spin" />
+                        <span className="text-sm text-indigo-800 font-bold">{liveStatus?.stage || 'Initializing...'}</span>
+                      </div>
+                      {liveStatus?.live_result && (
+                        <p className="text-xs text-indigo-600 font-medium truncate ml-6">File: {liveStatus.live_result.pdf_name}</p>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    {renderStatusCheck('PDF Loaded', true, false, false)}
+                    {currentItem?.result?.document_type !== 'digital' && renderStatusCheck('OCR Complete', 
+                      currentItem?.status === 'success', 
+                      currentItem?.status === 'error',
+                      false
+                    )}
+                    {renderStatusCheck('Bank Detected', 
+                      currentItem?.status === 'success',
+                      currentItem?.status === 'error',
+                      false
+                    )}
+                    {renderStatusCheck('Transaction Extraction', 
+                      currentItem?.status === 'success',
+                      currentItem?.status === 'error',
+                      false
+                    )}
+                    {renderStatusCheck('Validation', 
+                      currentItem?.status === 'success',
+                      currentItem?.status === 'error',
+                      false
+                    )}
+                  </>
                 )}
 
-                {currentItem?.result?.stages && (
+                {currentItem?.status === 'success' && totalProcessingTimeMs > 0 && (
                   <div className="pt-3 mt-3 border-t border-gray-100 flex justify-between items-center text-xs">
-                    <span className="text-gray-500">Processing Time:</span>
-                    <span className="font-semibold text-gray-700">{(currentItem.result.stages.reduce((s: any, st: any) => s + st.time_ms, 0) / 1000).toFixed(1)}s</span>
+                    <span className="text-gray-500">Processing Time (Total):</span>
+                    <span className="font-semibold text-gray-700">{(totalProcessingTimeMs / 1000).toFixed(1)}s</span>
                   </div>
                 )}
                 
@@ -626,18 +683,17 @@ export default function App() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div>
                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Bank</p>
-                        <p className="font-semibold text-gray-900 truncate">
-                          {successfulItems.length > 0 
-                            ? (successfulItems[0].result?.bank_detection?.institution_name as string || 'Unknown')
-                            : '—'}
+                        <p className="font-semibold text-gray-900">
+                          <BankListDisplay banks={Array.from(new Set(successfulItems.map(q => q.result?.bank_detection?.institution_name as string || q.result?.bank).filter(b => b && b !== 'Unknown')))} />
                         </p>
                       </div>
                       <div>
                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Type</p>
-                        <p className="font-semibold text-gray-900 capitalize">
-                          {successfulItems.length > 0 
-                            ? (successfulItems[0].result?.document_type || 'Unknown')
-                            : '—'}
+                        <p className="font-semibold text-gray-900 capitalize break-words">
+                          {(() => {
+                            const types = Array.from(new Set(successfulItems.map(q => q.result?.document_type).filter(b => b && b !== 'Unknown')));
+                            return types.length > 0 ? types.join(', ') : '—';
+                          })()}
                         </p>
                       </div>
                       <div>
@@ -726,15 +782,9 @@ export default function App() {
                       <TableCell className="whitespace-nowrap text-sm text-gray-900">{t.date}</TableCell>
                       <TableCell className="max-w-[300px] text-sm text-gray-700">
                         <div className="truncate" title={t.narration}>{t.narration}</div>
-                        {t.amount_conflict && (
-                          <div className="mt-1 flex items-center gap-1.5 text-xs text-amber-600 font-medium bg-amber-100/50 w-fit px-2 py-0.5 rounded border border-amber-200">
-                            <AlertTriangle className="w-3.5 h-3.5" />
-                            Amount Conflict: OCR shows {t.ocr_amount ?? 'none'}, but balance math requires {t.delta_amount ?? 'none'}
-                          </div>
-                        )}
                       </TableCell>
-                      <TableCell className="text-right text-sm text-red-600 tabular-nums">{t.debit ?? (t.amount_conflict ? '—' : '—')}</TableCell>
-                      <TableCell className="text-right text-sm text-emerald-600 tabular-nums">{t.credit ?? (t.amount_conflict ? '—' : '—')}</TableCell>
+                      <TableCell className="text-right text-sm text-red-600 tabular-nums">{t.debit ?? '—'}</TableCell>
+                      <TableCell className="text-right text-sm text-emerald-600 tabular-nums">{t.credit ?? '—'}</TableCell>
                       <TableCell className="text-right text-sm font-medium text-gray-900 tabular-nums">{t.balance ?? '—'}</TableCell>
                     </TableRow>
                   ))}
@@ -774,12 +824,14 @@ export default function App() {
                     <div className="space-y-2">
                       <h4 className="text-xs font-bold text-gray-700 uppercase tracking-wider">Pipeline Inspector</h4>
                       <div className="bg-white border rounded-lg p-3 space-y-2 shadow-sm">
-                        {currentItem.result.stages.map((stage, idx) => (
+                        {currentItem.result.stages ? currentItem.result.stages.map((stage: any, idx: number) => (
                           <div key={idx} className="flex justify-between items-center text-xs border-b border-gray-50 pb-2 last:border-0 last:pb-0">
                             <span className="font-medium text-gray-600">{stage.name}</span>
                             <span className="text-gray-400">{(stage.time_ms / 1000).toFixed(2)}s</span>
                           </div>
-                        ))}
+                        )) : (
+                           <div className="text-xs text-gray-500 italic">Stage breakdown not available in batch mode. Total processing time: {((currentItem.result.processing_time_ms || 0) / 1000).toFixed(2)}s</div>
+                        )}
                       </div>
                     </div>
                     

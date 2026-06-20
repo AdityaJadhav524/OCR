@@ -1,0 +1,9 @@
+{
+  "pdf_name": "axis",
+  "bank": "AXIS BANK",
+  "type": "digital",
+  "expected_transactions": null,
+  "verified": false,
+  "corpus_file": "axis.pdf",
+  "notes": "Added for baseline testing"
+}

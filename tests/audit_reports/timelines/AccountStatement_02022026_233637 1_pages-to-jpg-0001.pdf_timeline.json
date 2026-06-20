@@ -1,87 +1,89 @@
 {
-  "job_id": "JOB_20260619_172539_4680",
+  "job_id": "JOB_20260620_100023_B5C9",
   "pdf_name": "AccountStatement_02022026_233637 1_pages-to-jpg-0001.pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T17:25:39.971484",
+    "uploaded_at": "2026-06-20T10:00:23.528120",
     "password_detected_at": null,
     "password_received_at": null,
     "password_validated_at": null,
-    "classification_at": "2026-06-19T17:35:25.292580",
-    "backend_state_available_at": "2026-06-19T17:35:44.665417",
-    "frontend_polled_at": "2026-06-19T17:36:14.335805",
+    "classification_at": "2026-06-20T10:07:14.515871",
+    "backend_state_available_at": "2026-06-20T10:07:27.760066",
+    "frontend_polled_at": "2026-06-20T10:07:50.535346",
     "engine": "PaddleOCR",
-    "engine_start": "2026-06-19T17:35:25.289680",
-    "engine_end": "2026-06-19T17:35:44.654248",
+    "engine_start": "2026-06-20T10:07:14.512532",
+    "engine_end": "2026-06-20T10:07:27.751319",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T17:35:25.292597",
-    "extraction_finished_at": "2026-06-19T17:35:44.654239",
-    "parser_started_at": "2026-06-19T17:35:44.658339",
-    "parser_finished_at": "2026-06-19T17:35:44.665322",
-    "validation_completed_at": "2026-06-19T17:35:44.665382",
-    "completed_at": "2026-06-19T17:35:44.665404"
+    "extraction_started_at": "2026-06-20T10:07:14.515893",
+    "extraction_finished_at": "2026-06-20T10:07:27.751312",
+    "parser_started_at": "2026-06-20T10:07:27.753679",
+    "parser_finished_at": "2026-06-20T10:07:27.759924",
+    "validation_completed_at": "2026-06-20T10:07:27.759958",
+    "completed_at": "2026-06-20T10:07:27.760057"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T17:35:25.289673"
+      "2026-06-20T10:07:14.512523"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T17:35:25.292587"
+      "2026-06-20T10:07:14.515884"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T17:35:25.292599"
+      "2026-06-20T10:07:14.515895"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:35:44.657023",
+      "2026-06-20T10:07:27.752947",
       {
-        "protected_row": 34,
+        "protected_row": 29,
         "protected_tokens": [
           "Value Date",
           "Post Date",
           "Details",
+          "Cheque",
           "Debit",
           "Credit",
           "Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
+          "DEBIT",
           "BALANCE",
-          "DATE",
-          "DEBIT"
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:35:44.657033",
+      "2026-06-20T10:07:27.752952",
       {
-        "protected_row": 54,
+        "protected_row": 48,
         "protected_tokens": [
           "Value Date",
           "Post Date",
           "Details",
+          "Cheque",
           "Debit",
           "Credit",
           "Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
+          "DEBIT",
           "BALANCE",
-          "DATE",
-          "DEBIT"
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:35:44.657035",
+      "2026-06-20T10:07:27.752953",
       {
-        "protected_row": 63,
+        "protected_row": 56,
         "protected_tokens": [
           "Brought Forward",
           "Dr Count",
@@ -91,24 +93,24 @@
           "Closing Balance()"
         ],
         "matched_keywords": [
+          "CR",
           "BALANCE",
-          "DR",
-          "CR"
+          "DR"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PARSING",
-      "2026-06-19T17:35:44.658345"
+      "2026-06-20T10:07:27.753681"
     ],
     [
       "VALIDATING",
-      "2026-06-19T17:35:44.665333"
+      "2026-06-20T10:07:27.759932"
     ],
     [
       "COMPLETED",
-      "2026-06-19T17:35:44.665414"
+      "2026-06-20T10:07:27.760064"
     ]
   ]
 }

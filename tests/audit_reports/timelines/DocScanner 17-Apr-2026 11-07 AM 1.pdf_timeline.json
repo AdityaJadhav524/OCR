@@ -1,92 +1,94 @@
 {
-  "job_id": "JOB_20260619_172539_4680",
+  "job_id": "JOB_20260620_100023_B5C9",
   "pdf_name": "DocScanner 17-Apr-2026 11-07 AM 1.pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T17:25:39.971490",
+    "uploaded_at": "2026-06-20T10:00:23.528126",
     "password_detected_at": null,
     "password_received_at": null,
     "password_validated_at": null,
-    "classification_at": "2026-06-19T17:35:57.465029",
-    "backend_state_available_at": "2026-06-19T17:36:13.891478",
-    "frontend_polled_at": "2026-06-19T17:36:14.338196",
+    "classification_at": "2026-06-20T10:07:37.291507",
+    "backend_state_available_at": "2026-06-20T10:07:50.275189",
+    "frontend_polled_at": "2026-06-20T10:07:50.537465",
     "engine": "PaddleOCR",
-    "engine_start": "2026-06-19T17:35:57.460637",
-    "engine_end": "2026-06-19T17:36:13.882372",
+    "engine_start": "2026-06-20T10:07:37.289180",
+    "engine_end": "2026-06-20T10:07:50.266844",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T17:35:57.465045",
-    "extraction_finished_at": "2026-06-19T17:36:13.882365",
-    "parser_started_at": "2026-06-19T17:36:13.885758",
-    "parser_finished_at": "2026-06-19T17:36:13.891406",
-    "validation_completed_at": "2026-06-19T17:36:13.891446",
-    "completed_at": "2026-06-19T17:36:13.891461"
+    "extraction_started_at": "2026-06-20T10:07:37.291517",
+    "extraction_finished_at": "2026-06-20T10:07:50.266837",
+    "parser_started_at": "2026-06-20T10:07:50.269425",
+    "parser_finished_at": "2026-06-20T10:07:50.275045",
+    "validation_completed_at": "2026-06-20T10:07:50.275077",
+    "completed_at": "2026-06-20T10:07:50.275181"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T17:35:57.460628"
+      "2026-06-20T10:07:37.289174"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T17:35:57.465039"
+      "2026-06-20T10:07:37.291512"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T17:35:57.465046"
+      "2026-06-20T10:07:37.291518"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:36:13.884615",
+      "2026-06-20T10:07:50.268663",
       {
-        "protected_row": 32,
+        "protected_row": 29,
         "protected_tokens": [
           "Value Date",
           "Post Date",
           "Details",
+          "Cheque",
           "Debit",
           "Credit",
           "Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
+          "DEBIT",
           "BALANCE",
-          "DATE",
-          "DEBIT"
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:36:13.884623",
+      "2026-06-20T10:07:50.268670",
       {
-        "protected_row": 52,
+        "protected_row": 48,
         "protected_tokens": [
           "Value Date Post Date",
           "Details",
+          "Cheque",
           "Debit",
           "Credit",
           "Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
+          "DEBIT",
           "BALANCE",
-          "DATE",
-          "DEBIT"
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PARSING",
-      "2026-06-19T17:36:13.885763"
+      "2026-06-20T10:07:50.269430"
     ],
     [
       "VALIDATING",
-      "2026-06-19T17:36:13.891415"
+      "2026-06-20T10:07:50.275051"
     ],
     [
       "COMPLETED",
-      "2026-06-19T17:36:13.891476"
+      "2026-06-20T10:07:50.275188"
     ]
   ]
 }

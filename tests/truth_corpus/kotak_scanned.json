@@ -1,0 +1,14 @@
+{
+  "pdf_name": "DocScanner 17-Apr-2026 Kotak Scanned",
+  "bank": "KOTAK MAHINDRA BANK",
+  "type": "scanned",
+  "expected_transactions": 9,
+  "expected_first_date": "02 Feb 2026",
+  "expected_last_date": "20 Feb 2026",
+  "expected_opening_balance": 1.45,
+  "expected_closing_balance": 0.61,
+  "verified": true,
+  "verified_by": "user — compared against actual PDF content row by row",
+  "corpus_file": "DocScanner 17-Apr-2026 11-06 AM 1.pdf",
+  "notes": "9 transactions visible in PDF. Cashback rows (1.00 and 2.16) were previously missed due to zone boundary bug — fixed 2026-06-20. Running balance uses plain numeric format, no CR/DR suffix."
+}

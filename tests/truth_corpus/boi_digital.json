@@ -1,0 +1,9 @@
+{
+  "pdf_name": "BOI_SAVINGS_DIGITAL",
+  "bank": "BANK OF INDIA",
+  "type": "digital",
+  "expected_transactions": 64,
+  "verified": false,
+  "corpus_file": "BOI_SAVINGS_DIGITAL.pdf",
+  "notes": "Added for baseline testing"
+}

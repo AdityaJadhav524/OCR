@@ -1,41 +1,41 @@
 {
-  "job_id": "JOB_20260619_193607_F46D",
+  "job_id": "JOB_20260620_100023_B5C9",
   "pdf_name": "SavingAccountStatement_20260421090553 1 (2)_page-0001.pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T19:36:07.187543",
+    "uploaded_at": "2026-06-20T10:00:23.528108",
     "password_detected_at": null,
     "password_received_at": null,
     "password_validated_at": null,
-    "classification_at": "2026-06-19T19:36:07.217286",
-    "backend_state_available_at": "2026-06-19T19:36:40.849251",
-    "frontend_polled_at": "2026-06-19T19:36:40.912839",
+    "classification_at": "2026-06-20T10:03:22.698647",
+    "backend_state_available_at": "2026-06-20T10:03:40.033807",
+    "frontend_polled_at": "2026-06-20T10:07:50.532545",
     "engine": "PaddleOCR",
-    "engine_start": "2026-06-19T19:36:07.190018",
-    "engine_end": "2026-06-19T19:36:40.838532",
+    "engine_start": "2026-06-20T10:03:22.694373",
+    "engine_end": "2026-06-20T10:03:40.016058",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T19:36:07.217305",
-    "extraction_finished_at": "2026-06-19T19:36:40.838521",
-    "parser_started_at": "2026-06-19T19:36:40.844374",
-    "parser_finished_at": "2026-06-19T19:36:40.848965",
-    "validation_completed_at": "2026-06-19T19:36:40.849002",
-    "completed_at": "2026-06-19T19:36:40.849239"
+    "extraction_started_at": "2026-06-20T10:03:22.698666",
+    "extraction_finished_at": "2026-06-20T10:03:40.016048",
+    "parser_started_at": "2026-06-20T10:03:40.020834",
+    "parser_finished_at": "2026-06-20T10:03:40.033568",
+    "validation_completed_at": "2026-06-20T10:03:40.033600",
+    "completed_at": "2026-06-20T10:03:40.033789"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T19:36:07.189949"
+      "2026-06-20T10:03:22.694364"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T19:36:07.217295"
+      "2026-06-20T10:03:22.698657"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T19:36:07.217310"
+      "2026-06-20T10:03:22.698668"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:36:40.842697",
+      "2026-06-20T10:03:40.019432",
       {
         "protected_row": 11,
         "protected_tokens": [
@@ -46,18 +46,18 @@
           "Debit AmountCredit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "DATE",
+          "DEBIT",
+          "TRANSACTION",
           "BALANCE",
           "DESCRIPTION",
-          "TRANSACTION",
-          "DEBIT"
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:36:40.842708",
+      "2026-06-20T10:03:40.019453",
       {
         "protected_row": 65,
         "protected_tokens": [
@@ -68,22 +68,22 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "DATE",
-          "CREDIT",
+          "DEBIT",
+          "TRANSACTION",
           "BALANCE",
           "AMOUNT",
           "DESCRIPTION",
-          "TRANSACTION",
-          "DEBIT"
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T19:36:40.842710",
+      "2026-06-20T10:03:40.019456",
       {
-        "protected_row": 92,
+        "protected_row": 88,
         "protected_tokens": [
           "Total Transactlons",
           "Number of Credits",
@@ -92,24 +92,24 @@
           "Credit Amount"
         ],
         "matched_keywords": [
-          "CREDIT",
+          "DEBIT",
           "AMOUNT",
-          "DEBIT"
+          "CREDIT"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PARSING",
-      "2026-06-19T19:36:40.844378"
+      "2026-06-20T10:03:40.020838"
     ],
     [
       "VALIDATING",
-      "2026-06-19T19:36:40.848978"
+      "2026-06-20T10:03:40.033580"
     ],
     [
       "COMPLETED",
-      "2026-06-19T19:36:40.849250"
+      "2026-06-20T10:03:40.033804"
     ]
   ]
 }

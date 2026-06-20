@@ -1,41 +1,41 @@
 {
-  "job_id": "JOB_20260619_172539_4680",
+  "job_id": "JOB_20260620_100023_B5C9",
   "pdf_name": "24-25 -2 1 (2)_page-0006.pdf",
   "timestamps": {
-    "uploaded_at": "2026-06-19T17:25:39.971453",
+    "uploaded_at": "2026-06-20T10:00:23.528093",
     "password_detected_at": null,
     "password_received_at": null,
     "password_validated_at": null,
-    "classification_at": "2026-06-19T17:25:39.992910",
-    "backend_state_available_at": "2026-06-19T17:29:12.965553",
-    "frontend_polled_at": "2026-06-19T17:36:14.327070",
+    "classification_at": "2026-06-20T10:00:23.551059",
+    "backend_state_available_at": "2026-06-20T10:02:38.495425",
+    "frontend_polled_at": "2026-06-20T10:07:50.531064",
     "engine": "PaddleOCR",
-    "engine_start": "2026-06-19T17:25:39.972331",
-    "engine_end": "2026-06-19T17:29:12.860061",
+    "engine_start": "2026-06-20T10:00:23.529189",
+    "engine_end": "2026-06-20T10:02:38.306085",
     "engine_result": "SUCCESS",
-    "extraction_started_at": "2026-06-19T17:25:39.992926",
-    "extraction_finished_at": "2026-06-19T17:29:12.860049",
-    "parser_started_at": "2026-06-19T17:29:12.914719",
-    "parser_finished_at": "2026-06-19T17:29:12.965308",
-    "validation_completed_at": "2026-06-19T17:29:12.965469",
-    "completed_at": "2026-06-19T17:29:12.965540"
+    "extraction_started_at": "2026-06-20T10:00:23.551077",
+    "extraction_finished_at": "2026-06-20T10:02:38.306080",
+    "parser_started_at": "2026-06-20T10:02:38.352304",
+    "parser_finished_at": "2026-06-20T10:02:38.495048",
+    "validation_completed_at": "2026-06-20T10:02:38.495145",
+    "completed_at": "2026-06-20T10:02:38.495405"
   },
   "status_transition_log": [
     [
       "QUEUED",
-      "2026-06-19T17:25:39.972322"
+      "2026-06-20T10:00:23.529178"
     ],
     [
       "CLASSIFIED",
-      "2026-06-19T17:25:39.992919"
+      "2026-06-20T10:00:23.551069"
     ],
     [
       "EXTRACTING",
-      "2026-06-19T17:25:39.992928"
+      "2026-06-20T10:00:23.551079"
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889715",
+      "2026-06-20T10:02:38.332469",
       {
         "protected_row": 0,
         "protected_tokens": [
@@ -46,21 +46,21 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889725",
+      "2026-06-20T10:02:38.332483",
       {
-        "protected_row": 91,
+        "protected_row": 78,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -69,21 +69,21 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889727",
+      "2026-06-20T10:02:38.332485",
       {
-        "protected_row": 173,
+        "protected_row": 152,
         "protected_tokens": [
           "Transaction Date",
           "Description",
@@ -92,22 +92,22 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
-          "TRANSACTION",
           "DEBIT",
-          "AMOUNT"
+          "TRANSACTION",
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889729",
+      "2026-06-20T10:02:38.332486",
       {
-        "protected_row": 265,
+        "protected_row": 229,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -116,18 +116,18 @@
         ],
         "matched_keywords": [
           "BALANCE",
-          "DATE",
+          "AMOUNT",
           "DESCRIPTION",
-          "AMOUNT"
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889731",
+      "2026-06-20T10:02:38.332488",
       {
-        "protected_row": 327,
+        "protected_row": 285,
         "protected_tokens": [
           "Total Transactlons",
           "Number of Credits",
@@ -136,18 +136,18 @@
           "Credit Amount"
         ],
         "matched_keywords": [
-          "CREDIT",
           "DEBIT",
-          "AMOUNT"
+          "AMOUNT",
+          "CREDIT"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889732",
+      "2026-06-20T10:02:38.332489",
       {
-        "protected_row": 343,
+        "protected_row": 301,
         "protected_tokens": [
           "Transaction Date",
           "Description",
@@ -156,20 +156,20 @@
           "Debit AmountCredit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
+          "DEBIT",
           "TRANSACTION",
-          "DEBIT"
+          "BALANCE",
+          "DESCRIPTION",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889733",
+      "2026-06-20T10:02:38.332491",
       {
-        "protected_row": 406,
+        "protected_row": 352,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -178,21 +178,21 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889735",
+      "2026-06-20T10:02:38.332492",
       {
-        "protected_row": 498,
+        "protected_row": 431,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -201,21 +201,21 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889736",
+      "2026-06-20T10:02:38.332493",
       {
-        "protected_row": 590,
+        "protected_row": 507,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -224,17 +224,17 @@
         ],
         "matched_keywords": [
           "BALANCE",
-          "DATE",
-          "DESCRIPTION"
+          "DESCRIPTION",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889738",
+      "2026-06-20T10:02:38.332495",
       {
-        "protected_row": 671,
+        "protected_row": 581,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -243,17 +243,17 @@
         ],
         "matched_keywords": [
           "BALANCE",
-          "DATE",
-          "DESCRIPTION"
+          "DESCRIPTION",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889739",
+      "2026-06-20T10:02:38.332496",
       {
-        "protected_row": 755,
+        "protected_row": 657,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -262,21 +262,21 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889741",
+      "2026-06-20T10:02:38.332497",
       {
-        "protected_row": 843,
+        "protected_row": 731,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -285,21 +285,21 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889742",
+      "2026-06-20T10:02:38.332498",
       {
-        "protected_row": 937,
+        "protected_row": 807,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -308,17 +308,17 @@
         ],
         "matched_keywords": [
           "BALANCE",
-          "DATE",
-          "DESCRIPTION"
+          "DESCRIPTION",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889743",
+      "2026-06-20T10:02:38.332500",
       {
-        "protected_row": 1025,
+        "protected_row": 886,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -327,21 +327,21 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PROTECTED_HEADER",
-      "2026-06-19T17:29:12.889745",
+      "2026-06-20T10:02:38.332501",
       {
-        "protected_row": 1121,
+        "protected_row": 964,
         "protected_tokens": [
           "Transactlon Date",
           "Description",
@@ -350,27 +350,27 @@
           "Debit Amount)Credit AmountRunning Balance"
         ],
         "matched_keywords": [
-          "CREDIT",
-          "BALANCE",
-          "DATE",
-          "DESCRIPTION",
           "DEBIT",
-          "AMOUNT"
+          "BALANCE",
+          "AMOUNT",
+          "DESCRIPTION",
+          "CREDIT",
+          "DATE"
         ],
         "reason": "STRUCTURAL_HEADER_CANDIDATE"
       }
     ],
     [
       "PARSING",
-      "2026-06-19T17:29:12.914735"
+      "2026-06-20T10:02:38.352315"
     ],
     [
       "VALIDATING",
-      "2026-06-19T17:29:12.965327"
+      "2026-06-20T10:02:38.495057"
     ],
     [
       "COMPLETED",
-      "2026-06-19T17:29:12.965550"
+      "2026-06-20T10:02:38.495421"
     ]
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "pdf_name": "HDFC_SAVINGS_SCANNED",
+  "bank": "HDFC BANK",
+  "type": "scanned",
+  "expected_transactions": null,
+  "verified": false,
+  "corpus_file": "HDFC_SAVINGS_SCANNED.pdf",
+  "notes": "Added for baseline testing"
+}

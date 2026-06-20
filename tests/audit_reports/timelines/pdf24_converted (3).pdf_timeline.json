@@ -1,0 +1,87 @@
+{
+  "job_id": "JOB_20260619_214901_A57B",
+  "pdf_name": "pdf24_converted (3).pdf",
+  "timestamps": {
+    "uploaded_at": "2026-06-19T21:49:01.549069",
+    "password_detected_at": null,
+    "password_received_at": null,
+    "password_validated_at": null,
+    "classification_at": "2026-06-19T21:49:01.570399",
+    "backend_state_available_at": "2026-06-19T21:50:18.779053",
+    "frontend_polled_at": "2026-06-19T21:50:18.783676",
+    "engine": "PaddleOCR",
+    "engine_start": "2026-06-19T21:49:01.550132",
+    "engine_end": "2026-06-19T21:49:29.486040",
+    "engine_result": "SUCCESS",
+    "extraction_started_at": "2026-06-19T21:49:01.570467",
+    "extraction_finished_at": "2026-06-19T21:49:29.486033",
+    "parser_started_at": "2026-06-19T21:50:18.761633",
+    "parser_finished_at": "2026-06-19T21:50:18.778548",
+    "validation_completed_at": "2026-06-19T21:50:18.778581",
+    "completed_at": "2026-06-19T21:50:18.779024"
+  },
+  "status_transition_log": [
+    [
+      "QUEUED",
+      "2026-06-19T21:49:01.550123"
+    ],
+    [
+      "CLASSIFIED",
+      "2026-06-19T21:49:01.570429"
+    ],
+    [
+      "EXTRACTING",
+      "2026-06-19T21:49:01.570472"
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T21:50:18.758408",
+      {
+        "protected_row": 9,
+        "protected_tokens": [
+          "ACCOUNT SUMMARY (IN INR)",
+          "Date",
+          "Description",
+          "Amount <"
+        ],
+        "matched_keywords": [
+          "DESCRIPTION",
+          "DATE",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PROTECTED_HEADER",
+      "2026-06-19T21:50:18.758420",
+      {
+        "protected_row": 76,
+        "protected_tokens": [
+          "Upto  7,000 per annum( This will be",
+          "Date",
+          "Transaction",
+          "Amount"
+        ],
+        "matched_keywords": [
+          "TRANSACTION",
+          "DATE",
+          "AMOUNT"
+        ],
+        "reason": "STRUCTURAL_HEADER_CANDIDATE"
+      }
+    ],
+    [
+      "PARSING",
+      "2026-06-19T21:50:18.761641"
+    ],
+    [
+      "VALIDATING",
+      "2026-06-19T21:50:18.778558"
+    ],
+    [
+      "COMPLETED",
+      "2026-06-19T21:50:18.779047"
+    ]
+  ]
+}

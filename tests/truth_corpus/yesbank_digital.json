@@ -1,0 +1,9 @@
+{
+  "pdf_name": "YESBANK_SAVINGS_DIGITAL",
+  "bank": "YES BANK",
+  "type": "digital",
+  "expected_transactions": null,
+  "verified": false,
+  "corpus_file": "YESBANK_SAVINGS_DIGITAL.pdf",
+  "notes": "Added for baseline testing"
+}

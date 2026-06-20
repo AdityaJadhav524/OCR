@@ -340,19 +340,38 @@ def _extract_block(
     # --- Pass 1: Claim structural roles in priority order ---
     # Priority: DATE > BALANCE > DEBIT > CREDIT
     # (Balance before amounts avoids mis-claiming balance tokens as credit/debit)
+    #
+    # Special case: Indian banks often show running balance as "10,206.79 CR" or
+    # "10,206.79 DR" where CR/DR indicates the sign of the balance, NOT a credit
+    # or debit transaction. Build a set of indices whose next token is CR/DR so we
+    # can re-route them to balance instead of credit.
+    _cr_dr_suffixed = set()
+    _CR_DR_RE = re.compile(r'^(CR|DR)$', re.IGNORECASE)
+    for _idx, _tok in enumerate(all_tokens):
+        if _CR_DR_RE.match(_tok.get("text", "").strip()):
+            # The token immediately BEFORE this CR/DR is likely a balance value
+            if _idx > 0:
+                _cr_dr_suffixed.add(_idx - 1)
+
     for idx, tok in enumerate(all_tokens):
         if idx in claimed:
             continue
 
         # G2: Balance — FIRST valid balance wins.
-        # The real transaction balance is always in the anchor row (first row of block).
-        # Footer/header tokens appended to the block come later and must NOT override it.
-        # "Last wins" caused SBI page-number tokens ("3 of 4") to replace real balance.
         if balance is None and balance_zone:
             b = _prove_balance(tok, balance_zone)
             if b is not None:
                 balance = b
                 _raw_balance_text = tok.get("text", "").strip()
+                claimed.add(idx)
+                continue
+
+        # CR/DR-suffixed token in any numeric zone → treat as running balance
+        if balance is None and idx in _cr_dr_suffixed:
+            val = _parse_float(tok.get("text", ""))
+            if val is not None and val > 0:
+                balance = val
+                _raw_balance_text = tok.get("text", "").strip() + " (CR/DR-suffixed)"
                 claimed.add(idx)
                 continue
 
@@ -496,21 +515,25 @@ def _qualifies(txn: Dict, prev_balance: Optional[float], balance_zone_missing: b
 
     if txn.get("balance") is None:
         if balance_zone_missing:
-            # P9A Provisional Fallback: balance zone never detected, so don't reject row.
+            # P9A Provisional Fallback: balance zone never detected.
             txn["quality"] = "PROVISIONAL"
-            # It falls through to UNSEEDED conservation state automatically
         else:
-            # Standard Strict Rule: balance column exists, so failure to OCR it is a hard reject
-            return False, "no_balance", CONSERVATION_UNSEEDED
+            # ── Detect-All, Flag-Suspicious (P1 architecture) ──────────────
+            # Previously this was a hard reject. Now we keep the row and flag it.
+            # Rationale: a valid date + amount IS a real transaction even if the
+            # balance value landed in the wrong zone due to OCR position variance.
+            # Silently rejecting it is worse than keeping it with a flag.
+            # The caller will set agreement_state = UNSEEDED (no prev_balance update).
+            txn["flags"] = txn.get("flags", {})
+            txn["flags"]["missing_balance"] = True
 
     has_debit  = txn.get("debit")  is not None
     has_credit = txn.get("credit") is not None
 
     # P0.5 Transaction Seed Validator
-    # At minimum we need some amount movement to call this a transaction,
-    # or a balance to act as an anchor if there are no movements (rare but possible).
     if not has_debit and not has_credit and txn.get("balance") is None:
         return False, "NO_TRANSACTION_SEED", CONSERVATION_UNSEEDED
+
         
     # P2 Row Contamination Detector
     contamination_keywords = [

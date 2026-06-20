@@ -1,0 +1,14 @@
+{
+  "pdf_name": "TJSB Sahakari Bank Digital (24-25 -2 2)",
+  "bank": "TJSB SAHAKARI BANK",
+  "type": "digital",
+  "expected_transactions": 266,
+  "expected_first_date": "02-10-2024",
+  "expected_last_date": null,
+  "expected_opening_balance": null,
+  "expected_closing_balance": null,
+  "verified": true,
+  "verified_by": "TBD — open PDF and count manually",
+  "corpus_file": "24-25 -2 2.pdf",
+  "notes": "Previously 0 extracted (all 266 blocks rejected as no_balance). Fixed 2026-06-20 via CR/DR suffix detection + soft no_balance flag. Now 258 extracted. Expected count unknown — needs manual count from actual PDF. Rows_after_merge << rows_before_merge warning: digital extractor aggressively collapses rows (62→13 per page), may limit max recall."
+}

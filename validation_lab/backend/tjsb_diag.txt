@@ -1,0 +1,117 @@
+BANK: TJSB SAHAKARI BANK
+TOTAL ROWS: 1223
+ZONES: {'date_zone': [0.0, 120.85], 'narration_zone': [125.85, 373.53], 'debit_zone': [378.53, 438.9], 'credit_zone': [443.9, 539.12], 'balance_zone': [544.12, 9999.0]}
+
+=== HEADER TOKENS ===
+  x0=   25.5  x1=   66.5  text='Transaction'
+  x0=   69.0  x1=   85.5  text='Date'
+  x0=  125.8  x1=  165.2  text='Description'
+  x0=  212.5  x1=  225.6  text='Txn'
+  x0=  228.1  x1=  305.5  text='Reference/Instrument'
+  x0=  328.1  x1=  354.7  text='Cheque'
+  x0=  357.2  x1=  366.9  text='No'
+  x0=  378.5  x1=  397.1  text='Debit'
+  x0=  399.6  x1=  437.5  text='Amount(₹)'
+  x0=  443.9  x1=  464.7  text='Credit'
+  x0=  467.2  x1=  505.1  text='Amount(₹)'
+  x0=  512.6  x1=  541.6  text='Running'
+  x0=  544.1  x1=  571.4  text='Balance'
+
+=== ROWS WITH KEYWORDS (first 50 matches) ===
+Row    3 (pg=1): From | Date | 01/10/2024 | To | Date | 31/03/2025
+           x0s=[32.0, 52.6, 211.0, 308.0, 319.5, 487.0]
+Row    7 (pg=1): Available | Balance | Rs77,051.12 | CR | Ledger | Balance | Rs77,051.12 | CR
+           x0s=[32.0, 65.8, 205.5, 247.7, 308.0, 334.6, 481.5, 523.7]
+Row    9 (pg=1): Joint | Holder | N/A | Opening | Balance | -Rs1,53,008.95
+           x0s=[31.0, 50.1, 160.0, 308.0, 339.9, 482.8]
+Row   10 (pg=1): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row   25 (pg=1): ndateReques
+           x0s=[122.6]
+Row   74 (pg=2): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  169 (pg=3): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  222 (pg=3): ndateReques
+           x0s=[122.6]
+Row  262 (pg=4): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  354 (pg=5): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  448 (pg=6): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  540 (pg=7): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  550 (pg=7): ndateReques
+           x0s=[122.6]
+Row  633 (pg=8): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  720 (pg=8): ndateReques
+           x0s=[122.6]
+Row  729 (pg=9): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  819 (pg=10): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  856 (pg=10): Auto | Credit
+           x0s=[125.7, 144.5]
+Row  901 (pg=11): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row  989 (pg=12): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row 1046 (pg=12): Auto | Credit
+           x0s=[125.7, 144.5]
+Row 1049 (pg=12): Mandate
+           x0s=[130.3]
+Row 1069 (pg=12): ervices.bdsi@icici/MandateRe
+           x0s=[93.7]
+Row 1071 (pg=13): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row 1095 (pg=13): 505636343834Credit
+           x0s=[108.9]
+Row 1097 (pg=13): Adjustment: | Credit | Transfer
+           x0s=[96.4, 141.9, 165.2]
+Row 1123 (pg=13): ervices.bdsi@icici/MandateRe
+           x0s=[93.7]
+Row 1131 (pg=13): Auto | Credit
+           x0s=[125.7, 144.5]
+Row 1134 (pg=13): Mandate
+           x0s=[130.3]
+Row 1145 (pg=13): 506268871843Credit
+           x0s=[108.9]
+Row 1147 (pg=13): Adjustment: | Credit | Transfer
+           x0s=[96.4, 141.9, 165.2]
+Row 1156 (pg=14): Transaction | Date | Description | Txn | Reference/Instrument | Cheque | No | Debit | Amount(Rs) | C
+           x0s=[25.5, 69.0, 125.8, 212.5, 228.1, 328.1, 357.2, 378.5]
+Row 1218 (pg=14): Total | Transactions | Number | of | Credits | Number | of | Debits | Debit | Amount | Credit | Amou
+           x0s=[27.7, 47.8, 117.9, 148.4, 157.8, 228.0, 258.5, 267.9]
+
+=== PARSE RESULT ===
+ACCEPTED: 258
+REJECTED: 8
+REASONS: {'no_date': 4, 'NO_TRANSACTION_SEED': 3, 'both_debit_and_credit': 1}
+
+FIRST 5 REJECTS:
+  date=None  reason=no_date
+  snippet=from date 01/10/2024 to date 31/03/2025 account details account number 087110100
+  ocr_balance=₹77,051.12 (CR/DR-suffixed) parsed=77051.12
+  ocr_debit=None  ocr_credit=₹77,051.12
+
+  date=None  reason=no_date
+  snippet=3-28/10/2024 upi/dr/050663989577/shar ad
+  ocr_balance=None parsed=None
+  ocr_debit=None  ocr_credit=None
+
+  date=28/11/2024  reason=NO_TRANSACTION_SEED
+  snippet=collection-28/11/2024 upi/cr/110588305322/ujjvi las
+  ocr_balance=None parsed=None
+  ocr_debit=None  ocr_credit=None
+
+  date=28/12/2024  reason=NO_TRANSACTION_SEED
+  snippet=collection-28/12/2024 upi/dr/436549725664/zerod ha
+  ocr_balance=None parsed=None
+  ocr_debit=None  ocr_credit=None
+
+  date=None  reason=no_date
+  snippet=by int.cr. 30/09/2024-
+  ocr_balance=None parsed=None
+  ocr_debit=None  ocr_credit=None

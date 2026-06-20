@@ -1,0 +1,93 @@
+{
+  "run_at": "2026-06-20T03:22:05.070923Z",
+  "parser": "coordinate_parser_v2",
+  "results": [
+    {
+      "corpus": "axis_digital.json",
+      "pdf_name": "axis.pdf",
+      "bank": "AXIS BANK",
+      "expected": null,
+      "v2_got": 46,
+      "discovery_got": 63,
+      "verified": false,
+      "v2_reasons": {
+        "both_debit_and_credit": 10,
+        "no_debit_or_credit": 3
+      }
+    },
+    {
+      "corpus": "boi_digital.json",
+      "status": "ERROR: PASSWORD_REQUIRED"
+    },
+    {
+      "corpus": "boi_scanned.json",
+      "pdf_name": "BOI_SAVINGS_SCANNED.pdf",
+      "bank": "BANK OF INDIA",
+      "expected": 60,
+      "v2_got": 252,
+      "discovery_got": 273,
+      "verified": false,
+      "v2_reasons": {
+        "NO_TRANSACTION_SEED": 9,
+        "no_date": 2
+      }
+    },
+    {
+      "corpus": "hdfc_scanned.json",
+      "pdf_name": "HDFC_SAVINGS_SCANNED.pdf",
+      "bank": "HDFC BANK",
+      "expected": null,
+      "v2_got": 107,
+      "discovery_got": 114,
+      "verified": false,
+      "v2_reasons": {
+        "no_date": 12,
+        "NO_TRANSACTION_SEED": 12,
+        "both_debit_and_credit": 1
+      }
+    },
+    {
+      "corpus": "icici_cc_digital.json",
+      "status": "ERROR: PASSWORD_REQUIRED"
+    },
+    {
+      "corpus": "kotak_scanned.json",
+      "pdf_name": "DocScanner 17-Apr-2026 11-06 AM 1.pdf",
+      "bank": "KOTAK MAHINDRA BANK",
+      "expected": 9,
+      "v2_got": 9,
+      "discovery_got": 9,
+      "verified": true,
+      "v2_reasons": {
+        "NO_TRANSACTION_SEED": 1
+      }
+    },
+    {
+      "corpus": "tjsb_digital.json",
+      "pdf_name": "24-25 -2 2.pdf",
+      "bank": "TJSB SAHAKARI BANK",
+      "expected": 266,
+      "v2_got": 258,
+      "discovery_got": 273,
+      "verified": true,
+      "v2_reasons": {
+        "no_date": 4,
+        "NO_TRANSACTION_SEED": 3,
+        "both_debit_and_credit": 1
+      }
+    },
+    {
+      "corpus": "yesbank_digital.json",
+      "pdf_name": "YESBANK_SAVINGS_DIGITAL.pdf",
+      "bank": "YES BANK",
+      "expected": null,
+      "v2_got": 81,
+      "discovery_got": 83,
+      "verified": false,
+      "v2_reasons": {
+        "no_date": 2,
+        "both_debit_and_credit": 1
+      }
+    }
+  ]
+}
