@@ -4,6 +4,11 @@ __pycache__/
 *$py.class
 
 # Temporary and Output files
+temp/
+cache/
+debug/
+audit_export/
+investigations/
 validation_lab/backend/temp/
 validation_lab/backend/debug/
 tests/audit_reports/timelines/
@@ -20,3 +25,12 @@ page_boundary_audit_results.txt
 .venv
 venv/
 ENV/
+legacy_env/
+ocr_legacy_env/
+
+# Models & Weights
+models/
+HF_Downloads/
+MINERU/
+checkpoints/
+weights/
