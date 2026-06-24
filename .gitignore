@@ -22,6 +22,7 @@ page_boundary_audit_results.txt
 
 # Environments
 .env
+.env.*
 .venv
 venv/
 ENV/
