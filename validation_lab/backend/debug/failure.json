@@ -1,4 +1,0 @@
-{
-  "failure_stage": "STAGE_6_COORDINATE_PARSE",
-  "reason": "transaction_count=0, confidence=0.60, status=FAILED, detail=BALANCE_RECONCILIATION_FAILURE"
-}

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary and Output files
+validation_lab/backend/temp/
+validation_lab/backend/debug/
+tests/audit_reports/timelines/
+page_boundary_audit_results.txt
+
+# Media / Documents
+*.pdf
+*.jpg
+*.jpeg
+*.png
+
+# Environments
+.env
+.venv
+venv/
+ENV/
