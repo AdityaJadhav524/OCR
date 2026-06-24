@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-06-20T03:22:05.070923Z",
+  "run_at": "2026-06-24T06:28:31.860940Z",
   "parser": "coordinate_parser_v2",
   "results": [
     {
@@ -7,12 +7,12 @@
       "pdf_name": "axis.pdf",
       "bank": "AXIS BANK",
       "expected": null,
-      "v2_got": 46,
+      "v2_got": 47,
       "discovery_got": 63,
       "verified": false,
       "v2_reasons": {
         "both_debit_and_credit": 10,
-        "no_debit_or_credit": 3
+        "no_debit_or_credit": 2
       }
     },
     {
@@ -28,8 +28,8 @@
       "discovery_got": 273,
       "verified": false,
       "v2_reasons": {
-        "NO_TRANSACTION_SEED": 9,
-        "no_date": 2
+        "NO_TRANSACTION_SEED": 8,
+        "no_date": 3
       }
     },
     {
