@@ -1,28 +1,33 @@
 # OCR & Document AI Roadmap
 
-The Validation Pipeline is officially frozen. Phase 2 of the project concentrates entirely on upstream image processing and bounding box extraction. 
+Phase 2 of the project concentrates entirely on upstream image processing and bounding box extraction. 
+The V1.1.0 Validation Engine is strictly frozen. The core KPI of Phase 2 is the **Reduction in validator failures caused by OCR**, measured directly through `run_regression.py`.
 
-## Phase 2 Architecture Goals
-To elevate challenging scanned documents (Axis, HDFC), we must improve the initial extraction vectors before they hit the deterministic parser.
+## Phase 2 Priority Tracks
 
-### Track A: Image Preprocessing Pipeline
-We need to normalize the image fidelity before submitting to the OCR engine.
-- **Watermark Suppression:** Removing dense background text that fuses with digits (e.g. Axis).
-- **Adaptive Deskewing:** Properly orienting individual page chunks.
-- **Binarization & Shadow Removal:** Adaptive thresholding to rescue faded numbers.
+### Priority 1 — Layout Detection (Highest ROI)
+Before OCR executes, classify the document architecture. Different layouts (Savings, Passbook, Credit Card, Scanned vs Digital, Landscape vs Portrait) must be explicitly routed to specialized pipelines.
 
-### Track B: Modular OCR Engine Hub
-Instead of locking into a single provider, the system will orchestrate adapters for various engines, picking the best tool for the specific document profile:
-- Document Intelligence (Azure)
-- PaddleOCR
-- Tesseract
-- Surya
-- EasyOCR
+### Priority 2 — Image Quality Pipeline
+Deconstruct the monolithic OCR run into a measurable image preprocessing chain:
+1. Deskew & Orientation
+2. Crop margins & Remove borders
+3. Contrast Normalization
+4. Adaptive Thresholding & Noise Removal
+5. Watermark Suppression (Critical for Axis)
 
-### Track C: OCR Evaluation Framework
-We must measure improvements deterministically without polluting the Validation Engine metrics.
-The upcoming `evaluation/metrics/` stack will natively track:
-- Amount/Date Recall
-- Character Error Rate (CER)
-- Word Error Rate (WER)
-- OCR Model Confidence Values
+### Priority 3 — OCR Ensemble
+Benchmarking and orchestrating multiple extraction engines (PaddleOCR, EasyOCR, Tesseract, Docling, RapidOCR) rather than hardcoding a single provider. The best engine is selected dynamically based on Priority 1's Layout Detection.
+
+### Priority 4 — Region-based OCR
+Targeting specific bounding boxes (Transaction table, Balance column, Header, Footer) to radically improve token accuracy and extraction speed while ignoring noise (watermarks, logos).
+
+### Priority 5 — Token Confidence
+Tracking native OCR character-confidence arrays inside the `_source_tokens` schema to empower downstream validators to distinguish between parser heuristic failures and fundamental OCR corruption.
+
+## Definition of Done
+Phase 2 is considered successful when:
+- OCR improvements produce measurable gains against the **same** frozen parser and validator stack.
+- Every OCR experiment is successfully evaluated using the regression framework.
+- No changes to the parser contract are required.
+- Telemetry explicitly identifies whether remaining failures are due to OCR or parser logic.

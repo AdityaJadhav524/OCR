@@ -24,7 +24,7 @@ Every extracted transaction must be a dictionary containing the following struct
 - `type` *(string)*: The inferred transaction type (e.g., 'UPI', 'NEFT', 'IMPS').
 
 ### Internal/Debug Fields (For Validation & Discovery)
-- `_source_tokens` *(list)*: The raw OCR tokens that built this transaction.
+- `_source_tokens` *(list)*: The raw OCR tokens that built this transaction. Each token should preserve its native OCR `confidence` float.
 - `_source_page` *(int)*: The original source page index (preserved even if sorting happens).
 - `balance_zone` *(tuple)*: `(x0, x1)` bounding box coordinates of the balance column, used by the Candidate Generator.
 - `confidence` *(dict)*: Sub-system confidence flags (e.g. OCR suspicion).
@@ -42,7 +42,7 @@ Every extracted transaction must be a dictionary containing the following struct
   "page": 1,
   "confidence": {},
   "telemetry": {},
-  "_source_tokens": [{"text": "17/05/2025", "x0": 50, "y0": 100}],
+  "_source_tokens": [{"text": "17/05/2025", "x0": 50, "y0": 100, "confidence": 0.94}],
   "_source_page": 1
 }
 ```
