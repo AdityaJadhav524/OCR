@@ -1,0 +1,62 @@
+[
+  {
+    "bank": "HDFC BANK",
+    "pdf_name": "HDFC_SAVINGS_SCANNED.pdf",
+    "confidence": 86,
+    "status": "REVIEW",
+    "continuity": 71.3,
+    "reconciliation": 92.8,
+    "direction": 100.0,
+    "completeness": 100.0
+  },
+  {
+    "bank": "AXIS BANK",
+    "pdf_name": "AXIS_CURRENT_SCANNED.pdf",
+    "confidence": 46,
+    "status": "MANUAL_CHECK",
+    "continuity": 35.0,
+    "reconciliation": 0.0,
+    "direction": 100.0,
+    "completeness": 95.0
+  },
+  {
+    "bank": "BANK OF INDIA",
+    "pdf_name": "BOI_SAVINGS_SCANNED.pdf",
+    "confidence": 92,
+    "status": "REVIEW",
+    "continuity": 94.6,
+    "reconciliation": 100.0,
+    "direction": 100.0,
+    "completeness": 100.0
+  },
+  {
+    "bank": "TJSB SAHAKARI BANK",
+    "pdf_name": "TJSB_SAVINGS_DIGITAL.pdf",
+    "confidence": 100,
+    "status": "AUTO_APPROVE",
+    "continuity": 100.0,
+    "reconciliation": 100.0,
+    "direction": 100.0,
+    "completeness": 100.0
+  },
+  {
+    "bank": "YES BANK",
+    "pdf_name": "YES_CURRENT_DIGITAL.pdf",
+    "confidence": 100,
+    "status": "AUTO_APPROVE",
+    "continuity": 100.0,
+    "reconciliation": 100.0,
+    "direction": 100.0,
+    "completeness": 100.0
+  },
+  {
+    "bank": "KOTAK BANK",
+    "pdf_name": "KOTAK_SAVINGS_DIGITAL.pdf",
+    "confidence": 100,
+    "status": "AUTO_APPROVE",
+    "continuity": 100.0,
+    "reconciliation": 100.0,
+    "direction": 100.0,
+    "completeness": 100.0
+  }
+]
