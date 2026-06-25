@@ -80,6 +80,7 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
     page_set = set(t.get("_source_page", t.get("page", 0)) for t in sorted_txns)
     page_count = len(page_set)
     
+    page_repaired = False
     if page_count > 3 and continuity < 90 and _detect_page_order_anomaly(sorted_txns):
         logger.info(f"Triggering Page Sequence Repair (continuity {continuity}% across {page_count} pages with anomalies)")
         from core.ordering.page_sequence_repair import run_page_sequence_repair
@@ -88,6 +89,7 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
         sorted_txns, order_meta = validate_and_sort_transactions(sorted_txns)
         rb_audit = run_running_balance_audit(sorted_txns)
         continuity = rb_audit["continuity_percentage"]
+        page_repaired = True
     
     # Sprint 1: Direction (and heals the transactions in-place safely)
     direction_audit = run_ledger_direction_validator(sorted_txns)
@@ -128,6 +130,69 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
     else:
         status = "MANUAL_CHECK"
         
+    # Calculate OCR suspected corruptions
+    suspected_ocr_corruption = 0
+    for t in sorted_txns:
+        cands = t.get("balance_candidates", [])
+        if any("watermark_pattern_suspect" in ev for c in cands for ev in c.get("evidence", [])):
+            suspected_ocr_corruption += 1
+        elif t.get("balance") is not None and not cands: # No valid candidates at all
+            suspected_ocr_corruption += 1
+            
+    # Explainability
+    explainability = []
+    explainability.append(status)
+    explainability.append("")
+    explainability.append(f"Confidence: {confidence}")
+    explainability.append("")
+    if status == "AUTO_APPROVE":
+        explainability.append("Reason:")
+        if completeness >= 99.9: explainability.append("✓ 100% transaction completeness")
+        if continuity >= 99.0: explainability.append(f"✓ {continuity:.1f}% running balance continuity")
+        if reconciliation == 100.0: explainability.append("✓ 100% reconciliation")
+        if not page_repaired: explainability.append("✓ No page ordering anomalies")
+        if suspected_ocr_corruption == 0: explainability.append("✓ No OCR corruption detected")
+    else:
+        explainability.append("Primary causes\n")
+        
+        # Attribute missing confidence points
+        total_lost = 100.0 - confidence_float
+        if total_lost > 0:
+            cont_lost = (100.0 - continuity) * 0.40
+            recon_lost = (100.0 - reconciliation) * 0.35
+            dir_lost = (100.0 - direction) * 0.15
+            comp_lost = (100.0 - completeness) * 0.10
+            
+            causes = []
+            
+            # Map continuity to OCR or Missing Balances
+            if cont_lost > 0:
+                if suspected_ocr_corruption > 0:
+                    causes.append(("OCR corruption", cont_lost))
+                else:
+                    causes.append(("Missing balances", cont_lost))
+                    
+            if recon_lost > 0:
+                if page_repaired:
+                    causes.append(("Page ordering", recon_lost))
+                else:
+                    causes.append(("Anchor discovery", recon_lost))
+                    
+            if dir_lost > 0:
+                causes.append(("Direction uncertainty", dir_lost))
+                
+            if comp_lost > 0:
+                causes.append(("Missing transactions", comp_lost))
+                
+            causes.sort(key=lambda x: x[1], reverse=True)
+            
+            for cause, lost in causes:
+                percentage = int(round((lost / total_lost) * 100))
+                if percentage > 0:
+                    explainability.append(f"{percentage}%\n{cause}\n")
+                    
+    explainability_report = "\n".join(explainability).strip()
+        
     return {
         "confidence": confidence,
         "status": status,
@@ -135,11 +200,13 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
         "reconciliation": reconciliation,
         "direction": direction,
         "transaction_completeness": completeness,
+        "explainability_report": explainability_report,
         "transactions": healed_transactions,
         "details": {
             "order": order_meta,
             "ledger_breaks": rb_audit["ledger_breaks"],
             "reconciliation_difference": recon_audit["difference"],
-            "corrected_directions": direction_audit["corrected_amounts"]
+            "corrected_directions": direction_audit["corrected_amounts"],
+            "suspected_ocr_corruption": suspected_ocr_corruption
         }
     }

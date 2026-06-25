@@ -3,10 +3,10 @@ import json
 import logging
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
-BASELINE_PATH = ROOT / "benchmarks" / "corpus_v1.0.0.json"
+ROOT = Path(__file__).parent.parent.parent
+BASELINE_PATH = ROOT / "evaluation" / "benchmarks" / "corpus_v1.0.0.json"
 
-sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT / "evaluation" / "reports"))
 from run_confidence_benchmark import run_confidence_benchmark
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -49,6 +49,20 @@ def run_regression():
         # 4. Reconciliation shouldn't worsen
         if stat["reconciliation"] < base["reconciliation"] - 0.5:
             regressions.append(f"{bank}: Reconciliation dropped {base['reconciliation']}% -> {stat['reconciliation']}%")
+            
+    # Also print the nice Delta table
+    logger.info("=== BENCHMARK DELTA ===")
+    logger.info(f"{'Bank':<20} | {'v1.0.0':<8} | {'Current':<8} | {'Δ':<6}")
+    logger.info("-" * 50)
+    for stat in current_stats:
+        bank = stat["bank"]
+        if bank in baseline:
+            base_conf = baseline[bank]["confidence"]
+            curr_conf = stat["confidence"]
+            delta = curr_conf - base_conf
+            delta_str = f"+{delta}" if delta >= 0 else str(delta)
+            logger.info(f"{bank:<20} | {base_conf:<8} | {curr_conf:<8} | {delta_str:<6}")
+    logger.info("-" * 50)
             
     if regressions:
         logger.error("REGRESSION(S) DETECTED:")
