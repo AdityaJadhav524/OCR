@@ -154,6 +154,14 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
                 
         # Also include the full row text for cases where date bleeds slightly outside the zone
         row_str = " ".join([t['text'] for t in tokens])
+        
+        # --- FOOTER BAIL-OUT (END OF FILE) ---
+        # If we hit the terminal summary of the statement, stop parsing entirely
+        # so we don't accidentally merge totals/disclaimers into the final transaction.
+        row_str_upper = row_str.upper()
+        if any(kw in row_str_upper for kw in ["GRAND TOTAL", "ABBREVIATIONS USED", "DISCLAIMER", "END OF STATEMENT"]):
+            break
+            
         zone_str = " ".join([t['text'] for t in zone_tokens]) if zone_tokens else row_str
 
         # Check zone_str first, fallback to row_str if needed
