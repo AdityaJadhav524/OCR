@@ -24,7 +24,7 @@ Schema Mapping (from Phase 1 analysis):
 import logging
 from typing import List, Tuple
 
-logger = logging.getLogger("core.adapters.ocr_adapter")
+logger = logging.getLogger("ocr.adapters.ocr_adapter")
 
 # Must exactly match the separator used in pdf_extractor.py (line 499) and
 # the regex used in statement_parser.py (re.split(r'={80}', full_text))

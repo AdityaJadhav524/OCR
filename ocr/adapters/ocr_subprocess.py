@@ -24,7 +24,7 @@ import os
 import subprocess
 from typing import List, Tuple
 
-logger = logging.getLogger("core.adapters.ocr_subprocess")
+logger = logging.getLogger("ocr.adapters.ocr_subprocess")
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 _WORKSPACE_ROOT = os.path.normpath(

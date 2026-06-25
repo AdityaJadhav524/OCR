@@ -805,7 +805,7 @@ from fastapi import BackgroundTasks
 
 async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = None, original_filenames: List[str] = None):
     try:
-        from core.adapters.ocr_subprocess import extract_via_subprocess
+        from ocr.adapters.ocr_subprocess import extract_via_subprocess
         from core.parsers.coordinate_parser_v2 import parse_with_coordinates
         from core.validators.ledger_truth import annotate_ledger_truth
         from core.detection.header_suppression import suppress_headers_and_footers

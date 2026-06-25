@@ -62,7 +62,7 @@ sys.stdout   = sys.stderr
 try:
     # ── Load pipeline and adapter (imports paddle, cv2, etc.) ─────────────────
     from pipeline import run_pipeline                          # ocr_core/pipeline.py
-    from core.adapters.ocr_adapter import document_to_text    # core/adapters/ocr_adapter.py
+    from ocr.adapters.ocr_adapter import document_to_text    # core/adapters/ocr_adapter.py
 
     # ── Read PDF bytes ─────────────────────────────────────────────────────────
     with open(PDF_PATH, "rb") as fh:

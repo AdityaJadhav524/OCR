@@ -1,0 +1,191 @@
+[
+  {
+    "pdf": "axis.pdf",
+    "rows_before": 166,
+    "rows_after": 131,
+    "ratio": 0.79,
+    "largest_block_rows": 2,
+    "avg_block_rows": 1.27,
+    "top_20_merged_blocks": [
+      {
+        "source_rows": 2,
+        "merged_block": "        JoivHolder                                         AXIS         BANK"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "        370201       Statementof  Account  No :918020085057027   lortle period (rom:01-10-2021     To :08-07-2022)  Curreney:INR"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "        O1-10-2021           NPathandone212745121839Nishar                     3299,00                            3118032l  178"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "        04 10-2031           INEETABKL2|1004687172/StA  MACHINCKY_           402000.00        2950n.00"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "         202                 CASHKGANDHIDHAMGANDHIDIAM04102                     1500,00                           13212.37  I78"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "       04-10-2021            IBUP2N127778573396/NISHAR     JDIBank of                         10000,00            2321237   178"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "        05-10-2021           MORTYANTHA        M9557287                        I5000.00                          96496.8;"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "                              NEFTAIAXM321767469UPRt            Elesn          94999,00"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "        05-0-2021            RGSHD    C35in0s639:8%4/SREE"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "        07-10-2021           NEFT/MBAXMB212807938928/Padhan      Pardeu       22500.00                              79342  178"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "              021             RTGSIT0111OUS13960.BROTHERS/                                  S90100.0             SO35142   34"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "          9-10-2021                   NEFTI2S191461761DCI.BROTHERSBALANC                                                137992.0                  138943.42     248"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "           09-10-2021l                          ZAIZ8219460647/Firdoa'INDUSINX                     125011.80                                     1013931.6     178"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "            l1-10-2021}               AXISCWCWI7821/6371/1             1021/GANDHIDHA                   1000,00                                       SA32.62   178"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "            11-10-2021                  AXIS/DPRH32940        8251/111021/GANDIHIDIIA                   1000.00|                                     4432.62    178"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "           I6-10-2021                 NEFT   25245430121DCIGANDHIDHAM                                                  SOUO00.O0                  500932.62    248"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "            16-10-202                   SAKNEFTRTGS         Charges  on  Rs.500000   at                                                               903,12"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "            1-10202L                    RTGS/SKUTIBRS202         11021003$9546/178/YAN                699000.o0                                      1000,00      78"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "                                              arges                  on  Rs.690"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "           23-10-2021                 IMPP2A/129612305755/DEEPAKMEHDFCB                                                200000.00 l                200882.00L    178"
+      }
+    ]
+  },
+  {
+    "pdf": "24-25 -2 2.pdf",
+    "rows_before": 1035,
+    "rows_after": 1033,
+    "ratio": 1.0,
+    "largest_block_rows": 2,
+    "avg_block_rows": 1.0,
+    "top_20_merged_blocks": [
+      {
+        "source_rows": 2,
+        "merged_block": "            Perioddetails                                    Account  Statement"
+      },
+      {
+        "source_rows": 2,
+        "merged_block": "     Transaction   Summary     31032025"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                                                              SavingAccountStatement"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "        From Date                                  01/10/2024              ToDate                                     31/03/2025"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "             AccountDetails"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "        AccountNumber                           087110100001357            AccountCurrency                              INR (\u20b9)"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "        AccountName                            UMESH  VILAS PATIL          Branch                                   SANGLI BRANCH"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "        AvailablBalance                           \u20b977,051.12CR             LedgerBalance                             \u20b977,051.12CR"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "        HoldAmount                                    \u20b90.00                AccruedInterest                              \u20b974.45"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "        JoinHolder                     N/A                                 OpeningBalance                            -\u20b91,53,008.95"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "      TransactionDate          Description          TxnReference/Instrument     Cheque No   DebitAmount(\u20b9)  CrediAmount(\u20b9)  Running Balance"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                       UPI/CR/427669681424/UMES"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "         02-10-2024             H VILAS                 126-148234236            000000                         100.00        10,324.79CR"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                       PAT/HDFC/50100478383644/"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                                  UPI"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                       UPI/CR/464256945112/UMES"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "         02-10-2024             H VILAS                 126-148234238            000000                          1.00         10,325.79CR"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                      PAT/HDFC/50100478383644/t"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                                o TJSB"
+      },
+      {
+        "source_rows": 1,
+        "merged_block": "                       UPI/DR/428149227411/Spotif"
+      }
+    ]
+  },
+  {
+    "pdf": "YESBANK_SAVINGS_DIGITAL.pdf",
+    "rows_before": 0,
+    "rows_after": 0,
+    "ratio": 1.0,
+    "largest_block_rows": 1,
+    "avg_block_rows": 1.0,
+    "top_20_merged_blocks": []
+  }
+]

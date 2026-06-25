@@ -148,7 +148,7 @@ def _extract_digital(pdf_path: str, password: str = None) -> Tuple[str, List[str
 # -----------------------------------------------------------------------------
 
 def _extract_scanned(pdf_path: str, password: str = None) -> Tuple[str, List[str], dict, list]:
-    from core.adapters.ocr_subprocess import extract_via_subprocess
+    from ocr.adapters.ocr_subprocess import extract_via_subprocess
 
     filename = os.path.basename(pdf_path)
     logger.info(
