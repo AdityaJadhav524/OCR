@@ -140,58 +140,85 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
             suspected_ocr_corruption += 1
             
     # Explainability
-    explainability = []
-    explainability.append(status)
-    explainability.append("")
-    explainability.append(f"Confidence: {confidence}")
-    explainability.append("")
-    if status == "AUTO_APPROVE":
-        explainability.append("Reason:")
-        if completeness >= 99.9: explainability.append("✓ 100% transaction completeness")
-        if continuity >= 99.0: explainability.append(f"✓ {continuity:.1f}% running balance continuity")
-        if reconciliation == 100.0: explainability.append("✓ 100% reconciliation")
-        if not page_repaired: explainability.append("✓ No page ordering anomalies")
-        if suspected_ocr_corruption == 0: explainability.append("✓ No OCR corruption detected")
-    else:
-        explainability.append("Primary causes\n")
+    explainability = {
+        "summary": "",
+        "strengths": [],
+        "issues": [],
+        "root_causes": [],
+        "validator_scores": {
+            "continuity": continuity,
+            "reconciliation": reconciliation,
+            "direction": direction,
+            "completeness": completeness
+        }
+    }
+    
+    # Analyze Strengths
+    if continuity >= 99.0:
+        explainability["strengths"].append(f"Running balance continuity {continuity:.1f}%")
+    if reconciliation >= 99.0:
+        explainability["strengths"].append(f"Statement reconciliation {reconciliation:.1f}%")
+    if completeness >= 99.9:
+        explainability["strengths"].append("100% transaction completeness")
+    if recon_audit.get("reconciliation_percentage", 0) > 0 and reconciliation >= 99.0:
+        explainability["strengths"].append("Opening/Closing balance anchors recovered")
+    if direction_audit.get("corrected_amounts", 0) > 0:
+        explainability["strengths"].append(f"Debit/Credit directions healed ({direction_audit['corrected_amounts']} rows)")
+    if page_repaired:
+        explainability["strengths"].append("Page ordering recovered automatically")
         
-        # Attribute missing confidence points
-        total_lost = 100.0 - confidence_float
-        if total_lost > 0:
-            cont_lost = (100.0 - continuity) * 0.40
-            recon_lost = (100.0 - reconciliation) * 0.35
-            dir_lost = (100.0 - direction) * 0.15
-            comp_lost = (100.0 - completeness) * 0.10
+    # Analyze Issues and Root Causes
+    if suspected_ocr_corruption > 0:
+        explainability["issues"].append(f"OCR corrupted {suspected_ocr_corruption} fields")
+        explainability["root_causes"].append("OCR_CORRUPTION")
+        
+    if continuity < 99.0:
+        breaks = rb_audit.get("ledger_breaks", 0)
+        explainability["issues"].append(f"{breaks} continuity breaks remain")
+        if "OCR_CORRUPTION" not in explainability["root_causes"]:
+            explainability["root_causes"].append("BALANCE_CORRUPTION")
             
-            causes = []
+    if reconciliation < 99.0:
+        explainability["issues"].append("Reconciliation failed (anchors mismatch)")
+        if page_repaired or page_date_reversals > 0:
+            explainability["root_causes"].append("PAGE_ORDERING")
             
-            # Map continuity to OCR or Missing Balances
-            if cont_lost > 0:
-                if suspected_ocr_corruption > 0:
-                    causes.append(("OCR corruption", cont_lost))
-                else:
-                    causes.append(("Missing balances", cont_lost))
-                    
-            if recon_lost > 0:
-                if page_repaired:
-                    causes.append(("Page ordering", recon_lost))
-                else:
-                    causes.append(("Anchor discovery", recon_lost))
-                    
-            if dir_lost > 0:
-                causes.append(("Direction uncertainty", dir_lost))
-                
-            if comp_lost > 0:
-                causes.append(("Missing transactions", comp_lost))
-                
-            causes.sort(key=lambda x: x[1], reverse=True)
-            
-            for cause, lost in causes:
-                percentage = int(round((lost / total_lost) * 100))
-                if percentage > 0:
-                    explainability.append(f"{percentage}%\n{cause}\n")
-                    
-    explainability_report = "\n".join(explainability).strip()
+    if completeness < 99.0:
+        explainability["issues"].append(f"Low transaction completeness ({completeness:.1f}%)")
+        explainability["root_causes"].append("MISSING_TRANSACTION")
+        explainability["root_causes"].append("LOW_COMPLETENESS")
+        
+    if direction < 99.0:
+        explainability["issues"].append("Direction errors could not be healed")
+        explainability["root_causes"].append("DIRECTION_ERROR")
+        
+    # Summary
+    if status == "AUTO_APPROVE":
+        explainability["summary"] = "The statement is mathematically reliable and safe for automated processing."
+    elif status == "REVIEW":
+        explainability["summary"] = "The statement is mathematically consistent but contains OCR or ordering anomalies. Safe for accountant review."
+    else:
+        explainability["summary"] = "The statement failed multiple mathematical audits. Requires strict manual verification."
+        
+    # Human-readable report
+    report_lines = []
+    report_lines.append(f"Confidence: {confidence} ({status})")
+    report_lines.append("")
+    report_lines.append("Summary")
+    report_lines.append(explainability["summary"])
+    report_lines.append("")
+    if explainability["strengths"]:
+        report_lines.append("Strengths")
+        for s in explainability["strengths"]:
+            report_lines.append(f"✓ {s}")
+        report_lines.append("")
+    if explainability["issues"]:
+        report_lines.append("Issues")
+        for i in explainability["issues"]:
+            report_lines.append(f"• {i}")
+        report_lines.append("")
+        
+    explainability["human_readable_report"] = "\n".join(report_lines).strip()
         
     return {
         "confidence": confidence,
@@ -200,7 +227,7 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
         "reconciliation": reconciliation,
         "direction": direction,
         "transaction_completeness": completeness,
-        "explainability_report": explainability_report,
+        "explainability": explainability,
         "transactions": healed_transactions,
         "details": {
             "order": order_meta,
