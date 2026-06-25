@@ -139,17 +139,37 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
         elif t.get("balance") is not None and not cands: # No valid candidates at all
             suspected_ocr_corruption += 1
             
-    # Explainability
+    # Explainability Structured API
     explainability = {
         "summary": "",
         "strengths": [],
         "issues": [],
         "root_causes": [],
-        "validator_scores": {
-            "continuity": continuity,
-            "reconciliation": reconciliation,
-            "direction": direction,
-            "completeness": completeness
+        "evidence": {
+            "continuity_breaks": rb_audit.get("ledger_breaks", 0),
+            "reconciliation_difference": recon_audit.get("difference", 0.0),
+            "direction_corrections": direction_audit.get("corrected_amounts", 0),
+            "missing_balances": sum(1 for t in sorted_txns if t.get("balance") is None),
+            "page_reorders": 1 if page_repaired else 0,
+            "suspected_ocr_corruption": suspected_ocr_corruption
+        },
+        "validators": {
+            "continuity": {
+                "score": continuity,
+                "breaks": rb_audit.get("ledger_breaks", 0)
+            },
+            "reconciliation": {
+                "score": reconciliation,
+                "difference": recon_audit.get("difference", 0.0)
+            },
+            "direction": {
+                "score": direction,
+                "corrected": direction_audit.get("corrected_amounts", 0)
+            },
+            "completeness": {
+                "score": completeness,
+                "missing": expected_transaction_count - len(transactions) if expected_transaction_count and len(transactions) < expected_transaction_count else 0
+            }
         }
     }
     
@@ -162,8 +182,10 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
         explainability["strengths"].append("100% transaction completeness")
     if recon_audit.get("reconciliation_percentage", 0) > 0 and reconciliation >= 99.0:
         explainability["strengths"].append("Opening/Closing balance anchors recovered")
+        explainability["root_causes"].append("ANCHOR_RECOVERED")
     if direction_audit.get("corrected_amounts", 0) > 0:
         explainability["strengths"].append(f"Debit/Credit directions healed ({direction_audit['corrected_amounts']} rows)")
+        explainability["root_causes"].append("DIRECTION_HEALED")
     if page_repaired:
         explainability["strengths"].append("Page ordering recovered automatically")
         
@@ -185,7 +207,6 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
             
     if completeness < 99.0:
         explainability["issues"].append(f"Low transaction completeness ({completeness:.1f}%)")
-        explainability["root_causes"].append("MISSING_TRANSACTION")
         explainability["root_causes"].append("LOW_COMPLETENESS")
         
     if direction < 99.0:
@@ -220,20 +241,12 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
         
     explainability["human_readable_report"] = "\n".join(report_lines).strip()
         
+    # Deduplicate root causes
+    explainability["root_causes"] = list(set(explainability["root_causes"]))
+        
     return {
         "confidence": confidence,
         "status": status,
-        "continuity": continuity,
-        "reconciliation": reconciliation,
-        "direction": direction,
-        "transaction_completeness": completeness,
         "explainability": explainability,
-        "transactions": healed_transactions,
-        "details": {
-            "order": order_meta,
-            "ledger_breaks": rb_audit["ledger_breaks"],
-            "reconciliation_difference": recon_audit["difference"],
-            "corrected_directions": direction_audit["corrected_amounts"],
-            "suspected_ocr_corruption": suspected_ocr_corruption
-        }
+        "transactions": healed_transactions
     }

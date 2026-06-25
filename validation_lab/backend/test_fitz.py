@@ -5,7 +5,7 @@ _WORKSPACE_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../.
 sys.path.insert(0, _WORKSPACE_ROOT)
 sys.path.insert(0, os.path.join(_WORKSPACE_ROOT, "core"))
 
-from core.adapters.ocr_subprocess import extract_via_subprocess
+from ocr.adapters.ocr_subprocess import extract_via_subprocess
 
 pdf_path = r'C:\Users\adity\Downloads\CA\validation_lab\backend\temp\JOB_20260619_174708_E5E8_SavingAccountStatement_20260421090553 1 (2)_page-0001.pdf'
 full_text, pages, telemetry, page_tokens = extract_via_subprocess(pdf_path)

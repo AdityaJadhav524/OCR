@@ -1000,6 +1000,20 @@ async def run_benchmark_job(job_id: str, file_paths: List[str], password: str = 
                                         "DATE_NARRATION_MERGE", "COLUMN_BOUNDARY_SUSPECT",
                                         "NUMERIC_SHAPE_ANOMALY"):
                             ocr_format_counts[reason] = ocr_format_counts.get(reason, 0) + 1
+                # --- Telemetry Logging ---
+                from telemetry.logger import log_telemetry
+                log_telemetry("extraction", statement_id, {
+                    "job_id": job_id,
+                    "pdf_name": pdf_name,
+                    "bank": bank_name,
+                    "telemetry": tel,
+                    "ocr_metrics": telemetry,
+                    "primary_anomalies": primary_anomalies,
+                    "downstream_effects": downstream_effects,
+                    "ocr_format_counts": ocr_format_counts,
+                    "extracted_transactions_count": len(final_txns)
+                })
+                # -------------------------
                 
                 BENCHMARK_JOBS[job_id]["results"].append({
                     "statement_id": statement_id,

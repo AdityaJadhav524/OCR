@@ -64,6 +64,10 @@ def run_confidence_benchmark():
         # Sprint 4
         conf = generate_statement_confidence(txns, expected_transaction_count=expected_count)
         
+        # Telemetry
+        from telemetry.logger import log_telemetry
+        log_telemetry("confidence", pdf_name.replace(".pdf", ""), conf)
+        
         bank_stats.append({
             "bank": bank,
             "pdf_name": pdf_name,
