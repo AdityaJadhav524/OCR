@@ -101,13 +101,15 @@ def _is_cont_line(line: str) -> bool:
     """
     True when *line* is a wrapped-cell continuation:
       - not blank
-      - starts with >= _MIN_LEADING spaces  (content not in the date column)
-      - no date pattern in the date zone
+      - starts with >= _MIN_LEADING spaces
+      - no date pattern ANYWHERE in the line
     """
     if not line.strip():
         return False
+    if bool(DATE_RE.search(line)):
+        return False
     leading = len(line) - len(line.lstrip(' '))
-    return leading >= _MIN_LEADING and not _has_date_at_left(line)
+    return leading >= _MIN_LEADING
 
 
 def _can_safely_overlay(line1: str, line2: str) -> bool:
@@ -115,6 +117,14 @@ def _can_safely_overlay(line1: str, line2: str) -> bool:
     Returns True ONLY if no non-space character collision exists.
     Data preservation must always win.
     """
+    # Rule 1: If both lines contain dates -> NEVER overlay
+    if bool(DATE_RE.search(line1)) and bool(DATE_RE.search(line2)):
+        return False
+        
+    # Rule 2: If both lines contain monetary amounts -> NEVER overlay
+    if len(AMOUNT_RE.findall(line1)) > 0 and len(AMOUNT_RE.findall(line2)) > 0:
+        return False
+
     min_len = min(len(line1), len(line2))
     for col in range(min_len):
         if line1[col] != ' ' and line2[col] != ' ':
@@ -143,92 +153,50 @@ def _overlay_lines(group: List[str]) -> str:
 def _merge_continuation_rows(lines: List[str]) -> tuple[List[str], dict]:
     """
     Bank-agnostic fix for wrapped table-cell rows and stacked headers.
+    Enforces strict semantic safety and MAX_OVERLAY_DEPTH=2.
     """
     if not lines:
         return lines, {"before": 0, "after": 0, "overlaid": 0, "appended": 0, "safe_rejected": 0}
 
     result: List[str] = []
-    i, n = 0, len(lines)
+    block_counts: List[int] = []
+    n = len(lines)
     
     rows_overlaid = 0
     rows_appended = 0
     safe_overlay_rejected = 0
 
-    while i < n:
-        line = lines[i]
-
+    for line in lines:
         # ── Stop merging at page breaks or summary blocks ──
         if 'PAGE' in line or 'Opening Balance' in line or 'TOTAL' in line:
             result.append(line)
+            block_counts.append(1)
             rows_appended += 1
-            i += 1
             continue
 
-        # ── pre-continuation block (continuation lines before any anchor) ──
-        if _is_cont_line(line):
-            pre: List[str] = []
-            while i < n and _is_cont_line(lines[i]):
-                pre.append(lines[i])
-                i += 1
-
-            if i < n and _has_date_at_left(lines[i]):
-                anchor = lines[i]
-                i += 1
-                post: List[str] = []
-                while i < n and _is_cont_line(lines[i]):
-                    post.append(lines[i])
-                    i += 1
-                result.append(_overlay_lines([anchor] + pre + post))
-                rows_overlaid += len(pre) + len(post)
-            else:
-                # Sparse header handling
-                merged_pre = _overlay_lines(pre)
-                if result and not _has_date_at_left(result[-1]):
-                    if _can_safely_overlay(result[-1], merged_pre):
-                        result[-1] = _overlay_lines([result[-1], merged_pre])
-                        rows_overlaid += len(pre)
-                    else:
-                        result.append(merged_pre)
-                        rows_appended += 1
-                        safe_overlay_rejected += 1
-                        logger.warning("SAFE_OVERLAY_REJECTED: Pre-continuation collision detected.")
-                else:
-                    result.append(merged_pre)
-                    rows_appended += 1
-
-        # ── anchor line ──
-        elif _has_date_at_left(line):
-            anchor = line
-            i += 1
-            post = []
-            while i < n and _is_cont_line(lines[i]):
-                post.append(lines[i])
-                i += 1
-            if post:
-                result.append(_overlay_lines([anchor] + post))
-                rows_overlaid += len(post)
-            else:
-                result.append(anchor)
-                rows_appended += 1
-
-        # ── regular line (header / title / footer) ──
-        else:
-            if result and not _has_date_at_left(result[-1]) and line.strip() and not _has_date_at_left(line):
-                if _can_safely_overlay(result[-1], line):
-                    result[-1] = _overlay_lines([result[-1], line])
-                    rows_overlaid += 1
-                else:
-                    result.append(line)
-                    rows_appended += 1
-                    safe_overlay_rejected += 1
-                    logger.warning(f"SAFE_OVERLAY_REJECTED: Collision between\n'{result[-1]}'\n'{line}'")
+        if not result:
+            result.append(line)
+            block_counts.append(1)
+            rows_appended += 1
+            continue
+            
+        if _can_safely_overlay(result[-1], line):
+            if block_counts[-1] < 2:
+                result[-1] = _overlay_lines([result[-1], line])
+                block_counts[-1] += 1
+                rows_overlaid += 1
             else:
                 result.append(line)
+                block_counts.append(1)
                 rows_appended += 1
-            i += 1
+                safe_overlay_rejected += 1
+        else:
+            result.append(line)
+            block_counts.append(1)
+            rows_appended += 1
 
     final_lines = [l for l in result if l.strip()]
-    if len(final_lines) < n * 0.5:
+    if len(final_lines) < n * 0.75:
         logger.warning(f"EXTRACTION_WARNING: rows_after_merge ({len(final_lines)}) << rows_before_merge ({n})")
     
     stats = {
@@ -236,7 +204,9 @@ def _merge_continuation_rows(lines: List[str]) -> tuple[List[str], dict]:
         "after": len(final_lines),
         "overlaid": rows_overlaid,
         "appended": rows_appended,
-        "safe_rejected": safe_overlay_rejected
+        "safe_rejected": safe_overlay_rejected,
+        "block_counts": [c for c, l in zip(block_counts, result) if l.strip()],
+        "blocks": final_lines
     }
     logger.info(f"Merge Stats: {stats}")
     return final_lines, stats
@@ -578,7 +548,12 @@ class EnhancedFinancialPDFExtractor:
                 best_toks = valid_toks_cands[0] if valid_toks_cands else scored[0][3]
                 
                 for k, v in best_stats.items():
-                    self.merge_stats[k] = self.merge_stats.get(k, 0) + v
+                    if isinstance(v, list):
+                        self.merge_stats[k] = self.merge_stats.get(k, []) + v
+                    else:
+                        self.merge_stats[k] = self.merge_stats.get(k, 0) + v
+
+                logger.error(f"PAGE {page_num+1} WON BY {scored[0][0]}. Stats: {best_stats.get('before')} -> {best_stats.get('after')}")
 
                 all_tokens.extend(best_toks)
 

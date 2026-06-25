@@ -518,6 +518,7 @@ def _extract_block(
         "assigned_column": assigned_column,
         "debit_zone":     debit_zone,
         "credit_zone":    credit_zone,
+        "balance_zone":   balance_zone,
         "_block_text":    " ".join(block_text_parts),
         "_anchor_text":   anchor_text,
         "_token_total":   len(all_tokens),

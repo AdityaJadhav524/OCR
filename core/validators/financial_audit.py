@@ -4,6 +4,7 @@ from typing import List, Dict, Any
 logger = logging.getLogger("core.validators.financial_audit")
 
 import re
+from core.cleaners.balance_text_sanitizer import sanitize_balance_text
 
 def _parse_float(val) -> float:
     if val is None:
@@ -14,7 +15,12 @@ def _parse_float(val) -> float:
 
     text = str(val).strip()
     
-    # Strip everything except digits, comma, period, minus
+    # 1. Apply Document-Specific Sanitization (Watermarks, OCR bleeding)
+    text = sanitize_balance_text(text)
+    if not text:
+        return None
+
+    # Strip everything except digits, comma, period, minus (just in case)
     text = re.sub(r'[^\d.,-]', '', text)
 
     # Apply OCR comma-as-decimal fix

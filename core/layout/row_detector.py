@@ -233,6 +233,28 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
                         is_footer = True
                         
                 if not is_footer:
+                    # RULE: MAX_OVERLAY_DEPTH = 2 (anchor + 1 continuation)
+                    if len(current_block) >= 2:
+                        blocks.append(current_block)
+                        current_block = [row]
+                        continue
+                        
+                    prev_text = " ".join([t.get("text", "") for t in current_block[-1].get("tokens", [])])
+                    curr_text = " ".join([t.get("text", "") for t in row.get("tokens", [])])
+                    
+                    # Rule 1: Both lines contain dates -> NO OVERLAY
+                    if bool(DATE_RE.search(prev_text)) and bool(DATE_RE.search(curr_text)):
+                        blocks.append(current_block)
+                        current_block = [row]
+                        continue
+                        
+                    # Rule 2: Both lines contain amounts -> NO OVERLAY
+                    AMOUNT_RE = re.compile(r'\b\d{1,3}(?:,\d{3})*\.\d{2}\b')
+                    if len(AMOUNT_RE.findall(prev_text)) > 0 and len(AMOUNT_RE.findall(curr_text)) > 0:
+                        blocks.append(current_block)
+                        current_block = [row]
+                        continue
+                        
                     current_block.append(row)
                 
     if current_block:
