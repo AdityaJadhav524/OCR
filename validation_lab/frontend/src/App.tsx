@@ -762,8 +762,17 @@ export default function App() {
         {/* ── STEP 4: TRANSACTIONS TABLE ──────────────────────────────────── */}
         {allTxns.length > 0 && (
           <Card className="shadow-sm border-gray-200 bg-white overflow-hidden">
-             <CardHeader className="pb-3 border-b border-gray-100 bg-slate-50/50">
+             <CardHeader className="pb-3 border-b border-gray-100 bg-slate-50/50 flex flex-row items-center justify-between">
                 <CardTitle className="text-sm font-bold text-gray-800 tracking-wide uppercase">Transactions</CardTitle>
+                {allTxns.length > 0 && (
+                  <div className="flex gap-4 text-xs font-mono text-gray-500 bg-gray-100 px-3 py-1.5 rounded-md border border-gray-200">
+                    <span title="The parser used for this extraction">Parser: <span className="font-semibold text-gray-700">{successfulItems[0]?.result?.parser_used || 'Unknown'}</span></span>
+                    <span className="text-gray-300">|</span>
+                    <span title="Active Git commit hash">Git: <span className="font-semibold text-gray-700">latest</span></span>
+                    <span className="text-gray-300">|</span>
+                    <span title="Shadow parsing mode status">Shadow: <span className="font-semibold text-emerald-600">enabled</span></span>
+                  </div>
+                )}
               </CardHeader>
             <div className="max-h-[600px] overflow-auto">
               <Table>
@@ -783,9 +792,15 @@ export default function App() {
                       <TableCell className="max-w-[300px] text-sm text-gray-700">
                         <div className="truncate" title={t.narration}>{t.narration}</div>
                       </TableCell>
-                      <TableCell className="text-right text-sm text-red-600 tabular-nums">{t.debit ?? '—'}</TableCell>
-                      <TableCell className="text-right text-sm text-emerald-600 tabular-nums">{t.credit ?? '—'}</TableCell>
-                      <TableCell className="text-right text-sm font-medium text-gray-900 tabular-nums">{t.balance ?? '—'}</TableCell>
+                      <TableCell className="text-right text-sm text-red-600 tabular-nums">
+                        {t.debit !== undefined && t.debit !== null ? Number(t.debit).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—'}
+                      </TableCell>
+                      <TableCell className="text-right text-sm text-emerald-600 tabular-nums">
+                        {t.credit !== undefined && t.credit !== null ? Number(t.credit).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—'}
+                      </TableCell>
+                      <TableCell className="text-right text-sm font-medium text-gray-900 tabular-nums">
+                        {t.balance !== undefined && t.balance !== null ? Number(t.balance).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—'}
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

@@ -78,6 +78,16 @@ def detect_rows(tokens: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "tokens": cur_row_tokens
             })
 
+    # Phase C: Row Grouping Diagnostics
+    for i, r in enumerate(all_rows):
+        if not r["tokens"]: continue
+        heights = sorted(t['y1'] - t['y0'] for t in r["tokens"])
+        median_h = heights[len(heights)//2] if heights else 0
+        gaps = sorted(abs(r["tokens"][j]['yc'] - r["tokens"][j-1]['yc']) for j in range(1, len(r["tokens"])))
+        median_gap = gaps[len(gaps)//2] if gaps else 0.0
+        
+        logger.debug(f"ROW_DIAGNOSTICS: row={i} bbox=[{r['y0']:.1f}, {r['y1']:.1f}] height={r['y1']-r['y0']:.1f} median_gap={median_gap:.1f} median_token_h={median_h:.1f} tokens={' | '.join(t['text'] for t in r['tokens'])}")
+
     logger.info(f"Detected {len(all_rows)} physical rows from {len(tokens)} tokens.")
     return all_rows
 
@@ -155,13 +165,6 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
         # Also include the full row text for cases where date bleeds slightly outside the zone
         row_str = " ".join([t['text'] for t in tokens])
         
-        # --- FOOTER BAIL-OUT (END OF FILE) ---
-        # If we hit the terminal summary of the statement, stop parsing entirely
-        # so we don't accidentally merge totals/disclaimers into the final transaction.
-        row_str_upper = row_str.upper()
-        if any(kw in row_str_upper for kw in ["GRAND TOTAL", "ABBREVIATIONS USED", "DISCLAIMER", "END OF STATEMENT"]):
-            break
-            
         zone_str = " ".join([t['text'] for t in zone_tokens]) if zone_tokens else row_str
 
         # Check zone_str first, fallback to row_str if needed
@@ -201,6 +204,21 @@ def detect_transaction_blocks(rows: List[Dict[str, Any]], date_x_bounds: tuple =
                     is_anchor = True
                     break
                     
+        # --- MODULAR FOOTER DETECTOR (END OF FILE) ---
+        page_pos = row.get("y1", 0) / max(page_heights.get(row.get("page", 1), 1000), 1)
+        
+        from core.detection.footer_detector import FooterDetector
+        detector = FooterDetector()
+        decision = detector.evaluate_row(row_str, page_pos, is_anchor)
+        
+        if decision.is_footer:
+            if decision.action == "STOP_PAGE":
+                logger.info(f"Terminal footer detected (STOP_PAGE). Halting parsing. Confidence: {decision.confidence:.2f}")
+                break
+            elif decision.action == "IGNORE_ROW":
+                logger.info(f"Page footer detected (IGNORE_ROW). Skipping row. Confidence: {decision.confidence:.2f}")
+                continue
+            
         if is_anchor:
             if current_block:
                 blocks.append(current_block)

@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.append(r'c:\Users\adity\Downloads\CA')
-from core.adapters.ocr_subprocess import extract_via_subprocess
+from ocr.adapters.ocr_subprocess import extract_via_subprocess
 
 pdf_path = r'C:\Users\adity\Downloads\CA\tests\pdfs\YESBANK.pdf'
 full_text, pages, telemetry, page_tokens = extract_via_subprocess(pdf_path)

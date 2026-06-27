@@ -21,6 +21,8 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
     """
 
     date_kws      = ["DATE"]
+    value_date_kws= ["VALUE DATE", "VALUE DT", "VAL DT", "VAL.DATE", "EFFECTIVE DATE"]
+    cheque_kws    = ["CHQ", "CHEQUE", "REF", "REFERENCE", "INSTRUMENT"]
     narration_kws = ["PARTICULARS", "NARRATION", "DESCRIPTION", "DETAILS", "REMARKS"]
     debit_kws     = ["WITHDRAWAL", "WITHDRAWALS", "DEBIT", "DR"]
     credit_kws    = ["DEPOSIT", "DEPOSITS", "CREDIT", "CR"]
@@ -46,6 +48,10 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
         for j, w_row in enumerate(window_rows):
             text_upper = " ".join([t["text"].upper() for t in w_row.get("tokens", [])])
 
+            if matches_any(text_upper, value_date_kws) and "value_date" not in found_types:
+                found_types.add("value_date"); window_header_end = i + j
+            if matches_any(text_upper, cheque_kws)    and "cheque"    not in found_types:
+                found_types.add("cheque");     window_header_end = i + j
             if matches_any(text_upper, date_kws)      and "date"      not in found_types:
                 found_types.add("date");      window_header_end = i + j
             if matches_any(text_upper, balance_kws)   and "balance"   not in found_types:
@@ -106,6 +112,10 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
             else:
                 cols_found.append({"type": "credit", "x0": t["x0"], "xc": (t["x0"] + mid) / 2.0})
                 cols_found.append({"type": "debit",  "x0": mid,      "xc": (mid + t.get("x1", t["x0"] + 50)) / 2.0})
+        elif matches_any(text, value_date_kws):
+            cols_found.append({"type": "value_date", "x0": t["x0"], "xc": xc})
+        elif matches_any(text, cheque_kws):
+            cols_found.append({"type": "cheque", "x0": t["x0"], "xc": xc})
         elif matches_any(text, date_kws):
             cols_found.append({"type": "date", "x0": t["x0"], "xc": xc})
         elif matches_any(text, narration_kws):
@@ -123,7 +133,7 @@ def detect_columns(rows: List[Dict[str, Any]], identity: Dict = None) -> Dict[st
     best_cols = {}
     for c in cols_found:
         t = c["type"]
-        if t in ["date", "narration"]:
+        if t in ["date", "narration", "value_date", "cheque"]:
             if t not in best_cols or c["x0"] < best_cols[t]["x0"]:
                 best_cols[t] = c
         else:

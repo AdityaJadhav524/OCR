@@ -3,7 +3,7 @@ import sys
 import json
 import logging
 
-logging.getLogger("core.adapters.ocr_subprocess").setLevel(logging.WARNING)
+logging.getLogger("ocr.adapters.ocr_subprocess").setLevel(logging.WARNING)
 
 sys.path.insert(0, os.path.abspath('.'))
 from core.extractors.document_router import route_document

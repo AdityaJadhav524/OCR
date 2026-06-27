@@ -8,7 +8,7 @@ on the specified benchmark PDFs and reports the Before/After matrix.
 import sys, os, json
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from core.adapters.ocr_subprocess import extract_via_subprocess
+from ocr.adapters.ocr_subprocess import extract_via_subprocess
 from core.detection.bank_detector import classify_document_llm
 from core.layout.structural_token_protection import protect_table_header_tokens
 from core.detection.header_suppression import suppress_headers_and_footers

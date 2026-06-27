@@ -2,7 +2,7 @@ import os
 import json
 import glob
 from collections import defaultdict
-from core.adapters.ocr_subprocess import extract_via_subprocess
+from ocr.adapters.ocr_subprocess import extract_via_subprocess
 
 from core.parsers.coordinate_parser_v2 import parse_with_coordinates
 from core.detection.header_suppression import suppress_headers_and_footers

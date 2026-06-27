@@ -25,22 +25,14 @@ def sanitize_balance_text(text: Optional[str]) -> Optional[str]:
         suffix = "DR"
         text = text[:-2].strip()
         
-    # 2. Find the first valid money pattern
-    # Allow spaces, commas, periods as valid internal characters.
-    # We want to match the LONGEST numeric block.
-    # This matches digits, commas, and spaces, optionally followed by a dot and 1-2 digits
-    pattern = r"-?[\d][\d,\s]*\.\s*\d{1,2}"
+    # 2. Find the first valid money block
+    # Allow digits, commas, periods, and spaces as valid internal characters.
+    # Stop at the first alpha character (like 'L128' watermark).
+    pattern = r"-?[\d][\d,\.\s]*"
     
     match = re.search(pattern, text)
     if match:
-        clean_val = match.group(0).replace(" ", "")
-        return clean_val + suffix
-        
-    # If it doesn't match the strict decimal pattern, try a whole number pattern
-    whole_pattern = r"-?[\d][\d,\s]*"
-    match = re.search(whole_pattern, text)
-    if match:
-        clean_val = match.group(0).replace(" ", "")
+        clean_val = match.group(0).rstrip(' .,').replace(" ", "")
         return clean_val + suffix
 
     return text

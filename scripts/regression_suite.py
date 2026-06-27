@@ -8,7 +8,7 @@ from typing import Dict, Any
 # Ensure path is set to import core modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from core.adapters.ocr_subprocess import extract_via_subprocess
+from ocr.adapters.ocr_subprocess import extract_via_subprocess
 from core.parsers.coordinate_parser_v2 import parse_with_coordinates
 
 TEST_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "tests")

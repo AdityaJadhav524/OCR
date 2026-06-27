@@ -3,7 +3,7 @@ import os
 import json
 
 sys.path.append(r'c:\Users\adity\Downloads\CA')
-from core.adapters.ocr_subprocess import extract_via_subprocess
+from ocr.adapters.ocr_subprocess import extract_via_subprocess
 from core.parsers.coordinate_parser_v2 import parse_with_coordinates
 
 pdf_path = r'C:\Users\adity\Downloads\CA\tests\pdfs\YESBANK.pdf'

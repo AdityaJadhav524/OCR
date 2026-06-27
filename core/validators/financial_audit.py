@@ -39,10 +39,10 @@ def _parse_float(val) -> float:
     elif text.count('.') == 1:
         # Check for single-period OCR misreads where a comma was read as a period
         parts = text.split('.')
-        if len(parts[1]) == 3:
+        if len(parts[1]) == 3 and len(parts[0]) <= 3:
             # "2.000" -> "2000"
             text = text.replace('.', '')
-        elif len(parts[1]) == 5:
+        elif len(parts[1]) == 5 and len(parts[0]) <= 3:
             # "2.00000" -> "2000.00"
             text = parts[0] + parts[1][:3] + '.' + parts[1][3:]
 

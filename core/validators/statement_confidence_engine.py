@@ -202,7 +202,7 @@ def generate_statement_confidence(transactions: List[Dict[str, Any]], expected_t
             
     if reconciliation < 99.0:
         explainability["issues"].append("Reconciliation failed (anchors mismatch)")
-        if page_repaired or page_date_reversals > 0:
+        if page_repaired:
             explainability["root_causes"].append("PAGE_ORDERING")
             
     if completeness < 99.0:

@@ -550,19 +550,62 @@ async def process_document(file: UploadFile = File(...), password: Optional[str]
                     )
                     v2_audit = run_financial_audit(v2_txns)
                     v2_score = score_statement(v2_txns)
+                    
+                    # V3 Benchmark (Declarative Architecture)
+                    try:
+                        from core.parsers.declarative_parser import DeclarativeParser
+                        v3_parser = DeclarativeParser()
+                        # Pass flattened tokens
+                        v3_ctx = v3_parser.parse([page_tokens])
+                        v3_txns_raw = v3_ctx.transactions
+                        
+                        v3_txns = []
+                        for t in v3_txns_raw:
+                            v3_txns.append({
+                                "date": t.date,
+                                "narration": t.narration or "",
+                                "debit": t.debit,
+                                "credit": t.credit,
+                                "balance": t.balance
+                            })
+                        v3_audit = run_financial_audit(v3_txns)
+                    except Exception as e:
+                        logger.error(f"V3 Declarative Parser failed: {e}")
+                        v3_txns = []
+                        v3_audit = {}
 
                     SESSION_CACHE[session_id]["real_benchmark"] = {
                         "token_count": len(page_tokens),
                         "v1_count": len(v1_rows),
                         "v2_count": len(v2_txns),
+                        "v3_count": len(v3_txns),
                         "diff_rows": abs(len(v1_rows) - len(v2_txns)),
                         "v1_output": v1_rows,
                         "v1_score": v1_score.get("statement_score", 0),
                         "v2_output": v2_txns,
                         "v2_score": v2_score.get("statement_score", 0),
+                        "v3_output": v3_txns,
                         "v2_telemetry": v2_tel,
-                        "audit_result": v2_audit
+                        "audit_result": v2_audit,
+                        "v3_audit_result": v3_audit
                     }
+
+                    # -- Recovery Audit --
+                    try:
+                        from core.validators.recovery_auditor import (
+                            TransactionRecoveryAuditor, compare_parsers
+                        )
+                        auditor = TransactionRecoveryAuditor(
+                            session_id=session_id,
+                            bank=identity.get("institution_name", "UNKNOWN")
+                        )
+                        recovery = auditor.audit(page_tokens, identity)
+                        shadow_diff = compare_parsers(v1_rows, v2_txns, v3_txns)
+
+                        SESSION_CACHE[session_id]["recovery_report"] = recovery.summary()
+                        SESSION_CACHE[session_id]["shadow_diff"]      = shadow_diff
+                    except Exception as ra_exc:
+                        logger.error(f"Recovery audit failed: {ra_exc}")
                 except Exception as b_exc:
                     logger.error(f"Benchmark injection failed: {b_exc}")
             else:
@@ -796,6 +839,207 @@ async def debug_run_v2(session_id: str):
     except Exception as e:
         import traceback
         return JSONResponse(status_code=500, content={"error": str(e), "traceback": traceback.format_exc()})
+
+@app.get("/api/audit/{session_id}")
+async def get_recovery_audit(session_id: str):
+    """
+    Return the Transaction Recovery Audit report for a session.
+
+    The report contains:
+      - total rows seen vs emitted vs rejected
+      - reject_breakdown  → count per RejectCode
+      - missing_rows      → every dropped row with its reject code + evidence
+    """
+    session = SESSION_CACHE.get(session_id)
+    if not session:
+        return JSONResponse(status_code=404, content={"error": "Session not found"})
+
+    report = session.get("recovery_report")
+    if not report:
+        # If not yet computed (scanned PDF / old session), try to compute now
+        tokens = session.get("tokens")
+        if not tokens:
+            return JSONResponse(status_code=200, content={
+                "session_id": session_id,
+                "available": False,
+                "reason": "No page tokens in session (scanned PDF or pre-audit session)"
+            })
+        try:
+            from core.validators.recovery_auditor import TransactionRecoveryAuditor
+            identity = session.get("bank_detection", {})
+            bank     = identity.get("institution_name", "UNKNOWN")
+            auditor  = TransactionRecoveryAuditor(session_id=session_id, bank=bank)
+            recovery = auditor.audit(tokens, identity)
+            report   = recovery.summary()
+            session["recovery_report"] = report
+        except Exception as exc:
+            return JSONResponse(status_code=500, content={"error": str(exc)})
+
+    return JSONResponse(content={"session_id": session_id, "available": True, "report": report})
+
+
+@app.get("/api/shadow-diff/{session_id}")
+async def get_shadow_diff(session_id: str):
+    """
+    Return the V1 vs V2 vs V3 side-by-side row comparison.
+
+    For every row index, shows what each parser produced.
+    Rows where any parser disagrees by > ₹1 are flagged with disagrees=true.
+    """
+    session = SESSION_CACHE.get(session_id)
+    if not session:
+        return JSONResponse(status_code=404, content={"error": "Session not found"})
+
+    diff = session.get("shadow_diff")
+    if not diff:
+        benchmark = session.get("real_benchmark", {})
+        v1 = benchmark.get("v1_output", [])
+        v2 = benchmark.get("v2_output", [])
+        v3 = benchmark.get("v3_output", [])
+        if not (v1 or v2 or v3):
+            return JSONResponse(status_code=200, content={
+                "session_id": session_id,
+                "available": False,
+                "reason": "No benchmark data — process a document first"
+            })
+        try:
+            from core.validators.recovery_auditor import compare_parsers
+            diff = compare_parsers(v1, v2, v3)
+            session["shadow_diff"] = diff
+        except Exception as exc:
+            return JSONResponse(status_code=500, content={"error": str(exc)})
+
+    return JSONResponse(content={
+        "session_id": session_id,
+        "available": True,
+        "diff": diff,
+        # Convenience: pull first_divergence to the top level
+        "first_divergence": diff.get("first_divergence"),
+        "disagreement_count": diff.get("disagreement_count", 0),
+    })
+
+
+class CorpusEntry(BaseModel):
+    bank: str
+    expected: int
+    session_id: str   # resolved to cached parsed transactions
+
+@app.post("/api/corpus-matrix")
+async def get_corpus_matrix(entries: List[CorpusEntry]):
+    """
+    Release-gate verification matrix.
+
+    POST body: [{"bank": "Federal Bank", "expected": 94, "session_id": "SESSION_..."}]
+
+    Returns a table with expected/parsed/missing/extra/amount_mismatches per bank.
+    All banks must have status=✅ before promoting to production.
+    """
+    from core.validators.recovery_auditor import build_corpus_matrix
+
+    resolved = []
+    for e in entries:
+        session = SESSION_CACHE.get(e.session_id, {})
+        parsed  = session.get("transactions", [])
+        resolved.append({
+            "bank":     e.bank,
+            "expected": e.expected,
+            "parsed":   parsed,
+            # reference data not yet wired — amount_mismatches will be 0
+        })
+
+    try:
+        matrix = build_corpus_matrix(resolved)
+        return JSONResponse(content={"success": True, "matrix": matrix})
+    except Exception as exc:
+        return JSONResponse(status_code=500, content={"error": str(exc)})
+
+
+@app.get("/api/recovery-kpi/{session_id}")
+async def get_recovery_kpi(session_id: str):
+    """
+    Returns the top-level recovery KPI for a session:
+      - recovered / dropped / recovery_rate / reject_rate
+      - confidence histogram
+      - layer failure breakdown
+    Subset of /api/audit/{session_id} for the dashboard header card.
+    """
+    session = SESSION_CACHE.get(session_id)
+    if not session:
+        return JSONResponse(status_code=404, content={"error": "Session not found"})
+
+    report = session.get("recovery_report")
+    if not report:
+        return JSONResponse(status_code=200, content={
+            "session_id": session_id,
+            "available": False,
+            "reason": "Run /api/audit/{session_id} first or process a document"
+        })
+
+    return JSONResponse(content={
+        "session_id":              session_id,
+        "available":               True,
+        "recovered":               report["total_emitted"],
+        "dropped":                 report["total_rejected"],
+        "recovery_rate":           report["recovery_rate"],
+        "reject_rate":             report["reject_rate"],
+        "confidence_histogram":    report["confidence_histogram"],
+        "layer_failure_breakdown": report["layer_failure_breakdown"],
+        "reject_breakdown":        report["reject_breakdown"],
+        # NEW: funnel shows exactly WHERE rows vanish
+        "funnel":                  report.get("funnel", []),
+        "largest_drop_layer":      report.get("largest_drop_layer"),
+        "invariants":              report.get("invariants", []),
+    })
+
+@app.get("/api/first-divergence/{session_id}")
+async def get_first_divergence(session_id: str):
+    """
+    Returns the FIRST row where the legacy parser (V1) and the new declarative
+    parser (V3) disagree by more than Rs 1 on any amount field.
+
+    Includes the candidate-level provenance so you immediately know whether
+    the disagreement came from OCR reconstruction, column detection, or
+    candidate selection.
+    """
+    session = SESSION_CACHE.get(session_id)
+    if not session:
+        return JSONResponse(status_code=404, content={"error": "Session not found"})
+
+    # Use cached diff if available
+    diff = session.get("shadow_diff")
+    if diff and diff.get("first_divergence") is not None:
+        return JSONResponse(content={
+            "session_id":       session_id,
+            "available":        True,
+            "first_divergence": diff["first_divergence"],
+            "v1_count":         diff["counts"].get("v1"),
+            "v3_count":         diff["counts"].get("v3"),
+        })
+
+    # Otherwise compute on-demand from benchmark
+    benchmark = session.get("real_benchmark", {})
+    v1 = benchmark.get("v1_output", [])
+    v3 = benchmark.get("v3_output", [])
+    if not (v1 or v3):
+        return JSONResponse(status_code=200, content={
+            "session_id": session_id,
+            "available": False,
+            "reason": "No benchmark data — process a document first"
+        })
+
+    try:
+        from core.validators.recovery_auditor import find_first_divergence
+        div = find_first_divergence(v1, v3)
+        return JSONResponse(content={
+            "session_id":       session_id,
+            "available":        True,
+            "first_divergence": div.to_dict() if div else None,
+            "v1_count":         len(v1),
+            "v3_count":         len(v3),
+        })
+    except Exception as exc:
+        return JSONResponse(status_code=500, content={"error": str(exc)})
+
 
 # ── BENCHMARK BACKGROUND WORKER ──────────────────────────────────────────────────
 
@@ -1147,3 +1391,12 @@ async def benchmark_status(job_id: str):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+@app.get("/api/hello_world")
+async def hello_world():
+    return {"message": "Hello World"}
+
+@app.get("/api/test_float")
+async def test_float():
+    from core.validators.financial_audit import _parse_float
+    return {"result": _parse_float("403.836.10")}
