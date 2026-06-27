@@ -633,12 +633,29 @@ Analyze this financial statement and generate identification markers:
 {first_pages_text}
 """
 
-    llm_result = call_llm(
-        prompt=prompt,
-        model=CLASSIFIER_MODEL,
-        temperature=0,
-    )
-    raw = llm_result["raw_response"]
+    try:
+        llm_result = call_llm(
+            prompt=prompt,
+            model=CLASSIFIER_MODEL,
+            temperature=0,
+        )
+        raw = llm_result["raw_response"]
+    except Exception as e:
+        logger.warning(f"AI unavailable ({e}). Continuing with deterministic parser.")
+        return {
+            "institution_name": "UNKNOWN",
+            "document_family": "BANK_STATEMENT",
+            "id": "UNKNOWN",
+            "parsing_hints": {
+                "layout_type": "SINGLE_COLUMN",
+                "summary_section_labels": [],
+                "transaction_boundary_signals": ["DATE"],
+                "ref_no_pattern": None,
+                "page_break_pattern": r"Page \d+ of \d+",
+                "details_strip_patterns": [],
+                "known_summary_amounts": [],
+            }
+        }
 
     # â”€â”€ Clean and parse the LLM JSON response â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     def _clean_json(s: str) -> str:
