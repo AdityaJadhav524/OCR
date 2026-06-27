@@ -259,10 +259,25 @@ def do_bank_detection(session_id):
                   int((t1 - t0) * 1000), extra_data={"identity_json": identity_json})
         return True, None
     except Exception as e:
-        logger.exception("Bank Detection error")
-        log_stage(session_id, "Bank Detection", "ERROR", str(e),
-                  int((time.time() - t0) * 1000), error=str(e))
-        return False, str(e)
+        logger.exception("Bank Detection error, falling back to UNKNOWN")
+        fallback_identity = {
+            "institution_name": "UNKNOWN",
+            "document_family": "BANK_STATEMENT",
+            "id": "UNKNOWN",
+            "parsing_hints": {
+                "layout_type": "SINGLE_COLUMN",
+                "summary_section_labels": [],
+                "transaction_boundary_signals": ["DATE"],
+                "ref_no_pattern": None,
+                "page_break_pattern": r"Page \d+ of \d+",
+                "details_strip_patterns": [],
+                "known_summary_amounts": []
+            }
+        }
+        session["bank_detection"] = fallback_identity
+        log_stage(session_id, "Bank Detection", "WARNING", f"Failed ({e}), using UNKNOWN",
+                  int((time.time() - t0) * 1000), extra_data={"identity_json": fallback_identity, "error": str(e)})
+        return True, None
 
 def do_extraction(session_id):
     session = SESSION_CACHE[session_id]

@@ -54,6 +54,7 @@ type QueueItem = {
   status: 'pending' | 'processing' | 'success' | 'error' | 'password_required' | 'invalid_password'
   result?: PipelineResult
   error?: string
+  job_id?: string
 }
 
 // ── Upload zone ────────────────────────────────────────────────────────────────
@@ -163,13 +164,13 @@ export default function App() {
   }
 
   React.useEffect(() => {
-    if (!passwordState.activeItemId && !isProcessingQueue) {
+    if (!passwordState.activeItemId) {
       const needsPassword = queue.find(q => q.status === 'password_required' || q.status === 'invalid_password')
       if (needsPassword) {
         setPasswordState({ activeItemId: needsPassword.id, input: '', show: false, capsLock: false })
       }
     }
-  }, [queue, passwordState.activeItemId, isProcessingQueue])
+  }, [queue, passwordState.activeItemId])
 
   const runQueue = async () => {
     if (queue.length === 0 || isProcessingQueue) return
@@ -197,6 +198,8 @@ export default function App() {
         throw new Error("Failed to start benchmark job")
       }
 
+      setQueue(prev => prev.map(q => pendingFiles.some(p => p.id === q.id) ? { ...q, job_id: data.job_id } : q))
+
       // Poll for status
       const poll = setInterval(async () => {
         try {
@@ -216,8 +219,8 @@ export default function App() {
             setQueue(prev => {
               const newQueue = [...prev]
               statusData.results.forEach((resItem: any) => {
-                // Find matching file in queue
-                const qIdx = newQueue.findIndex(q => q.file.name === resItem.pdf_name && q.status === 'processing')
+                // Find matching file in queue using job_id and filename
+                const qIdx = newQueue.findIndex(q => q.file.name === resItem.pdf_name && q.job_id === data.job_id)
                 if (qIdx >= 0) {
                   if (resItem.status === 'success') {
                     newQueue[qIdx] = { ...newQueue[qIdx], status: 'success', result: resItem }
@@ -265,6 +268,8 @@ export default function App() {
       
       if (!data.job_id) throw new Error("Failed to start benchmark job")
 
+      setQueue(prev => prev.map(q => q.id === activeItemId ? { ...q, job_id: data.job_id } : q))
+
       // Poll for status
       const poll = setInterval(async () => {
         try {
@@ -283,7 +288,7 @@ export default function App() {
             setQueue(prev => {
               const newQueue = [...prev]
               statusData.results.forEach((resItem: any) => {
-                const qIdx = newQueue.findIndex(q => q.id === activeItemId && q.status === 'processing')
+                const qIdx = newQueue.findIndex(q => q.id === activeItemId && q.job_id === data.job_id)
                 if (qIdx >= 0) {
                   if (resItem.status === 'success') {
                     newQueue[qIdx] = { ...newQueue[qIdx], status: 'success', result: resItem }

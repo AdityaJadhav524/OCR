@@ -23,6 +23,10 @@ import logging
 import os
 import sys
 
+# Workaround for PaddlePaddle 3.0 oneDNN / PIR executor crash on Windows CPU
+os.environ["FLAGS_enable_pir_api"] = "0"
+os.environ["FLAGS_use_mkldnn"] = "0"
+
 # ── Resolve workspace paths ────────────────────────────────────────────────────
 _THIS_DIR      = os.path.dirname(os.path.abspath(__file__))  # ocr_core/
 _WORKSPACE     = os.path.dirname(_THIS_DIR)                  # Z:\CA\

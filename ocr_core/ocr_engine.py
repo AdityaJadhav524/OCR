@@ -34,14 +34,20 @@ def get_ocr_engine():
         logger.info("Initializing PaddleOCR singleton…")
         from paddleocr import PaddleOCR
 
+        # Workaround for PaddlePaddle 3.0 PIR executor crash on Windows
+        import paddle
+        if hasattr(paddle, 'set_flags'):
+            paddle.set_flags({'FLAGS_enable_pir_api': 0, 'FLAGS_use_mkldnn': 0})
+
         _OCR_INSTANCE = PaddleOCR(
             # ── Accuracy settings (DO NOT CHANGE) ─────────────────────────────
-            use_textline_orientation=False,   # upright docs: textline orient is pure overhead (v3: was use_angle_cls)
+            use_angle_cls=False,              # upright docs (v2 arg)
             lang='en',                        # English-only dict
-            # use_gpu removed — CPU is default in v3.x, not a constructor arg
+            use_gpu=False,                    # CPU default for Windows
 
             # ── Safe throughput improvement ────────────────────────────────────
-            text_recognition_batch_size=16,   # recognition batch: 6→16 (v3: was rec_batch_num)
+            rec_batch_num=16,                 # recognition batch (v2 arg)
+            show_log=False,                   # suppress verbose logging
 
             # ── show_log removed — not a constructor arg in PaddleOCR v3.x ────
         )
